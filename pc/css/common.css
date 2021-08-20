@@ -3,43 +3,64 @@
 	폰트
 ============================================== */
 @font-face {
-	font-family:nb;
+	font-family:noto;
 	font-style:normal;
 	font-weight:300;
-	src:url(font/NanumBarunGothicLight.eot);
-	src:local(※),
-	url(font/NanumBarunGothicLight.eot?#iefix) format('embedded-opentype'),
-	url(font/NanumBarunGothicLight.woff) format('woff'),
-	url(font/NanumBarunGothicLight.ttf) format('truetype');
+	src: url('font/noto-sans-light.eot');
+	src: local(''),
+	url('font/noto-sans-light.eot?#iefix') format('embedded-opentype'),
+	url('font/noto-sans-light.woff2') format('woff2'),
+	url('font/noto-sans-light.woff') format('woff')
+	/*url(font/NanumBarunGothicLight.ttf) format('truetype');*/
 }
 
 @font-face {
-	font-family:nb;
+	font-family:noto;
+	font-style:normal;
+	font-weight:400;
+	src: url('font/noto-sans-regular.eot');
+	src: local(''),
+	url('font/noto-sans-regular.eot?#iefix') format('embedded-opentype'),
+	url('font/noto-sans-regular.woff2') format('woff2'),
+	url('font/noto-sans-regular.woff') format('woff')
+}
+
+@font-face {
+	font-family:noto;
 	font-style:normal;
 	font-weight:500;
-	src:url(font/NanumBarunGothic.eot);
-	src:local(※),
-	url(font/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
-	url(font/NanumBarunGothic.woff) format('woff'),
-	url(font/NanumBarunGothic.ttf) format('truetype');
+	src: url('font/noto-sans-medium.eot');
+	src: local(''),
+	url('font/noto-sans-medium.eot?#iefix') format('embedded-opentype'),
+	url('font/noto-sans-medium.woff2') format('woff2'),
+	url('font/noto-sans-medium.woff') format('woff')
 }
-
 @font-face {
-	font-family:nb;
+	font-family:noto;
 	font-style:normal;
-	font-weight:800;
-	src:url(font/NanumBarunGothicBold.eot);
-	src:local(※),
-	url(font/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
-	url(font/NanumBarunGothicBold.woff) format('woff'),
-	url(font/NanumBarunGothicBold.ttf) format('truetype');
+	font-weight:700;
+	src: url('font/noto-sans-bold.eot');
+	src: local(''),
+	url('font/noto-sans-bold.eot?#iefix') format('embedded-opentype'),
+	url('font/noto-sans-bold.woff2') format('woff2'),
+	url('font/noto-sans-bold.woff') format('woff')
+}
+@font-face {
+	font-family:noto;
+	font-style:normal;
+	font-weight:900;
+	src: url('font/noto-sans-black.eot');
+	src: local(''),
+	url('font/noto-sans-black.eot?#iefix') format('embedded-opentype'),
+	url('font/noto-sans-black.woff2') format('woff2'),
+	url('font/noto-sans-black.woff') format('woff')
 }
 
 
 /* ==============================================
 	리셋
 ============================================== */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0;box-sizing: border-box;}
 fieldset,img{border:0 none}
 dl,ul,ol,menu,li{list-style:none}
 blockquote, q{quotes:none}
@@ -49,12 +70,12 @@ input::-ms-clear{display:none}
 button{border:0 none;background-color:transparent;cursor:pointer}
 html {font-size:62.5%;}
 body{background:#fff;direction:ltr;-webkit-text-size-adjust:none;}
-body,th,td,input,select,textarea,button {color:#000;font-size:16px;font-family:nb, '나눔고딕', sans-serif;font-weight:300;line-height:1.5;}
+body,th,td,input,select,textarea,button {color:#000;font-size:16px;font-family:noto, sans-serif;font-weight:400;line-height:1.5;letter-spacing:-0.35px}
 a{color:#000;text-decoration:none}
 a:hover{text-decoration:none;}
 a:active{background-color:transparent;}
 address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:300;}
-strong {font-weight:800;}
+strong {font-weight:700;}
 table {table-layout:fixed;border-collapse:collapse;width:100%;border-spacing:0;border:0;}
 
 div,
@@ -90,43 +111,52 @@ label {display:inline-block;vertical-align:middle;}
 header {
 	position:fixed;
 	top:0;
-	right:0;
+	bottom:0;	
 	left:0;
-	z-index:100;
+	width:250px;
+	/* z-index:100;
 	border-bottom:1px solid #e5edef;
-	background-color:#fff;
+	background-color:#fff; */
+	
+	background-color: #414550;
+
 }
-header .head-inner {
+header .header {padding:0 22px;}
+/* header .head-inner {
 	position:relative;
 	min-width:1260px;
 	max-width:1400px;
 	height:80px;
 	margin:0 auto;
 	padding:0 20px;
-}
+} */
 header .s-logo {
-	position:absolute;
-	top:50%;
-	left:20px;
-	transform:translateY(-50%);
+	/* position:absolute;
+	top:0;
+	left:50%;
+	transform:translateX(-50%); */
+	display:flex;
+	justify-content: space-around;
+	padding:24px 0 28px;	
+
 }
-header .s-logo .logo {
-	display:block;
-	width:252px;
-	height:45px;
-	background:url(../imgs/layout/img_logo.png) no-repeat 0 0;
+header .s-logo .logo {	
+	width:135px;
+	height:40px;	
+	background:url(../images/layout/logo.png) no-repeat 0 0;
 	font-size:0;
 	text-indent:-99999px;
 	line-height:0;
 }
-
+header .btn-lg.icon-send {width:100%}
+header .info-area {}
 header .gnb {
-	position:absolute;
+	/* position:absolute;
 	top:50%;
 	left:50%;
-	transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%); */
 }
-header .gnb:after {
+/*header .gnb:after {
 	content:'';
 	display:block;
 	clear:both;
@@ -160,6 +190,7 @@ header .gnb .gnb-item button.link:before {
 	transform:rotate(45deg);
 }
 header .gnb .gnb-item .link .txt {display:inline-block;}
+*/
 /* hover */
 header .gnb .gnb-item .link:hover {color:#00a5bf;}
 header .gnb .gnb-item .link:hover:before {border-color:#00a5bf;}
@@ -231,13 +262,13 @@ footer {
 	min-width:1260px;
 	overflow:hidden;
 }
-.container section {position:relative;}
+/* .container section {position:relative;}
 .container section .content {
 	width:100%;
 	max-width:1360px;
 	margin:0 auto;
 	padding:106px 0 0;
-}
+} */
 
 /* 타이틀 영역 */
 .tit-txt-area {text-align:center;}
@@ -255,27 +286,43 @@ footer {
 }
 
 /* 버튼 */
-[class^=btn-txt-] {
-	display:inline-block;
-	height:50px;
+[class^=btn-] {
+	display:inline-block;	
 	padding:0 10px;
 	border-radius:6px;
-	color:#fff;
-	font-size:16px;
-	font-weight:800;
-	text-align:center;
-	line-height:50px;
-	letter-spacing:-1px;
+	color:#fff;	
+	font-weight:500;
+	text-align:center;	
+	border-radius: 6px;	
+
 }
-[class^=btn-txt-].wide {min-width:223px;}
+[class*=icon-] span{position:relative; padding-left:24px;}
+[class*=icon-] span:before{
+	content:'';
+	display:block;
+	position:absolute;
+	left:0;
+	top:50%;
+	margin-top:-9px;
+	width: 18px;
+	height:18px;
+	background:url(../images/layout/gnb/icon_quick_white.png) no-repeat 0 0;
+}
+
+.btn-lg {}
+
+
+/* [class^=btn-txt-].wide {min-width:223px;}
 [class^=btn-txt-] .arr {
 	display:inline-block;
 	padding-right:24px;
 	background:url(../imgs/main/btn_arr.png) no-repeat 100% 50%;
-}
-.btn-txt-1 {background-color:#00c191;}
-.btn-txt-2 {background-color:#81c615;}
-.btn-txt-3 {background-color:#02a8b4;}
+} */
+.btn-sm {}
+.btn-mid {}
+.btn-lg {height:52px;line-height:52px;font-size:16px;}
+
+[class^=btn-].bg-pink {background-color: #e03d7c;}
 
 .btn-area {
 	font-size:0;
