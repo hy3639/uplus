@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>U+ 웹팩스</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<header>
+		<div class="head-inner">
+			<h1 class="s-logo"><a href="#" class="logo">U+ 웹팩스</a></h1>
+			<div class="gnb">
+				<div class="gnb-item">
+					<button class="link"><span class="txt">솔루션 소개</span></button>
+					<div class="depth">
+						<a href="#">메타커머스솔루션</a>
+						<a href="#">네이버클라우드</a>
+						<a href="#">부가서비스</a>
+					</div>
+				</div>
+				<div class="gnb-item">
+					<a href class="link"><span class="txt">개발자가이드</span></a>
+				</div>
+				<div class="gnb-item">
+					<a href="#" class="link"><span class="txt">메타 파트너</span></a>
+				</div>
+				<div class="gnb-item">
+					<button class="link"><span class="txt">고객지원</span></button>
+					<div class="depth">
+						<a href="#">상담문의</a>
+						<a href="#">FAQ</a>
+						<a href="#">공지사항</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<!-- 탑 컨텐츠 -->
+		<section class="main-top">			
+			<div class="content">			
+			</div>
+		</section>
+
+		<!-- 첫번째 컨텐츠 -->
+		<section class="section1">
+			<div class="content">
+				
+
+			</div>
+		</section>
+
+		<!-- 두번째 컨텐츠 -->
+		<section class="section2">
+			<div class="content">
+				
+			</div>			
+		</section>
+
+		<!-- 세번째 컨텐츠 -->
+		<section class="section3">
+			<div class="content">
+			
+			</div>
+		</section>
+	
+	</div><!-- /.container -->
+
+	<footer>
+		
+	</footer>
+</div>
+
+
+<script src="js/jquery-3.3.1.js"></script>
+<!-- <script src="js/slick.min.js"></script> -->
+<script>
+$(document).ready(function(){
+	/* GNB 하위메뉴 */
+	//열기
+	/*$(document).on('click', '.gnb button.link', function(){
+		if($(this).closest('.gnb-item').hasClass('on')){
+			gnbHide();
+		}else{
+			gnbHide();
+			$(this).closest('.gnb-item').addClass('on');
+			$(this).closest('.gnb-item').find('.depth').fadeIn(100, function(){
+				$(this).addClass('on');
+			});
+		}
+	});*/
+	//닫기
+	/*$(document).mouseup(function(e){
+		var $depth = $('.gnb-item');
+		if(!$depth.is(e.target) && $depth.has(e.target).length === 0){
+			gnbHide();
+		}
+	});*/
+	/*function gnbHide(){
+		$('.gnb-item').removeClass('on');
+		$('.gnb-item .depth').removeClass('on').hide();
+	}
+*/
+/*	$('.img-swiper').each(function(){
+		$(this).slick({
+			infinite: true,
+			slidesToShow: 3,
+			centerMode: true,
+			variableWidth: true,
+			centerPadding: '231px',
+			slidesToScroll: 3
+		});
+	});*/
+});
+
+$(window).on('load', function(){
+	
+});
+
+$(window).scroll(function(){
+
+});
+
+
+</script>
+</body>
+</html>

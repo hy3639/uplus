@@ -1,0 +1,288 @@
+@charset "utf-8";
+/* ==============================================
+	폰트
+============================================== */
+@font-face {
+	font-family:nb;
+	font-style:normal;
+	font-weight:300;
+	src:url(font/NanumBarunGothicLight.eot);
+	src:local(※),
+	url(font/NanumBarunGothicLight.eot?#iefix) format('embedded-opentype'),
+	url(font/NanumBarunGothicLight.woff) format('woff'),
+	url(font/NanumBarunGothicLight.ttf) format('truetype');
+}
+
+@font-face {
+	font-family:nb;
+	font-style:normal;
+	font-weight:500;
+	src:url(font/NanumBarunGothic.eot);
+	src:local(※),
+	url(font/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+	url(font/NanumBarunGothic.woff) format('woff'),
+	url(font/NanumBarunGothic.ttf) format('truetype');
+}
+
+@font-face {
+	font-family:nb;
+	font-style:normal;
+	font-weight:800;
+	src:url(font/NanumBarunGothicBold.eot);
+	src:local(※),
+	url(font/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+	url(font/NanumBarunGothicBold.woff) format('woff'),
+	url(font/NanumBarunGothicBold.ttf) format('truetype');
+}
+
+
+/* ==============================================
+	리셋
+============================================== */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+input,select,textarea,button{border-radius:0;vertical-align:middle}
+input::-ms-clear{display:none}
+button{border:0 none;background-color:transparent;cursor:pointer}
+html {font-size:62.5%;}
+body{background:#fff;direction:ltr;-webkit-text-size-adjust:none;}
+body,th,td,input,select,textarea,button {color:#000;font-size:16px;font-family:nb, '나눔고딕', sans-serif;font-weight:300;line-height:1.5;}
+a{color:#000;text-decoration:none}
+a:hover{text-decoration:none;}
+a:active{background-color:transparent;}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:300;}
+strong {font-weight:800;}
+table {table-layout:fixed;border-collapse:collapse;width:100%;border-spacing:0;border:0;}
+
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+a,
+span,
+label,
+input,
+:before,
+::before,
+:after,
+::after {box-sizing:border-box;}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance:none;
+	margin:0;
+}
+input[type=file]:focus,
+a:focus,
+button:focus {outline:0;}
+
+label {display:inline-block;vertical-align:middle;}
+
+
+/* ==============
+	레이아웃
+============== */
+/* 해더 */
+header {
+	position:fixed;
+	top:0;
+	right:0;
+	left:0;
+	z-index:100;
+	border-bottom:1px solid #e5edef;
+	background-color:#fff;
+}
+header .head-inner {
+	position:relative;
+	min-width:1260px;
+	max-width:1400px;
+	height:80px;
+	margin:0 auto;
+	padding:0 20px;
+}
+header .s-logo {
+	position:absolute;
+	top:50%;
+	left:20px;
+	transform:translateY(-50%);
+}
+header .s-logo .logo {
+	display:block;
+	width:252px;
+	height:45px;
+	background:url(../imgs/layout/img_logo.png) no-repeat 0 0;
+	font-size:0;
+	text-indent:-99999px;
+	line-height:0;
+}
+
+header .gnb {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+header .gnb:after {
+	content:'';
+	display:block;
+	clear:both;
+}
+header .gnb .gnb-item {
+	float:left;
+	position:relative;
+}
+header .gnb .gnb-item .link {
+	display:block;
+	position:relative;
+	padding:0 20px;
+	color:#000;
+	font-size:14px;
+	font-weight:500;
+	text-align:left;
+	line-height:50px;
+	transition:all .3s;
+}
+header .gnb .gnb-item button.link {padding-right:38px;}
+header .gnb .gnb-item button.link:before {
+	content:'';
+	position:absolute;
+	top:50%;
+	right:20px;
+	width:8px;
+	height:8px;
+	margin-top:-6px;
+	border-right:2px solid #000;
+	border-bottom:2px solid #000;
+	transform:rotate(45deg);
+}
+header .gnb .gnb-item .link .txt {display:inline-block;}
+/* hover */
+header .gnb .gnb-item .link:hover {color:#00a5bf;}
+header .gnb .gnb-item .link:hover:before {border-color:#00a5bf;}
+/* on */
+header .gnb .gnb-item.on .link {
+	color:#00a5bf;
+	font-weight:800;
+	transform:rotateX(180deg);
+}
+header .gnb .gnb-item.on .link .txt {transform:rotateX(180deg);}
+header .gnb .gnb-item.on .link:before {
+	margin-top:-3px;
+	border-color:#00a5bf;
+	transform:rotate(-135deg);
+}
+
+header .gnb .depth {
+	display:none;
+	position:absolute;
+	top:23px;
+	left:50%;
+	transform:translateX(-50%);
+	padding:15px 0 20px;
+	border:1px solid #ebebeb;
+	background-color:#fff;
+	line-height:38px;
+	opacity:0;
+}
+/* on */
+header .gnb .on .depth.on {animation:gnbDepthOn .5s forwards;}
+@keyframes gnbDepthOn {
+	30% {
+		top:43px;
+		opacity:1;
+	}
+	50% {
+		top:43px;
+		padding:15px 0 20px;
+		line-height:38px;
+		opacity:1;
+	}
+	100% {
+		top:43px;
+		padding:20px 0;
+		line-height:28px;
+		opacity:1;
+	}
+}
+
+header .gnb .depth a {
+	display:block;
+	padding:0 25px;
+	color:#4a4a4a;
+	font-size:15px;
+	white-space:nowrap;
+	transition:color .2s;
+}
+header .gnb .depth a:hover {color:#00a5bf;}/* hover */
+
+
+/* 푸터 */
+footer {
+	height:360px;
+	border-top:1px solid #e5e5e5;
+}
+/* 컨텐츠 영역 */
+.wrapper {
+	width:100%;
+	min-width:1260px;
+	overflow:hidden;
+}
+.container section {position:relative;}
+.container section .content {
+	width:100%;
+	max-width:1360px;
+	margin:0 auto;
+	padding:106px 0 0;
+}
+
+/* 타이틀 영역 */
+.tit-txt-area {text-align:center;}
+.tit-txt-area .txt {
+	margin-bottom:15px;
+	font-size:14px;
+}
+.tit-txt-area .tit {
+	font-size:38px;
+	font-weight:300;
+}
+.tit-txt-area .sub {
+	margin-top:15px;
+	font-size:16px;
+}
+
+/* 버튼 */
+[class^=btn-txt-] {
+	display:inline-block;
+	height:50px;
+	padding:0 10px;
+	border-radius:6px;
+	color:#fff;
+	font-size:16px;
+	font-weight:800;
+	text-align:center;
+	line-height:50px;
+	letter-spacing:-1px;
+}
+[class^=btn-txt-].wide {min-width:223px;}
+[class^=btn-txt-] .arr {
+	display:inline-block;
+	padding-right:24px;
+	background:url(../imgs/main/btn_arr.png) no-repeat 100% 50%;
+}
+.btn-txt-1 {background-color:#00c191;}
+.btn-txt-2 {background-color:#81c615;}
+.btn-txt-3 {background-color:#02a8b4;}
+
+.btn-area {
+	font-size:0;
+	text-align:center;
+}
+.btn-area [class^=btn-txt-] + [class^=btn-txt-] {margin-left:6px;}
+
+/* ==============
+	컨텐츠
+============== */
