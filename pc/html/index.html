@@ -5,14 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>U+ 웹팩스</title>
 	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.css">
 </head>
 
 <body>
 <div class="wrapper">
-	<header>
+	<header class="scroll-area">
 		<div class="header">
 			<h1 class="s-logo"><a href="#" class="logo">U+ 웹팩스</a></h1>
-			<a href="#" class="btn-lg bg-pink icon-send"><span>팩스 보내기</span></a>
+			<a href="#" class="btn-lg bg-pink wide"><span class="icon-send">팩스 보내기</span></a>
 			<div class="info-area">
 				<ul class="list-wrap">
 					<li class="list-item">
@@ -28,16 +29,20 @@
 						<span class="cont">선불</span>
 					</li>
 				</ul>
-				<div class="box-gray">
-					<span>잔액 <em class="f-white">1,000,000</em>원</span>
+				<div class="balance-area">
+					<span class="balance">잔액 <em class="f-white">1,000,000</em>원</span>
 					<button type="button" class="f-pink">충전하기</button>
 				</div>
 			</div>
+			<div class="button-area justify">
+				<a href="#" class="btn-border-sm bg-gray col1">마이페이지</a>
+				<a href="#" class="btn-border-sm bg-gray col1">로그아웃</a>
+			</div>
 			<div class="gnb">
 				<div class="gnb-item">
-					<button class="link"><span class="txt">팩스</span></button>
+					<button class="link"><span class="txt fax">팩스</span></button>
 					<div class="depth">
-						<a href="#">팩스 보내기</a>
+						<a href="#" class="on">팩스 보내기</a> <!-- 메뉴 선택시 on 추가 -->
 						<a href="#">받은 팩스함</a>
 						<a href="#">보낸 팩스함</a>
 						<a href="#">중요 문서함</a>
@@ -46,17 +51,17 @@
 					</div>
 				</div>
 				<div class="gnb-item">
-					<button class="link"><span class="txt">문자</span></button>
+					<button class="link"><span class="txt sms">문자</span></button>
 					<div class="depth">
 						<a href="#">문자 보내기</a>
 						<a href="#">보낸 문자함</a>					
 					</div>
 				</div>
 				<div class="gnb-item">
-					<a href class="link"><span class="txt">주소록</span></a>
+					<a href class="link"><span class="txt address">주소록</span></a>
 				</div>				
 				<div class="gnb-item">
-					<button class="link"><span class="txt">고객지원</span></button>
+					<button class="link"><span class="txt support">고객지원</span></button>
 					<div class="depth">
 						<a href="#">공지사항</a>
 						<a href="#">자료실</a>
@@ -65,32 +70,62 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="util">
-				<a href="#">영상 이용가이드</a>
-				<a href="#">사용 tip</a>
-				<a href="#">간편팩스 다운로드</a>
-				<a href="#">수신번호 신청/관리</a>
-				<a href="#">API 신청</a>
-				<a href="#">모바일</a>
+				<a href="#" class="guide">영상 이용가이드</a>
+				<a href="#" class="tip">사용 tip</a>
+				<a href="#" class="down-fax">간편팩스 다운로드</a>
+				<a href="#" class="num-magage">수신번호 신청/관리</a>
+				<a href="#" class="api">API 신청</a>
+				<a href="#" class="mobile">모바일</a>
 			</div>
 		</div>
 	</header>
-
-	
-
-	<footer>
-		
-	</footer>
+	<div class="container">
+		<section class="cont-top"></section>
+		<section class="section"></section>
+	</div>
+	<div class="quick-area">
+		<div class="quick">
+			<div class="quick-item">
+				<a href="#" class="link"><span class="txt setting">설정</span></a>
+			</div>		
+			<div class="quick-item">
+				<button class="link"><span class="txt admin">관리자</span></button>
+				<div class="depth">
+					<a href="#" class="on">가입정보 및 변경신청</a> <!-- 메뉴 선택시 on 추가 -->
+					<a href="#">아이디(서브계정)관리</a>
+					<a href="#">수신번호 신청/관리</a>
+					<a href="#">사용자 설정</a>
+					<a href="#">부가서비스 신청</a>
+					<a href="#">카카오워크 연동</a>
+				</div>
+			</div>
+			<div class="quick-item">
+				<button class="link"><span class="txt preferences">환경설정</span></button>
+				<div class="depth">
+					<a href="#">알림설정</a>
+					<a href="#">스팸번호 차단</a>
+					<a href="#">전송금지 번호 설정</a>
+					<a href="#">문자발신번호 인증</a>
+					<a href="#">팩스발신번호 인증</a>					
+				</div>
+			</div>			
+		</div>
+		<button type="button" class="btn-quick">퀵메뉴버튼</button>
+	</div>
 </div>
 
 
 <script src="../js/jquery-3.3.1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- <script src="js/slick.min.js"></script> -->
 <script>
 $(document).ready(function(){
 	/* GNB 하위메뉴 */
 	//열기
-	/*$(document).on('click', '.gnb button.link', function(){
+	$(document).on('click', '.gnb button.link', function(){
 		if($(this).closest('.gnb-item').hasClass('on')){
 			gnbHide();
 		}else{
@@ -100,19 +135,58 @@ $(document).ready(function(){
 				$(this).addClass('on');
 			});
 		}
-	});*/
+	});
 	//닫기
-	/*$(document).mouseup(function(e){
-		var $depth = $('.gnb-item');
-		if(!$depth.is(e.target) && $depth.has(e.target).length === 0){
-			gnbHide();
-		}
-	});*/
-	/*function gnbHide(){
+	// $(document).mouseup(function(e){
+	// 	var $depth = $('.gnb-item');
+	// 	if(!$depth.is(e.target) && $depth.has(e.target).length === 0){
+	// 		gnbHide();
+	// 	}
+	// });
+	function gnbHide(){
 		$('.gnb-item').removeClass('on');
 		$('.gnb-item .depth').removeClass('on').hide();
 	}
-*/
+
+	/* quick 메뉴열기 */
+	$(document).on('click', '.btn-quick', function(){
+		if($(this).hasClass('on')){
+			$(this).removeClass('on').prev('.quick').removeClass('on');
+			$('.quick-item').removeClass('on');
+			$('.quick .depth').removeClass('on').css('display','none')
+		}else{
+			$(this).addClass('on').prev('.quick').addClass('on');
+		}
+		
+
+	})
+
+	/* quick 하위메뉴 */
+	//열기
+	$(document).on('click', '.quick button.link', function(){
+		if($(this).closest('.quick-item').hasClass('on')){
+			quickHide();
+		}else{
+			quickHide();
+			$(this).closest('.quick-item').addClass('on');
+			$(this).closest('.quick-item').find('.depth').fadeIn(100, function(){
+				$(this).addClass('on');
+			});
+		}
+	});
+	//닫기
+	// $(document).mouseup(function(e){
+	// 	var $depth = $('.quick-item');
+	// 	if(!$depth.is(e.target) && $depth.has(e.target).length === 0){
+	// 		quickHide();
+	// 	}
+	// });
+	function quickHide(){
+		$('.quick-item').removeClass('on');
+		$('.quick-item .depth').removeClass('on').hide();
+	}
+
+
 /*	$('.img-swiper').each(function(){
 		$(this).slick({
 			infinite: true,
@@ -126,6 +200,14 @@ $(document).ready(function(){
 });
 
 $(window).on('load', function(){
+	/* call mCustomScrollbar function before jquery ui resizable() */
+	
+	$(".scroll-area").mCustomScrollbar({
+		mouseWheelPixels : 500, 
+		scrollInertia : 100
+	});
+	$(".scroll-area").resizable();
+
 	
 });
 
