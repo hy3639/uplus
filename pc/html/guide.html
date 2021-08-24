@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>U+ 웹팩스</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">	
+<style>
+	.wrapper {padding:20px}
+	.wrapper h1 {background-color:bisque}
+	.wrapper h2 {font-size:20px;border-left:4px solid gold;padding-left:10px; margin-top:15px}
+	.group > .cont {margin-bottom:30px}
+	.group .sub-cont {margin-top:20px}
+	.group .sub-cont .tit {font-weight:bold; font-size:14px}
+	.sub-cont  .select-box {margin-bottom: 10px;}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+	<h1>가이드</h1>
+	<section class="group">
+		<h2 class="tit">버튼</h2>
+		<div class="cont">
+			<div class="sub-cont">
+				<p class="tit">xsmall</p>
+				<div class="cont">
+					<a href="#" class="btn-border btn-xs bg-gray">마이페이지</a>
+				</div>
+			</div>
+			<div class="sub-cont">
+				<p class="tit">small</p>
+				<div class="cont">
+					<a href="#" class="btn-border btn-sm bg-white">발송현황</a>
+				</div>
+			</div>
+			<div class="sub-cont">
+				<p class="tit">medium</p>
+				<div class="cont">
+					<a href="#" class="btn-mid bg-gray">검색</a>
+					<a href="#" class="btn-mid bg-pink">파일첨부</a>
+					<a href="#" class="btn-border btn-mid bg-white">중복삭제</a>
+					<a href="#" class="btn-border btn-mid bd-pink">복사</a>
+				</div>
+			</div>
+			<div class="sub-cont">
+				<p class="tit">large</p>
+				<div class="cont">
+					<a href="#" class="btn-lg bg-pink">보내기</a>
+					<a href="#" class="btn-lg bg-gray">미리보기</a>
+				</div>
+			</div>
+			<div class="sub-cont">
+				<p class="tit">아이콘버튼</p>
+				<div class="cont">
+					<a href="#" class="btn-lg bg-pink"><span class="icon-send">팩스 보내기</span></a>
+					<a href="#" class="btn-border btn-mid bg-white"><span class="icon-delete">삭제</span></a>
+					<a href="#" class="btn-mid bg-pink"><span class="icon-address">주소록</span></a>
+					<a href="#" class="btn-mid bg-gray"><span class="icon-excel">엑셀 불러오기</span></a>
+					<a href="#" class="btn-mid bg-pink"><span class="icon-attach">파일첨부</span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="group">
+		<h2 class="tit">폼요소</h2>
+		<div class="cont">
+			<div class="sub-cont">
+				<p class="tit">체크박스</p>
+				<div class="cont">
+					<!-- 체크박스 -->
+					<input type="checkbox" class="styled" checked>
+					<input type="checkbox" class="styled">
+					<input type="checkbox" class="styled" disabled>
+					<input type="checkbox" class="styled" disabled checked>					
+					<span class="chkbox">
+						<input type="checkbox" class="styled" checked="">
+						<span class="chk"></span>
+					</span>
+					<!-- styled2
+						<span class="chkbox">
+						<input type="checkbox" class="styled2" checked="">
+						<span class="chk"></span>
+					</span>					 
+					-->
+				</div>
+			</div>
+			<div class="sub-cont">
+				<p class="tit">라디오</p>
+				<div class="cont">
+					<!-- 라디오 -->
+					<input type="radio" name="Rdo" class="styled" checked>
+					<input type="radio" name="Rdo" class="styled">
+					<input type="radio" class="styled" disabled>
+					<input type="radio" class="styled" disabled checked>
+
+					<span class="chkbox">
+						<input type="radio" name="Rdo" class="styled" checked="">
+						<span class="chk"></span>
+					</span>
+				</div>
+			</div>
+			<div class="sub-cont">
+				<p class="tit">셀렉트박스</p>
+				<div class="cont">
+					<div class="select-box wide">
+						<select class="styled">
+							<option value="">option 01</option>
+							<option value="">option 02</option>
+							<option value="">option 03</option>
+							<option value="">option 04</option>
+						</select>
+					</div>
+					<div class="select-box">
+						<select class="styled">
+							<option value="">팩스 제목</option>
+							<option value="">보낸사람</option>						
+						</select>
+					</div>
+					<div class="select-box">
+						<select class="styled" disabled>
+							<option value="">팩스 제목</option>
+							<option value="">보낸사람</option>						
+						</select>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+<script src="../js/jquery-3.3.1.js"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> -->
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/common.js"></script>
+<!-- <script src="js/slick.min.js"></script> -->
+
+</body>
+</html>

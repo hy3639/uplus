@@ -35,8 +35,8 @@
 				</div>
 			</div>
 			<div class="button-area justify">
-				<a href="#" class="btn-border-sm bg-gray col1">마이페이지</a>
-				<a href="#" class="btn-border-sm bg-gray col1">로그아웃</a>
+				<a href="#" class="btn-border btn-xs bg-gray col1">마이페이지</a>
+				<a href="#" class="btn-border btn-xs bg-gray col1">로그아웃</a>
 			</div>
 			<div class="gnb">
 				<div class="gnb-item">
@@ -82,9 +82,37 @@
 		</div>
 	</header>
 	<div class="container">
-		<section class="cont-top"></section>
-		<section class="section"></section>
+		<div class="cont-top"></div>
+		<div class="cont-area">
+			<div class="tit-area">
+				<h2 class="tit">팩스 보내기</h2>
+				<p class="txt">U+ 웹팩스로 더욱 빠르고 간편하게 팩스를 보내실 수 있습니다.</p>
+			</div>
+			<div class="section">
+				<div class="grid-style">
+					<div class="grid-item">
+						<div class="tit">
+							<span>발신번호 입력</span>
+							<div class="tooltip-area">
+								<button type="button" class="btn-tooltip">툴팁</button>
+								<div class="tooltip-layer">
+									<button type="button" class="btn-tooltip-close">툴팁닫기</button>
+									<p class="txt">'설정 &gt; <a href="#" class="f-pink">팩스발신번호설정</a>'에서 등록 가능합니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="select-wrap"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
 	</div>
+	<footer>
+		<p>Copyright © 2021 <span class="f-pink">LG UPlus.</span> All rights reserved.</p>
+	</footer>
 	<div class="quick-area">
 		<div class="quick">
 			<div class="quick-item">
@@ -118,76 +146,13 @@
 
 
 <script src="../js/jquery-3.3.1.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> -->
 <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/common.js"></script>
 <!-- <script src="js/slick.min.js"></script> -->
 <script>
 $(document).ready(function(){
-	/* GNB 하위메뉴 */
-	//열기
-	$(document).on('click', '.gnb button.link', function(){
-		if($(this).closest('.gnb-item').hasClass('on')){
-			gnbHide();
-		}else{
-			gnbHide();
-			$(this).closest('.gnb-item').addClass('on');
-			$(this).closest('.gnb-item').find('.depth').fadeIn(100, function(){
-				$(this).addClass('on');
-			});
-		}
-	});
-	//닫기
-	// $(document).mouseup(function(e){
-	// 	var $depth = $('.gnb-item');
-	// 	if(!$depth.is(e.target) && $depth.has(e.target).length === 0){
-	// 		gnbHide();
-	// 	}
-	// });
-	function gnbHide(){
-		$('.gnb-item').removeClass('on');
-		$('.gnb-item .depth').removeClass('on').hide();
-	}
-
-	/* quick 메뉴열기 */
-	$(document).on('click', '.btn-quick', function(){
-		if($(this).hasClass('on')){
-			$(this).removeClass('on').prev('.quick').removeClass('on');
-			$('.quick-item').removeClass('on');
-			$('.quick .depth').removeClass('on').css('display','none')
-		}else{
-			$(this).addClass('on').prev('.quick').addClass('on');
-		}
-		
-
-	})
-
-	/* quick 하위메뉴 */
-	//열기
-	$(document).on('click', '.quick button.link', function(){
-		if($(this).closest('.quick-item').hasClass('on')){
-			quickHide();
-		}else{
-			quickHide();
-			$(this).closest('.quick-item').addClass('on');
-			$(this).closest('.quick-item').find('.depth').fadeIn(100, function(){
-				$(this).addClass('on');
-			});
-		}
-	});
-	//닫기
-	// $(document).mouseup(function(e){
-	// 	var $depth = $('.quick-item');
-	// 	if(!$depth.is(e.target) && $depth.has(e.target).length === 0){
-	// 		quickHide();
-	// 	}
-	// });
-	function quickHide(){
-		$('.quick-item').removeClass('on');
-		$('.quick-item .depth').removeClass('on').hide();
-	}
-
-
-/*	$('.img-swiper').each(function(){
+	/*	$('.img-swiper').each(function(){
 		$(this).slick({
 			infinite: true,
 			slidesToShow: 3,
@@ -197,22 +162,6 @@ $(document).ready(function(){
 			slidesToScroll: 3
 		});
 	});*/
-});
-
-$(window).on('load', function(){
-	/* call mCustomScrollbar function before jquery ui resizable() */
-	
-	$(".scroll-area").mCustomScrollbar({
-		mouseWheelPixels : 500, 
-		scrollInertia : 100
-	});
-	$(".scroll-area").resizable();
-
-	
-});
-
-$(window).scroll(function(){
-
 });
 
 
