@@ -438,6 +438,7 @@ footer  p {
 	
 }
 .quick-area .quick.on {width:250px;}
+/* @media all  and (min-width:1470px){} */
 
 .quick-area .quick-item .link {
 	display:flex;

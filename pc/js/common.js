@@ -1,5 +1,6 @@
 $(document).ready(function(){
-
+	resQuick();
+	
 	/* GNB 하위메뉴 */
 	//열기
 	$(document).on('click', '.gnb button.link', function(){
@@ -82,10 +83,7 @@ $(document).ready(function(){
 
 $(window).on('load', function(){
 	rdoCheck(); // 라디오,체크박스
-	resQuick()//
-	//select();
-	
-	
+
 	//디자인스크롤
 	$(".scroll-area").mCustomScrollbar({
 		mouseWheelPixels : 500, 
@@ -135,33 +133,41 @@ function rdoCheck(){
 // }
 
 
-	 /* 반응형 퀵 */
-	 function resQuick(){
-		var w = $(window).outerWidth();
-		if(w >= 1470){	
-
-			$('.quick-area').each(function(){
-				$(this).addClass('on').find('.quick').addClass('on');
-			});
-			
-		}else{
-			$(document).on('mouseenter', '.quick-area', function(){
-				if($(this).hasClass('on')){
-					$(this).removeClass('on').find('.quick').removeClass('on');
-					$('.quick-item').removeClass('on');
-					$('.quick .depth').removeClass('on').css('display','none')
-				}else{
-					$(this).addClass('on').find('.quick').addClass('on');
-				}		
-			});
-
-			$(document).on('mouseleave', '.quick-area', function(){
-				$(this).removeClass('on');
-				$(this).find('.quick').removeClass('on');
+/* 반응형 퀵 */
+function resQuick(){
+	var w = $(window).outerWidth();
+	if(w >= 1470){	
+		//펼쳐질경우
+		$('.quick-area').each(function(){
+			$(this).removeClass('nonfix');		
+			$(this).addClass('on').find('.quick').addClass('on');			
+		});			
+	}else{
+		//닫힐경우			
+		$('.quick-area').each(function(){
+			$(this).addClass('nonfix');			
+			$(this).removeClass('on').find('.quick').removeClass('on');
+			$(this).find('.quick-item').removeClass('on');
+			$(this).find('.depth').removeClass('on').hide();
+		});			
+		$(document).on('mouseenter', '.quick-area.nonfix', function(){
+			if($(this).hasClass('fix')){
+				$(this).removeClass('on').find('.quick').removeClass('on');
 				$('.quick-item').removeClass('on');
-				$('.quick-item .depth').removeClass('on').hide();
-			
-			});
-		}
+				$('.quick .depth').removeClass('on').css('display','none')
+			}else{
+				$(this).addClass('on').find('.quick').addClass('on');
+			}		
+		});
+		$(document).on('mouseleave', '.quick-area.nonfix', function(){				
+			$(this).removeClass('on');
+			$(this).find('.quick').removeClass('on');
+			$('.quick-item').removeClass('on');
+			$('.quick-item .depth').removeClass('on').hide();			
+		});
+		
 	}
+}
+
+	
 	
