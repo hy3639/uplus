@@ -121,7 +121,7 @@ textarea::placeholder {color:#bbb;}
 header {
 	position:fixed;
 	top:0;
-	bottom:30px;	
+	bottom:0;	
 	left:0;
 	width:250px;	
 	background-color: #414550;
@@ -281,10 +281,11 @@ header .util .mobile {background:url(../images/layout/gnb/icon_mobile.png) no-re
 
 /* 푸터 */
  footer {
-	position:fixed;
+	/* position:fixed;
 	bottom:0;
 	left:0;
-	right:0;
+	right:0; */
+	min-width:970px;
 	height:30px;
 	border-top:1px solid #dbdbdb;
 	background-color:#f6f7f8;
@@ -307,21 +308,25 @@ footer  p {
 }
 .container {
 	position:absolute;
-	/* left:250px;
-	top:0; */
+	left:250px;
+	right:60px;
+	/* top:0; */
 	/* width: calc(100% - 310px); */
-	left:50%;
+	/* left:50%;
 	margin-left:-390px;
-	width:970px;
-	min-height:calc(100vh - 30px);
+	width:970px; */
+	min-height:100vh;
 	/* background-color:gold; */
 }
-@media all  and (max-width:1280px) {
+ @media all  and (min-width:1470px) {
 	.container {
-		left:250px;
-		margin-left:inherit;
+		right:250px;
 	}
 
+} 
+.container .cont-wrap {
+	width:970px;
+	margin:0 auto;
 }
 .container .cont-top {
 	width:100%;
@@ -422,13 +427,14 @@ footer  p {
 	position:fixed;
 	right:0;
 	top:0;
-	bottom:30px;
+	bottom:0;
 	background-color: #fff;
 	border-left:1px solid #dbdbdb;
 }
 .quick-area .quick {
 	width:60px;
 	border-top:6px solid #e03d7c;
+	/* transition: width 1s; */
 	
 }
 .quick-area .quick.on {width:250px;}

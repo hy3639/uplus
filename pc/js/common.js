@@ -26,15 +26,15 @@ $(document).ready(function(){
 	}
 
 	/* quick 메뉴열기 */
-	$(document).on('click', '.btn-quick', function(){
-		if($(this).hasClass('on')){
-			$(this).removeClass('on').prev('.quick').removeClass('on');
-			$('.quick-item').removeClass('on');
-			$('.quick .depth').removeClass('on').css('display','none')
-		}else{
-			$(this).addClass('on').prev('.quick').addClass('on');
-		}		
-	})
+	// $(document).on('click', '.btn-quick', function(){
+	// 	if($(this).hasClass('on')){
+	// 		$(this).removeClass('on').prev('.quick').removeClass('on');
+	// 		$('.quick-item').removeClass('on');
+	// 		$('.quick .depth').removeClass('on').css('display','none')
+	// 	}else{
+	// 		$(this).addClass('on').prev('.quick').addClass('on');
+	// 	}		
+	// })
 
 	/* quick 하위메뉴 */
 	//열기
@@ -63,6 +63,7 @@ $(document).ready(function(){
 
 
 
+
 	/* 탭영역 */
 	$(document).on('click', '.tab-item .btn', function(){
 		var idx = $(this).closest('.tab-item').index();
@@ -81,6 +82,7 @@ $(document).ready(function(){
 
 $(window).on('load', function(){
 	rdoCheck(); // 라디오,체크박스
+	resQuick()//
 	//select();
 	
 	
@@ -94,7 +96,7 @@ $(window).on('load', function(){
 });
 
 $(window).resize(function(){
-	
+	resQuick();
 });
 
 
@@ -132,3 +134,34 @@ function rdoCheck(){
 //     });
 // }
 
+
+	 /* 반응형 퀵 */
+	 function resQuick(){
+		var w = $(window).outerWidth();
+		if(w >= 1470){	
+
+			$('.quick-area').each(function(){
+				$(this).addClass('on').find('.quick').addClass('on');
+			});
+			
+		}else{
+			$(document).on('mouseenter', '.quick-area', function(){
+				if($(this).hasClass('on')){
+					$(this).removeClass('on').find('.quick').removeClass('on');
+					$('.quick-item').removeClass('on');
+					$('.quick .depth').removeClass('on').css('display','none')
+				}else{
+					$(this).addClass('on').find('.quick').addClass('on');
+				}		
+			});
+
+			$(document).on('mouseleave', '.quick-area', function(){
+				$(this).removeClass('on');
+				$(this).find('.quick').removeClass('on');
+				$('.quick-item').removeClass('on');
+				$('.quick-item .depth').removeClass('on').hide();
+			
+			});
+		}
+	}
+	
