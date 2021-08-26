@@ -8,17 +8,28 @@
 <style>
 	.wrapper {padding:20px}
 	.wrapper h1 {background-color:bisque}
-	.wrapper h2 {font-size:20px;border-left:4px solid gold;padding-left:10px; margin-top:15px}
+	.wrapper .group {border-bottom:1px solid #ddd; padding-bottom:30px}
+	.wrapper .group > h2{font-size:20px;border-left:4px solid gold;padding-left:10px; margin:15px 0 30px}
 	.group > .cont {margin-bottom:30px}
 	.group .sub-cont {margin-top:20px}
 	.group .sub-cont .tit {font-weight:bold; font-size:14px}
-	.sub-cont  .select-box {margin-bottom: 10px;}
+	/* .sub-cont .select-box,
+	.input-text {margin-bottom: 10px;} */
 </style>
 </head>
 
 <body>
 <div class="wrapper">
 	<h1>가이드</h1>
+	<section class="group">
+		<h2 class="tit">타이틀</h2>
+		<div class="cont">
+			<div class="tit-area">
+				<h2 class="tit">팩스 보내기</h2>
+				<p class="txt">U+ 웹팩스로 더욱 빠르고 간편하게 팩스를 보내실 수 있습니다.</p>
+			</div>
+		</div>
+	</section>
 	<section class="group">
 		<h2 class="tit">버튼</h2>
 		<div class="cont">
@@ -103,29 +114,220 @@
 			<div class="sub-cont">
 				<p class="tit">셀렉트박스</p>
 				<div class="cont">
-					<div class="select-box wide">
+					<span class="select-box wide">
 						<select class="styled">
 							<option value="">option 01</option>
 							<option value="">option 02</option>
 							<option value="">option 03</option>
 							<option value="">option 04</option>
 						</select>
-					</div>
-					<div class="select-box">
+					</span>
+					<span class="select-box">
 						<select class="styled">
 							<option value="">팩스 제목</option>
 							<option value="">보낸사람</option>						
 						</select>
-					</div>
-					<div class="select-box">
+					</span>
+					<span class="select-box">
 						<select class="styled" disabled>
 							<option value="">팩스 제목</option>
 							<option value="">보낸사람</option>						
 						</select>
-					</div>					
+					</span>					
+				</div>
+			</div>
+			<div class="sub-cont">
+				<p class="tit">인풋</p>
+				<div class="cont">
+					<div class="input-text">
+						<input type="text" placeholder="검색어를 입력해주세요">
+					</div>
+					<div class="input-text">
+						<input type="text" placeholder="검색어를 입력해주세요" disabled>
+					</div>	
 				</div>
 			</div>
 		</div>
+	</section>
+	<section class="group">
+		<h2 class="tit">테이블</h2>
+		<div class="cont">
+			<div class="sub-cont">
+				<p class="tit">리스트</p>
+				<div class="cont">
+					<div class="board-list">
+						<table>
+							<caption>받은팩스함 리스트</caption>
+							<colgroup>
+								<col style="width:6%;">
+								<col style="width:20%;">
+								<col style="width:8%;">
+								<col>
+								<col style="width:9.5%;">
+								<col style="width:11.5%;">
+								<col style="width:10%;">
+								<col style="width:10%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><input type="checkbox" class="styled" checked></th>
+									<th scope="col">받은시간</th>
+									<th scope="col">제목</th>
+									<th scope="col">문서보기</th>
+									<th scope="col">페이지</th>
+									<th scope="col">보낸사람</th>
+									<th scope="col">수신번호</th>
+									<th scope="col">저장/출력</th>
+								</tr>
+							</thead>
+							<tbody>							
+								<tr>
+									<td><input type="checkbox" class="styled" checked></td>
+									<td>
+										<div class="input-text">
+											<input type="text" id="txt1" placeholder="제목을 입력하세요">
+										</div>
+									</td>
+									<td></td>									
+									<td class="subject"><a href="#" class="link"><span class="tit"></a></td>								
+									<td><button type="button" class="btn-user">관리자</button></td>
+									<td>2017.12.24</td>
+									<td>999</td>
+									<td>200</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" class="styled" checked></td>
+									<td>219</td>
+									<td></td>									
+									<td class="subject"><a href="#" class="link"><span class="tit"></a></td>								
+									<td><button type="button" class="btn-user">관리자</button></td>
+									<td>2017.12.24</td>
+									<td>999</td>
+									<td>200</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="sub-cont">
+				<p class="tit">뷰</p>
+				<div class="cont">
+					<div class="board-write">
+						<table>
+							<colgroup>
+								<col style="width:15%;">
+								<col>
+								<col style="width:15%;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><label for="txt1">문서 제목</label></th>
+									<td colspan="3">
+										<div class="input-text">
+											<input type="text" id="txt1">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">팩스커버추가</th>
+									<td colspan="3">
+										<div class="form-list">
+											<label class="form-wrap"><input type="radio" name="Rdo1" class="styled" checked> 팩스커버 있음</label>
+											<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> 팩스커버 없음</label>											
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="txt2">수신인</label></th>
+									<td>										
+										<div class="input-text">
+											<input type="text" id="txt2">
+										</div>
+									</td>
+									<th scope="row"><label for="txt3">발신인</label></th>
+									<td>
+										<div class="input-text">
+											<input type="text" id="txt3">
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="sub-cont">
+				<p class="tit">페이지네이션</p>
+				<div class="cont">
+					<div class="pagenation">
+						<a href="#" class="btn-first page">처음</a>
+						<a href="#" class="btn-prev page">이전</a>
+						<span class="page now">1</span>
+						<a href="#" class="page">2</a>
+						<a href="#" class="page">3</a>
+						<a href="#" class="page">4</a>
+						<a href="#" class="page">5</a>
+						<a href="#" class="page">6</a>
+						<a href="#" class="page">7</a>
+						<a href="#" class="page">8</a>
+						<a href="#" class="page">9</a>
+						<a href="#" class="page">10</a>
+						<a href="#" class="btn-next page">다음</a>
+						<a href="#" class="btn-last page">마지막</a>
+					</div>
+				</div>
+			</div>	
+	</section>
+	<section class="group">
+		<h2 class="tit">탭</h2>
+		<div class="cont">
+			<div class="sub-cont">
+				<p class="tit">탭 기능</p>
+				<div class="cont">
+					<div class="tab-wrap">
+						<div class="tab-lst depth1">
+							<div class="tab-item on">
+								<button class="btn"><span class="txt">이용통계조회</span></button>
+							</div>
+							<div class="tab-item">
+								<button class="btn"><span class="txt">회원정보변경</span></button>
+							</div>							
+						</div>
+
+						<div class="tab-conts">						
+							<div class="tab-cont on">
+								tab1
+								<div class="tab-wrap">
+									<div class="tab-lst depth2">
+										<div class="tab-item on">
+											<button class="btn"><span class="txt">기간별 데이터 검색</span></button>
+										</div>
+										<div class="tab-item">
+											<button class="btn"><span class="txt">아이디별 데이터 검색</span></button>
+										</div>							
+									</div>
+			
+									<div class="tab-conts">						
+										<div class="tab-cont on">
+											서브1
+										</div>						
+										<div class="tab-cont">
+											서브2
+										</div>
+			
+									</div>
+								</div>
+							</div>						
+							<div class="tab-cont">
+								tab2
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>			
 	</section>
 </div>
 

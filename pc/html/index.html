@@ -82,7 +82,42 @@
 		</div>
 	</header>
 	<div class="container">
-		<div class="cont-top"></div>
+		<div class="cont-top">
+			<div class="shadow-box">
+				<div class="fax-area">
+					<div class="fax">
+						<a href="#" class="btn-fax-receive">
+							받은팩스함 <span class="txt">미확인 <em class="f-mint">0</em> 건</span>
+						</a>
+						<a href="#" class="btn-fax-send">
+							보낸 팩스함 <span class="txt">실패 <em class="f-pink">2</em> 건</span>
+						</a>
+					</div>					
+					<button type="button" class="btn-border btn-sm bg-white btn-fax-layer">발송현황</button>
+				</div>
+				<div class="noti-area">					
+					<div class="swiper-container">
+						<div class="swiper-wrapper">							
+							<div class="swiper-slide">
+								<div class="item">
+									<p class="tit">[공지] 카카오워크 &amp; 웹팩스 연동기능 8월초 오픈</p>
+									<span class="date">2021-07-29</span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="item">
+									<p class="tit">[공지] 카카오워크 &amp; 웹팩스 연동기능 8월초 오픈</p>
+									<span class="date">2021-07-29</span>
+								</div>	
+							</div>				
+						</div>	
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="cont-area">
 			<div class="tit-area">
 				<h2 class="tit">팩스 보내기</h2>
@@ -92,17 +127,26 @@
 				<div class="grid-style">
 					<div class="grid-item">
 						<div class="tit">
-							<span>발신번호 입력</span>
-							<div class="tooltip-area">
-								<button type="button" class="btn-tooltip">툴팁</button>
-								<div class="tooltip-layer">
-									<button type="button" class="btn-tooltip-close">툴팁닫기</button>
-									<p class="txt">'설정 &gt; <a href="#" class="f-pink">팩스발신번호설정</a>'에서 등록 가능합니다.</p>
+							<span>발신번호 입력
+								
+								 <div class="tooltip-area">
+									<button type="button" class="btn-tooltip">툴팁</button>
+									<div class="tooltip-layer">
+										<button type="button" class="btn-tooltip-close">툴팁닫기</button>
+										<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다.</p>
+									</div>
 								</div>
-							</div>
+							</span>							
 						</div>
 						<div class="cont">
-							<div class="select-wrap"></div>
+							<span class="select-box wide">
+								<select class="styled">
+									<option value="">option 01</option>
+									<option value="">option 02</option>
+									<option value="">option 03</option>
+									<option value="">option 04</option>
+								</select>
+							</span>
 						</div>
 					</div>
 				</div>
@@ -149,19 +193,20 @@
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> -->
 <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="../js/common.js"></script>
-<!-- <script src="js/slick.min.js"></script> -->
+<script src="../js/swiper.min.js"></script>
 <script>
 $(document).ready(function(){
-	/*	$('.img-swiper').each(function(){
-		$(this).slick({
-			infinite: true,
-			slidesToShow: 3,
-			centerMode: true,
-			variableWidth: true,
-			centerPadding: '231px',
-			slidesToScroll: 3
-		});
-	});*/
+	
+	var swiper = new Swiper(".swiper-container", {
+        direction: "vertical",
+		  // Navigation arrows
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+       
+      });
+    
 });
 
 
