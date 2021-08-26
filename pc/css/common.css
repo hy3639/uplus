@@ -326,6 +326,7 @@ footer  p {
 } 
 .container .cont-wrap {
 	width:970px;
+	min-height:100vh;
 	margin:0 auto;
 }
 .container .cont-top {
