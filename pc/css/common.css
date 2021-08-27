@@ -74,7 +74,7 @@ body,th,td,input,select,textarea,button {color:#000;font-size:16px;font-family:n
 a{color:#000;text-decoration:none}
 a:hover{text-decoration:none;}
 a:active{background-color:transparent;}
-address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:300;}
+address,caption,cite,code,dfn,em,var{font-style:normal;/*font-weight:300;*/}
 strong {font-weight:700;}
 table {table-layout:fixed;border-collapse:collapse;width:100%;border-spacing:0;border:0;}
 
@@ -100,8 +100,11 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=file]:focus,
 a:focus,
 button:focus,
-input[type=text] {outline:0;}
+input[type=text],
+textarea {outline:0;}
+
 label {display:inline-block;vertical-align:middle;}
+textarea {width: 100%;min-height: 80px;resize: none;}
 
 input:-ms-input-placeholder {color:#bbb;}
 input::-webkit-input-placeholder {color:#bbb;}
@@ -113,6 +116,7 @@ textarea::-webkit-input-placeholder {color:#bbb;}
 textarea::-moz-placeholder{color:#bbb;}
 textarea::placeholder {color:#bbb;}
 
+select::-ms-expand {display:none}
 
 /* ==============
 	레이아웃
@@ -576,6 +580,10 @@ footer  p {
 
 .underline {text-decoration: underline;}
 
+/* 정렬 */
+.center {text-align: center;}
+.right {text-align: right;}
+
 /* 타이틀 영역 */
 .tit-area {
 	position:relative;
@@ -608,7 +616,7 @@ footer  p {
 /* 버튼 */
 [class^=btn-] {
 	display:inline-block;	
-	padding:0 10px;
+	padding:0 8px;
 	border-radius:6px;
 	color:#fff;	
 	text-align:center;	
@@ -617,9 +625,9 @@ footer  p {
 [class^=btn-fax] {padding:0}
 [class^=btn-].radius2{border-radius: 2px;}
 [class^=btn-].wide {width:100%;}
-[class^=btn-].bg-pink {background-color: #e03d7c;}
-[class^=btn-].bg-gray {background-color: #565864;}
-[class^=btn-].bg-white {background-color: #fff;}
+[class^=btn-].bg-pink {background-color: #e03d7c; border:1px solid #e03d7c; }
+[class^=btn-].bg-gray {background-color: #565864; border:1px solid #565864}
+[class^=btn-].bg-white {background-color: #fff; border:1px solid #fff}
 
 /* border버튼 */
 [class*=btn-border] {	
@@ -664,7 +672,7 @@ footer  p {
 }
 
 .btn-mid [class^=icon-] {
-	padding-left:20px;
+	padding-left:17px;
 	/*font-weight:500 !important;*/
 }
 .btn-mid [class^=icon-]:before {
@@ -684,27 +692,36 @@ footer  p {
 .icon-attach:before {	
 	background:url(../images/icon/btn_16_upload.png) no-repeat 0 0;
 }
+.icon-up:before {	
+	background:url(../images/icon/icon_16_down.png) no-repeat 0 0;
+	transform: rotate(180deg);
+}
+.icon-down:before {	
+	background:url(../images/icon/icon_16_down.png) no-repeat 0 0;
+	
+}
 
 .btn-xs {
 	height:26px;
 }
 .btn-sm {
-	height:31px; 
+	height:29px; 
 	padding:0 8px;
 	font-size:12px;
-	line-height:30px;
+	line-height:28px;
 }
 .btn-mid {
-	min-width:60px;
-	height:34px;
-	line-height:32px;
-	font-size:14px;
-	font-weight:500;
+	min-width:55px;
+	height:32px;
+	line-height:30px;
+	font-size:13px;
+	font-weight:400;
 }
+.btn-mid.bg-pink {min-width:65px}
 .btn-lg {
 	min-width:190px;
 	height:52px;
-	line-height:52px;
+	line-height:50px;
 	font-size:16px;
 	font-weight:700;
 	border-radius:6px;
@@ -717,11 +734,14 @@ footer  p {
 /* .button-area [class^=btn-txt-] + [class^=btn-txt-] {margin-left:6px;} */
 
 .button-area {display: flex;}
+* + .button-area {margin-top:10px}
 .button-area.justify {justify-content: space-between;}
 .button-area.center {justify-content: center;}
-
 .button-area .col1 {flex:1}
 .button-area [class^=btn-] + [class^=btn-] {margin-left:4px}
+.button-area button[class^=btn-] {vertical-align: top;}
+
+
 
 /*box*/
 .shadow-box {
@@ -731,6 +751,15 @@ footer  p {
 	background-color: #fff;
 }
 
+/*box*/
+.box-gray {
+	padding:9px 0;
+	background-color:#f6f7f8;
+}
+.box-gray .txt {
+	font-size: 14px;
+	color:#000
+}
 /* ==============
 	폼요소
 ============== */
@@ -739,7 +768,7 @@ footer  p {
 .form-list > .form-wrap:first-child {margin-left:0}
 .form-list.block > .form-wrap {display: block; margin-left:0; margin-top:5px} */
 .form-list {display: flex; justify-content: left; flex-wrap: wrap;}
-.form-list > .form-wrap {margin-right:30px;  font-size:14px}
+.form-list > .form-wrap {margin-right:30px;  font-size:13px}
 .form-list > .form-wrap .chkbox{margin-right:5px}
 .form-list.block {display:inherit}
 .form-list.block > .form-wrap {display: block;margin-top:5px;}
@@ -881,7 +910,8 @@ input[type=checkbox][class^=styled] {
 }
 
 /* 인풋 */
-.input-text input {
+.input-text input,
+.input-text textarea{
 	height:34px;
 	padding:0 10px;
 	line-height:32px;
@@ -990,8 +1020,8 @@ input[type=checkbox][class^=styled] {
 	padding:15px 20px;
 	background-color:#f6f7f8;
 	color:#000;
-	font-weight:700;
-	font-size:14px;
+	font-weight:500;
+	font-size:13px;
 	text-align:left;
 }
 /* .board-write tbody th {padding:0;} */
@@ -1002,10 +1032,14 @@ input[type=checkbox][class^=styled] {
 
 
 /*그리드*/
-.grid-style .grid-item {display: flex;}
+.grid-style {
+	padding-bottom:50px;
+	border-bottom:1px solid #9c9c9c;
+}
+.grid-style .grid-item {display: flex; margin-bottom:40px}
 .grid-style .grid-item .tit {
 	width:150px;
-	font-size:16px;
+	font-size:18px;
 	font-weight:700
 }
 .grid-style .grid-item .tit span {display:inline-block;padding-right:30px;position:relative;}
@@ -1017,6 +1051,20 @@ input[type=checkbox][class^=styled] {
 .grid-style .grid-item .cont {
 	width:720px;
 }
+.grid-style .grid-area {
+	width:100%;
+	height:247px;
+	background-color:#ecedef;
+}
+.grid-style .grid-item .cont > * + .grid-area {margin-top:10px}
+.grid-style + .button-area {margin-top:20px}
+.grid-style .cont .guide-txt {
+	margin-bottom: 5px;
+	font-weight: 300;
+	color:#000;
+	font-size:12px
+}
+.grid-style .cont .guide-txt span {font-weight: 700;}
 
 /*페이징*/
 .pagenation {
@@ -1235,5 +1283,30 @@ input[type=checkbox][class^=styled] {
 	컨텐츠
 ============== */
 /* 팩스 보내기 */
-/* .grid-style .grid-item {display: flex;} */
+.count-area {margin-top: 10px;}
+.count-area .count {
+	font-size:22px;
+	color:#000;
+	font-weight:500
+}
+.count-area .count span {
+	padding-left:5px;
+	color:#c0bfc4; 
+	font-weight:700
+}
+.count-area .count span .f-pink {}
 
+.attach-area {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	height:150px;
+
+}
+.attach-area .txt {
+	min-height: 40px;
+	padding-left:50px;
+	background:url(../images/icon/icon_40_file.png) no-repeat 0 0;
+	font-size:16px; 
+	line-height: 40px;
+}

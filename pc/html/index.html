@@ -58,7 +58,7 @@
 					</div>
 				</div>
 				<div class="gnb-item">
-					<a href class="link"><span class="txt address">주소록</span></a>
+					<a href="#none" class="link"><span class="txt address">주소록</span></a>
 				</div>				
 				<div class="gnb-item">
 					<button class="link"><span class="txt support">고객지원</span></button>
@@ -122,7 +122,7 @@
 			<div class="cont-area">
 				<div class="tit-area">
 					<h2 class="tit">팩스 보내기</h2>
-					<p class="txt">U+ 웹팩스로 더욱 빠르고 간편하게 팩스를 보내실 수 있습니다.</p>
+					<!-- <p class="txt">U+ 웹팩스로 더욱 빠르고 간편하게 팩스를 보내실 수 있습니다.</p> -->
 				</div>
 				<div class="section">
 					<div class="grid-style">
@@ -133,7 +133,7 @@
 									 <div class="tooltip-area">
 										<button type="button" class="btn-tooltip">툴팁</button>
 										<div class="tooltip-layer">
-											<button type="button" class="btn-tooltip-close">툴팁닫기</button>
+											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
 											<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다.</p>
 										</div>
 									</div>
@@ -150,6 +150,198 @@
 								</span>
 							</div>
 						</div>
+						<div class="grid-item">
+							<div class="tit">
+								<span>수신번호 입력
+									
+									 <div class="tooltip-area">
+										<button type="button" class="btn-tooltip">툴팁</button>
+										<div class="tooltip-layer">
+											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
+											<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다.</p>
+										</div>
+									</div>
+								</span>							
+							</div>
+							<div class="cont">
+								<div class="box-gray center">
+									<p class="txt"><span class="f-pink">이름·팩스번호</span>를 항목에 <span class="f-pink">직접 입력</span>하세요. <span class="f-pink">복사·붙여넣기</span>도 가능합니다.</p>
+								</div>
+								<div class="grid-area">
+									그리드 영역
+								</div>
+								<div class="button-area justify">
+									<div class="left">
+										<a href="#" class="btn-border btn-mid bg-white">삭제</a>
+										<a href="#" class="btn-border btn-mid bg-white">중복삭제</a>
+									</div>
+									<div class="right">
+										<a href="#" class="btn-mid bg-pink">주소록</a>
+										<a href="#" class="btn-mid bg-gray">엑셀 불러오기</a>
+									</div>
+								</div>
+								<div class="count-area right">
+									<p class="count">인원 <span><em class="f-pink">1</em>/4000</span> 명</p>
+								</div>
+							</div>
+						</div>
+						<div class="grid-item">
+							<div class="tit">
+								<span>문서제목
+									
+									 <div class="tooltip-area">
+										<button type="button" class="btn-tooltip">툴팁</button>
+										<div class="tooltip-layer">
+											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
+											<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다.</p>
+										</div>
+									</div>
+								</span>							
+							</div>
+							<div class="cont">
+								<div class="board-write">
+									<table>
+										<colgroup>
+											<col style="width:130px;">
+											<col>
+											<col style="width:130px;">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row"><label for="txt1">문서 제목</label></th>
+												<td colspan="3">
+													<div class="input-text">
+														<input type="text" id="txt1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">팩스커버추가</th>
+												<td colspan="3">
+													<div class="form-list">
+														<label class="form-wrap"><input type="radio" name="Rdo1" class="styled" checked> 팩스커버 있음</label>
+														<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> 팩스커버 없음</label>											
+													</div>										
+												</td>
+											</tr>
+											<tr>
+												<th scope="row"><label for="txt2">수신인</label></th>
+												<td>										
+													<div class="input-text">
+														<input type="text" id="txt2">
+													</div>
+												</td>
+												<th scope="row"><label for="txt3">발신인</label></th>
+												<td>
+													<div class="input-text">
+														<input type="text" id="txt3">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row"><label for="txt4">기타정보</label></th>
+												<td>										
+													<div class="input-text">
+														<input type="text" id="txt4">
+													</div>
+												</td>
+												<th scope="row"><label for="txt5">전송매수</label></th>
+												<td>
+													<div class="input-text">
+														<input type="text" id="txt5">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row"><label for="txt6">내용</label></th>
+												<td colspan="3">										
+													<div class="input-text">
+														<textarea id="txt6"></textarea>
+													</div>
+												</td>
+												
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="grid-item">
+							<div class="tit">
+								<span>보낼문서 선택
+									
+									 <div class="tooltip-area">
+										<button type="button" class="btn-tooltip">툴팁</button>
+										<div class="tooltip-layer">
+											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
+											<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다.</p>
+										</div>
+									</div>
+								</span>							
+							</div>
+							<div class="cont">
+								<p class="guide-txt right">첨부 총 용량 7MB / 용량 <span>00 KB</span></p>
+								<div class="box-gray attach-area">
+									<p class="txt">마우스로 파일을 끌어오세요.</p>
+								</div>
+								<div class="button-area justify">
+									<div class="left">
+										<button type="button" class="btn-border btn-mid bg-white"><span class="icon-up">위로</span></button>
+										<button type="button" class="btn-border btn-mid bg-white"><span class="icon-down">아래로</span></button>
+										<button type="button" class="btn-border btn-mid bg-white">삭제</button>
+									</div>
+									<div class="right">
+										<a href="#" class="btn-mid bg-pink">파일첨부</a>
+										<a href="#" class="btn-mid bg-gray">문서보관함</a>										
+									</div>
+								</div>
+								<div class="count-area right">
+									<p class="count">총 <span class="f-pink">0</span>매</p>
+								</div>
+							</div>
+						</div>
+						<div class="grid-item">
+							<div class="tit">
+								<span>예약발송
+									
+									 <div class="tooltip-area">
+										<button type="button" class="btn-tooltip">툴팁</button>
+										<div class="tooltip-layer">
+											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
+											<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다.</p>
+										</div>
+									</div>
+								</span>							
+							</div>
+							<div class="cont">
+								<div class="board-write">
+									<table>
+										<colgroup>
+											<col style="width:130px;">
+											<col>
+											<col style="width:130px;">
+											<col>
+										</colgroup>
+										<tbody>											
+											<tr>
+												<th scope="row">팩스커버추가</th>
+												<td colspan="3">
+													<div class="form-list">
+														<label class="form-wrap"><input type="radio" name="Rdo2" class="styled" checked> 즉시발송</label>
+														<label class="form-wrap"><input type="radio" name="Rdo2" class="styled"> 예약발송</label>											
+													</div>										
+												</td>
+											</tr>											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="button-area justify">
+						<div class="left"><button type="button" class="btn-lg bg-gray">엑셀 불러오기</button></div>
+						<div class="right"><a href="#" class="btn-lg bg-pink">보내기</a></div>
 					</div>
 				</div>
 			</div>

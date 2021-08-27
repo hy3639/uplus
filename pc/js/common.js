@@ -3,7 +3,7 @@ $(document).ready(function(){
 	
 	/* GNB 하위메뉴 */
 	//열기
-	$(document).on('click', '.gnb button.link', function(){
+	$(document).on('click', '.gnb .link', function(){
 		if($(this).closest('.gnb-item').hasClass('on')){
 			gnbHide();
 		}else{
@@ -75,6 +75,15 @@ $(document).ready(function(){
 		}
 	});
 
+	/* 툴팁 */
+	$('.btn-tooltip').mouseenter(function(){
+		$(this).next('.tooltip-layer').show();
+	});
+	$('.btn-tooltip').mouseleave(function(){
+		$(this).next('.tooltip-layer').hide();
+	});
+
+	
 
 
 	
