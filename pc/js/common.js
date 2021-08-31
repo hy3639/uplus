@@ -130,12 +130,20 @@ $(document).ready(function(){
 		  showOtherMonths:true,
 	  
 		  
-		  
-		  
-		  
 
+		});
+	});
 
-
+	/* 라디오 선택시 컨텐츠 영역 노출 : 단독*/
+	$('.formSingle').each(function(){
+		var id = $(this).attr('data-form');
+		var name = $(this).attr('name');			
+		$('input[name=' + name + ']').change(function(){
+			if($(this).closest('tr').find('.formSingle').is(':checked')){
+				$(this).closest('table').find('tr.' + id).show();
+			}else{
+				$(this).closest('table').find('tr.' + id).hide();
+			}
 		});
 	});
 	
