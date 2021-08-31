@@ -370,6 +370,7 @@ footer  p {
 	padding:8px 0 8px 73px;
 	color:#000;
 	font-size:13px;
+	text-align: left;
 }
 .cont-top .fax-area a + a {margin-left:10px;}
 
@@ -379,10 +380,28 @@ footer  p {
 .cont-top .fax-area .btn-fax-send {	
 	background:url(../images/icon/img_63_receive.png) no-repeat left center;
 }
+.cont-top .fax-area .btn-num-apply {	
+	background:url(../images/icon/img_63_request.png) no-repeat left center;
+}
 .cont-top .fax-area a .txt {
+	position:relative;
 	display:block;
 	font-weight:500;
 	text-align:left
+}
+.cont-top .fax-area a .txt.arrow {padding-right:10px}
+.cont-top .fax-area a .txt.arrow:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    margin-top: -2px;
+    border-right: 2px solid #9c9c9c;
+    border-bottom: 2px solid #9c9c9c;
+    transform: rotate(-45deg);
+    transition: all .3s;
 }
 .cont-top .fax-area a .txt em {font-weight:700}
 
@@ -428,6 +447,9 @@ footer  p {
 }
 .cont-top .noti-area .swiper-button-next {bottom:5px;transform: rotate(180deg)}
 .container .cont-area {padding:50px 50px 80px 50px;}
+.container .cont-area > .section {margin-top:30px}
+.container .cont-area > .section .search-area:first-child {margin-top:-20px}
+
 .quick-area {
 	position:fixed;
 	right:0;
@@ -584,25 +606,35 @@ footer  p {
 .center {text-align: center;}
 .right {text-align: right;}
 
+/* 말줄임 */
+.ellipsis {
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;  /* 말줄임 적용 */
+  }
+
 /* 타이틀 영역 */
 .tit-area {
 	position:relative;
-	padding-bottom:20px;
-	margin-bottom:40px;
+	padding-bottom:15px;
+	/* margin-bottom:25px; */
 }
 .tit-area:after {
 	content: '';
 	display:block;
-	width: 35px;
-	height:3px;
+	width: 26px;
+	height:2px;
 	position:absolute;
 	left:0;
 	bottom:0;
 	background-color:#e03d7c;
 
 }
-.tit-area .txt {
+.tit-area + .sub-txt {
+	margin-top: 30px;
 	font-size:14px;
+	line-height: 20px;
 }
 .tit-area .tit {
 	font-size:30px;
@@ -612,6 +644,33 @@ footer  p {
 	margin-top:15px;
 	font-size:16px;
 } */
+.tit-area .navi {
+	position:absolute;
+	right:0; top:0;
+	display:flex; 
+	align-items: center;
+	padding-top:5px;
+}
+.tit-area .navi li,
+.tit-area .navi li a {font-size:12px; color:#000}
+.tit-area .navi li {
+	padding-left:16px;
+	font-weight: 400;
+	background:url(../images/icon/icon_12_location.png) no-repeat left center;
+}
+.tit-area .navi li:first-child {background:none}
+.tit-area .navi li a {font-weight:300}
+.tit-area .navi li:first-child {margin-left:0; padding-left:0}
+
+
+
+/*텍스트 스타일*/
+.guide-area {display:flex; align-items: center;}
+.guide-area.justify {justify-content: space-between;}
+.guide-area p {font-size:12px; font-weight: 300;}
+.guide-area p span {font-weight:500}
+
+
 
 /* 버튼 */
 [class^=btn-] {
@@ -700,7 +759,12 @@ footer  p {
 	background:url(../images/icon/icon_16_down.png) no-repeat 0 0;
 	
 }
-
+.btn-xxs {
+	height:23px;
+	line-height: 21px;
+	font-weight: 300;
+	font-size: 11px;
+}
 .btn-xs {
 	height:26px;
 }
@@ -738,7 +802,7 @@ footer  p {
 .button-area.justify {justify-content: space-between;}
 .button-area.center {justify-content: center;}
 .button-area .col1 {flex:1}
-.button-area [class^=btn-] + [class^=btn-] {margin-left:4px}
+.button-area [class^=btn-] + [class^=btn-] {}
 .button-area button[class^=btn-] {vertical-align: top;}
 
 
@@ -760,6 +824,7 @@ footer  p {
 	font-size: 14px;
 	color:#000
 }
+
 /* ==============
 	폼요소
 ============== */
@@ -896,7 +961,7 @@ input[type=checkbox][class^=styled] {
     padding:0 40px 0 10px;
     border: 1px solid #dbdbdb;    
     background: #fff url(../images/icon/icon_16_down.png) no-repeat calc(100% - 10px) center;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 32px;
     outline: transparent;
     -webkit-appearance: none;
@@ -952,7 +1017,15 @@ input[type=checkbox][class^=styled] {
 	border-top:1px solid #f2f2f2;
 	word-wrap:break-word;
 }
-.board-list table  tr:first-child td {border-top:0} 
+.board-list table tr:first-child td {border-top:0} 
+.board-list table td .layer-box {position:relative}
+.board-list table td .layer-box button {display:none;position:absolute;left:60%;bottom:-20%;}
+.board-list table td p.tit {
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;  /* 말줄임 적용 */
+}
 /* .board-list table td.subject {padding:0;}
 .board-list table tbody td.subject {padding:0 0 0 20px;text-align:left;}
 .board-list table tbody td.subject .link {
@@ -1068,7 +1141,8 @@ input[type=checkbox][class^=styled] {
 
 /*페이징*/
 .pagenation {
-	position:relative;	
+	position:relative;
+	margin-top:40px;
 	font-size:0;
 	text-align:center;
 }
@@ -1230,7 +1304,7 @@ input[type=checkbox][class^=styled] {
 /* ==============
 	툴팁
 ============== */
-.tooltip-area {/*display: inline-block;*/}
+.tooltip-area {display: inline-block;}
 .tooltip-area .tooltip-layer {
 	display:none;
 	position:absolute;
@@ -1310,3 +1384,92 @@ input[type=checkbox][class^=styled] {
 	font-size:16px; 
 	line-height: 40px;
 }
+
+/* 받은 팩스함 */
+.calendar-area {
+	display: inline-block;
+}
+
+.box-gray.search-area {
+	max-width: 870px;
+	position:relative;
+	margin: 0 0 30px;
+	padding:20px 30px;
+}
+.guide-area + .search-area {margin-top:10px}
+.search-area .group + .group {margin-top:10px}
+.search-area .item {
+	display:inline-block;
+	margin-left:20px;
+}
+.search-area .item:first-child {margin-left:0}
+.search-area .item label {
+	padding-right:3px;
+	font-size:13px;
+	font-weight: 500;
+}
+.search-area .input-text {display:inline-block}
+.search-area .input-text input,
+.search-area .select-box select,
+.button-area .select-box select
+{
+	height: 32px;
+	line-height: 30px;
+}
+.search-area .btn-search {
+	position:absolute;
+	right:30px;
+	top:50%;
+	margin-top:-37px;
+	width:100px;
+	height:74px;
+	font-size:16px;
+	font-weight: 500;
+	background-color:#5d616d;
+	border-radius: 5px;
+}
+.search-area .btn-search span {position:relative; padding-left:23px;background:url(../images/icon/icon_20_search.png) no-repeat left center;}
+
+.board-list .title-input {display:flex}
+.button-area.board + [class^=board-] {margin-top:10px}
+.button-area.board .btn-border + .select-box {margin-left:10px} 
+.button-area.board .btn-border + .select-box + .btn-border {margin-right:10px}
+
+
+/* 데이트피커 */
+.input-text.cal {position:relative}
+/*.search-area .input-text.cal:before {
+	content: '';
+	display:block;
+	position:absolute;
+	right:10px;
+	top:50%;
+	margin-top:-10px;
+	width:20px;
+	height:20px;
+	background:url(../images/icon/icon_20_date.png) no-repeat 0 0;
+} */
+.input-text.cal input {
+	width:140px;
+	padding-right:30px
+}
+.input-text.cal input + img {position:absolute; right:8px; top:50%; margin-top:-10px;}
+
+.ui-datepicker {width:300px; border:1px solid #ddd; background-color:#fff}
+.ui-datepicker-header .ui-corner-all {
+	position:absolute;
+	top:0;
+	font-size:0;
+	width:15px;
+	height:15px;
+	background-color:gold
+}
+.ui-datepicker-header .ui-datepicker-prev {
+	left:0;
+
+}
+.ui-datepicker-header .ui-datepicker-next {
+	right:0
+}
+.ui-datepicker-title {text-align:center}
+.ui-datepicker-calendar tbody td {text-align:center}

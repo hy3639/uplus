@@ -8,8 +8,8 @@
 <style>
 	.wrapper {padding:20px}
 	.wrapper h1 {background-color:bisque}
-	.wrapper .group {border-bottom:1px solid #ddd; padding-bottom:30px}
-	.wrapper .group > h2{font-size:20px;border-left:4px solid gold;padding-left:10px; margin:15px 0 30px}
+	.wrapper section.group {border-bottom:1px solid #ddd; padding-bottom:30px}
+	.wrapper section.group > h2{font-size:20px;border-left:4px solid gold;padding-left:10px; margin:15px 0 30px}
 	.group > .cont {margin-bottom:30px}
 	.group .sub-cont {margin-top:20px}
 	.group .sub-cont .tit {font-weight:bold; font-size:14px}
@@ -25,28 +25,124 @@
 		<h2 class="tit">타이틀</h2>
 		<div class="cont">
 			<div class="tit-area">
-				<h2 class="tit">팩스 보내기</h2>
-				<p class="txt">U+ 웹팩스로 더욱 빠르고 간편하게 팩스를 보내실 수 있습니다.</p>
+				<h2 class="tit">팩스 보내기</h2>				
 			</div>
+			<p class="sub-txt">U+ 웹팩스로 더욱 빠르고 간편하게 팩스를 보내실 수 있습니다.</p>
+		</div>
+	</section>
+	<section class="group">
+		<h2 class="tit">box style</h2>
+		<div class="cont">
+			<div class="sub-cont">
+				<p class="tit">기본</p>
+				<div class="cont">
+					<div class="box-gray center">
+						<p class="txt"><span class="f-pink">이름·팩스번호</span>를 항목에 <span class="f-pink">직접 입력</span>하세요. <span class="f-pink">복사·붙여넣기</span>도 가능합니다.</p>
+					</div>
+				</div>
+			</div>
+			<div class="sub-cont">
+				<p class="tit">검색영역</p>
+				<div class="cont">
+					<div class="box-gray search-area">
+						<div class="group">
+							<div class="item">
+								<label>받은시간</label>
+								<div class="calendar-area">
+									<div class="input-text cal">
+										<input type="text" name="from" style="width:108px" id="dp1630369711368" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../images/icon/icon_20_date.png" alt="..." title="...">	
+									</div>
+									~
+									<div class="input-text cal">									
+										<input type="text" name="to" style="width:108px" id="dp1630369711369" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../images/icon/icon_20_date.png" alt="..." title="...">
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<label>확인상태</label>
+								<span class="select-box">
+									<select class="styled" style="width:83px;">
+										<option value="">전체</option>
+										<option value="">읽지 않음</option>
+										<option value="">읽음</option>	
+									</select>
+								</span>
+							</div>
+							<div class="item">
+								<label>
+									<div class="tooltip-area">
+										<button type="button" class="btn-tooltip">툴팁</button>
+										<div class="tooltip-layer">
+											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
+											<p class="txt">
+												자동 서식 분류 서비스란?<br>
+												머신 러닝(Machine learning:기계학습)알고리즘으로 수신된 팩스 문서를 자동으로 분류해주는 서비스입니다.
+												서식훈련이 반복될수록 정확도가 올라갑니다. 서식은 관리자만 추가할 수 있습니다.
+												서식을 추가하거나 궁금하신 점은 고객센터(1544-8007)로 문의 주시기 바랍니다.
+											</p>
+										</div>
+									</div>
+									서식분류
+								</label>
+								<span class="select-box">
+									<select class="styled" style="width:156px;">
+										<option value="">서식분류 전체</option>										
+									</select>
+								</span>
+							</div>
+						</div>
+						<div class="group">
+							<div class="item">
+								<label>수신번호</label>
+								<span class="select-box">
+									<select class="styled" style="width:130px;">
+										<option value="">전체</option>										
+									</select>
+								</span>
+							</div>
+							<div class="item">
+								<label for="txt1">발신번호</label>
+								<div class="input-text">
+									<input id="txt1" type="text" placeholder="" style="width:130px;">
+								</div>
+							</div>
+							<div class="item">
+								<label for="txt2">제목</label>
+								<div class="input-text">
+									<input id="txt2" type="text" placeholder="" style="width:254px;">
+								</div>
+							</div>
+						</div>
+						<button type="button" class="btn-search"><span>검색</span></button>
+					</div>
+				</div>
+			</div>			
 		</div>
 	</section>
 	<section class="group">
 		<h2 class="tit">버튼</h2>
 		<div class="cont">
 			<div class="sub-cont">
-				<p class="tit">xsmall</p>
+				<p class="tit">xxsmall (height:23px)</p>
+				<div class="cont">
+					<a href="#" class="btn-xxs bg-gray">마이페이지</a>
+					<a href="#" class="btn-border btn-xxs bg-white">마이페이지</a>
+				</div>
+			</div>
+			<div class="sub-cont">
+				<p class="tit">xsmall (height:26px)</p>
 				<div class="cont">
 					<a href="#" class="btn-border btn-xs bg-gray">마이페이지</a>
 				</div>
 			</div>
 			<div class="sub-cont">
-				<p class="tit">small</p>
+				<p class="tit">small (height:29px)</p>
 				<div class="cont">
 					<a href="#" class="btn-border btn-sm bg-white">발송현황</a>
 				</div>
 			</div>
 			<div class="sub-cont">
-				<p class="tit">medium</p>
+				<p class="tit">medium (height:32px)</p>
 				<div class="cont">
 					<a href="#" class="btn-mid bg-gray">검색</a>
 					<a href="#" class="btn-mid bg-pink">파일첨부</a>
@@ -55,7 +151,7 @@
 				</div>
 			</div>
 			<div class="sub-cont">
-				<p class="tit">large</p>
+				<p class="tit">large (height:52px)</p>
 				<div class="cont">
 					<a href="#" class="btn-lg bg-pink">보내기</a>
 					<a href="#" class="btn-lg bg-gray">미리보기</a>
