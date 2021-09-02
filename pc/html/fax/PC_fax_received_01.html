@@ -274,11 +274,18 @@
 										</div>
 									</div>
 								</label>
-								<span class="select-box">
-									<select class="styled" style="width:156px;">
-										<option value="">서식분류 전체</option>										
-									</select>
-								</span>
+								<div class="select-area" style="width:160px">
+									<button type="button" class="button-select">서식 선택</button> <!-- disabled 추가시 비활성화 -->
+									<div class="select-layer">												
+										<ul class="selBox">
+											<li><button type="button">거래명세서</button></li>
+											<li><button type="button">세금계산서</button></li>
+											<li><button type="button">기타</button></li>
+											<li><button type="button">광고</button></li>
+										</ul>
+										<button type="button" class="button-layer">새 서식 만들기</button>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="group">
@@ -371,7 +378,7 @@
 									<td>오후 2:20</td>
 									<td class="subject">
 										<div class="layer-box">
-											<p class="tit ellipsis">진료비영수증_진료비영수증_진료비영수증_12.28.jpg</p>
+											<p class="tit ellipsis" title="진료비영수증_진료비영수증_진료비영수증_12.28.jpg">진료비영수증_진료비영수증_진료비영수증_12.28.jpg</p>
 											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:54px">제목수정</button>											
 										</div>
 										<div class="title-input">
@@ -380,39 +387,9 @@
 											</div>
 											<button type="button" class="btn-border btn-sm bg-white btn-save">저장</button>
 										</div>
-									</td>																	
-									<!-- <td>
-										<div class="layer-box">
-											<p class="tit ellipsis">-</p>	
-											<button type="button" class="btn-border btn-xxs bg-white btn-layer btn-show" style="width:60px">서식 선택</button>									
-											<div class="tooltip-area">												
-												<div class="tooltip-layer">
-													<ul class="selBox">
-														<li><button type="button">거래명세서</button></li>
-														<li><button type="button">세금계산서</button></li>
-														<li><button type="button">기타</button></li>
-														<li><button type="button">광고</button></li>
-													</ul>
-													<button type="button">새 서식 만들기</button>
-												</div>
-											</div>										
-										</div>
-										
-									</td>								 -->
+									</td>
 									<td>
-										<!-- <p class="tit ellipsis">-</p> -->											
-										<div class="select-area">
-											<button type="button" class="btn-border btn-xxs bg-white btn-show btn-select" style="width:60px;">서식 선택</button>
-											<div class="select-layer">												
-												<ul class="selBox">
-													<li><button type="button">거래명세서</button></li>
-													<li><button type="button">세금계산서</button></li>
-													<li><button type="button">기타</button></li>
-													<li><button type="button">광고</button></li>
-												</ul>
-												<button type="button" class="button-layer">새 서식 만들기</button>
-											</div>
-										</div>	
+										<p class="tit ellipsis">-</p>
 									</td>	
 									<td>
 										<div class="tooltip-area">

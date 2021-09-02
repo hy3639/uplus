@@ -102,30 +102,38 @@ $(document).ready(function(){
 	})
 
 	/* 디자인셀렉트 */
-	$(document).on('click', '.btn-select', function(){
+	$(document).on('click', '.button-select', function(){
 		if($(this).hasClass('on')){
 			$(this).removeClass('on').next('.select-layer').removeClass('on');
 		}else{
 			$(this).addClass('on').next('.select-layer').addClass('on');	
-		}
-		
+		}		
 	});
-	// $('.select-layer, .btn-select').mouseleave(function(){
-	// 	$(this).removeClass('on');
-	// });
+	$('.select-layer button').each(function(){
+		$(this).click(function(){
+			var targetTag = $(this).closest('.select-area');		
+			if(!$(this).hasClass('button-layer')){				
+				var txt = $(this).text();		
+				targetTag.find('.button-select').text(txt);	
+				$(this).closest('li').siblings().removeClass('on');	
+				$(this).closest('li').addClass('on');			
+			}
+			targetTag.find('.select-layer').removeClass('on');
+			targetTag.find('.button-select').removeClass('on');
+			
+		});
+	});
+	
 
 	/* 다른곳 클릭시 셀렉트 닫기 */
     $(document).mouseup(function(e){
         var $selBox = $('.select-area');
         if (!$selBox.is(e.target) && $selBox.has(e.target).length === 0){
 			$selBox.find('.select-layer').removeClass('on');
-            $selBox.find('.btn-select').removeClass('on');
+            $selBox.find('.button-select').removeClass('on');
         }
     });
-	// $(document).on('click', '.btn-tooltip-close', function(){
-	// 	$(this).closest('.tooltip-layer').hide();	
-	// })
-
+	
 	/* 테이블 sort버튼 */
 	$('th .sort').click(function(){
 		$(this).toggleClass('on');
@@ -276,14 +284,6 @@ function rdoCheck(){
     // });
 	
 }
-
-/* 셀렉트 스타일 입히기 */
-// function select(){
-//     $('select.styled').each(function(){
-// 		$(this).wrap('<div class="selBox"></div>');
-        
-//     });
-// }
 
 
 /* 반응형 퀵 */

@@ -1031,13 +1031,25 @@ input[type=checkbox][class^=styled] {
 }
 
 /* 디자인셀렉트 */
-.select-area {position:relative;}
+.select-area {position:relative;display:inline-block}
+.button-select {
+	width:100%;
+	height: 34px;
+    padding: 0 40px 0 10px;
+    border: 1px solid #dbdbdb;
+    background: #fff url(../images/icon/icon_16_down.png) no-repeat calc(100% - 10px) center;
+    font-size: 13px;
+	text-align: left;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+.button-select:disabled {opacity: .7;cursor: default;}
 .select-layer{
-	 display:none; 
+	display:none; 
 	position:absolute;
-	left:9px;
-	top:22px;
-	width:150px;
+	left:0;
+	top:32px;
+	width:100%;
 	/* padding:10px 0 0 0; */
 	background-color:#fff;
 	border: solid 1px #dbdbdb;
@@ -1051,6 +1063,7 @@ input[type=checkbox][class^=styled] {
 	font-size: 13px;
 	text-align:left;
 }
+.select-layer .selBox li.on,
 .select-layer .selBox li:hover button {background-color:#ddd}
 /* .select-layer .selBox +  [class^=btn-] {margin-} */
 .select-layer > [class^=button-] {
