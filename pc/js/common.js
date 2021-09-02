@@ -93,13 +93,97 @@ $(document).ready(function(){
 		$(this).next('.tooltip-layer').hide();
 	});
 
+	/*클릭형 툴팁*/
+	$(document).on('click', '.btn-layer', function(){
+		$(this).closest('.tooltip-area').find('.tooltip-layer').show();	
+	});
+	$(document).on('click', '.btn-tooltip-close', function(){
+		$(this).closest('.tooltip-layer').hide();	
+	})
+
+	/* 디자인셀렉트 */
+	$(document).on('click', '.btn-select', function(){
+		if($(this).hasClass('on')){
+			$(this).removeClass('on').next('.select-layer').removeClass('on');
+		}else{
+			$(this).addClass('on').next('.select-layer').addClass('on');	
+		}
+		
+	});
+	// $('.select-layer, .btn-select').mouseleave(function(){
+	// 	$(this).removeClass('on');
+	// });
+
+	/* 다른곳 클릭시 셀렉트 닫기 */
+    $(document).mouseup(function(e){
+        var $selBox = $('.select-area');
+        if (!$selBox.is(e.target) && $selBox.has(e.target).length === 0){
+			$selBox.find('.select-layer').removeClass('on');
+            $selBox.find('.btn-select').removeClass('on');
+        }
+    });
+	// $(document).on('click', '.btn-tooltip-close', function(){
+	// 	$(this).closest('.tooltip-layer').hide();	
+	// })
+
+	/* 테이블 sort버튼 */
+	$('th .sort').click(function(){
+		$(this).toggleClass('on');
+	});
+
 	/* 테이블 오버시 버튼노출 */
 	$('.layer-box').mouseenter(function(){
-		$(this).find('button').show();
+		$(this).find('[class^=btn-]').show();
+	//	$(this).closest('.layer-box').find('.tit').hide();
 	});
 	$('.layer-box').mouseleave(function(){
-		$(this).find('button').hide();
+		$(this).find('[class^=btn-]').hide();
+	//	$(this).closest('.layer-box').find('.tit').show();
 	});
+
+
+	/* 테이블 제목 클릭시 수정폼 노출 */
+	$(document).on('click', '.subject .btn-modify, .subject .button-input', function(){
+		var targetTd = 	$(this).closest('.subject');
+	//	targetTd.find('.layer-box').hide();
+		targetTd.addClass('on');
+	});
+	//닫기
+	$(document).on('click', '.subject .btn-save', function(){
+		var targetTd = 	$(this).closest('.subject');
+//		targetTd.find('.layer-box').show();
+		targetTd.removeClass('on');
+	});
+
+	/* 테이블 체크시 bg 변경 */
+	$('.board-list td input[type="checkbox"]').each(function(){		
+		$(this).change(function(){
+			if($(this).is(':checked')){
+				$(this).closest('tr').addClass('checked');
+			}else{
+				$(this).closest('tr').removeClass('checked');
+			}
+			
+		});
+	});
+
+	// $('..button-input').click(function(){
+	// 	var targetClass = $(this).closest('.subject');
+	// 	if(targetClass.hasClass('on')){
+	// 		targetClass.removeClass('on');
+	// 	}else{
+	// 		targetClass.addClass('on').find('title-input').show();
+	// 	}
+		
+	// });
+
+	// $(document).on('click', '.layer-box .btn-show', function(){
+
+	// });
+
+
+
+
 
 
 	/* datepicker */
@@ -110,7 +194,7 @@ $(document).ready(function(){
 		  // monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
 
 		  showOn: "both", // 버튼과 텍스트 필드 모두 캘린더를 보여준다. 
-		  buttonImage: "../images/icon/icon_20_date.png", 
+		  buttonImage: "../../images/icon/icon_20_date.png", 
 		  buttonImageOnly: true, // 버튼에 있는 이미지만 표시한다. 
 		  changeMonth: false, // 월을 바꿀수 있는 셀렉트 박스를 표시한다. 
 		  changeYear: false, // 년을 바꿀 수 있는 셀렉트 박스를 표시한다. 
@@ -121,16 +205,12 @@ $(document).ready(function(){
 		  //stepMonths: 3, // next, prev 버튼을 클릭했을때 얼마나 많은 월을 이동하여 표시하는가. 
 		  //yearRange: 'c-100:c+10', // 년도 선택 셀렉트박스를 현재 년도에서 이전, 이후로 얼마의 범위를 표시할것인가.
 		  // showButtonPanel: true, // 캘린더 하단에 버튼 패널을 표시한다. 
-		  // closeText: '닫기', // 닫기 버튼 패널 
-		  
-		   showMonthAfterYear: true , // 월, 년순의 셀렉트 박스를 년,월 순으로 바꿔준다. 
-		   dayNamesMin: ['SUN','MON','TUE','WED','THU','FRI','SAT'],
-		   monthNames: ['01','02','03','04','05','06','07','08','09','10','11','12'],
-		   yearSuffix: '.',
+		  // closeText: '닫기', // 닫기 버튼 패널 		  
+		//   showMonthAfterYear: true , // 월, 년순의 셀렉트 박스를 년,월 순으로 바꿔준다. 
+		   dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+	//	   monthNames: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+		//   yearSuffix: '.',
 		  showOtherMonths:true,
-	  
-		  
-
 		});
 	});
 

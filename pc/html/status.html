@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>status</title>
+	<style>
+		@font-face {
+		font-family:noto;
+		font-style:normal;
+		font-weight:300;
+		src: url('../css/font/noto-sans-regular.eot');
+		src: local(''),
+		url('../css/font/noto-sans-regular.eot?#iefix') format('embedded-opentype'),
+		url('../css/font/noto-sans-regular.woff2') format('woff2'),
+		url('../css/font/noto-sans-regular.woff') format('woff')
+	}
+
+	@font-face {
+		font-family:noto;
+		font-style:normal;
+		font-weight:500;
+		src: url('../css/font/noto-sans-medium.eot');
+		src: local(''),
+		url('../css/font/noto-sans-medium.eot?#iefix') format('embedded-opentype'),
+		url('../css/font/noto-sans-medium.woff2') format('woff2'),
+		url('../css/font/noto-sans-medium.woff') format('woff')
+	}
+
+		* {box-sizing:border-box;}
+		h1, h2, h3, div, span, a, button, dl, table, select, input {font-family:noto, sans-serif;font-weight:300;}
+		html {overflow-y:scroll;padding-top:78px;font-size:62.5%;}
+		body, h1, h2, dl, dd {margin:0;}
+		body, h1, h2, div, a, span, em, dl, button, th, td, input[type=text], select {color:#666;font-size:1.3rem;font-weight:300;line-height:1.5;}
+		select, input[type=text] {height:34px;box-sizing:border-box;border-radius:0;border:1px solid rgba(0,0,0,.3);text-align:left;vertical-align:middle;outline:0;transition:all .3s ease-in;}
+		select:focus, input[type=text]:focus {border:1px solid red;background-color:#e4f6fd;}
+		input[type=text] {padding:0 1.4rem;vertical-align:middle;}
+		.placeholder {color:#999;}
+		:-ms-input-placeholder {color:#999;}
+		::-webkit-input-placeholder {color:#999;}
+		::-moz-placeholder{color:#999;}
+		button {border:0;background-color:transparent;border-radius:0;text-align:left;}
+		body {padding:0 2px 50px;}
+		.hide {display:none;}
+
+		header {position:fixed;top:0;right:0;left:0;z-index:50;padding:2rem 4rem;background-color:rgba(255,255,255,.9);transition:all .1s ease-in;}
+		header.scrl {background-color:rgba(209,234,245,.9);padding-top:.5rem;padding-bottom:.5rem;border-bottom:1px solid #ccc;box-shadow:0 1px 6px rgba(0,0,0,.2);transition:all .3s ease-in;}
+		header.scrl > dl {display:none;}
+		header:after {content:'';display:block;clear:both;}
+		header h1 {float:left;color:#000;font-size:2rem;font-weight:500;text-shadow:2px 2px 3px rgba(0,0,0,.2);line-height:3.4rem;}
+		header > dl {overflow:hidden;float:left;margin-left:1rem;line-height:3.4rem;}
+		header > dl dt {float:left;margin-left:1rem;}
+		header > dl dd + dt {position:relative;padding-left:1.1rem;}
+		header > dl dd + dt:before {content:'';position:absolute;top:50%;left:0;transform:translateY(-50%);width:1px;height:10px;background-color:#ddd;}
+		header > dl dd {float:left;margin-left:.8rem;}
+		header .rt-area {overflow:hidden;float:right;}
+		header .rt-area dl {overflow:hidden;float:left;line-height:3.4rem;}
+		header .rt-area dl dt {float:left;margin-right:.4rem;font-weight:500;}
+		header .rt-area dl dd {float:left;margin-left:.4rem;}
+		header .rt-area dl dd select,
+		header .rt-area dl dd input {vertical-align:top;}
+		header .len {float:left;margin-left:1rem;line-height:3.4rem;}
+		section {margin-top:3px;}
+		section h2 {position:relative;padding:0 1rem;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background-color:#ddd;color:#000;font-size:1.4rem;font-weight:500;line-height:3.4rem;}
+		section table {margin-bottom:-4px;}
+		table {width:100%;table-layout:fixed;border-collapse:collapse;border-right:1px solid #ddd;}
+		table tr:hover td {background-color:#f0ffff;transition:background-color .3s ease-in;}
+		table th,
+		table td {padding:.5rem 1rem;border-left:1px solid #ddd;border-bottom:1px solid #ddd;}
+		table th {background-color:#eee;}
+		table td a {display:block;color:#2277ee;outline:0;}
+		table td a:focus {background-color:#e4f6fd;color:red;}
+		.right {text-align:right;}
+		.stat,
+		.date {text-align:center;}
+		.contextmenu {display:none;position:fixed;top:50%;left:50%;z-index:100;padding:10px 0;background-color:rgba(0,0,0,.7);border:1px solid #000;box-shadow:2px 2px 6px rgba(0,0,0,.8);}
+		.contextmenu button {display:block;width:100%;padding:5px 40px 5px 20px;color:#fff;outline:0;}
+		.contextmenu button:hover {background-color:rgba(127,154,224,.6);}
+	</style>
+</head>
+
+<body>
+<header>
+	<h1>U+ 웹팩스 (PC)</h1>
+	<dl>
+		<dt>시작일 : </dt>
+		<dd class="date-start"> 2021-08-18</dd>
+		<dt>완료일 :</dt>
+		<dd class="date-end"></dd>
+		<dt>상태 :</dt>
+		<dd>완료(☆ : <span class="starBefore"></span>) / 검수완료(★ : <span class="starAfter"></span>)</dd>
+	</dl>
+	<!-- <div class="rt-area">
+		<dl>
+			<dt>구분</dt>
+			<dd>
+				<select>
+					<option>전체보기</option>
+				</select>
+			</dd>
+			<dd>
+				<input type="text" placeholder="검색어 입력">
+			</dd>
+		</dl>
+		<div class="len">
+			page : <span></span> / <span class="all"></span>
+		</div> -->
+	</div>
+</header>
+
+<!-- 가이드 -->
+<section>
+	<h2>가이드</h2>
+	<table>
+		<tbody>
+			<tr>
+				<td>가이드</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="right">/</td>
+				<td class="right"><a target="_blank" href="./guide.html">guide.html</a></td>
+				<td class="stat"></td>
+				<td class="date"></td>
+				<td></td>
+			</tr>			
+		</tbody>
+	</table>
+</section>
+
+<!-- 팩스 -->
+<section>
+	<h2>팩스</h2>
+	<table>
+		<tbody>
+			<tr>
+				<td>팩스 보내기</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="right">fax/</td>
+				<td class="right"><a target="_blank" href="fax/PC_fax_send_01.html">PC_fax_send_01.html</a></td>
+				<td class="stat"></td>
+				<td class="date"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>받은 팩스함</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="right">fax/</td>
+				<td class="right"><a target="_blank" href="fax/PC_fax_received_01.html">PC_fax_received_01.html</a></td>
+				<td class="stat"></td>
+				<td class="date"></td>
+				<td></td>
+			</tr>
+			
+		</tbody>
+	</table>
+</section>
+
+
+
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+$(window).on('load', function(){
+	/* 테이블정의 */
+	$('table').each(function(){
+		var tbl = '';
+		tbl += '<colgroup>';
+		tbl += '<col style="width:12%;">';//2depth
+		tbl += '<col style="width:12%;">';//3depth
+		tbl += '<col style="width:12%;">';//4depth
+		tbl += '<col style="width:12%;">';//5depth
+		tbl += '<col style="width:8%;">';//path
+		tbl += '<col>';                           //file
+		tbl += '<col style="width:50px;">';//stat
+		tbl += '<col style="width:100px;">';//date
+		tbl += '<col style="width:16%;">';//note
+		tbl += '</colgroup>';
+
+		tbl += '<thead><tr>';
+		tbl += '<th scope="col">2depth</th>';
+		tbl += '<th scope="col">3depth</th>';
+		tbl += '<th scope="col">4depth</th>';
+		tbl += '<th scope="col">5depth</th>';
+		tbl += '<th scope="col">path</th>';
+		tbl += '<th scope="col">file</th>';
+		tbl += '<th scope="col">stat</th>';
+		tbl += '<th scope="col">date</th>';
+		tbl += '<th scope="col">note</th>';
+		tbl += '</tr></thead>';
+		$(this).prepend(tbl);
+	});
+
+	/* 재미 */
+	$('h1').css({'transform':'scale(1.5) translateX(10%)', 'opacity':'.1', 'transition':'all 60s'});
+	$(document).on({
+		'mouseenter':function(){
+			$('h1').removeAttr('style').css({'transition':'all .2s ease-in'});
+		},
+		'mouseleave':function(){
+			$('h1').css({'transform':'scale(1.5) translateX(10%)', 'opacity':'.1', 'transition':'all 60s'});
+		}
+	});
+
+	/* 작업일자 */
+	$('table .date').each(function(){
+		if($(this).text().length == 0){
+			$(this).removeClass('date');
+		}
+	});
+
+	// $('html').each(function(){
+	// 	var $date = $(this).find('table .date');
+	// 	var dateArray = $date.map(function(){
+	// 		return $(this).text().replace(/-/g, '');
+	// 	});
+	// 	var dateMin = Math.min.apply(Math, dateArray);
+	// 	$('header .date-start').text(dateMin);
+	// 	var dateS = $('header .date-start').text();
+	// 	$('header .date-start').text(dateS.slice(0, 4) + '-' + dateS.slice(4, 6) + '-' + dateS.slice(6, 8));
+	// 	var dateMax = Math.max.apply(Math, dateArray);
+	// 	$('header .date-end').text(dateMax);
+	// 	var dateE = $('header .date-end').text();
+	// 	$('header .date-end').text(dateE.slice(0, 4) + '-' + dateE.slice(4, 6) + '-' + dateE.slice(6, 8));
+	// });
+
+	/* 작업공수 */
+	$('header .starBefore').each(function(){
+		var before = $('td.stat:contains("☆")').length;
+		$(this).text(before);
+	});
+	$('header .starAfter').each(function(){
+		var after = $('td.stat:contains("★")').length;
+		$(this).text(after);
+	});
+	$('header .len').each(function(){
+		var all = $('tbody tr').length;
+		var len = $('td.stat').text().length;
+		$(this).find('span').text(len);
+		$(this).find('.all').text(all);
+	});
+
+	/* 뎁스구분 */
+	$('section h2').each(function(){
+		var txt = $(this).text();
+		$('header select').append('<option>' + txt + '</option>');
+
+		var all = $(this).closest('section').find('tbody tr').length;
+		var len = $(this).closest('section').find('td.stat').text().length;
+		$(this).append('<span>(' + len + '/' + all + ')</span>');
+		$(this).find('span').css({
+			'position':'absolute',
+			'top':'50%',
+			'right':'1rem',
+			'transform':'translateY(-50%)'
+		});
+	});
+
+	/* 테이블토글 */
+	$(document).on('click', 'section h2', function(){
+		$(this).closest('section').find('table').toggleClass('hide');
+	});
+
+	/* 셀렉트 (1depth) */
+	// $(document).on('change', 'header select', function(){
+	// 	var vlu = $(this).val();
+	// 	if($(this).find('option:first-child').is(':selected') == true){
+	// 		$('section').removeClass('hide').show();
+	// 	}else{
+	// 		$('section').addClass('hide').hide();
+	// 		$('h2:contains("' + vlu + '")').closest('section').removeClass('hide').show();
+	// 	}
+	// 	$('header input').val('');
+	// 	srch();
+	// });
+	// $(document).on('keyup', 'header select', function(e){
+	// 	if(e.keyCode == 27){
+	// 		$(this).find('option:first-child').prop('selected', true);
+	// 		$(this).trigger('change');
+	// 	}
+	//});
+
+	/* 검색 */
+	// $(document).on('keyup', 'header input', function(e){
+	// 	if(e.keyCode == 27) $(this).val('');
+	// 	srch();
+	// });
+
+	/* 컨텍트메뉴 */
+	// $(document).bind('contextmenu rightclick', function(e){
+	// 	e.preventDefault();
+	// 	var x = e.pageX;
+	// 	var y = e.pageY;
+	// 	var top = $(window).scrollTop();
+	// 	var lft = $(window).scrollLeft();
+	// 	$('.contextmenu').css({'display':'block', 'top':y - top, 'left':x - lft,});
+	// });
+	// $(document).on('click', '.contextmenu button', function(){
+	// 	if($(this).hasClass('all-show')){
+	// 		$('table').removeClass('hide');
+	// 	}else{
+	// 		$('table').addClass('hide');
+	// 	}
+	// 	$('.contextmenu').css({'transform':'skewY(-2deg) scale(.9)','transition':'all .1s ease-in'});
+	// 	$('.contextmenu').bind('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(){
+	// 		$(this).delay(100).fadeOut(100, function(){
+	// 			$(this).removeAttr('style');
+	// 		});
+	// 	});
+	// });
+
+	// $(document).mouseup(function(e){
+	// 	var menu = $('.contextmenu');
+	// 	if(!menu.is(e.target) && menu.has(e.target).length === 0){
+	// 		menu.hide();
+	// 	}
+	// });
+});
+
+// $(window).scroll(function(){
+// 	var winTop = $(window).scrollTop();
+// 	if(winTop > 0){
+// 		$('header').addClass('scrl');
+// 	}else{
+// 		$('header').removeClass('scrl');
+// 	}
+// });
+
+// function srch(){
+// 	$('header input').each(function(){
+// 		var txt = $(this).val();
+// 		if(txt.length == 0){
+// 			$('span.pTxt').each(function(){
+// 				var reTxt = $(this).text();
+// 				$(this).replaceWith(reTxt);
+// 			});
+// 			$('section, tr').show();
+// 		}else{
+// 			$('section, tr').hide();
+// 			$('thead tr').show();
+// 			$('td:contains("' + txt + '")').closest('tr').show().closest('section').show();
+
+// 			$('table td').each(function(){
+// 				var sTxt = $(this).text();
+// 				var pTxt = sTxt.replace(new RegExp(txt,'gi'), '<span class="pTxt" style="color:red;font-weight:500;">' + txt + '</span>');
+
+// 				if($(this).find('a').length == 0){
+// 					$(this).html(pTxt);
+// 				}else{
+// 					$(this).find('a').html(pTxt);
+// 				}
+// 			});
+// 		}
+// 		$('section.hide').hide();
+// 		$('table').removeClass('hide');
+
+// 		$('html, body').scrollTop(0);
+// 	});
+// }
+</script>
+</body>
+
+</html>

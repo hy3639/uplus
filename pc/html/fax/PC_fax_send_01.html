@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>U+ 웹팩스</title>
-	<link rel="stylesheet" type="text/css" href="../css/common.css">
-	<link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.css">
 </head>
 
 <body>
@@ -99,8 +99,96 @@
 							<a href="#" class="btn-fax-send">
 								보낸 팩스함 <span class="txt">실패 <em class="f-pink">2</em> 건</span>
 							</a>
-						</div>					
-						<button type="button" class="btn-border btn-sm bg-white btn-fax-layer">발송현황</button>
+						</div>			
+						<div class="tooltip-area">
+							<button type="button" class="btn-border btn-sm bg-white btn-layer">발송현황</button>
+							<div class="tooltip-layer">
+								<button type="button" class="btn-tooltip-close">툴팁닫기</button>
+								<div class="send-status">
+									<div class="list">
+										<!-- 후불일경우 삭제 -->
+										<div class="item">
+											<p class="tit">받은 팩스</p>
+											<ul class="flex-list">
+												<li>
+													<span class="tit">수신요청</span>
+													<span class="cont">
+														<em class="f-mint">172</em> 
+														<em class="unit">건</em>
+													</span>
+												</li>
+												<li>
+													<span class="tit">페이지</span>
+													<span class="cont">
+														<em class="f-mint">2</em>
+														<em class="unit">P</em>
+													</span>
+												</li>
+											</ul>
+										</div>
+										<!--// 후불일경우 삭제 -->
+										<div class="item">
+											<p class="tit">보낸 팩스</p>
+											<ul class="flex-list">
+												<li>
+													<span class="tit">발신요청</span>
+													<span class="cont">
+														<em class="f-pink">172</em>
+														<em class="unit">건</em> 
+													</span>
+												</li>
+												<li>
+													<span class="tit">발신성공</span>
+													<span class="cont">
+														<em class="f-pink">12</em>
+														<em class="unit">건</em> 
+													</span>
+												</li>
+												<li>
+													<span class="tit">페이지</span>
+													<span class="cont">
+														<em class="f-pink">2</em>
+														<em class="unit">P</em>
+													</span>
+												</li>
+											</ul>
+										</div>
+										<div class="item">
+											<p class="tit">문자발송</p>
+											<ul class="flex-list">
+												<li>
+													<span class="tit">SMS</span>
+													<span class="cont">
+														<em class="f-purple">172</em>
+														<em class="unit">건</em>
+													</span>
+												</li>
+												<li>
+													<span class="tit">LMS</span>
+													<span class="cont">
+														<em class="f-purple">2</em>
+														<em class="unit">건</em>
+													</span>
+												</li>
+												<li>
+													<span class="tit">MMS</span>
+													<span class="cont">
+														<em class="f-purple">1</em>
+														<em class="unit">건</em>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="inner">
+										<div class="box-gray center">
+											<p class="txt">이용기간 : 2021-08-01 ~ 2021-08-31</p>
+										</div>
+										<p class="alert-txt">팩스 12시간, 단문 26시간 장문/포토문자 49시간 이내에 발송결과가 정리됩니다.</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="noti-area">					
 						<div class="swiper-container">
@@ -451,14 +539,14 @@
 </div>
 
 
-<script src="../js/jquery-3.3.1.js"></script>
-<script src="../js/jquery-ui.min.js"></script>
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="../js/swiper.min.js"></script>
-<script src="../js/common.js"></script>
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
+<script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
 <script>
 $(document).ready(function(){
-	
+
 	
     
 });
