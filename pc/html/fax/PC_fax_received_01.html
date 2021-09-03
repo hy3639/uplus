@@ -283,7 +283,7 @@
 											<li><button type="button">기타</button></li>
 											<li><button type="button">광고</button></li>
 										</ul>
-										<button type="button" class="button-layer">새 서식 만들기</button>
+										<button type="button" class="btnPop" title="Popup05">새 서식 만들기</button>
 									</div>
 								</div>
 							</div>
@@ -315,19 +315,26 @@
 					<div class="button-area justify board">
 						<div class="left">
 							<button type="button" class="btn-border btn-mid bg-white">팩스전송</button>
-							<button type="button" class="btn-border btn-mid bg-white">메일전송</button>
+							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup01">메일전송</button>
 							<button type="button" class="btn-border btn-mid bg-white">저장</button>
 							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
 
-							<span class="select-box ">
-								<select class="styled">
-									<option value="">문서보관함으로</option>															
-								</select>
-							</span>
+							<div class="select-area" style="width:140px">
+								<button type="button" class="button-select">문서보관함으로</button>
+								<div class="select-layer">												
+									<ul class="selBox">
+										<li><button type="button">문서보관함으로</button></li>
+										<li><button type="button">폴더1</button></li>
+										<li><button type="button">폴더2</button></li>
+										<li><button type="button">폴더3</button></li>
+									</ul>
+									<button type="button" class="btnPop" title="Popup04">새 폴더 만들기</button>
+								</div>
+							</div>
 							<button type="button" class="btn-border btn-mid bd-pink">이동</button>
 
-							<button type="button" class="btn-border btn-mid bg-white">발신번호 차단</button>
-							<button type="button" class="btn-border btn-mid bg-white">스팸신고</button>
+							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup03">발신번호 차단</button>
+							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup02">스팸신고</button>
 						</div>
 						<div class="right">
 							<span class="select-box">
@@ -847,6 +854,363 @@
 	</div>
 </div>
 
+<!-- 메일전송 -->
+<div class="layer-popup" title="Popup01">
+	<div class="popup">
+		<div class="popup-header">
+			<p class="title">메일전송</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<div class="form-list mgb15">
+				<label class="form-wrap">
+					<input type="checkbox" class="styled"> 나에게 보내기
+				</label>				
+			</div>
+			<div class="board-write">
+				<table>
+					<colgroup>
+						<col style="width:35%;">						
+						<col>					
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><label for="txt1">보내는 사람</label></th>
+							<td>
+								<div class="input-text wide">
+									<input type="text" id="txt1">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="txt2">받는사람</label></th>
+							<td>
+								<div class="input-btn">
+									<div class="input-text">
+										<input type="text" id="txt2">
+									</div>
+									<button type="button" class="btn-border btn-mid bd-pink">주소록</button>
+								</div>
+								
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="txt3">참조</label></th>
+							<td>
+								<div class="input-btn">
+									<div class="input-text">
+										<input type="text" id="txt3">
+									</div>
+									<button type="button" class="btn-border btn-mid bd-pink">주소록</button>
+								</div>
+								
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">첨부파일</th>
+							<td><span class="f-gray txt-attach">07048508029__0222152344_1629792870. 120654_20210824-171430.tif</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="txt4">제목</label></th>
+							<td>
+								<div class="input-text">
+									<input type="text" id="txt4">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="txt5">내용</label></th>
+							<td>
+								<div class="input-text">
+									<textarea id="txt5"></textarea>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink">등록</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 스팸신고 서비스 -->
+<div class="layer-popup" title="Popup02">
+	<div class="popup">
+		<div class="popup-header">
+			<p class="title">스팸신고 서비스 
+				<div class="tooltip-area">
+					<button type="button" class="btn-tooltip">툴팁</button>
+					<div class="tooltip-layer w450">						
+						<p class="txt">
+							<span class="tit-tooltip">스팸 신고 안내</span>
+							'웹팩스 스팸 간편신고 서비스'는 웹팩스 스팸 신고 전용이며, 이 외에
+							타용도로는 사용하실 수 없습니다. <br>
+							한국인터넷진흥원 불법스팸대응센터는 「정보통신망 이용촉진 및 정보보호 
+							등에 관한법률」 제52조제3항제10호에 따른 스팸 민원 고충상담 및 
+							민원처리를 위해 아래의 개인정보를 수집. 이용하고 있습니다.<br>
+							<span class="f-light sm">
+								- 아 래-<br>
+								제공되는 개인정보 : 수신일시,수신번호,발송번호,팩스원문,연락처 등 신고를 통해 
+								수집된 개인정보는 신고처리(스팸 고충 해결, 수사, 행정처분 등)를 위해 쓰이며, 필요한 
+								경우 해당 목적을 달성하기 위해 타 기관에 제공될 수 있습니다.<br><br>
+								
+								신고 시 비밀번호를 입력하신 경우에는 불법스팸대응센터 홈페이지
+								(http://spam.kisa.or.kr)에서 신고하신 내용을 조회할 수 있으며, 조회 없이 신고만 
+								하는 경우에는 비밀번호를 입력하지 않아도 됩니다.<br><br>
+
+								기타 자세한 사항은(국번없이) ☎118 또는 홈페이지를 통해 문의하시기 바랍니다.
+								또한, 허위로 신고하였을 경우 그로 인해 발생하는 모든 민.형사상 책임을 신고인이 
+								지게 되므로 유의하시기 바랍니다.<br><br>
+
+								신고된 내용이 미비하여 사실확인 진행이 어려운 경우 민원인에게 추가 자료를 요청할 
+								수 있으며, 자료 미제출 또는 제출된 증거자료도 미비할 경우에는 처리가 어려울 수
+								있습니다.
+							</span>
+						</p>
+					</div>
+				</div>
+			</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt mgb15">'웹팩스 스팸 간편신고 서비스'는 웹팩스 스팸 신고 전용이며, 이 외에 타용도로는 사용하실 수 없습니다.</p>
+			<div class="board-write">
+				<table>
+					<colgroup>
+						<col style="width:35%;">						
+						<col>					
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">스팸수신일시</th>
+							<td>2021.08.24 22:43:11</td>
+						</tr>
+						<tr>
+							<th scope="row">스팸수신번호</th>
+							<td>070-0000-0000</td>
+						</tr>
+						<tr>
+							<th scope="row"><label class="essential">연락처</label></th>
+							<td>
+								<div class="input-phone">
+									<span class="select-box">
+										<select class="styled">
+											<option value="">010</option>
+											<option value="">011</option>						
+										</select>
+									</span>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+								</div>
+								<p class="alert-txt">민원인에게 사실확인을 위해 연락드릴 수 있어 정확하게 입력해 주시기 바랍니다.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label class="essential">스팸신고번호</label></th>
+							<td>
+								<div class="input-phone">
+									<span class="select-box">
+										<select class="styled">
+											<option value="">010</option>
+											<option value="">011</option>						
+										</select>
+									</span>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+								</div>								
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label class="essential">개별수신팩스번호</label></th>
+							<td>
+								<div class="input-phone">
+									<span class="select-box">
+										<select class="styled">
+											<option value="">010</option>
+											<option value="">011</option>						
+										</select>
+									</span>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+								</div>
+								<p class="alert-txt">발신번호가 정확하지 않다고 판단하실 경우 본문 내에 있는 광고 전화번호를 입력해 주시기 바랍니다.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="txt1">비밀번호</label></th>
+							<td>
+								<div class="input-text">
+									<input type="password" id="txt1" placeholder="8자 이내의 영문 대소문자 숫자 조합" style="width:100%">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="txt2">비밀번호확인</label></th>
+							<td>
+								<div class="input-text">
+									<input type="password" id="txt2" style="width:100%">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label class="essential">개별수신팩스번호</label></th>
+							<td>
+								<div class="input-phone">
+									<span class="select-box">
+										<select class="styled">
+											<option value="">010</option>
+											<option value="">011</option>						
+										</select>
+									</span>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+								</div>
+								<p class="alert-txt">불법스팸대응센터 홈페이지(https://spam. kisa.or.kr)에서 신고 내용을 확인하기 위해서 필요하며 입력하지 않으셔도 됩니다.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink">신고하기</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 발신번호 차단 -->
+<div class="layer-popup" title="Popup03">
+	<div class="popup sm">
+		<div class="popup-header">
+			<p class="title">발신번호 차단</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				선택한 발신번호를 수신 차단 하시겠습니까?<br>
+				차단된 목록은 <span class="f-pink f-mid">[설정 > 전송금지번호]</span>에 추가 됩니다.
+			</p>			
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>
+			<button type="button" class="btn-mid bg-pink">예</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 발신번호 차단 -->
+<div class="layer-popup" title="Popup03">
+	<div class="popup sm">
+		<div class="popup-header">
+			<p class="title">발신번호 차단</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				선택한 발신번호를 수신 차단 하시겠습니까?<br>
+				차단된 목록은 <span class="f-pink f-mid">[설정 > 전송금지번호]</span>에 추가 됩니다.
+			</p>			
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>
+			<button type="button" class="btn-mid bg-pink">예</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 문서보관함 폴더 관리 -->
+<div class="layer-popup" title="Popup04">
+	<div class="popup sm">
+		<div class="popup-header">
+			<p class="title">문서 보관함 폴더 관리</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<ul class="form-list block">
+				<li>
+					<label for="newFolder">새 폴더 이름</label>
+					<div class="input-text">
+						<input type="text" id="newFolder" style="width:100%">
+					</div>
+				</li>
+			</ul>				
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink">만들기</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 새 서식 분류 -->
+<div class="layer-popup" title="Popup05">
+	<div class="popup sm">
+		<div class="popup-header">
+			<p class="title">새 서식 분류</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<ul class="form-list block">
+				<li>
+					<label for="newForm">새 서식 이름</label>
+					<div class="input-text">
+						<input type="text" id="newForm" style="width:100%">
+					</div>
+				</li>
+			</ul>				
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink btnPop" title="Popup07">만들기</button>			
+		</div>
+	</div>
+</div>
+
+<!-- alert -->
+<div class="layer-popup" title="Popup06">
+	<div class="popup sm">
+		<div class="popup-header">		
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				스팸신고를 위해 하나만 선택해 주십시오
+			</p>				
+		</div>
+		<div class="button-area center">			
+			<button type="button" class="btn-mid bg-pink">확인</button>			
+		</div>
+	</div>
+</div>
+
+<div class="layer-popup" title="Popup07">
+	<div class="popup sm">
+		<div class="popup-header">		
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				서식은 최대 3개까지 생성할 수 있습니다.
+			</p>				
+		</div>
+		<div class="button-area center">			
+			<button type="button" class="btn-mid bg-pink">확인</button>			
+		</div>
+	</div>
+</div>
 
 <script src="../../js/jquery-3.3.1.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>

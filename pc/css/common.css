@@ -633,12 +633,17 @@ footer  p {
 .w140 {width:140px !important}
 .w450 {width:450px !important}
 
+/*간격*/
+.mgb15 {margin-bottom:15px;}
+
 /*폰트*/
 .f-white {color:#fff !important}
 .f-pink {color:#e03d7c !important}
 .f-mint {color:#30b9a0 !important}
 .f-purple {color:#898af7 !important}
+.f-gray {color:#999 !important}
 
+.f-mid {font-weight:500}
 .f-light {font-weight:300}
 
 .underline {text-decoration: underline;}
@@ -704,11 +709,11 @@ footer  p {
 .tit-area .navi li:first-child {margin-left:0; padding-left:0}
 
 /* 블릿 text */
-.alert-txt {position:relative; font-size:12px; }
+.alert-txt {position:relative; font-size:12px; text-indent: -19px;margin-left: 19px;}
 .alert-txt:before {
 	content: '';
 	display:inline-block;
-	vertical-align: middle;
+	vertical-align: -2px;
 	margin-right:5px;
 	/* position:absolute;
 	left:0;
@@ -1034,13 +1039,13 @@ input[type=checkbox][class^=styled] {
 .select-area {position:relative;display:inline-block}
 .button-select {
 	width:100%;
-	height: 34px;
+	height: 32px;
     padding: 0 40px 0 10px;
     border: 1px solid #dbdbdb;
     background: #fff url(../images/icon/icon_16_down.png) no-repeat calc(100% - 10px) center;
     font-size: 13px;
 	text-align: left;
-    line-height: 32px;
+    line-height: 30px;
     box-sizing: border-box;
 }
 .button-select:disabled {opacity: .7;cursor: default;}
@@ -1066,7 +1071,7 @@ input[type=checkbox][class^=styled] {
 .select-layer .selBox li.on,
 .select-layer .selBox li:hover button {background-color:#ddd}
 /* .select-layer .selBox +  [class^=btn-] {margin-} */
-.select-layer > [class^=button-] {
+.select-layer > [class^=btn] {
 	width:100%;
 	padding:5px 10px;
 	border-top: 1px solid #ddd;
@@ -1078,13 +1083,16 @@ input[type=checkbox][class^=styled] {
 /* 인풋 */
 .input-text input,
 .input-text textarea{
-	height:34px;
+	height:32px;
 	padding:0 10px;
-	line-height:32px;
+	line-height:30px;
 	border:1px solid #dbdbdb;
 	font-size:13px;
 }
 
+/*인풋 폰*/
+.input-phone {display:flex; align-items: center;}
+.input-phone .hypen {padding:0 3px}
 /* ==============
 	테이블
 ============== */
@@ -1188,7 +1196,6 @@ input[type=checkbox][class^=styled] {
 
 /* 뷰 */
 .board-write {
-
 	border-top:1px solid #dbdbdb;
 	border-bottom:1px solid #dbdbdb;
 }
@@ -1218,13 +1225,33 @@ input[type=checkbox][class^=styled] {
 	font-size:13px;
 	text-align:left;
 }
+.board-write th .essential {position:relative;padding-left:8px}
+.board-write th .essential:before {
+	content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+	margin-top:-2px;
+	border-radius: 50%;
+    background-color: #e03d7c;
+}
 /* .board-write tbody th {padding:0;} */
 .board-write td {	
 	padding:7px 15px;
 	box-sizing:border-box;
+	font-size:13px;
 }
-
-
+.board-write td .input-btn {display:flex}
+.board-write td .input-btn .input-text + button {margin-left:4px}
+.board-write td .txt-attach {
+	display:inline-block;
+	font-size: 13px; 
+	font-weight: 300;
+	line-height: 20px;
+}
 tr.formSingle {display: none;}
 
 
@@ -1571,8 +1598,103 @@ tr.formSingle {display: none;}
 .ui-datepicker-current-day a {color:#fff}
 .ui-datepicker-calendar tbody tr td:first-child a {color:#e22267}
 
+/* ==============
+	레이어팝업
+============== */
+html.popOpen {overflow:hidden;}
+.layer-popup {
+    display:none;
+    overflow:auto;
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:100;
+    padding:50px 50px 0;
+    background-color:rgba(0,0,0,.6);
+}
+.layer-popup .popup {
+    position:relative;
+    width:450px;
+    margin:0 auto 50px;
+	padding-bottom:30px;
+    box-sizing:border-box;
+    background-color:#fff;
+}
+.layer-popup .popup.sm {width:360px;}
+.layer-popup .popup.sm .button-area > .btn-mid {min-width:104px}
+/* .layer-popup .popup.mid {width:450px;} */
 
+.layer-popup .popup-header {
+	min-height:54px;
+	position:relative;
+	padding:13px 30px;
+	background-color:#414550;
 
+}
+.layer-popup .popup-header .title {
+	display:inline-block;
+	font-size: 18px;
+	color:#fff;
+	font-weight: 500;
+}
+.layer-popup .popup-header .title + .tooltip-area {margin-left:5px;}
+.btn-tooltip {margin-top:-9px}
+.layer-popup .btn-close {
+    position:absolute;
+    top:50%;
+    right:16px;
+    width:25px;
+    height:25px;
+	margin-top:-12px;
+    border:0;
+    background-color:transparent;
+    font-size:0;
+    text-indent:-99999px;
+    line-height:0;
+    cursor:pointer;
+}
+.layer-popup .btn-close:before,
+.layer-popup .btn-close:after {
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:25px;
+    height:1px;
+    background-color:#ddd;
+}
+.layer-popup .btn-close:before {
+    transform:translate(-50%,-50%) rotate(45deg);
+}
+.layer-popup .btn-close:after {
+    transform:translate(-50%,-50%) rotate(135deg);
+}
+
+.layer-popup .popup-cont {
+	padding:30px 30px 10px 30px;
+}
+.layer-popup .popup-cont .guide-txt {font-size:13px; line-height: 18px;}
+.layer-popup .popup-cont label {font-weight: 500;}
+.layer-popup .popup-cont .form-list .chkbox{top:-2px}
+.layer-popup .popup-cont .form-list.block li label {font-size:13px; margin-bottom:10px}
+.layer-popup .popup-cont .board-write td .alert-txt {font-size:12px; font-weight: 300; margin-top:4px; line-height:16px}
+.layer-popup .button-area .btn-mid {
+	min-width:90px;
+	height:36px; 
+	line-height: 36px;
+}
+/* 팝업오픈 */
+.layer-popup .popup {
+    /* transform:scale(1.1); */
+    opacity:0;
+}
+.layer-popup.open .popup {
+    /* transform:scale(1); */
+    opacity:1;
+    transition:transform .3s, opacity .3s;
+}
 
 
 /* ==============
@@ -1663,11 +1785,11 @@ tr.formSingle {display: none;}
 .board-list .title-input.no-tit {display:block}
 .board-list .title-input.no-tit .btn-save {display:none}
 .board-list .title-input.no-tit input {border:0}
-.board-list .title-input  button {border:0; position:absolute; right:1px; top:1px; height:32px; font-size:13px}
+.board-list .title-input  button {border:0; position:absolute; right:1px; top:1px; height:30px; font-size:13px}
 .board-list .title-input .input-text input{ padding-right:40px}
 .button-area.board + [class^=board-] {margin-top:10px}
-.button-area.board .btn-border + .select-box {margin-left:10px} 
-.button-area.board .btn-border + .select-box + .btn-border {margin-right:10px}
+.button-area.board .btn-border + .select-area {margin-left:10px} 
+.button-area.board .btn-border + .select-area + .btn-border {margin-right:10px}
 
 .board-list table td .layer-box {position:relative}
 .board-list table .subject.on .layer-box {display: none;}
