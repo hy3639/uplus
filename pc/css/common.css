@@ -643,14 +643,15 @@ footer  p {
 .f-purple {color:#898af7 !important}
 .f-gray {color:#999 !important}
 
-.f-mid {font-weight:500}
-.f-light {font-weight:300}
+.f-mid {font-weight:500 !important}
+.f-light {font-weight:300 !important}
 
 .underline {text-decoration: underline;}
 
 /* 정렬 */
-.center {text-align: center;}
-.right {text-align: right;}
+.center {text-align: center !important;}
+.right {text-align: right !important;}
+.left {text-align: left !important;}
 
 /* 말줄임 */
 .ellipsis {
@@ -816,8 +817,33 @@ footer  p {
 }
 .icon-down:before {	
 	background:url(../images/icon/icon_16_down.png) no-repeat 0 0;
-	
+
 }
+.btn-more {
+	width:100%;
+	height:33px;
+	border:1px solid #dbdbdb;
+	color:#000;	
+	font-size: 13px;
+}
+.btn-more span {
+	position: relative;
+	padding-right:13px;
+}
+.btn-more span:before {
+	content:'';
+	position:absolute;
+	top:50%;
+	right:0;
+	width:6px;
+	height:6px;
+	margin-top:-4px;
+	border-right:2px solid #dbdbdb;
+	border-bottom:2px solid #dbdbdb;
+	transform:rotate(45deg);
+}
+.scroll-area + .btn-more {border-top:0px}
+
 .btn-xxs {
 	height:23px;
 	line-height: 21px;
@@ -1099,6 +1125,7 @@ input[type=checkbox][class^=styled] {
 [class^=board-] .input-text input[type="text"] {
 	width:100%;
 }
+.bdb0{border-bottom:0 !important}
 
 /* 리스트 테이블 */
 .board-list {
@@ -1184,15 +1211,7 @@ input[type=checkbox][class^=styled] {
 
 .board-list table .chkbox,
 .board-list table img {vertical-align:middle;}
-/* .board-list table td .icon-important {
-	display:inline-block;
-	width:44px;height:24px;
-	font-size:12px;
-	text-align:center;
-	background-color:#fff;
-	border:1px solid;
-	box-sizing:border-box;
-} */
+
 
 /* 뷰 */
 .board-write {
@@ -1254,6 +1273,54 @@ input[type=checkbox][class^=styled] {
 }
 tr.formSingle {display: none;}
 
+/* 스크롤테이블 */
+.scroll-board-list {
+	border-left:1px solid #dbdbdb;
+	border-right:1px solid #dbdbdb;
+	border-bottom:1px solid #dbdbdb;
+}
+.scroll-board-list table {
+	width:100%;
+	
+}
+.scroll-board-list.scroll-area {overflow:hidden;}
+.scroll-board-list .no-data p {padding:60px 0}
+.scroll-board-list table caption {display:none;}
+.scroll-board-list table thead th {
+	height:38px;
+	border-top:1px solid #dbdbdb;
+	border-bottom:1px solid #dbdbdb;
+	background-color:#f6f7f8;
+	font-size:13px;
+	color:#000;
+	font-weight:500;
+}
+/* .scroll-board-list table thead th:first-child,
+.scroll-board-list table tfoot th:first-child {border-left:1px solid #dbdbdb}
+.scroll-board-list table thead th:last-child,
+.scroll-board-list table tfoot th:last-child {border-right:1px solid #dbdbdb} */
+.scroll-board-list table tfoot th {
+	height:38px;
+	border-top:1px solid #dbdbdb;
+	/* border-bottom:1px solid #dbdbdb; */
+	background-color:#fff9f9;
+	font-size:13px;
+	color:#000;
+	font-weight:500;
+
+}
+.scroll-board-list table td {
+height: 38px;
+
+	color:#000;
+	font-size:13px;
+	text-align:center;
+	border-top:1px solid #f2f2f2;
+	word-wrap:break-word;
+	font-weight: 300;
+}
+
+.scroll-board-list table tr:first-child td {border-top:0} 
 
 
 /*그리드*/
@@ -1414,7 +1481,12 @@ tr.formSingle {display: none;}
 	background-color:#f6f7f8;
 	line-height:44px;
 }
-
+.tab-lst.sm .tab-item .btn {
+	height:38px;
+	line-height: 38px;
+	font-size:13px;
+}
+.tab-lst .tab-item .btn .txt {line-height: 38px;}
 /* on */
 .tab-lst .tab-item.on .btn,
 .tab-lst .tab-item.on .btn .txt {transition:all .2s;}
@@ -1426,12 +1498,16 @@ tr.formSingle {display: none;}
 	background-color:#fff;
 	border-color:#dbdbdb;
 	border-bottom-color:#fff;
-	line-height:44px;
+	/* line-height:44px; */
 }
 
 .tab-cont {display:none;}
 .tab-cont.on {display:block;}
 
+.layer-popup .tab-cont {margin-top:30px;}
+.layer-popup .lg .button-area .btn-mid {min-width:104px !important}
+.layer-popup .lg .box-gray .select-box + button {margin-left: 8px;}
+.layer-popup .lg .box-gray.search-area {margin-bottom:20px}
 
 .tab-lst.depth2 {
 	display:inline-flex
@@ -1625,6 +1701,7 @@ html.popOpen {overflow:hidden;}
 .layer-popup .popup.sm {width:360px;}
 .layer-popup .popup.sm .button-area > .btn-mid {min-width:104px}
 /* .layer-popup .popup.mid {width:450px;} */
+.layer-popup .popup.lg {width:560px;}
 
 .layer-popup .popup-header {
 	min-height:54px;
@@ -1748,7 +1825,7 @@ html.popOpen {overflow:hidden;}
 }
 .search-area .item:first-child {margin-left:0}
 .search-area .item label {
-	padding-right:3px;
+	padding-right:5px;
 	font-size:13px;
 	font-weight: 500;
 	vertical-align: inherit;
@@ -1808,7 +1885,7 @@ html.popOpen {overflow:hidden;}
 .board-list.fax td .tooltip-area .tooltip-layer.w140 li:first-child {margin-top:0}
 .board-list.fax .new-fax td,
 .board-list.fax .new-fax td > *:not(.btn-xxs) {font-weight: 500 !important;}
-.board-list.fax td .btn-xxs {}
+.board-list.sent td:last-child .btn-xxs {min-width:58px}
 .board-list.fax td.subject .btn-xxs {padding:0}
 .board-list.fax td.subject {}
 .board-list.fax .new-fax td .btn-tooltip.txt {font-weight:500}
@@ -1819,3 +1896,11 @@ html.popOpen {overflow:hidden;}
 }
 .board-list.fax .subject.on .button-input {display:none}
 .board-list.fax .subject.on .title-input {display:block !important}
+
+/* 보낸 팩스함 */
+.scroll-area + .btn-more + .guide-txt {
+	font-size: 12px;
+	font-weight: 300;
+	margin-top: 5px;
+}
+.scroll-area + .btn-more + .guide-txt span {font-weight: 500;}
