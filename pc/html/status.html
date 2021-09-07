@@ -169,7 +169,20 @@
 				<td class="stat"></td>
 				<td class="date">2021-09-06</td>
 				<td>					
-					레이어팝업: 주소,그룹추가/ 진행상태(재전송)
+					레이어팝업: 주소,그룹추가/ 진행상태(재전송) / 수신확인 문자발송 / 문자발송 결과
+				</td>
+			</tr>
+			<tr>
+				<td>문서 보관함</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="right">fax/</td>
+				<td class="right"><a target="_blank" href="fax/PC_fax_kept_01.html">PC_fax_kept_01.html</a></td>
+				<td class="stat"></td>
+				<td class="date">2021-09-07</td>
+				<td>					
+					레이어팝업: 폴더관리(리스트)/ 폴더관리(새폴더)/ 폴더관리(폴더이름수정) / 폴더관리(삭제)
 				</td>
 			</tr>
 		</tbody>
@@ -211,15 +224,15 @@ $(window).on('load', function(){
 	});
 
 	/* 재미 */
-	$('h1').css({'transform':'scale(1.5) translateX(10%)', 'opacity':'.1', 'transition':'all 60s'});
-	$(document).on({
-		'mouseenter':function(){
-			$('h1').removeAttr('style').css({'transition':'all .2s ease-in'});
-		},
-		'mouseleave':function(){
-			$('h1').css({'transform':'scale(1.5) translateX(10%)', 'opacity':'.1', 'transition':'all 60s'});
-		}
-	});
+	// $('h1').css({'transform':'scale(1.5) translateX(10%)', 'opacity':'.1', 'transition':'all 60s'});
+	// $(document).on({
+	// 	'mouseenter':function(){
+	// 		$('h1').removeAttr('style').css({'transition':'all .2s ease-in'});
+	// 	},
+	// 	'mouseleave':function(){
+	// 		$('h1').css({'transform':'scale(1.5) translateX(10%)', 'opacity':'.1', 'transition':'all 60s'});
+	// 	}
+	// });
 
 	/* 작업일자 */
 	$('table .date').each(function(){

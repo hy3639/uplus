@@ -42,13 +42,13 @@
 				<a href="#" class="btn-border btn-xs bg-gray col1">충전하기</a>
 			</div>
 			<div class="gnb">
-				<div class="gnb-item">
+				<div class="gnb-item on">
 					<button class="link"><span class="txt fax">팩스</span></button>
-					<div class="depth">
-						<a href="#" class="on">팩스 보내기</a> <!-- 메뉴 선택시 on 추가 -->
+					<div class="depth on">
+						<a href="#">팩스 보내기</a> 
 						<a href="#">받은 팩스함</a>
-						<a href="#">보낸 팩스함</a>
-						<a href="#">중요 문서함</a>
+						<a href="#"  class="on">보낸 팩스함</a><!-- 메뉴 선택시 on 추가 -->
+						<a href="#">문서 보관함</a>
 						<a href="#">수신번호 신청/관리</a>
 						<a href="#">휴지통</a>
 					</div>
@@ -293,7 +293,7 @@
 										<li><button type="button">폴더2</button></li>
 										<li><button type="button">폴더3</button></li>
 									</ul>
-									<button type="button" class="btnPop" title="Popup04">새 폴더 만들기</button>
+									<button type="button" class="btnPop" title="Popup03">새 폴더 만들기</button>
 								</div>
 							</div>
 							<button type="button" class="btn-border btn-mid bd-pink">이동</button>
@@ -376,7 +376,7 @@
 										<div class="layer-box">
 											<p class="tit ellipsis">조규찬</p>
 											<p class="tit ellipsis">010-7777-8888</p>										
-											<button type="button" class="btn-border btn-xxs bg-white btn-show" style="width:80px">문자발송</button>											
+											<button type="button" class="btn-border btn-xxs bg-white btn-show btnPop" title="Popup05" style="width:80px">문자발송</button>											
 										</div>
 									</td>
 									<td class="subject">
@@ -407,7 +407,7 @@
 										<li><button type="button">폴더2</button></li>
 										<li><button type="button">폴더3</button></li>
 									</ul>
-									<button type="button" class="btnPop" title="Popup04">새 폴더 만들기</button>
+									<button type="button" class="btnPop" title="Popup03">새 폴더 만들기</button>
 								</div>
 							</div>
 							<button type="button" class="btn-border btn-mid bd-pink">이동</button>
@@ -475,91 +475,6 @@
 		<!-- <button type="button" class="btn-quick">퀵메뉴버튼</button> -->
 	</div>
 </div>
-
-<!-- 메일전송 -->
-<!--
-<div class="layer-popup" title="Popup01">
-	<div class="popup">
-		<div class="popup-header">
-			<p class="title">메일전송</p>
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<div class="form-list mgb15">
-				<label class="form-wrap">
-					<input type="checkbox" class="styled"> 나에게 보내기
-				</label>				
-			</div>
-			<div class="board-write">
-				<table>
-					<colgroup>
-						<col style="width:35%;">						
-						<col>					
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="row"><label for="txt1">보내는 사람</label></th>
-							<td>
-								<div class="input-text wide">
-									<input type="text" id="txt1">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><label for="txt2">받는사람</label></th>
-							<td>
-								<div class="input-btn">
-									<div class="input-text">
-										<input type="text" id="txt2">
-									</div>
-									<button type="button" class="btn-border btn-mid bd-pink">주소록</button>
-								</div>
-								
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><label for="txt3">참조</label></th>
-							<td>
-								<div class="input-btn">
-									<div class="input-text">
-									<input type="text" id="txt3">
-									</div>
-									<button type="button" class="btn-border btn-mid bd-pink">주소록</button>
-								</div>
-								
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">첨부파일</th>
-							<td><span class="f-gray txt-attach">07048508029__0222152344_1629792870. 120654_20210824-171430.tif</span></td>
-						</tr>
-						<tr>
-							<th scope="row"><label for="txt4">제목</label></th>
-							<td>
-								<div class="input-text">
-									<input type="text" id="txt4">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><label for="txt5">내용</label></th>
-							<td>
-								<div class="input-text">
-									<textarea id="txt5"></textarea>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-		<div class="button-area center margin">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
-			<button type="button" class="btn-mid bg-pink">등록</button>			
-		</div>
-	</div>
-</div>
--->
 
 <!-- 진행상태(재전송) -->
 <div class="layer-popup" title="Popup01">
@@ -841,7 +756,7 @@
 </div>
 
 <!-- 주소/그룹추가 -->
-<div class="layer-popup" title="Popup02">
+<div class="layer-popup noneClose" title="Popup02">
 	<div class="popup">
 		<div class="popup-header">
 			<p class="title">주소/그룹추가</p>
@@ -859,6 +774,21 @@
 						<col>					
 					</colgroup>
 					<tbody>
+						<tr>
+							<th scope="row">그룹명</th>
+							<td>
+								<div class="select-area wide">
+									<button type="button" class="button-select">그룹명을 선택하세요</button>
+									<div class="select-layer">												
+										<ul class="selBox">
+											<li><button type="button">보험사 그룹</button></li>
+											<li><button type="button">캠페인 그룹</button></li>											
+										</ul>
+										<button type="button" class="btnPop" title="Popup04">그룹 만들기</button>
+									</div>
+								</div>
+							</td>
+						</tr>
 						<tr>
 							<th scope="row"><label for="txt1">이름</label></th>
 							<td>
@@ -902,8 +832,6 @@
 					</tbody>
 				</table>
 			</div>
-			<button type="button" class="btn-border btn-mid bg-white"><span>더보기</span></button>
-			<p class="guide-txt right">표시 항목 11개 / <span>총 20개</span></p>
 		</div>
 		<div class="button-area center margin">
 			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
@@ -912,48 +840,8 @@
 	</div>
 </div>
 
-<!-- 발신번호 차단 -->
-<div class="layer-popup" title="Popup03">
-	<div class="popup sm">
-		<div class="popup-header">
-			<p class="title">발신번호 차단</p>
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				선택한 발신번호를 수신 차단 하시겠습니까?<br>
-				차단된 목록은 <span class="f-pink f-mid">[설정 > 전송금지번호]</span>에 추가 됩니다.
-			</p>			
-		</div>
-		<div class="button-area center margin">
-			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>
-			<button type="button" class="btn-mid bg-pink">예</button>			
-		</div>
-	</div>
-</div>
-
-<!-- 발신번호 차단 -->
-<div class="layer-popup" title="Popup03">
-	<div class="popup sm">
-		<div class="popup-header">
-			<p class="title">발신번호 차단</p>
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				선택한 발신번호를 수신 차단 하시겠습니까?<br>
-				차단된 목록은 <span class="f-pink f-mid">[설정 > 전송금지번호]</span>에 추가 됩니다.
-			</p>			
-		</div>
-		<div class="button-area center margin">
-			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>
-			<button type="button" class="btn-mid bg-pink">예</button>			
-		</div>
-	</div>
-</div>
-
 <!-- 문서보관함 폴더 관리 -->
-<div class="layer-popup" title="Popup04">
+<div class="layer-popup" title="Popup03">
 	<div class="popup sm">
 		<div class="popup-header">
 			<p class="title">문서 보관함 폴더 관리</p>
@@ -976,43 +864,69 @@
 	</div>
 </div>
 
-<!-- 새 서식 분류 -->
-<div class="layer-popup" title="Popup05">
+<!-- 주소록 그룹만들기 -->
+<div class="layer-popup" title="Popup04">
 	<div class="popup sm">
 		<div class="popup-header">
-			<p class="title">새 서식 분류</p>
+			<p class="title">주소록 그룹 만들기</p>
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
 		<div class="popup-cont">
 			<ul class="form-list block">
 				<li>
-					<label for="newForm">새 서식 이름</label>
+					<label for="newFolder2">새 그룹 이름</label>
 					<div class="input-text">
-						<input type="text" id="newForm" style="width:100%">
+						<input type="text" id="newFolder2" style="width:100%">
 					</div>
 				</li>
 			</ul>				
 		</div>
 		<div class="button-area center margin">
 			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
-			<button type="button" class="btn-mid bg-pink btnPop" title="Popup07">만들기</button>			
+			<button type="button" class="btn-mid bg-pink">만들기</button>			
 		</div>
 	</div>
 </div>
 
-<!-- alert -->
-<div class="layer-popup" title="Popup06">
-	<div class="popup sm">
-		<div class="popup-header">		
+<!-- 수신확인 문자발송 -->
+<div class="layer-popup" title="Popup05">
+	<div class="popup mid">
+		<div class="popup-header">
+			<p class="title">수신확인 문자발송</p>
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
 		<div class="popup-cont">
-			<p class="guide-txt center">
-				스팸신고를 위해 하나만 선택해 주십시오
-			</p>				
+			<p class="guide-txt">
+				주소록에 저장 되어 있는 발신번호와 매칭되는 핸드폰 번호로 송신 완료 <br>
+				메시지를 전송합니다. 송신완료 메시를 전송하시겠습니까? <br>
+				(유료: 건 당 18원)
+			</p>
+			<div class="box-gray padding">
+				<p class="f-mid">메시지 예)</p>
+				[U+웹팩스] (홍길동)님이 032-0000-0000로 팩스를 <br>
+				전송했습니다.
+			</div>				
 		</div>
-		<div class="button-area center">			
-			<button type="button" class="btn-mid bg-pink">확인</button>			
+		<div class="button-area center margin">		
+			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>			
+			<button type="button" class="btn-mid bg-pink btnPop" title="Popup06">예</button>				
+		</div>
+	</div>
+</div>
+
+<!-- 문자발송 결과 -->
+<div class="layer-popup" title="Popup06">
+	<div class="popup xs">
+		<div class="popup-header">
+			<p class="title">문자발송 결과</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">SMS <span class="f-pink">[0]</span>건이 발송 되었습니다.</p>
+						
+		</div>
+		<div class="button-area center margin">				
+			<button type="button" class="btn-mid bg-pink popClose">확인</button>				
 		</div>
 	</div>
 </div>

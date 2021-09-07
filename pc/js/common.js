@@ -71,6 +71,14 @@ $('.btn-tooltip').mouseenter(function(){
 $('.btn-tooltip').mouseleave(function(){
 	$(this).next('.tooltip-layer').hide();
 });
+/* 다른곳 클릭시 툴팁 닫기 */
+$(document).mouseup(function(e){
+	var $toolBox = $('.tooltip-area');
+	if (!$toolBox.is(e.target) && $toolBox.has(e.target).length === 0){
+		$toolBox.find('.tooltip-layer').hide();	
+	}
+});
+
 
 /* 클릭형 툴팁 */
 $(document).on('click', '.btn-layer', function(){
@@ -94,14 +102,13 @@ $(document).on('click', '.button-select', function(){
 $('.select-layer button').each(function(){
 	$(this).click(function(){
 		var targetTag = $(this).closest('.select-area');		
-		if(!$(this).hasClass('button-layer')){				
+		if(!$(this).hasClass('btnPop')){				
 			var txt = $(this).text();		
-			targetTag.find('.button-select').text(txt);	
-			$(this).closest('li').siblings().removeClass('on');	
-			$(this).closest('li').addClass('on');			
+			targetTag.find('.button-select').text(txt).removeClass('on');	
+			$(this).closest('li').addClass('on').siblings().removeClass('on');		
 		}
 		targetTag.find('.select-layer').removeClass('on');
-		targetTag.find('.button-select').removeClass('on');
+		targetTag.find('.btnPop').removeClass('on');
 		
 	});
 });	
@@ -111,6 +118,7 @@ $(document).mouseup(function(e){
 	var $selBox = $('.select-area');
 	if (!$selBox.is(e.target) && $selBox.has(e.target).length === 0){
 		$selBox.find('.select-layer').removeClass('on');
+		$selBox.find('.btnPop').removeClass('on');
 		$selBox.find('.button-select').removeClass('on');
 	}
 });
@@ -150,8 +158,11 @@ $('.layer-box').mouseleave(function(){
 /* 테이블 제목 클릭시 수정폼 노출 */
 $(document).on('click', '.subject .btn-modify, .subject .button-input', function(){
 	var targetTd = 	$(this).closest('.subject');
+	var inputLen = targetTd.find('input').val().length;
+	
 //	targetTd.find('.layer-box').hide();
-	targetTd.addClass('on');
+	targetTd.find('input')[0].setSelectionRange(inputLen,inputLen);
+	targetTd.addClass('on').find('input').focus();
 });
 //닫기
 $(document).on('click', '.subject .btn-save', function(){
@@ -218,9 +229,13 @@ $(window).on('load', function(){
         $(this).addClass('on');
         $('html').addClass('popOpen');
 
-        $(this).closest('.layer-popup').fadeOut(300, function(){
-            $(this).removeClass('open');
-        });
+		//닫히지 않아야할경우 분기
+		if(!$(this).closest('.layer-popup').hasClass('noneClose')){
+			$(this).closest('.layer-popup').fadeOut(300, function(){
+				$(this).removeClass('open');
+			});
+		}
+        
         var name = $(this).attr('layer-name');
         $('.layer-popup[layer-name=' + name + ']').fadeIn(100, function(){
            // $(this).find('.firstTab').focus();
@@ -230,7 +245,7 @@ $(window).on('load', function(){
 		
     });
 
-    $(document).on('click', '.popClose', function(){
+    $(document).on('click', '.popClose, .layer-pop', function(){
         popClose();
     });
 /*=======// 레이어팝업 ======= */

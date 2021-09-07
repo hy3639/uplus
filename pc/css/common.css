@@ -819,7 +819,8 @@ footer  p {
 	background:url(../images/icon/icon_16_down.png) no-repeat 0 0;
 
 }
-.btn-more {
+.btn-more,
+.btn-add {
 	width:100%;
 	height:33px;
 	border:1px solid #dbdbdb;
@@ -842,7 +843,19 @@ footer  p {
 	border-bottom:2px solid #dbdbdb;
 	transform:rotate(45deg);
 }
-.scroll-area + .btn-more {border-top:0px}
+.btn-add {text-align: left;}
+.btn-add span {position:relative; padding-left:32px;font-weight:500;} 
+.btn-add span:before {
+	content:'';
+	position:absolute;
+	top:50%;
+	left:0;
+	width:20px;
+	height:20px;
+	margin-top:-10px;
+	background:url(../images/icon/address_group.png) no-repeat 0 0;
+}
+.scroll-area + [class*=btn-]{border-top:0px}
 
 .btn-xxs {
 	height:23px;
@@ -1063,6 +1076,7 @@ input[type=checkbox][class^=styled] {
 
 /* 디자인셀렉트 */
 .select-area {position:relative;display:inline-block}
+.select-area.wide {width:100%;display:block}
 .button-select {
 	width:100%;
 	height: 32px;
@@ -1097,7 +1111,8 @@ input[type=checkbox][class^=styled] {
 .select-layer .selBox li.on,
 .select-layer .selBox li:hover button {background-color:#ddd}
 /* .select-layer .selBox +  [class^=btn-] {margin-} */
-.select-layer > [class^=btn] {
+.select-layer > [class^=btn],
+.select-layer .button-layer {
 	width:100%;
 	padding:5px 10px;
 	border-top: 1px solid #ddd;
@@ -1275,20 +1290,21 @@ tr.formSingle {display: none;}
 
 /* 스크롤테이블 */
 .scroll-board-list {
-	border-left:1px solid #dbdbdb;
+	border:1px solid #dbdbdb;
+	/* border-left:1px solid #dbdbdb;
 	border-right:1px solid #dbdbdb;
-	border-bottom:1px solid #dbdbdb;
+	border-bottom:1px solid #dbdbdb; */
 }
+.scroll-board-list + .scroll-board-list {border-top:0}
 .scroll-board-list table {
-	width:100%;
-	
+	width:100%;	
 }
 .scroll-board-list.scroll-area {overflow:hidden;}
 .scroll-board-list .no-data p {padding:60px 0}
 .scroll-board-list table caption {display:none;}
 .scroll-board-list table thead th {
 	height:38px;
-	border-top:1px solid #dbdbdb;
+	/* border-top:1px solid #dbdbdb; */
 	border-bottom:1px solid #dbdbdb;
 	background-color:#f6f7f8;
 	font-size:13px;
@@ -1310,8 +1326,7 @@ tr.formSingle {display: none;}
 
 }
 .scroll-board-list table td {
-height: 38px;
-
+	height: 38px;
 	color:#000;
 	font-size:13px;
 	text-align:center;
@@ -1320,6 +1335,8 @@ height: 38px;
 	font-weight: 300;
 }
 
+.scroll-board-list .height32 td{height:32px}
+.scroll-board-list table td.bd-none {border-top:0}
 .scroll-board-list table tr:first-child td {border-top:0} 
 
 
@@ -1698,9 +1715,10 @@ html.popOpen {overflow:hidden;}
     box-sizing:border-box;
     background-color:#fff;
 }
+.layer-popup .popup.xs {width:280px;}
 .layer-popup .popup.sm {width:360px;}
 .layer-popup .popup.sm .button-area > .btn-mid {min-width:104px}
-/* .layer-popup .popup.mid {width:450px;} */
+.layer-popup .popup.mid {width:430px;}
 .layer-popup .popup.lg {width:560px;}
 
 .layer-popup .popup-header {
@@ -1753,12 +1771,13 @@ html.popOpen {overflow:hidden;}
 	padding:30px 30px 10px 30px;
 }
 .layer-popup .popup-cont .guide-txt {font-size:13px; line-height: 18px;}
+.layer-popup .popup-cont .guide-txt2 {font-size:14px; line-height: 18px; margin-top:10px}
 .layer-popup .popup-cont label {font-weight: 500;}
 .layer-popup .popup-cont .form-list .chkbox{top:-2px}
 .layer-popup .popup-cont .form-list.block li label {font-size:13px; margin-bottom:10px}
 .layer-popup .popup-cont .board-write td .alert-txt {font-size:12px; font-weight: 300; margin-top:4px; line-height:16px}
 .layer-popup .button-area .btn-mid {
-	min-width:90px;
+	min-width:104px;
 	height:36px; 
 	line-height: 36px;
 }
@@ -1904,3 +1923,7 @@ html.popOpen {overflow:hidden;}
 	margin-top: 5px;
 }
 .scroll-area + .btn-more + .guide-txt span {font-weight: 500;}
+
+.guide-txt + .box-gray {margin-top: 15px; font-size:13px; line-height: 18px;}
+.layer-popup .box-gray.padding {padding:15px 20px}
+.layer-popup .box-gray.padding .f-mid {margin-bottom: 4px;}

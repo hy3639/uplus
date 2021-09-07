@@ -42,13 +42,13 @@
 				<a href="#" class="btn-border btn-xs bg-gray col1">충전하기</a>
 			</div>
 			<div class="gnb">
-				<div class="gnb-item">
+				<div class="gnb-item on">
 					<button class="link"><span class="txt fax">팩스</span></button>
-					<div class="depth">
-						<a href="#" class="on">팩스 보내기</a> <!-- 메뉴 선택시 on 추가 -->
-						<a href="#">받은 팩스함</a>
+					<div class="depth on">
+						<a href="#" >팩스 보내기</a> 
+						<a href="#" class="on">받은 팩스함</a><!-- 메뉴 선택시 on 추가 -->
 						<a href="#">보낸 팩스함</a>
-						<a href="#">중요 문서함</a>
+						<a href="#">문서 보관함</a>
 						<a href="#">수신번호 신청/관리</a>
 						<a href="#">휴지통</a>
 					</div>
@@ -780,11 +780,18 @@
 							<button type="button" class="btn-border btn-mid bg-white">저장</button>
 							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
 
-							<span class="select-box ">
-								<select class="styled">
-									<option value="">문서보관함으로</option>															
-								</select>
-							</span>
+							<div class="select-area" style="width:140px">
+								<button type="button" class="button-select">문서보관함으로</button>
+								<div class="select-layer">												
+									<ul class="selBox">
+										<li><button type="button">문서보관함으로</button></li>
+										<li><button type="button">폴더1</button></li>
+										<li><button type="button">폴더2</button></li>
+										<li><button type="button">폴더3</button></li>
+									</ul>
+									<button type="button" class="btnPop" title="Popup04">새 폴더 만들기</button>
+								</div>
+							</div>
 							<button type="button" class="btn-border btn-mid bd-pink">이동</button>
 
 							<button type="button" class="btn-border btn-mid bg-white">발신번호 차단</button>
@@ -1112,7 +1119,7 @@
 </div>
 
 <!-- 발신번호 차단 -->
-<div class="layer-popup" title="Popup03">
+<!-- <div class="layer-popup" title="Popup03">
 	<div class="popup sm">
 		<div class="popup-header">
 			<p class="title">발신번호 차단</p>
@@ -1129,7 +1136,7 @@
 			<button type="button" class="btn-mid bg-pink">예</button>			
 		</div>
 	</div>
-</div>
+</div> -->
 
 <!-- 문서보관함 폴더 관리 -->
 <div class="layer-popup" title="Popup04">
