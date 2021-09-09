@@ -136,6 +136,16 @@ $('.formSingle').each(function(){
 	});
 });
 
+/* 라디오 선택시 컨텐츠 영역 노출 : 다수*/
+$('.formChange').each(function(){
+	var idx = $(this).find('.form-list input[type=radio]:checked').parent('.form-wrap').index();
+	$(this).find('.formItem').eq(idx).show();	
+	$(this).find('.form-list input[type=radio]').change(function(){		
+		var on = $(this).closest('.form-list').find('input[type=radio]:checked').closest('.form-wrap').index();
+		$(this).closest('.formChange').find('.formItem').hide().eq(on).show();
+	});
+});
+
 /*=======// 폼 ======= */
 
 /*======= 테이블 ======= */
@@ -245,7 +255,7 @@ $(window).on('load', function(){
 		
     });
 
-    $(document).on('click', '.popClose, .layer-pop', function(){
+    $(document).on('click', '.popClose, .layer-popup', function(){
         popClose();
     });
 /*=======// 레이어팝업 ======= */
@@ -264,7 +274,7 @@ $(window).scroll(function(){
 
 /* 라디오,체크박스*/
 function rdoCheck(){
-    $('input[type=radio].styled, input[type=checkbox].styled').each(function(){
+    $('input[type=radio].styled, input[type=checkbox].styled,input[type=checkbox].styled2').each(function(){
         if(!$(this).parent().hasClass('chkbox')){
             $(this).wrap('<span class="chkbox"></span>');
             var $chk = $(this).closest('.chkbox');

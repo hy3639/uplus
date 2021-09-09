@@ -10,141 +10,122 @@
 
 <body>
 <div class="wrapper login">
-	<header>
-		<div class="header">
-			<h1 class="s-logo"><a href="#" class="logo">U+ 웹팩스</a></h1>
-			<div class="link-area">
-				<a href="#">서비스 소개</a>
-				<a href="#">서비스 소개</a>
-				<a href="#">서비스 소개</a>
-				<a href="https://webfax.uplus.co.kr/join/step1-hostTestUser" target="_blank">서비스 소개</a>
-			</div>			
-		</div>
-	</header>
-	<div class="container">
-		<div class="login_form">
-			<h2>로그인</h2>
-			<div class="login_write">
-				<form id="loginfrm" name="loginfrm" method="post" action="/login" autocomplete="off">
-					<input type="hidden" name="loginRedirect" value="/user/logincheck.do">
-					<input type="hidden" name="defaultFailerUrl" value="/user/logincheck.do">
-					<fieldset>
-					   <legend class="blind">로그인폼</legend>
-					   <div class="input">
-						   <div class="input_lg">
-							   <div id="txtId" class="txt icon_id">
-								   <input type="text" value="" id="inputId" maxlength="50" placeholder="아이디를 입력해 주세요." class="text" name="username">
-								   <svg focusable="false" viewBox="0 0 24 24" class="i_error" style="display:none; fill: rgb(252, 83, 86); height: 14px; width: 14px; user-select: none; position: absolute; top: 50%; right: 6px; pointer-events: none; margin-top: -7px;"><path d="M12,0.054C5.407,0.054,0.054,5.407,0.054,12c0,6.596,5.353,11.946,11.946,11.946 c6.593,0,11.946-5.351,11.946-11.946C23.946,5.407,18.593,0.054,12,0.054z M13.627,18.859h-3.446v-3.546h3.446V18.859z M13.627,13.685h-3.446V5.081h3.446V13.685z"></path></svg>
-								   <svg focusable="false" viewBox="0 0 24 24" class="i_complete" style="display:none; fill: rgb(31, 196, 124); height: 14px; width: 14px; user-select: none; position: absolute; top: 50%; right: 6px; pointer-events: none; margin-top: -7px;"><path d="M12.001,0.075C5.417,0.075,0.072,5.417,0.072,12c0,6.582,5.342,11.926,11.929,11.926c6.584,0,11.927-5.342,11.927-11.926 C23.927,5.419,18.583,0.075,12.001,0.075z M9.833,18.443L9.797,18.41L9.71,18.498l-5.686-5.791L6.5,10.235l3.24,3.303l6.963-7.122 l2.473,2.47L9.833,18.443z"></path></svg>
-							   </div>
-						   </div>
-						   <div id="warnId" class="lg_ex error" style="display: none;">아이디를 입력해 주세요.</div>
-					   </div>
-					   <div class="input">
-						   <div class="input_lg">
-							   <div id="txtPwd" class="txt icon_pw">
-								   <input type="password" autocomplete="off" id="inputPw" maxlength="20" placeholder="비밀번호를 입력하세요." class="password" name="password">
-								   <svg focusable="false" viewBox="0 0 24 24" class="i_error" style="display:none; fill: rgb(252, 83, 86); height: 14px; width: 14px; user-select: none; position: absolute; top: 50%; right: 6px; pointer-events: none; margin-top: -7px;"><path d="M12,0.054C5.407,0.054,0.054,5.407,0.054,12c0,6.596,5.353,11.946,11.946,11.946 c6.593,0,11.946-5.351,11.946-11.946C23.946,5.407,18.593,0.054,12,0.054z M13.627,18.859h-3.446v-3.546h3.446V18.859z M13.627,13.685h-3.446V5.081h3.446V13.685z"></path></svg><!-- 20210105 수정 -->
-								   <svg focusable="false" viewBox="0 0 24 24" class="i_complete" style="display:none; fill: rgb(31, 196, 124); height: 14px; width: 14px; user-select: none; position: absolute; top: 50%; right: 6px; pointer-events: none; margin-top: -7px;"><path d="M12.001,0.075C5.417,0.075,0.072,5.417,0.072,12c0,6.582,5.342,11.926,11.929,11.926c6.584,0,11.927-5.342,11.927-11.926 C23.927,5.419,18.583,0.075,12.001,0.075z M9.833,18.443L9.797,18.41L9.71,18.498l-5.686-5.791L6.5,10.235l3.24,3.303l6.963-7.122 l2.473,2.47L9.833,18.443z"></path></svg>
-							   </div>
-						   </div>
-						   <div id="warnPw" class="lg_ex error" style="display: none;">비밀번호을 입력해 주세요.</div>
-						   <div id="warnIdPw" class="lg_ex error" style="display: none;">아이디 또는 비밀번호가 올바르지 않습니다. (로그인 실패 횟수: 1/10)</div>
-					   </div>
-					   <button type="button" class="loginbtn" id="btnLogin">로그인</button>
-				   </fieldset>
-				   <div class="login_info login_info_v2">
-					   <div class="chk_id">
-						   <input type="checkbox" id="input_forid_ckbox1">
-						   <label for="input_forid_ckbox1">아이디 저장</label>
-					   </div>
-					   <ul>
-						   <li><a href="javascript:;" id="btnSearchId" target="_self">아이디 찾기</a></li>
-						   <li><a href="javascript:;" id="btnSearchPasswd" target="_self">비밀번호 찾기</a></li>
-						   <li><a href="javascript:;" id="btnJoinMember" target="_self">회원가입</a></li>
-					   </ul>
-				   </div>
-				   <div class="lg_banner">
-						   <div class="lg_btn_all">
-							<a href="javascript:void(0);" class="btn_ban_01" onclick="fncOpenQuidePop('joinGuidPop', '');">특수계정등록팝업</a>
-							<a href="javascript:void(0);" class="btn_ban_02" onclick="fncOpenQuidePop('newUserGuidePop', '1');">신규회원가입절차</a>
-							<a href="javascript:void(0);" class="btn_ban_03" onclick="fncOpenQuidePop('oldUserGuidePop', '2');">기존사이트이용고객가이드</a>
-						</div>
+	<div class="header">
+		<h1 class="s-logo"><a href="#" class="logo">U+ 웹팩스</a></h1>
+		<ul class="link-area">
+			<li><a href="#">서비스 소개</a></li>
+			<li><a href="#">요금안내</a></li>
+			<li><a href="#">비즈마켓 이벤트</a></li>
+			<li>
+				<div class="tooltip-area">
+					<button type="button" class="btn-tooltip">툴팁</button>
+					<div class="tooltip-layer">						
+						<p class="txt">U+ 웹팩스 엔진을 설치하여 LG U+ 시스템과 연동을 통해 팩스를 송수신하는 방식 입니다.</p>
 					</div>
-				</form>
+				</div>
+				<a href="https://webfax.uplus.co.kr/join/step1-hostTestUser" target="_blank">호스트 모듈 신청</a>				
+			</li>			
+		</ul>			
+	</div>
+	<div class="container">
+		<div class="login-area">
+			<p class="title center">
+				<span class="f-pink">U+ 웹팩스</span>는 <span>LG유플러스가 자체 개발한 솔루션</span>으로<br>
+				안정성과 보안성이 검증된 팩스 시스템입니다
+			</p>
+			<div class="login-form">
+				<div class="input-text">
+					<input type="text" placeholder="아이디">
+				</div>
+				<div class="input-text">
+					<input type="password" placeholder="비밀번호">
+				</div>
+				<div class="login-info">
+					<label class="f-mid">
+						<input type="checkbox" class="styled2" checked>
+						아이디 저장
+					</label>
+					<a href="javascript:;" target="_self">아이디/ 비밀번호 찾기</a>
+				</div>
+				<div class="err-txt">
+					<!-- <p>아이디를 입력해주세요.</p>
+					<p>비밀번호를 입력해주세요.</p> -->
+					<p>
+						5회 이상 로그인 실패로 30분 동안 접속이 제한됩니다.<br>
+						(30분 후 로그인 가능합니다.)
+					</p>
+				</div>  
+				<button type="button" class="btn-login btnPop" title="Popup01">로그인</button>				
 			</div>
+			<a href="#" class="f-pink f-mid">서비스 신청하기</a>
 		</div>
 	</div>
-	<footer>
-		<p>Copyright © 2021 <span class="f-pink">LG UPlus.</span> All rights reserved.</p>
-	</footer>
+	<div class="footer">
+		<ul class="link-area">
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">스팸정책</a></li>
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#" class="f-bold">개인정보처리방침</a></li>
+			<li><a href="#">이메일주소무단수집거부</a></li>
+		</ul>
+		<p class="copyright">Copyright © 2021 LG UPlus. All rights reserved.</p>
+	</div>
 	
 </div>
 
 
-<!-- 폴더 관리 (새폴더만들기) -->
+<!-- 로그인 5회 이상 실패시 -->
 <div class="layer-popup" title="Popup01">
 	<div class="popup sm">
-		<div class="popup-header">
-			<p class="title">폴더 관리</p>
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<ul class="form-list block">
-				<li>
-					<label for="newFolder">새 폴더 이름</label>
-					<div class="input-text">
-						<input type="text" id="newFolder" style="width:100%">
-					</div>
-				</li>
-			</ul>				
-		</div>
-		<div class="button-area center margin">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
-			<button type="button" class="btn-mid bg-pink">만들기</button>			
-		</div>
-	</div>
-</div>
-
-<!-- 폴더 관리 (폴더이름 수정) -->
-<div class="layer-popup" title="Popup02">
-	<div class="popup sm">
-		<div class="popup-header">
-			<p class="title">폴더 관리</p>
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<ul class="form-list block">
-				<li>
-					<label for="FolderModify">폴더 이름 수정</label>
-					<div class="input-text">
-						<input type="text" id="FolderModify" style="width:100%">
-					</div>
-				</li>
-			</ul>				
-		</div>
-		<div class="button-area center margin">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
-			<button type="button" class="btn-mid bg-pink" title="Popup07">수정</button>			
-		</div>
-	</div>
-</div>
-
-
-<div class="layer-popup" title="Popup03">
-	<div class="popup sm">
-		<div class="popup-header">	
-			<p class="title">폴더 관리</p>	
+		<div class="popup-header">			
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
 		<div class="popup-cont">
 			<p class="guide-txt center">
-				선택한 폴더를 삭제하시겠습니까?
+				5회 이상 로그인 실패로 30분 동안 접속이 제한됩니다.<br>
+				(30분 후 로그인 가능합니다.)
 			</p>				
 		</div>
-		<div class="button-area  margin center">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
-			<button type="button" class="btn-mid bg-pink">확인</button>			
+		<div class="button-area center">			
+			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 6개월이상 비밀번호 변경하지 않은 경우 -->
+<div class="layer-popup" title="Popup02">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				6개월 이상 비밀번호를 변경하지 않으셨습니다.<br>
+				지금 변경하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area center margin">			
+			<button type="button" class="btn-mid btn-border bg-white popClose">다음에 변경</button>
+			<button type="button" class="btn-mid bg-pink">지금 변경</button>
+		</div>
+	</div>
+</div>
+
+<!-- 그룹웨어 연동 아이디일경우 -->
+<div class="layer-popup" title="Popup03">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				그룹웨어 연동 아이디는 그룹웨어에서 변경하시기 바랍니다.<br>
+				그룹웨어로 이동 할까요?
+			</p>				
+		</div>
+		<div class="button-area center margin">			
+			<button type="button" class="btn-mid btn-border bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink">이동</button>
 		</div>
 	</div>
 </div>
