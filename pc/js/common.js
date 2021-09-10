@@ -330,8 +330,8 @@ function resQuick(){
 
 // 레이어팝업 설정
 function layerPop(){
-    $('.btnPop, .layer-popup').each(function(){
-        var tit = $(this).attr('title');
+    $('.btnPop, .layer-popup').each(function(){ 
+       var tit = $(this).attr('title');
         $(this).attr('layer-name', tit).removeAttr('title');
     });
 
@@ -342,8 +342,7 @@ function layerPop(){
         var mgB = $(this).find('.popup').css('margin-bottom');
         var space = mgB.replace(/px/g, '') * 2;
 
-		console.log(hei);
-		console.log(popH);
+	
         if(hei - space < popH){
             $(this).css({'padding-top':mgB});
         }else{
