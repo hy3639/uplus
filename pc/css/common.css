@@ -1001,6 +1001,7 @@ footer  p {
 * + .button-area {margin-top:10px}
 .button-area.justify {justify-content: space-between;}
 .button-area.center {justify-content: center;}
+.button-area.right {justify-content: flex-end;}
 .button-area .col1 {flex:1}
 .button-area.margin [class^=btn-] + [class^=btn-] {margin-left:4px}
 .button-area button[class^=btn-] {vertical-align: top;}
@@ -1856,6 +1857,7 @@ html.popOpen {overflow:hidden;}
 .layer-popup .popup.sm .button-area > .btn-mid {min-width:104px}
 .layer-popup .popup.mid {width:430px;}
 .layer-popup .popup.lg {width:560px;}
+.layer-popup .popup.xl {width:680px;}
 
 .layer-popup .popup-header {
 	min-height:54px;
@@ -1906,6 +1908,9 @@ html.popOpen {overflow:hidden;}
 .layer-popup .popup-cont {
 	padding:30px 30px 10px 30px;
 }
+.layer-popup .popup-cont .button-area + .grid-area {margin-top:10px;}
+.layer-popup .popup-cont .grid-area {background-color:#ddd; height: 310px;}
+.layer-popup .popup-cont .grid-area + .pagenation {margin-top: 16px;}
 .layer-popup .popup-cont .guide-txt {font-size:13px; line-height: 18px;}
 .layer-popup .popup-cont .guide-txt2 {font-size:14px; line-height: 18px; margin-top:10px}
 .layer-popup .popup-cont label {font-weight: 500;}

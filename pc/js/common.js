@@ -255,9 +255,24 @@ $(window).on('load', function(){
 		
     });
 
-    $(document).on('click', '.popClose, .layer-popup', function(){
+    $(document).on('click', '.popClose', function(){
         popClose();
     });
+
+	// $(document).mouseup(function (e){
+	// 	var LayerPopup = $(".popup");
+	// 	console.log(LayerPopup.has(e.target).length);
+	// 	if(LayerPopup.has(e.target).length === 0){
+	// 		LayerPopup.removeClass("open");
+	// 		$('.layer-popup').each(function(){
+	// 			$(this).removeClass('open').scrollTop(0).fadeOut(300, function(){
+	// 				$('.btnPop.on').focus().removeClass('on');
+	// 				$('html').removeClass('popOpen');
+	// 			});
+	// 		});
+			
+	// 	}		
+	// });
 /*=======// 레이어팝업 ======= */
 
 });

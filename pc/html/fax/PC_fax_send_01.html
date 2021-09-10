@@ -48,7 +48,7 @@
 						<a href="#" class="on">팩스 보내기</a> <!-- 메뉴 선택시 on 추가 -->
 						<a href="#">받은 팩스함</a>
 						<a href="#">보낸 팩스함</a>
-						<a href="#">중요 문서함</a>
+						<a href="#">문서 보관함</a>
 						<a href="#">수신번호 신청/관리</a>
 						<a href="#">휴지통</a>
 					</div>
@@ -399,7 +399,7 @@
 									</div>
 									<div class="right">
 										<a href="#" class="btn-mid bg-pink">파일첨부</a>
-										<a href="#" class="btn-mid bg-gray">문서보관함</a>										
+										<a href="#" class="btn-mid bg-gray btnPop" title="Popup01">문서보관함</a>										
 									</div>
 								</div>
 								<div class="count-area right">
@@ -549,6 +549,60 @@
 	</div>
 </div>
 
+<!-- 문서보관함 -->
+<div class="layer-popup noneClose" title="Popup01">
+	<div class="popup xl">
+		<div class="popup-header">
+			<p class="title">문서 보관함</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<div class="button-area right">
+				<span class="select-box">
+					<select class="styled">
+						<option value="">20개씩 보기</option>															
+					</select>
+				</span>	
+			</div>
+			<div class="grid-area scroll-area">
+				그리드영역
+			</div>
+			<div class="pagenation">
+				<a href="#" class="btn-first page">처음</a>
+				<a href="#" class="btn-prev page">이전</a>
+				<span class="page now">1</span>
+				<a href="#" class="page">2</a>
+				<a href="#" class="page">3</a>
+				<a href="#" class="page">4</a>
+				<a href="#" class="page">5</a>				
+				<a href="#" class="btn-next page">다음</a>
+				<a href="#" class="btn-last page">마지막</a>
+			</div>
+		</div>
+		<div class="button-area center">			
+			<button type="button" class="btn-mid bg-pink btnPop" title="Popup02">문서 적용</button>			
+		</div>
+		
+	</div>
+</div>
+
+<!-- 중복제거 -->
+<div class="layer-popup" title="Popup02">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				중복 항목을 삭제 하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area center margin">			
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>	
+			<button type="button" class="btn-mid bg-pink">확인</button>			
+		</div>
+	</div>
+</div>
 
 <script src="../../js/jquery-3.3.1.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>
