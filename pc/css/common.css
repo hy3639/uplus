@@ -2343,3 +2343,156 @@ html.popOpen {overflow:hidden;}
 	flex: 1;
 	margin-right: 5px;
 }
+
+/* 팩스 미리보기 */
+.faxviewer {}
+.faxviewer.open .fax-content {left: 294px;}
+.faxviewer.open .fax-content .fax-nav {left:294px}
+.faxviewer .fax-header{
+	position: fixed;
+	left: 0;
+	right:0;
+	top: 0;
+	/* height:52px; */
+	padding:10px 20px;
+	background-color: #f6f7f8;
+	z-index: 50;
+}
+.faxviewer .fax-header .date {
+	position: absolute;
+	left:20px;
+	top:50%;
+	 margin-top: -10px;
+	font-size: 14px;
+}
+.faxviewer .fax-header .paging {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.faxviewer .fax-header .paging input {
+	width:46px;
+	text-align: center;
+	font-size: 16px;
+}
+.faxviewer .fax-header .paging button + .input-text {margin-left: 20px;}
+.faxviewer .fax-header .paging  .input-text + button {margin-left: 20px;}
+.input-text.divider {padding:0 10px}
+
+.fax-content-wrap {
+
+}
+.fax-content-wrap .sidebar-wrap{
+	
+	/* min-height: calc(100vh - 52px); */
+
+}
+.sidebar-wrap .side-content {
+	position: fixed;
+	width: 200px;
+    top: 52px;
+    left: -200px;
+    bottom: 0;
+	background-color:#e8e9ea;
+    z-index: 99;
+    overflow: hidden;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.fax-content-wrap .sidebar-wrap .side-content.open {left:94px}
+.sidebar {
+	position:fixed;
+	top: 52px;
+	bottom: 0;
+	width:94px;
+	left: 0;
+	z-index: 150;
+	background-color:#414550;
+}
+.sidebar .toolbar button {
+	position:relative;
+	width:100%;
+	height: 74px;
+	border-bottom:1px solid #5b5b5b;
+}
+.sidebar .toolbar button span {
+	/* position: relative; */
+	/* padding-top: 40px; */
+	display: block;
+	width:100%;
+	font-size: 14px;
+	color:#fff;
+	position:absolute;
+	left:50%;
+	margin-left:-49px;
+	top:12px;
+
+}
+.sidebar .toolbar button span:before {
+	content: '';
+	display: block;
+	margin:0 auto 5px auto;
+	/*position:absolute;
+	 top:12px; 
+	left:50%;
+	margin-left:-13px;*/
+	width:26px;
+	height:26px;	
+}
+.sidebar .toolbar .item1 span:before {background:url(../images/fax/icon_26_list.png) no-repeat 0 0;}
+.sidebar .toolbar .item2 span:before {background:url(../images/fax/icon_26_save.png) no-repeat 0 0;}
+.sidebar .toolbar .item3 span:before {background:url(../images/fax/icon_26_print.png) no-repeat 0 0;}
+.sidebar .toolbar .item4 span:before {background:url(../images/fax/icon_26_zoomin.png) no-repeat 0 0;}
+.sidebar .toolbar .item5 span:before {background:url(../images/fax/icon_26_zoomout.png) no-repeat 0 0;}
+.sidebar .toolbar .item6 span:before {background:url(../images/fax/icon_26_left.png) no-repeat 0 0;}
+.sidebar .toolbar .item7 span:before {background:url(../images/fax/icon_26_right.png) no-repeat 0 0;}
+.sidebar .toolbar .item8 span:before {background:url(../images/fax/icon_26_cut.png) no-repeat 0 0;}
+.sidebar .toolbar .item9 span:before {background:url(../images/fax/icon_26_delete.png) no-repeat 0 0;}
+.fax-content {	
+	position: absolute;
+	left: 94px;
+	right: 0;
+	top: 52px;
+	background-color:#b5b8bc;
+	transition: all .5s;
+	
+}
+.fax-content .img-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: calc(100vh - 52px);
+}
+.fax-content .img-area img {max-width:100% }
+
+.fax-nav{
+	position: fixed;
+	left: 94px;
+	right: 0;
+	top: 50%;
+	margin-top: -15px;
+	transition: all .4s;
+}
+.fax-nav button{
+	position:absolute;
+	width: 30px;
+	height: 30px;
+	font-size: 0;	
+}
+.fax-nav .fax-prev {left:20px;background:url(../images/fax/arrow_40_left.png) no-repeat 0 0;}
+.fax-nav .fax-next {right:20px;background:url(../images/fax/arrow_40_right.png) no-repeat 0 0;}
+.file-size-tip {
+	position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,.3)!important;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.3)!important;
+    text-align: center;
+    opacity: .8;
+}
+
