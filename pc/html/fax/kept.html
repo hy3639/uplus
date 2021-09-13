@@ -275,7 +275,7 @@
 					</div>
 					<div class="button-area justify board">
 						<div class="left">
-							<button type="button" class="btn-border btn-mid bg-white">저장</button>
+							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
 							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup01">다운로드</button>
 							<button type="button" class="btn-border btn-mid bg-white">팩스전송</button>						
 
@@ -295,6 +295,7 @@
 							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup04">폴더관리</button>
 						</div>
 						<div class="right">
+							<button type="button" class="btn-border btn-mid bg-pink btnPop" title="Popup05">파일등록</button>
 							<span class="select-box">
 								<select class="styled">
 									<option value="">20개씩 보기</option>															
@@ -308,6 +309,7 @@
 							<colgroup>
 								<col style="width:4%;">
 								<col style="width:15%;">
+								<col style="width:12%;">
 								<col>
 								<col style="width:10%;">	
 								<col style="width:13%;">
@@ -316,6 +318,7 @@
 							<thead>
 								<tr>
 									<th scope="col"><input type="checkbox" class="styled"></th>
+									<th scope="col"><button type="button" class="sort">발신번호</button></th>
 									<th scope="col"><button type="button" class="sort">폴더</button></th>
 									<th scope="col">제목</th>
 									<th scope="col"><button type="button" class="sort">크기</button></th>
@@ -335,6 +338,7 @@
 								<!--// data가 없는경우 -->	
 								<tr>
 									<td><input type="checkbox" class="styled" name="tableChk"></td>
+									<td>02-9999-9999</td>
 									<td>세금계산서</td>
 									<td class="subject">
 										<div class="layer-box">
@@ -358,6 +362,7 @@
 								</tr>		
 								<tr>
 									<td><input type="checkbox" class="styled" name="tableChk"></td>
+									<td>02-9999-9999</td>
 									<td>세금계산서</td>
 									<td class="subject">
 										<div class="layer-box">
@@ -381,6 +386,7 @@
 								</tr>
 								<tr>
 									<td><input type="checkbox" class="styled" name="tableChk"></td>
+									<td>02-9999-9999</td>
 									<td>광고</td>
 									<td class="subject">
 										<div class="layer-box">
@@ -404,6 +410,7 @@
 								</tr>
 								<tr>
 									<td><input type="checkbox" class="styled" name="tableChk"></td>
+									<td>02-9999-9999</td>
 									<td>-</td>
 									<td class="subject">
 										<div class="layer-box">
@@ -430,9 +437,9 @@
 					</div>
 					<div class="button-area justify board">
 						<div class="left">
-							<button type="button" class="btn-border btn-mid bg-white">저장</button>
+							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
 							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup01">다운로드</button>
-							<button type="button" class="btn-border btn-mid bg-white">팩스전송</button>							
+							<button type="button" class="btn-border btn-mid bg-white">팩스전송</button>						
 
 							<div class="select-area" style="width:140px">
 								<button type="button" class="button-select">폴더선택</button>
@@ -447,8 +454,10 @@
 								</div>
 							</div>
 							<button type="button" class="btn-border btn-mid bd-pink">이동</button>
+							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup04">폴더관리</button>
 						</div>
 						<div class="right">
+							<button type="button" class="btn-border btn-mid bg-pink">파일등록</button>
 							<span class="select-box">
 								<select class="styled">
 									<option value="">20개씩 보기</option>															
@@ -512,61 +521,10 @@
 	</div>
 </div>
 
-<!-- 폴더 관리 (리스트) -->
-<div class="layer-popup noneClose" title="Popup04">
-	<div class="popup sm">
-		<div class="popup-header">	
-			<p class="title">폴더 관리</p>	
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<div class="scroll-board-list scroll-area" style="height:130px;">
-				<table class="height32">
-					<caption>폴더 리스트</caption>
-					<colgroup>
-						<col style="width:13%;">						
-						<col>																
-					</colgroup>							
-					<tbody>	
-						<tr>
-							<td class="bd-none"><input type="checkbox" class="styled" checked></td>
-							<td class="left">폴더1</td>
-						</tr>
-						<tr>
-							<td class="bd-none"><input type="checkbox" class="styled"></td>
-							<td class="left">폴더2</td>
-						</tr>
-						<tr>
-							<td class="bd-none"><input type="checkbox" class="styled"></td>
-							<td class="left">폴더3</td>
-						</tr>
-						<tr>
-							<td class="bd-none"><input type="checkbox" class="styled"></td>
-							<td class="left">폴더4</td>
-						</tr>
-						<tr>
-							<td class="bd-none"><input type="checkbox" class="styled"></td>
-							<td class="left">폴더5</td>
-						</tr>
-						<tr>
-							<td class="bd-none"><input type="checkbox" class="styled"></td>
-							<td class="left">폴더6</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<button type="button" class="btn-add btnPop" title="Popup01"><span>폴더 만들기</span></button>	
-			<p class="guide-txt2 f-pink">하나만 선택해 주십시오.</p>			
-		</div>
-		<div class="button-area  margin center">
-			<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup02">수정</button>			
-			<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup03">삭제</button>				
-		</div>
-	</div>
-</div>
+
 
 <!-- 폴더 관리 (새폴더만들기) -->
-<div class="layer-popup" title="Popup01">
+<div class="layer-popup scroll" title="Popup01">
 	<div class="popup sm">
 		<div class="popup-header">
 			<p class="title">폴더 관리</p>
@@ -633,7 +591,81 @@
 	</div>
 </div>
 
+<!-- 폴더 관리 (리스트) -->
+<div class="layer-popup noneClose" title="Popup04">
+	<div class="popup sm">
+		<div class="popup-header">	
+			<p class="title">폴더 관리</p>	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<div class="scroll-board-list scroll-area" style="height:130px;">
+				<table class="height32">
+					<caption>폴더 리스트</caption>
+					<colgroup>
+						<col style="width:13%;">						
+						<col>																
+					</colgroup>							
+					<tbody>	
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled" checked></td>
+							<td class="left">폴더1</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">폴더2</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">폴더3</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">폴더4</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">폴더5</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">폴더6</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<button type="button" class="btn-add btnPop" title="Popup01"><span>폴더 만들기</span></button>	
+			<p class="guide-txt2 f-pink">하나만 선택해 주십시오.</p>			
+		</div>
+		<div class="button-area  margin center">
+			<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup02">수정</button>			
+			<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup03">삭제</button>				
+		</div>
+	</div>
+</div>
 
+<!-- 파일등록 -->
+<div class="layer-popup" title="Popup05">
+	<div class="popup xl">
+		<div class="popup-header">
+			<p class="title">파일등록</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt f-pink">엑셀 파일의 경우 모든 시트가 저장 됩니다.</p>
+			<div class="attach-wrap">
+				<div class="box-gray attach-area">
+					<p class="txt">마우스로 파일을 끌어오세요.</p>
+				</div>
+				<a href="#" class="btn-mid bg-pink">파일첨부</a>				
+			</div>			
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink">등록</button>			
+		</div>
+	</div>
+</div>
 
 <script src="../../js/jquery-3.3.1.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>

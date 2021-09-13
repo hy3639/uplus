@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>U+ 웹팩스</title>
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<header class="scroll-area">
+		<div class="header">
+			<h1 class="s-logo"><a href="#" class="logo">U+ 웹팩스</a></h1>
+			<a href="#" class="btn-lg bg-pink wide"><span class="icon-send">팩스 보내기</span></a>
+			<div class="info-area">
+				<ul class="list-wrap">
+					<li class="list-item">
+						<span class="tit">수신번호</span>
+						<span class="cont">0269191342</span>
+					</li>
+					<li class="list-item">
+						<span class="tit">고객명</span>
+						<span class="cont">이영하</span>
+					</li>
+					<li class="list-item">
+						<span class="tit">요금유형</span>
+						<span class="cont">선불</span>
+					</li>
+				</ul>
+				<div class="balance-area">
+					<span class="balance">잔액 <em class="f-white">1,000,000</em>원</span>
+					<button type="button" class="f-pink">충전하기</button>
+				</div>
+			</div>
+			<div class="button-area justify">
+				<a href="#" class="btn-border btn-xs bg-gray col1">마이페이지</a>
+				<a href="#" class="btn-border btn-xs bg-gray col1">로그아웃</a>				
+			</div>
+			<div class="button-area justify">			
+				<a href="#" class="btn-border btn-xs bg-gray col1">충전하기</a>
+			</div>
+			<div class="gnb">
+				<div class="gnb-item on"> <!-- 메뉴 선택시 on 추가 -->
+					<button class="link"><span class="txt fax">팩스</span></button>
+					<div class="depth on" style="display:block">  <!-- 메뉴 펼침시 on 추가 및 스타일추가 -->
+						<a href="#">팩스 보내기</a>
+						<a href="#">받은 팩스함</a>
+						<a href="#">보낸 팩스함</a>
+						<a href="#">문서 보관함</a>
+						<a href="#">수신번호 신청/관리</a>
+						<a href="#"  class="on">휴지통</a>  <!-- 메뉴 선택시 on 추가 -->
+					</div>
+				</div>
+				<div class="gnb-item">
+					<button class="link"><span class="txt sms">문자</span></button>
+					<div class="depth">
+						<a href="#">문자 보내기</a>
+						<a href="#">보낸 문자함</a>					
+					</div>
+				</div>
+				<div class="gnb-item">
+					<a href="#none" class="link"><span class="txt address">주소록</span></a>
+				</div>				
+				<div class="gnb-item">
+					<button class="link"><span class="txt support">고객지원</span></button>
+					<div class="depth">
+						<a href="#">공지사항</a>
+						<a href="#">자료실</a>
+						<a href="#">자주하는 질문</a>
+						<a href="#">문의하기</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="util">
+				<a href="#" class="guide">영상 이용가이드</a>
+				<a href="#" class="tip">사용 tip</a>
+				<a href="#" class="down-fax">간편팩스 다운로드</a>
+				<a href="#" class="num-magage">수신번호 신청/관리</a>
+				<a href="#" class="api">API 신청</a>
+				<a href="#" class="mobile">모바일</a>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="cont-wrap">
+			<div class="cont-top">
+				<div class="shadow-box">
+					<div class="fax-area">
+						<div class="fax">
+							<a href="#" class="btn-fax-receive">
+								받은팩스함 <span class="txt">미확인 <em class="f-mint">0</em> 건</span>
+							</a>
+							<!-- <a href="#" class="btn-num-apply">
+								수신번호 <span class="txt arrow">신청하기</span>
+							</a> -->
+							<a href="#" class="btn-fax-send">
+								보낸 팩스함 <span class="txt">실패 <em class="f-pink">2</em> 건</span>
+							</a>
+						</div>					
+						<button type="button" class="btn-border btn-sm bg-white btn-fax-layer">발송현황</button>
+					</div>
+					<div class="noti-area">					
+						<div class="swiper-container">
+							<div class="swiper-wrapper">							
+								<div class="swiper-slide">
+									<div class="item">
+										<p class="tit">[공지] 카카오워크 &amp; 웹팩스 연동기능 8월초 오픈</p>
+										<span class="date">2021-07-29</span>
+									</div>	
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<p class="tit">[공지] 카카오워크 &amp; 웹팩스 연동기능 8월초 오픈</p>
+										<span class="date">2021-07-29</span>
+									</div>	
+								</div>				
+							</div>	
+							<!-- If we need navigation buttons -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cont-area">
+				<div class="tit-area">
+					<h2 class="tit">휴지통</h2>					
+					<ul class="navi">
+						<li><a href="#">홈</a></li>
+						<li><a href="#">팩스</a></li>
+						<li>휴지통</li>
+					</ul>
+				</div>
+				<p class="sub-txt">
+					휴지통에 있는 문서는 <span class="f-pink">7일 후 자동 삭제</span>됩니다.
+				</p>
+				<div class="section">
+					<!-- <div class="guide-area justify">
+						<p class="guide-txt left">휴지통에 있는 문서는 7일 후 자동 삭제됩니다.</p>
+						<p class="guide-txt right">보관중인 파일 용량: <span>2,479 KB</span></p>
+					</div> -->
+					
+					<div class="box-gray search-area">
+						<div class="group">
+							<div class="item">
+								<label>삭제일</label>
+								<div class="calendar-area">
+									<div class="input-text cal">
+										<input type="text" name="from" style="width:108px">	
+									</div>
+									~
+									<div class="input-text cal">									
+										<input type="text" name="to" style="width:108px">
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<label for="txt2">제목</label>
+								<div class="input-text">
+									<input id="txt2" type="text" placeholder="" style="width:420px;">
+								</div>
+							</div>
+							<button type="button" class="btn-mid bg-gray">검색</button>
+						</div>
+					</div>
+					<div class="button-area justify board">
+						<div class="left">							
+							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup01">삭제</button>
+							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup02">복구</button>
+						</div>
+						<div class="right">
+							<span class="select-box">
+								<select class="styled">
+									<option value="">20개씩 보기</option>															
+								</select>
+							</span>								
+						</div>
+					</div>
+					<div class="board-list fax">
+						<table>
+							<caption>휴지통 리스트</caption>
+							<colgroup>
+								<col style="width:6%;">
+								<col >
+								<col >
+								<col style="width:10%;">								
+								<col style="width:10%;">								
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><input type="checkbox" class="styled" checked></th>
+									<th scope="col">제목</th>
+									<th scope="col"><button type="button" class="sort">파일명</button></th>
+									<th scope="col"><button type="button" class="sort">크기</button></th>								
+									<th scope="col">기능</th>
+								</tr>
+							</thead>
+							<tbody>							
+								<tr>
+									<td><input type="checkbox" class="styled" checked></td>									
+									<td class="subject"><p class="tit ellipsis">해지신청서.docx</p></td>																	
+									<td class="subject"><p class="tit ellipsis">sfd213542999999from30432030324fax.tif</p></td>								
+									<td>99Kb</td>								
+									<td><button type="button" class="btn-border btn-xxs bg-white">저장</button></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" class="styled" checked></td>									
+									<td class="subject"><p class="tit ellipsis">07048474121 가 025498435407048474121 가 0254984354 에게 받은 팩스</p> </td>																	
+									<td class="subject"><p class="tit ellipsis">sfd213542999999sfd213542999999from30432030324fax.tif</p></td>								
+									<td>99Kb</td>								
+									<td><button type="button" class="btn-border btn-xxs bg-white">저장</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+					<div class="button-area justify board">
+						<div class="left">							
+							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
+							<button type="button" class="btn-border btn-mid bg-white">복구</button>
+						</div>
+						<div class="right">
+							<span class="select-box">
+								<select class="styled">
+									<option value="">20개씩 보기</option>															
+								</select>
+							</span>								
+						</div>
+					</div>				
+					<div class="pagenation">
+						<a href="#" class="btn-first page">처음</a>
+						<a href="#" class="btn-prev page">이전</a>
+						<span class="page now">1</span>
+						<a href="#" class="page">2</a>
+						<a href="#" class="page">3</a>
+						<a href="#" class="page">4</a>
+						<a href="#" class="page">5</a>
+						<a href="#" class="page">6</a>
+						<a href="#" class="page">7</a>
+						<a href="#" class="page">8</a>
+						<a href="#" class="page">9</a>
+						<a href="#" class="page">10</a>
+						<a href="#" class="btn-next page">다음</a>
+						<a href="#" class="btn-last page">마지막</a>
+					</div>			
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+			<p>Copyright © 2021 <span class="f-pink">LG UPlus.</span> All rights reserved.</p>
+		</footer>
+	</div>
+	
+	<div class="quick-area">
+		<div class="quick">
+			<div class="quick-item">
+				<a href="#" class="link"><span class="txt setting">설정</span></a>
+			</div>		
+			<div class="quick-item">
+				<button type="button" class="link"><span class="txt admin">관리자</span></button>
+				<div class="depth">
+					<a href="#" class="on">가입정보 및 변경신청</a> <!-- 메뉴 선택시 on 추가 -->
+					<a href="#">아이디(서브계정)관리</a>
+					<a href="#">수신번호 신청/관리</a>
+					<a href="#">사용자 설정</a>
+					<a href="#">부가서비스 신청</a>
+					<a href="#">카카오워크 연동</a>
+				</div>
+			</div>
+			<div class="quick-item">
+				<button type="button" class="link"><span class="txt preferences">환경설정</span></button>
+				<div class="depth">
+					<a href="#">알림설정</a>
+					<a href="#">스팸번호 차단</a>
+					<a href="#">전송금지 번호 설정</a>
+					<a href="#">문자발신번호 인증</a>
+					<a href="#">팩스발신번호 인증</a>					
+				</div>
+			</div>			
+		</div>
+		<!-- <button type="button" class="btn-quick">퀵메뉴버튼</button> -->
+	</div>
+</div>
+
+<!-- 삭제 -->
+<div class="layer-popup" title="Popup01">
+	<div class="popup sm">
+		<div class="popup-header">				
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				선택한 항목을 삭제 하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area  margin center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
+			<button type="button" class="btn-mid bg-pink">확인</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 복구 -->
+<div class="layer-popup" title="Popup02">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				선택한 항목을 복구 하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area  margin center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
+			<button type="button" class="btn-mid bg-pink">확인</button>			
+		</div>
+	</div>
+</div>
+
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
+<script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(document).ready(function(){
+	
+    
+});
+
+
+</script>
+</body>
+</html>

@@ -135,29 +135,87 @@
 					</ul>
 				</div>
 				<p class="sub-txt">
-					삭제된 문서들을 확인 및 관리하실 수 있습니다. 휴지통에 있는 문서는 7일 후 자동 삭제됩니다.
+					휴지통에 있는 문서는 <span class="f-pink">7일 후 자동 삭제</span>됩니다.
 				</p>
 				<div class="section">
-					<div class="guide-area justify">
+					<!-- <div class="guide-area justify">
 						<p class="guide-txt left">휴지통에 있는 문서는 7일 후 자동 삭제됩니다.</p>
 						<p class="guide-txt right">보관중인 파일 용량: <span>2,479 KB</span></p>
-					</div>
+					</div> -->
 					
-					<div class="box-gray search-area center">
-						<div class="group">							
-							<div class="item">								
-								<span class="select-box">
-									<select class="styled" style="width:100px;">
-										<option value="">팩스제목</option>										
-									</select>
-								</span>
-								<div class="input-text">
-									<input type="text" placeholder="검색어를 입력해주세요" style="width:260px;">
+					<div class="box-gray search-area">
+						<div class="group">
+							<div class="item">
+								<label>삭제일</label>
+								<div class="calendar-area">
+									<div class="input-text cal">
+										<input type="text" name="from" style="width:108px">	
+									</div>
+									~
+									<div class="input-text cal">									
+										<input type="text" name="to" style="width:108px">
+									</div>
 								</div>
-								<button type="button" class="btn-mid bg-gray">검색</button>
 							</div>
+							<div class="item">
+								<label for="txt2">제목</label>
+								<div class="input-text">
+									<input id="txt2" type="text" placeholder="" style="width:420px;">
+								</div>
+							</div>
+							<button type="button" class="btn-mid bg-gray">검색</button>
 						</div>
 					</div>
+					<div class="button-area justify board">
+						<div class="left">							
+							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup01">삭제</button>
+							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup02">복구</button>
+						</div>
+						<div class="right">
+							<span class="select-box">
+								<select class="styled">
+									<option value="">20개씩 보기</option>															
+								</select>
+							</span>								
+						</div>
+					</div>
+					<div class="board-list fax">
+						<table>
+							<caption>휴지통 리스트</caption>
+							<colgroup>
+								<col style="width:6%;">
+								<col >
+								<col >
+								<col style="width:10%;">								
+								<col style="width:10%;">								
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><input type="checkbox" class="styled" checked></th>
+									<th scope="col">제목</th>
+									<th scope="col"><button type="button" class="sort">파일명</button></th>
+									<th scope="col"><button type="button" class="sort">크기</button></th>								
+									<th scope="col">기능</th>
+								</tr>
+							</thead>
+							<tbody>							
+								<tr>
+									<td><input type="checkbox" class="styled" checked></td>									
+									<td class="subject"><p class="tit ellipsis">해지신청서.docx</p></td>																	
+									<td class="subject"><p class="tit ellipsis">sfd213542999999from30432030324fax.tif</p></td>								
+									<td>99Kb</td>								
+									<td><button type="button" class="btn-border btn-xxs bg-white">저장</button></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" class="styled" checked></td>									
+									<td class="subject"><p class="tit ellipsis">07048474121 가 025498435407048474121 가 0254984354 에게 받은 팩스</p> </td>																	
+									<td class="subject"><p class="tit ellipsis">sfd213542999999sfd213542999999from30432030324fax.tif</p></td>								
+									<td>99Kb</td>								
+									<td><button type="button" class="btn-border btn-xxs bg-white">저장</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
 					<div class="button-area justify board">
 						<div class="left">							
 							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
@@ -170,98 +228,7 @@
 								</select>
 							</span>								
 						</div>
-					</div>
-					<div class="board-list">
-						<table>
-							<caption>휴지통 리스트</caption>
-							<colgroup>
-								<col style="width:6%;">
-								<col style="width:10%;">
-								<col>
-								<col style="width:10%;">								
-								<col style="width:6%;">
-								<col style="width:12%;">
-								<col style="width:10%;">
-								<col style="width:14%;">
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col"><input type="checkbox" class="styled" checked></th>
-									<th scope="col">받은시간</th>
-									<th scope="col">제목</th>
-									<th scope="col">서식분류</th>
-									<th scope="col">장수</th>
-									<th scope="col">보낸사람</th>
-									<th scope="col">발신번호</th>
-									<th scope="col">기능</th>
-								</tr>
-							</thead>
-							<tbody>							
-								<tr>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td>오후 2:20</td>
-									<td class="subject">
-										<div class="title-input modify">
-											<div class="input-text">
-												<input type="text" id="txt1" placeholder="제목을 입력하세요">
-											</div>
-											<button type="button" class="btn-border btn-sm bg-white">저장</button>
-										</div>	
-									</td>																	
-									<td>광고</td>								
-									<td>2</td>
-									<td>
-										<div class="layer-box">
-											조규찬<br>010-777-7777
-											<button type="button" class="btn-border btn-sm bg-gray" style="width:110px">수신확인 문자발송</button>
-										</div>
-										
-									</td>
-									<td>
-										<div class="layer-box">
-											07012369854
-											<button type="button" class="btn-border btn-sm bg-gray" style="width:110px">주소록 추가</button>
-										</div>
-									</td>
-									<td>
-										<button type="button" class="btn-border btn-xxs bg-white">보기</button>
-										<button type="button" class="btn-border btn-xxs bg-white">편집</button>
-										<button type="button" class="btn-border btn-xxs bg-white">저장</button>
-									</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" class="styled" checked></td>
-									<td>오후 2:20</td>
-									<td>
-										<div class="layer-box">
-											<p class="tit">21년 8월 거래명세표 첨부 21년 8월 거래명세표 첨부 21년 8월 거래명세표 첨부</p>
-											<button type="button" class="btn-border btn-sm bg-gray">제목수정</button>
-										</div>	
-									</td>																	
-									<td>광고</td>								
-									<td>2</td>
-									<td>
-										<div class="layer-box">
-											조규찬<br>010-777-7777
-											<button type="button" class="btn-border btn-sm bg-gray" style="width:110px">수신확인 문자발송</button>
-										</div>
-										
-									</td>
-									<td>
-										<div class="layer-box">
-											07012369854
-											<button type="button" class="btn-border btn-sm bg-gray" style="width:110px">주소록 추가</button>
-										</div>
-									</td>
-									<td>
-										<button type="button" class="btn-border btn-xxs bg-white">보기</button>
-										<button type="button" class="btn-border btn-xxs bg-white">편집</button>
-										<button type="button" class="btn-border btn-xxs bg-white">저장</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>					
+					</div>				
 					<div class="pagenation">
 						<a href="#" class="btn-first page">처음</a>
 						<a href="#" class="btn-prev page">이전</a>
@@ -318,6 +285,41 @@
 	</div>
 </div>
 
+<!-- 삭제 -->
+<div class="layer-popup" title="Popup01">
+	<div class="popup sm">
+		<div class="popup-header">				
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				선택한 항목을 삭제 하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area  margin center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
+			<button type="button" class="btn-mid bg-pink">확인</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 복구 -->
+<div class="layer-popup" title="Popup02">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				선택한 항목을 복구 하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area  margin center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
+			<button type="button" class="btn-mid bg-pink">확인</button>			
+		</div>
+	</div>
+</div>
 
 <script src="../../js/jquery-3.3.1.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>

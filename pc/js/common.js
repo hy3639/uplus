@@ -65,11 +65,11 @@ $(document).on('click', '.tab-item .btn', function(){
 });
 
 /* 툴팁 */
-$('.btn-tooltip').mouseenter(function(){
-	$(this).next('.tooltip-layer').show();
+$('.tooltip-area').mouseenter(function(){
+	$(this).find('.tooltip-layer').show();
 });
-$('.btn-tooltip').mouseleave(function(){
-	$(this).next('.tooltip-layer').hide();
+$('.tooltip-area').mouseleave(function(){
+	$(this).find('.tooltip-layer').hide();
 });
 /* 다른곳 클릭시 툴팁 닫기 */
 $(document).mouseup(function(e){
@@ -236,6 +236,7 @@ $(window).on('load', function(){
 	$(document).on('click', '.btnPop', function(){
         layerPop();
 
+		
         $(this).addClass('on');
         $('html').addClass('popOpen');
 
@@ -249,16 +250,34 @@ $(window).on('load', function(){
         var name = $(this).attr('layer-name');
         $('.layer-popup[layer-name=' + name + ']').fadeIn(100, function(){
            // $(this).find('.firstTab').focus();
-            $(this).addClass('open');
+            $(this).addClass('open').closest('.layer-popup').prepend('<div class="dimmed">');;
 			layerPop();
         });
 		
     });
 
-    $(document).on('click', '.popClose', function(){
-        popClose();
-    });
+	/* 팝업닫기 */
+    $(document).on('click', '.popClose,.dimmed', function(){
+      // popClose();
 
+	  $(this).closest('.layer-popup').removeClass('open').scrollTop(0).fadeOut(300, function(){
+		$('.btnPop.on').focus().removeClass('on');
+		$(this).closest('.layer-popup').find('.dimmed').remove();
+	});	
+
+	//팝업이 하나일경우만 body스크롤 제거
+	if( !$(this).closest('.layer-popup').hasClass('scroll')){
+		setTimeout(function(){
+			$('html').removeClass('popOpen');
+		}, 300);
+	}
+
+
+	
+    });
+	// $(document).on('click', '.dimmed', function(){
+	// 	 popClose();
+	// });
 	// $(document).mouseup(function (e){
 	// 	var LayerPopup = $(".popup");
 	// 	console.log(LayerPopup.has(e.target).length);
@@ -368,16 +387,17 @@ function layerPop(){
 
 // 레이어팝업 닫기
 function popClose(){
-    var spd = '300';
+   var spd = '300';
     $('.layer-popup').each(function(){
-        $(this).removeClass('open').scrollTop(0).fadeOut(spd, function(){
+        $(this).removeClass('open').fadeOut(spd, function(){
             $('.btnPop.on').focus().removeClass('on');
             
         });
     });
     setTimeout(function(){
         $('html').removeClass('popOpen');
-    }, spd);
+    }, spd);	
+
 }
-	
+
 	
