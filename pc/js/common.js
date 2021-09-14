@@ -219,13 +219,15 @@ $('.cal').each(function(){
 /*======= 팩스미리보기 ======= */
 /* 슬라이드레이어 */
 $('.btnLayer').click(function(){
-	var id = $(this).attr('title');
+	var id = $(this).attr('data-label');
 
-	if($('.side-content[title=' + id + ']').hasClass('open')){
-		$('.side-content[title=' + id + ']').removeClass('open');
+	$('.side-content,.side-cont').removeClass('open');
+
+	if($('.side-content[data-target=' + id + ']').hasClass('open')){
+		$('.side-content[data-target=' + id + ']').removeClass('open');
 		$(this).closest('.faxviewer').removeClass('open');
 	}else{
-		$('.side-content[title=' + id + ']').addClass('open');
+		$('.side-content[data-target=' + id + ']').addClass('open');
 		$(this).closest('.faxviewer').addClass('open');
 	}
 });

@@ -28,7 +28,9 @@
 		<div class="sidebar-wrap">
 			<div class="sidebar">
 				<div class="toolbar">
-					<button type="button" class="item1 btnLayer" title="fax-list"><span>문서목록</span></button>
+					<button type="button" class="item10 btnPop"  title="Popup03"><span>스팸신고</span></button>
+					<button type="button" class="item11 btnLayer" data-label="fax-category"><span>서식분류</span></button>
+					<button type="button" class="item1 btnLayer" data-label="fax-list"><span>문서목록</span></button>
 					<button type="button" class="item2 btnPop" title="Popup01"><span>문서저장</span></button>
 					<button type="button" class="item3 btnPop" title="Popup02"><span>인쇄</span></button>
 					<button type="button" class="item4"><span>확대</span></button>
@@ -36,10 +38,10 @@
 					<button type="button" class="item6"><span>왼쪽 회전</span></button>
 					<button type="button" class="item7"><span>오른쪽 회전</span></button>
 					<button type="button" class="item8"><span>잘라내기</span></button>
-					<button type="button" class="item9"><span>삭제</span></button>
+					<button type="button" class="item9 btnPop" title="Popup04"><span>삭제</span></button>
 				</div>
 			</div>
-			<div class="side-content gray" title="fax-list">
+			<div class="side-content gray" data-target="fax-list">
 				<div class="side-header">
 					<p class="tit">문서목록</p>
 					<span class="select-box wide">
@@ -62,6 +64,50 @@
 					</div>
 				</div>
 			</div>
+			<div class="side-content" data-target="fax-category">
+				<div class="side-header pdb10">
+					<p class="tit">
+						서식분류
+						<div class="tooltip-area">
+							<button type="button" class="btn-tooltip">툴팁</button>
+							<div class="tooltip-layer w450">
+								<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
+								<p class="txt">
+									<span class="tit-tooltip">자동 서식 분류 서비스란?</span>
+									머신 러닝(Machine learning:기계학습)알고리즘으로 수신된 팩스 문서를<br>
+									자동으로 분류해주는 유료 서비스입니다. <em class="f-pink">후불 사용자 전용 상품</em>입니다.<br>
+									<span class="f-light">
+										서식훈련이 반복될수록 정확도가 올라갑니다. <br>
+										서식은 관리자만 추가할 수 있습니다.<br>
+										서식을 추가하거나 궁금하신 점은 고객센터(1544-8007)로 문의 주시기 바랍니다.
+									</span>
+								</p>
+								<br>
+								<a href="#" class="btn-link">서비스 신청하기</a>
+							</div>
+						</div>
+					</p>
+					<div class="select-area" style="width:170px">
+						<button type="button" class="button-select">전체</button>
+						<div class="select-layer">												
+							<ul class="selBox">
+								<li><button type="button">거래명세서</button></li>
+								<li><button type="button">세금계산서</button></li>
+								<li><button type="button">기타</button></li>
+								<li><button type="button">광고</button></li>
+							</ul>
+							<button type="button" class="btnPop" title="Popup05">새 서식 만들기</button>
+						</div>
+					</div>
+					<button type="button" class="btn-side-close">툴팁닫기</button>
+				</div>
+				<div class="side-cont">
+					<div class="button-area">
+						<a href="#" class="btn-mid bg-pink wide">서식훈련</a>
+					</div>
+					
+				</div>
+			</div>
 		</div>
 		
 		<div class="fax-content">
@@ -75,13 +121,161 @@
 			<div class="file-size-tip"><span>35%</span></div>
 		</div>
 	</div>
-	
-
-
-
 </div>
 
+<!-- 스팸신고 서비스 -->
+<div class="layer-popup" title="Popup03">
+	<div class="popup">
+		<div class="popup-header">
+			<p class="title">스팸신고 서비스 
+				<div class="tooltip-area">
+					<button type="button" class="btn-tooltip">툴팁</button>
+					<div class="tooltip-layer w450">						
+						<p class="txt">
+							<span class="tit-tooltip">스팸 신고 안내</span>
+							'웹팩스 스팸 간편신고 서비스'는 웹팩스 스팸 신고 전용이며, 이 외에
+							타용도로는 사용하실 수 없습니다. <br>
+							한국인터넷진흥원 불법스팸대응센터는 「정보통신망 이용촉진 및 정보보호 
+							등에 관한법률」 제52조제3항제10호에 따른 스팸 민원 고충상담 및 
+							민원처리를 위해 아래의 개인정보를 수집. 이용하고 있습니다.<br>
+							<span class="f-light sm">
+								- 아 래-<br>
+								제공되는 개인정보 : 수신일시,수신번호,발송번호,팩스원문,연락처 등 신고를 통해 
+								수집된 개인정보는 신고처리(스팸 고충 해결, 수사, 행정처분 등)를 위해 쓰이며, 필요한 
+								경우 해당 목적을 달성하기 위해 타 기관에 제공될 수 있습니다.<br><br>
+								
+								신고 시 비밀번호를 입력하신 경우에는 불법스팸대응센터 홈페이지
+								(http://spam.kisa.or.kr)에서 신고하신 내용을 조회할 수 있으며, 조회 없이 신고만 
+								하는 경우에는 비밀번호를 입력하지 않아도 됩니다.<br><br>
 
+								기타 자세한 사항은(국번없이) ☎118 또는 홈페이지를 통해 문의하시기 바랍니다.
+								또한, 허위로 신고하였을 경우 그로 인해 발생하는 모든 민.형사상 책임을 신고인이 
+								지게 되므로 유의하시기 바랍니다.<br><br>
+
+								신고된 내용이 미비하여 사실확인 진행이 어려운 경우 민원인에게 추가 자료를 요청할 
+								수 있으며, 자료 미제출 또는 제출된 증거자료도 미비할 경우에는 처리가 어려울 수
+								있습니다.
+							</span>
+						</p>
+					</div>
+				</div>
+			</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt mgb15">'웹팩스 스팸 간편신고 서비스'는 웹팩스 스팸 신고 전용이며, 이 외에 타용도로는 사용하실 수 없습니다.</p>
+			<div class="board-write">
+				<table>
+					<colgroup>
+						<col style="width:35%;">						
+						<col>					
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">스팸수신일시</th>
+							<td>2021.08.24 22:43:11</td>
+						</tr>
+						<tr>
+							<th scope="row">스팸수신번호</th>
+							<td>070-0000-0000</td>
+						</tr>
+						<tr>
+							<th scope="row"><label class="essential">연락처</label></th>
+							<td>
+								<div class="input-phone">
+									<span class="select-box">
+										<select class="styled">
+											<option value="">010</option>
+											<option value="">011</option>						
+										</select>
+									</span>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+								</div>
+								<p class="alert-txt">민원인에게 사실확인을 위해 연락드릴 수 있어 정확하게 입력해 주시기 바랍니다.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label class="essential">스팸신고번호</label></th>
+							<td>
+								<div class="input-phone">
+									<span class="select-box">
+										<select class="styled">
+											<option value="">010</option>
+											<option value="">011</option>						
+										</select>
+									</span>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+								</div>								
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label class="essential">개별수신팩스번호</label></th>
+							<td>
+								<div class="input-phone">
+									<span class="select-box">
+										<select class="styled">
+											<option value="">010</option>
+											<option value="">011</option>						
+										</select>
+									</span>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+								</div>
+								<p class="alert-txt">발신번호가 정확하지 않다고 판단하실 경우 본문 내에 있는 광고 전화번호를 입력해 주시기 바랍니다.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="txt1">비밀번호</label></th>
+							<td>
+								<div class="input-text">
+									<input type="password" id="txt1" placeholder="8자 이내의 영문 대소문자 숫자 조합" style="width:100%">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="txt2">비밀번호확인</label></th>
+							<td>
+								<div class="input-text">
+									<input type="password" id="txt2" style="width:100%">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label class="essential">개별수신팩스번호</label></th>
+							<td>
+								<div class="input-phone">
+									<span class="select-box">
+										<select class="styled">
+											<option value="">010</option>
+											<option value="">011</option>						
+										</select>
+									</span>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+									<span class="hypen">-</span>
+									<div class="input-text"><input type="text"></div>
+								</div>
+								<p class="alert-txt">불법스팸대응센터 홈페이지(https://spam. kisa.or.kr)에서 신고 내용을 확인하기 위해서 필요하며 입력하지 않으셔도 됩니다.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink">신고하기</button>			
+		</div>
+	</div>
+</div>
 
 <!-- 문서 저장 설정 -->
 <div class="layer-popup" title="Popup01">
@@ -117,22 +311,66 @@
 				<label class="form-wrap"><input type="radio" name="Rdo2" class="styled formSingle" data-form="formSingle"> 인쇄할 페이지 지정</label>											
 			</div>
 			<div class="formSingle">
-				<div class="flex">
-
+				<div class="flex-area">
+					<div class="input-text">
+						<input type="text" value="1" style="width:50px">
+					</div>
+					<div class="input-text divider">-</div>
+					<div class="input-text">
+						<input type="text" value="2" style="width:50px">
+					</div>
 				</div>
-				<div class="input-text">
-					<input type="text" value="1">
-				</div>
-				<div class="input-text divider">-</div>
-				<div class="input-text">
-					<input type="text" value="2" disabled="">
-				</div>
-				
 			</div>					
 		</div>
 		<div class="button-area  margin center">
 			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
 			<button type="button" class="btn-mid bg-pink">인쇄</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 받은팩스 삭제 -->
+<div class="layer-popup" title="Popup04">
+	<div class="popup sm">
+		<div class="popup-header">
+			<p class="title">받은팩스 삭제</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				삭제된 팩스는 휴지통으로 이동 합니다.<br>
+				휴지통에서 복구가 가능하며<br>
+				복구된 문서는 문서보관함으로 이동 됩니다.<br>
+				정말 삭제 하시겠습니까?
+			</p>			
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>
+			<button type="button" class="btn-mid bg-pink">삭제</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 새 서식 분류 -->
+<div class="layer-popup" title="Popup05">
+	<div class="popup sm">
+		<div class="popup-header">
+			<p class="title">새 서식 분류</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<ul class="form-list block">
+				<li>
+					<label for="newForm">새 서식 이름</label>
+					<div class="input-text">
+						<input type="text" id="newForm" style="width:100%">
+					</div>
+				</li>
+			</ul>				
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink btnPop" title="Popup07">만들기</button>			
 		</div>
 	</div>
 </div>
