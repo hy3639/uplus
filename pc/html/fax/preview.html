@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div class="faxviewer">
+<div class="wrapper faxviewer">
 	<div class="fax-header">
 		<p class="date">2021.08.19 15:13</p>
 		<div class="paging">
@@ -29,8 +29,8 @@
 			<div class="sidebar">
 				<div class="toolbar">
 					<button type="button" class="item1 btnLayer" title="fax-list"><span>문서목록</span></button>
-					<button type="button" class="item2"><span>문서저장</span></button>
-					<button type="button" class="item3"><span>인쇄</span></button>
+					<button type="button" class="item2 btnPop" title="Popup01"><span>문서저장</span></button>
+					<button type="button" class="item3 btnPop" title="Popup02"><span>인쇄</span></button>
 					<button type="button" class="item4"><span>확대</span></button>
 					<button type="button" class="item5"><span>축소</span></button>
 					<button type="button" class="item6"><span>왼쪽 회전</span></button>
@@ -39,7 +39,7 @@
 					<button type="button" class="item9"><span>삭제</span></button>
 				</div>
 			</div>
-			<div class="side-content" title="fax-list">
+			<div class="side-content gray" title="fax-list">
 				<div class="side-header">
 					<p class="tit">문서목록</p>
 					<span class="select-box wide">
@@ -47,7 +47,19 @@
 							<option value="">2021.08.19 15:13</option>						
 						</select>
 					</span>
-					<button type="button" class="btn-tooltip-close">툴팁닫기</button>
+					<button type="button" class="btn-side-close">툴팁닫기</button>
+				</div>
+				<div class="side-cont">
+					<div class="docu-list">
+						<div class="docu-item on">
+							<span class="num">1</span>
+							<span class="img"><img src ="../../images/temp/temp_fax.png" alt="팩스미리보기 이미지"></span>
+						</div>
+						<div class="docu-item">
+							<span class="num">2</span>
+							<span class="img"><img src ="../../images/temp/temp_fax.png" alt="팩스미리보기 이미지"></span>
+						</div>						
+					</div>
 				</div>
 			</div>
 		</div>
@@ -68,38 +80,59 @@
 
 
 </div>
-<!-- 삭제 -->
-<div class="layer-popup" title="fax-list">
+
+
+
+<!-- 문서 저장 설정 -->
+<div class="layer-popup" title="Popup01">
 	<div class="popup sm">
-		<div class="popup-header">				
+		<div class="popup-header">
+			<p class="title">문서 저장 설정</p>		
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
 		<div class="popup-cont">
-			<p class="guide-txt center">
-				선택한 항목을 삭제 하시겠습니까?
-			</p>				
+			<div class="form-list block">
+				<label class="form-wrap"><input type="radio" name="Rdo1" class="styled" checked> 전체 페이지 저장</label>
+				<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> 현재 페이지 저장</label>											
+			</div>					
 		</div>
 		<div class="button-area  margin center">
 			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
-			<button type="button" class="btn-mid bg-pink">확인</button>			
+			<button type="button" class="btn-mid bg-pink">저장</button>			
 		</div>
 	</div>
 </div>
 
-<!-- 복구 -->
+<!-- 문서 인쇄 설정 -->
 <div class="layer-popup" title="Popup02">
 	<div class="popup sm">
-		<div class="popup-header">			
+		<div class="popup-header">		
+			<p class="title">문서 인쇄 설정</p>			
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				선택한 항목을 복구 하시겠습니까?
-			</p>				
+		<div class="popup-cont form-area">
+			<div class="form-list block">
+				<label class="form-wrap"><input type="radio" name="Rdo2" class="styled" checked> 전체 페이지 인쇄</label>
+				<label class="form-wrap"><input type="radio" name="Rdo2" class="styled"> 현재 페이지 저장</label>
+				<label class="form-wrap"><input type="radio" name="Rdo2" class="styled formSingle" data-form="formSingle"> 인쇄할 페이지 지정</label>											
+			</div>
+			<div class="formSingle">
+				<div class="flex">
+
+				</div>
+				<div class="input-text">
+					<input type="text" value="1">
+				</div>
+				<div class="input-text divider">-</div>
+				<div class="input-text">
+					<input type="text" value="2" disabled="">
+				</div>
+				
+			</div>					
 		</div>
 		<div class="button-area  margin center">
 			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
-			<button type="button" class="btn-mid bg-pink">확인</button>			
+			<button type="button" class="btn-mid bg-pink">인쇄</button>			
 		</div>
 	</div>
 </div>
@@ -111,23 +144,9 @@
 <script src="../../js/common.js"></script>
 <script>
 $(document).ready(function(){
-	$('.btnLayer').click(function(){
-		var id = $(this).attr('title');
 	
-		if($('.side-content[title=' + id + ']').hasClass('open')){
-			$('.side-content[title=' + id + ']').removeClass('open');
-			$(this).closest('.faxviewer').removeClass('open');
-		}else{
-			$('.side-content[title=' + id + ']').addClass('open');
-			$(this).closest('.faxviewer').addClass('open');
-		}
-	
-	});
 
-	$('.side-content .btn-tooltip-close').click(function(){	
-		$(this).closest('.side-content').removeClass('open');
-		$(this).closest('.faxviewer').removeClass('open');
-	});
+	
     
 });
 
