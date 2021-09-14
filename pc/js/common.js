@@ -128,10 +128,10 @@ $('.formSingle').each(function(){
 	var id = $(this).attr('data-form');
 	var name = $(this).attr('name');			
 	$('input[name=' + name + ']').change(function(){
-		if($(this).closest('tr').find('.formSingle').is(':checked')){
-			$(this).closest('table').find('tr.' + id).show();
+		if($(this).closest('.form-list').find('.formSingle').is(':checked')){
+			$(this).closest('.form-area').find('.' + id).show();
 		}else{
-			$(this).closest('table').find('tr.' + id).hide();
+			$(this).closest('.form-area').find('.' + id).hide();
 		}
 	});
 });
@@ -215,6 +215,31 @@ $('.cal').each(function(){
 	});
 });
 /*=======// 달력 ======= */
+
+/*======= 팩스미리보기 ======= */
+/* 슬라이드레이어 */
+$('.btnLayer').click(function(){
+	var id = $(this).attr('title');
+
+	if($('.side-content[title=' + id + ']').hasClass('open')){
+		$('.side-content[title=' + id + ']').removeClass('open');
+		$(this).closest('.faxviewer').removeClass('open');
+	}else{
+		$('.side-content[title=' + id + ']').addClass('open');
+		$(this).closest('.faxviewer').addClass('open');
+	}
+});
+
+$('.side-content .btn-side-close').click(function(){	
+	$(this).closest('.side-content').removeClass('open');
+	$(this).closest('.faxviewer').removeClass('open');
+});
+
+/* 문서리스트 on */
+$('.docu-list > div').click(function(){
+	$(this).addClass('on').siblings().removeClass('on');
+});
+/*=======// 슬라이드 레이어 ======= */
 
 	
 });

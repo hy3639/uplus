@@ -1430,7 +1430,9 @@ input[type=checkbox][class^=styled] {
 	font-weight: 300;
 	line-height: 20px;
 }
-tr.formSingle {display: none;}
+input[type="radio"].formSingle {display: block!important;}
+tr.formSingle,
+div.formSingle {display: none;}
 
 /* 스크롤테이블 */
 .scroll-board-list {
@@ -1851,6 +1853,7 @@ html.popOpen {overflow:hidden;}
     z-index:100;
     padding:50px 50px 0;
     background-color:rgba(0,0,0,.6);
+	z-index:200
 }
 .layer-popup .popup {
     position:relative;
@@ -2345,7 +2348,8 @@ html.popOpen {overflow:hidden;}
 }
 
 /* 팩스 미리보기 */
-.faxviewer {}
+.faxviewer {min-width: initial; height:calc(100vh - 52px); }
+
 .faxviewer.open .fax-content {left: 294px;}
 .faxviewer.open .fax-content .fax-nav {left:294px}
 .faxviewer .fax-header{
@@ -2393,13 +2397,54 @@ html.popOpen {overflow:hidden;}
     top: 52px;
     left: -200px;
     bottom: 0;
-	background-color:#e8e9ea;
+	background-color:#fff;
     z-index: 99;
     overflow: hidden;
     -webkit-transition: .4s;
     transition: .4s;
 }
+.sidebar-wrap .side-content.gray {background-color:#e8e9ea}
 .fax-content-wrap .sidebar-wrap .side-content.open {left:94px}
+.side-content .side-header {
+	padding:20px 15px;
+	background-color:#fff
+}
+.side-content .side-header .tit {
+	font-size: 16px;
+	font-weight: 500;
+}
+.side-content .side-header .btn-side-close {
+	width: 18px;
+    height: 18px;
+	padding:0;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    text-indent: -9999px;
+	background: url(../images/icon/icon_side-close.png) no-repeat 0 0;
+}
+.side-cont {
+	height: calc(100% - 110px);
+	overflow-y: auto;
+}
+.side-content .side-header .tit + * {margin-top: 12px ;}
+.side-cont.gray {background-color:#e8e9ea}
+.side-cont .docu-list 
+{padding:20px 23px 20px  18px;
+
+}
+.side-cont .docu-list .docu-item {
+	display: flex;
+	justify-content: space-between;
+
+}
+.side-cont .docu-list .docu-item + .docu-item {margin-top: 20px;}
+.side-cont .docu-list .docu-item > span {display: inline-block;}
+.side-cont .docu-list .docu-item .num {}
+.side-cont .docu-list .docu-item .img {width:130px; height: 180px;}
+.side-cont .docu-list .docu-item .img img {width: 100%; height: 100%;}
+.side-cont .docu-list .docu-item.on .img {border:2px solid #e03d7c}
+
 .sidebar {
 	position:fixed;
 	top: 52px;
@@ -2448,6 +2493,8 @@ html.popOpen {overflow:hidden;}
 .sidebar .toolbar .item7 span:before {background:url(../images/fax/icon_26_right.png) no-repeat 0 0;}
 .sidebar .toolbar .item8 span:before {background:url(../images/fax/icon_26_cut.png) no-repeat 0 0;}
 .sidebar .toolbar .item9 span:before {background:url(../images/fax/icon_26_delete.png) no-repeat 0 0;}
+
+
 .fax-content {	
 	position: absolute;
 	left: 94px;
