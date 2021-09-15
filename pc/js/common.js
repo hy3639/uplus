@@ -64,7 +64,7 @@ $(document).on('click', '.tab-item .btn', function(){
 	}
 });
 
-/* 툴팁 */
+/* 오버형 툴팁 */
 $('.tooltip-area').mouseenter(function(){
 	if(!$(this).hasClass('click')){
 		$(this).find('.tooltip-layer').show();
