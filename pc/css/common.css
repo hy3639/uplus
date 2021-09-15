@@ -1047,7 +1047,7 @@ footer  p {
 .form-list > .form-wrap:first-child {margin-left:0}
 .form-list.block > .form-wrap {display: block; margin-left:0; margin-top:5px} */
 .form-list {display: flex; justify-content: left; flex-wrap: wrap;}
-/* .form-list.justify {justify-content: space-between;} */
+.form-list.center {justify-content: center;} 
 .form-list > .form-wrap {margin-right:30px;  font-size:13px}
 .form-list > .form-wrap .chkbox{margin-right:5px}
 .form-list.block {display:inherit}
@@ -1187,12 +1187,13 @@ input[type=checkbox][class^=styled] {
 	height: 34px;
     padding:0 40px 0 10px;
     border: 1px solid #dbdbdb;    
-    background: #fff url(../images/icon/icon_16_down.png) no-repeat calc(100% - 10px) center;
+    background: #fff url(../images/icon/icon_16_down.png) no-repeat right center;
     font-size: 13px;
     line-height: 32px;
     outline: transparent;
     -webkit-appearance: none;
     -moz-appearance: none;
+	appearance: none;
 	box-sizing: border-box;
 }	
 .select-box.wide {display:block;}
@@ -2562,11 +2563,39 @@ html.popOpen {overflow:hidden;}
 }
 
 /* 수신번호 신청,관리 */
+.receive-address .board-list tr td {font-weight: 300; font-size: 13px;}
 .receive-address .board-list tr td:last-child button {min-width:73px;}
 .receive-address .border-box + .box-gray{margin-top: 20px;}
-.border-box .group .item .flex-area { display: inline-flex;margin:0 10px;}
+.receive-address .group + .group {margin-top: 15px;}
+.border-box .group .item .flex-area { display: inline-flex;margin:0 5px;}
 .border-box .group .item .divider {padding: 0 5px;}
 .border-box .group .item label {
 	font-size: 13px;
 	font-weight: 500;
+}
+.num-list {
+	border-top:1px solid #dbdbdb;
+	border-bottom:1px solid #dbdbdb
+}
+
+.num-list > .form-wrap {
+	border-bottom: 1px solid #f2f2f2;
+	margin-right: 0;
+	padding:12px 15.5px;
+}
+.num-list .form-wrap:nth-last-child(-n+10) {border-bottom: 0;}
+.num-list + .btn-more {
+	height: inherit;
+	border:0;
+	width: inherit;
+	margin: 20px 0 0 0;
+	
+}
+.num-list + .btn-more span {
+	padding-right: 20px;
+	font-weight: 500;
+	background:url(../images/icon/arrow_19_gray.png) no-repeat right center;
+}
+.num-list + .btn-more span:before {
+	display: none;
 }

@@ -66,10 +66,15 @@ $(document).on('click', '.tab-item .btn', function(){
 
 /* 툴팁 */
 $('.tooltip-area').mouseenter(function(){
-	$(this).find('.tooltip-layer').show();
+	if(!$(this).hasClass('click')){
+		$(this).find('.tooltip-layer').show();
+	}
+	
 });
 $('.tooltip-area').mouseleave(function(){
-	$(this).find('.tooltip-layer').hide();
+	if(!$(this).hasClass('click')){
+		$(this).find('.tooltip-layer').hide();
+	}	
 });
 /* 다른곳 클릭시 툴팁 닫기 */
 $(document).mouseup(function(e){
