@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>U+ 웹팩스</title>
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+<div class="wrapper bgNone">
+	<div class="header">
+		<h1 class="s-logo"><a href="#" class="logo">U+ 웹팩스</a></h1>
+		<ul class="link-area">
+			<li><a href="#">서비스 소개</a></li>
+			<li><a href="#">요금안내</a></li>
+			<li><a href="#">비즈마켓 이벤트</a></li>
+			<li>
+				<div class="tooltip-area">
+					<button type="button" class="btn-tooltip">툴팁</button>
+					<div class="tooltip-layer">						
+						<p class="txt">U+ 웹팩스 엔진을 설치하여 LG U+ 시스템과 연동을 통해 팩스를 송수신하는 방식 입니다.</p>
+					</div>
+				</div>
+				<a href="https://webfax.uplus.co.kr/join/step1-hostTestUser" target="_blank">호스트 모듈 신청</a>				
+			</li>			
+		</ul>			
+	</div>
+	<div class="container">		
+		<div class="cont-wrap">
+			<div class="cont-area join">
+				<div class="tit-area">
+					<h2 class="tit">회원가입</h2>					
+					<ul class="navi">
+						<li><a href="#">홈</a></li>
+						<li><a href="#">회원가입</a></li>						
+						<li>가입양식 작성</li>
+					</ul>
+				</div>
+				<div class="section">
+					<div class="step-area">
+						<div class="step">약관동의</div>
+						<div class="step on">가입양식작성</div>
+						<div class="step">완료</div>
+					</div>
+				</div>
+				<div class="section mgt40">
+					<div class="border-box-light">
+						<div class="box">
+							<p class="tit">
+								후불 요금제는 <br>
+								<span class="f-pink">매월 요금 고지서</span>가 발송됩니다.
+							</p>
+							<ul class="ul-list tit">
+								<li>
+									<span class="tit">발신 요금 : </span>
+									<span class="txt">장당 39원(부가세 별도)</span>
+								</li>
+								<li>
+									<span class="tit">수신 요금 : </span>
+									<span class="txt">1회선 당 월 6,000원(부가세 별도)</span>
+								</li>
+							</ul>
+							<ul class="ul-list bar light">
+								<li> 발신 요금과 별도로 수신 기본료 적용되며, 신청월, 해지월 일할 계산 청구</li>
+								<li>
+									<span class="tit">최저 이용료 :</span>
+									<span class="txt">
+										수신번호 미신청 시, 사용량이 없거나 3천 원 이하로 사용할 경우
+										3,000원 (부가세 별도)이 부과됩니다.
+									</span>									
+								</li>
+							</ul>
+						</div>
+						<div class="box">
+							<p class="tit">
+								후불 요금제는 사업자 전용 요금제로, <br>
+								<span class="f-pink">사업자등록증 사본</span>을<span class="f-pink">반드시 제출</span>해주셔야<br>
+								사용이 가능합니다.
+							</p>
+							<ul class="ul-list tit">
+								<li>
+									<span class="tit">제출 서류 : </span>
+									<span class="txt">사업자등록증 사본</span>
+								</li>
+								<li>
+									<span class="tit">제출 방법 : </span>
+									<span class="txt">팩스(02-6919-2890), 이메일(magicfax@lguplus.co.kr)</span>
+								</li>
+							</ul>
+							<ul class="ul-list bar">
+								<li>추가로 궁금하신 사항은 고객센터(1544-8007)로 문의해주세요.</li>							
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="section mgt40">
+					<div class="flex-area justify">
+						<h3 class="tit">기본정보사항</h3>
+						<span class="essential guide-txt">표시된 항목은 필수 항목입니다. 빠짐없이 작성해 주세요.</span>
+					</div>
+					
+					<div class="board-write">
+						<table>
+							<colgroup>
+								<col style="width:130px;">						
+								<col>	
+								<col style="width:130px;">						
+								<col>				
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><label class="essential" for="txt2">사용자 아이디</label></th>
+									<td colspan="3">
+										<div class="input-text inline" style="width: 216px;">
+											<input type="text" id="txt2">
+										</div>
+										<p class="guide-txt f-pink">이메일 형식으로 입력해 주시기 바랍니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential" for="txt3">비밀번호</label></th>
+									<td colspan="3">
+										<div class="input-text inline" style="width: 216px;">
+											<input type="password" id="txt3">
+										</div>									
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential" for="txt4">비밀번호 확인</label></th>
+									<td colspan="3">
+										<div class="input-text inline" style="width: 216px;">
+											<input type="password" id="txt4">
+										</div>
+										<p class="guide-txt f-pink">비밀번호가 일치하지 않습니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential">사업자 종류</label></th>
+									<td colspan="3">
+										<div class="form-list inline">
+											<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> 개인 사업자</label>
+											<label class="form-wrap"><input type="radio" name="Rdo1" class="styled" checked> 법인 사업자</label>																									
+										</div>						
+									</td>
+								</tr>	
+								<tr>
+									<th scope="row"><label class="essential" for="txt5">사업자등록 번호</label></th>
+									<td colspan="3">
+										<div class="input-phone inline">
+											<div class="input-text"><input type="text" id="txt5"></div>
+											<span class="hypen">-</span>
+											<div class="input-text"><input type="text"></div>
+											<span class="hypen">-</span>
+											<div class="input-text"><input type="text"></div>
+										</div>	
+										<button type="button" class="btn-border btn-mid bd-pink">가입 확인하기</button>							
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">사업자등록증</th>
+									<td colspan="3">
+										<div class="input-btn">
+											<div class="input-text"><input type="text" placeholder="선택된 파일 없음"></div>
+											<button type="button" class="btn-border btn-mid bd-pink">파일선택</button>												
+										</div>				
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><label class="essential" for="txt1">대표자 이름</label></th>
+									<td colspan="3">
+										<div class="input-btn">
+											<div class="input-text" style="width: 216px;">
+												<input type="text" id="txt1">
+											</div>
+											<button type="button" class="btn-border btn-mid bd-pink">휴대폰으로 본인확인</button>
+											<button type="button" class="btn-border btn-mid bd-pink">아이핀으로 본인확인</button>
+										</div>										
+									</td>
+								</tr>						
+								<tr>
+									<th scope="row"><label class="essential" for="txt6">업체명</label></th>
+									<td><div class="input-text" style="width: 216px;"><input type="text" id="txt6"></div></td>
+									<th scope="row"><label class="essential">업종</label></th>
+									<td>
+										<span class="select-box">
+											<select class="styled" style="width: 216px;">			
+												<option value="">선택</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential" for="txt7">업태</label></th>
+									<td><div class="input-text" style="width: 216px;"><input type="text" id="txt7"></div></td>
+									<th scope="row"><label class="essential">종목</label></th>
+									<td>
+										<span class="select-box">
+											<select class="styled" style="width: 216px;">			
+												<option value="">선택</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential" for="txt8">주소</label></th>
+									<td colspan="3">
+										<div class="address">
+											<div class="input-btn">
+												<div class="input-text"><input type="text"></div>
+												<button type="button" class="btn-border btn-mid bd-pink">우편번호</button>												
+											</div>	
+											<div class="input-text"><input type="text"></div>
+											<div class="input-text"><input type="text"></div>	
+										</div>			
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential" for="txt9">전화번호</label></th>
+									<td colspan="3">
+										<div class="input-phone">
+											<span class="select-box">
+												<select class="styled">			
+													<option value="">선택</option>										
+													<option value="">010</option>
+													<option value="">011</option>						
+												</select>
+											</span>
+											<span class="hypen">-</span>
+											<div class="input-text"><input type="text"></div>
+											<span class="hypen">-</span>
+											<div class="input-text"><input type="text"></div>
+										</div>								
+									</td>
+								</tr>													
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="section mgt40">
+					<h3 class="tit tit-area">수신번호 예약하기</h3>
+					<p class="sub-txt mgb15">
+						수신번호를 신청하시면 월 발송 건 수가 없어도 최저 이용료 3,000원이 부과되지 않습니다.<br>
+						수신번호 예약은 5일간 유효하며, 5일 내에 제출하지 않으시면 번호 예약이 자동으로 취소됩니다.
+					</p>
+					<dl class="dl-list type2">
+						<dt>번호 선택 방법</dt>
+						<dd>① 지역번호와 국번 선택 후 번호 입력란 클릭 후 키보드의 아래 방향 키(↓)를 누르면 신청 가능한 번호 목록이 나타납니다.</dd>
+						<dd>
+							② 번호 입력란에 원하는 숫자를 입력하고 키보드의 아래 방향 키(↓)를 누르면 입력한 숫자를 포함한 번호를 확인할 수 있습니다.
+      						<span class="sub">예) 숫자 2 입력 + 키보드 ↓ : 2가 포함된 뒷자리 번호 목록 표시됨</span>
+						</dd>
+						<dd>③ 번호를 선택한 후 [번호 선점] 버튼을 클릭하여 신청 가능 여부를 확인하세요.</dd>
+						<dd>④ 가입 양식 작성 후 [다음 단계] 버튼 클릭 시 신청이 완료됩니다.</dd>
+					</dl>
+					<div class="board-write mgt20">
+						<table>
+							<colgroup>
+								<col style="width:130px;">						
+								<col>					
+							</colgroup>
+							<tbody>		
+								<tr>
+									<th scope="row">번호선택</th>
+									<td>
+										<div class="add-box">
+											<div class="input-phone inline">
+												<span class="select-box">
+													<select class="styled">			
+														<option value="">선택</option>										
+														<option value="">010</option>
+														<option value="">011</option>						
+													</select>
+												</span>
+												<span class="hypen">-</span>
+												<div class="input-text"><input type="text"></div>
+												<span class="hypen">-</span>
+												<div class="input-text"><input type="text"></div>
+											</div>		
+											<button type="button" class="btn-mid bg-gray button-add"></button>
+											<!-- <button type="button" class="btn-mid bg-gray button-del"></button>  삭제버튼-->
+											<a href="#" class="btn-mid bg-pink">번호선점</a>
+											<a href="#" class="btn-border btn-mid bg-white">재설정</a>
+										</div>															
+										<p class="guide-txt mgl50">수신번호 1회선 당 월 6,000원(부가세 별도)</p>			
+									</td>
+								</tr>						
+																				
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="section mgt40">
+					<div class="flex-area justify">
+						<h3 class="tit">요금 납부 방법</h3>
+						<label class="guide-txt"><input type="checkbox" class="styled" checked> 기본정보와 동일</label>
+					</div>
+					
+					<!-- 지로일경우 -->
+					<!-- <div class="board-write">
+						<table>
+							<colgroup>
+								<col style="width:130px;">						
+								<col>											
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><label class="essential">납부 방법</label></th>
+									<td>
+										<div class="form-list inline">
+											<label class="form-wrap"><input type="radio" name="Rdo2" class="styled" checked> 지로</label>
+											<label class="form-wrap"><input type="radio" name="Rdo2" class="styled"> 자동이체</label>
+											<label class="form-wrap"><input type="radio" name="Rdo2" class="styled"> 신용카드</label>																									
+										</div>	
+										<p class="guide-txt">자동이체 선택시 요금의 1% 할인</p>									
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential">청구방법</label></th>
+									<td>
+										<div class="form-list inline position">
+											<label class="form-wrap"><input type="radio" name="Rdo3" class="styled" checked> 이메일</label>																																			
+										</div>	
+										<p class="guide-txt">
+											이메일청구서 신청시 별도 세금계산서가 제공되며, 매월 15일 전후로 청구서 수령이 가능합니다.<br>
+											(16.02.01부터 LG유플러스 정책에 따라 신규 가입 시 이메일청구만 가능합니다.)
+										</p>									
+									</td>
+								</tr>	
+								<tr>
+									<th scope="row"><label class="essential" for="txt8">상호명</label></th>
+									<td>
+										<div class="input-text inline" style="width: 216px;">
+											<input type="text" id="txt8">
+										</div>									
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential" for="txt9">청구서 수령인</label></th>
+									<td>
+										<div class="input-text inline" style="width: 216px;">
+											<input type="text" id="txt9">
+										</div>									
+									</td>
+								</tr>							
+								<tr>
+									<th scope="row"><label class="essential" for="txt11">부서명</label></th>
+									<td>
+										<div class="input-text inline" style="width: 216px;">
+											<input type="text" id="txt11">
+										</div>									
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential">전화번호</label></th>
+									<td>
+										<div class="input-phone">
+											<span class="select-box">
+												<select class="styled">			
+													<option value="">선택</option>										
+													<option value="">010</option>
+													<option value="">011</option>						
+												</select>
+											</span>
+											<span class="hypen">-</span>
+											<div class="input-text"><input type="text"></div>
+											<span class="hypen">-</span>
+											<div class="input-text"><input type="text"></div>
+										</div>								
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential" for="txt12">이메일</label></th>
+									<td>
+										<div class="input-email inline">
+											<div class="input-text"><input type="text" id="txt12"></div>
+											<span class="divider">@</span>
+											<div class="input-text"><input type="text"></div>
+											<span class="select-box">
+												<select class="styled">																								
+													<option value="">naver.com</option>													
+												</select>
+											</span>
+										</div>
+										<button type="button" class="btn-border btn-mid bd-pink">유효성 검사</button>
+										<p class="guide-txt mgl0 mgt5">해당 이메일로 청구서가 발송됩니다. 입력하신 이메일의 유효성 검사를 진행해 주시기 바랍니다.</p>
+									</td>
+								</tr>	
+																		
+							</tbody>
+						</table>
+					</div> -->
+
+					<!-- 자동이체일경우 -->
+					<!-- <div class="board-write">
+						<table>
+							<colgroup>
+								<col style="width:130px;">						
+								<col>											
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><label class="essential">납부 방법</label></th>
+									<td>
+										<div class="form-list inline">
+											<label class="form-wrap"><input type="radio" name="Rdo2" class="styled"> 지로</label>
+											<label class="form-wrap"><input type="radio" name="Rdo2" class="styled" checked> 자동이체</label>
+											<label class="form-wrap"><input type="radio" name="Rdo2" class="styled"> 신용카드</label>																									
+										</div>	
+										<p class="guide-txt">자동이체 선택시 요금의 1% 할인</p>									
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential">청구방법</label></th>
+									<td>
+										<div class="form-list inline position">
+											<label class="form-wrap"><input type="radio" name="Rdo3" class="styled" checked> 이메일</label>																																			
+										</div>	
+										<p class="guide-txt">
+											이메일청구서 신청시 별도 세금계산서가 제공되며, 매월 15일 전후로 청구서 수령이 가능합니다.<br>
+											(16.02.01부터 LG유플러스 정책에 따라 신규 가입 시 이메일청구만 가능합니다.)
+										</p>									
+									</td>
+								</tr>	
+								<tr>
+									<th scope="row"><label class="essential" for="txt12">이메일</label></th>
+									<td>
+										<div class="input-email inline">
+											<div class="input-text"><input type="text" id="txt12"></div>
+											<span class="divider">@</span>
+											<div class="input-text"><input type="text"></div>
+											<span class="select-box">
+												<select class="styled">																								
+													<option value="">naver.com</option>													
+												</select>
+											</span>
+										</div>
+										<button type="button" class="btn-border btn-mid bd-pink">유효성 검사</button>
+										<p class="guide-txt mgl0 mgt5">해당 이메일로 청구서가 발송됩니다. 입력하신 이메일의 유효성 검사를 진행해 주시기 바랍니다.</p>
+									</td>
+								</tr>	
+								<tr>
+									<th scope="row"><label class="essential">은행명</label></th>
+									<td>
+										<span class="select-box">
+											<select class="styled" style="width: 216px;">			
+												<option value="">선택</option>										
+												<option value="">010</option>
+												<option value="">011</option>						
+											</select>
+										</span>									
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential" for="txt18">예금주명</label></th>
+									<td>
+										<div class="input-text inline" style="width: 216px;">
+											<input type="text" id="txt18">
+										</div>									
+									</td>
+								</tr>							
+								<tr>
+									<th scope="row"><label class="essential" for="txt19">계좌번호</label></th>
+									<td>
+										<div class="input-text inline" style="width: 216px;">
+											<input type="text" id="txt19">
+										</div>									
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential">예금주 ID 종류</label></th>
+									<td>
+										<div class="flex-area">
+											<span class="select-box">
+												<select class="styled" style="width: 216px;">			
+													<option value="">선택</option>
+												</select>
+											</span>
+											<div class="input-text mgl4" style="width: 216px;"><input type="text"></div>	
+										</div>																		
+										<p class="guide-txt mgl0">숫자만 표기(- 제외) / 생년월일은 주민등록번호 앞자리를(YYMMDD) 입력해주세요 ex) 810212</p>								
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential">출금결제동의</label></th>
+									<td>
+										<p class="guide-txt f-pink mgl0">
+											전자금융거래법 15조에 따라 은행자동이체 등록 시 납부인(예금주)의 출금동의 증빙 자료를 보관하도록 되어 있습니다.<br>
+											‘자동이체출금동의서’를 출력하셔서 작성하시고, 반드시 본인 서명 후 스캔(혹은 사진촬영)하여 첨부하여 주시기 바랍니다.											
+										</p>						
+										<div class="input-btn inline mgt5">
+											<div class="input-text"><input type="text" placeholder="선택된 파일 없음"></div>
+											<button type="button" class="btn-border btn-mid bd-pink">파일선택</button>		
+											<button type="button" class="btn-border btn-mid bg-white">출금동의서 다운로드</button>										
+										</div>
+										
+									</td>
+								</tr>
+																		
+							</tbody>
+						</table>
+					</div> -->
+
+					<!-- 신용카드일경우 -->
+					<div class="board-write">
+						<table>
+							<colgroup>
+								<col style="width:130px;">						
+								<col>											
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><label class="essential">납부 방법</label></th>
+									<td>
+										<div class="form-list inline">
+											<label class="form-wrap"><input type="radio" name="Rdo2" class="styled"> 지로</label>
+											<label class="form-wrap"><input type="radio" name="Rdo2" class="styled"> 자동이체</label>
+											<label class="form-wrap"><input type="radio" name="Rdo2" class="styled checked"> 신용카드</label>																									
+										</div>	
+										<p class="guide-txt">자동이체 선택시 요금의 1% 할인</p>									
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential">청구방법</label></th>
+									<td>
+										<div class="form-list inline position">
+											<label class="form-wrap"><input type="radio" name="Rdo3" class="styled" checked> 이메일</label>																																			
+										</div>	
+										<p class="guide-txt">
+											이메일청구서 신청시 별도 세금계산서가 제공되며, 매월 15일 전후로 청구서 수령이 가능합니다.<br>
+											(16.02.01부터 LG유플러스 정책에 따라 신규 가입 시 이메일청구만 가능합니다.)
+										</p>									
+									</td>
+								</tr>	
+								<tr>
+									<th scope="row"><label class="essential" for="txt20">이메일</label></th>
+									<td>
+										<div class="input-email inline">
+											<div class="input-text"><input type="text" id="txt20"></div>
+											<span class="divider">@</span>
+											<div class="input-text"><input type="text"></div>
+											<span class="select-box">
+												<select class="styled">																								
+													<option value="">naver.com</option>													
+												</select>
+											</span>
+										</div>
+										<button type="button" class="btn-border btn-mid bd-pink">유효성 검사</button>
+										<p class="guide-txt mgl0 mgt5">해당 이메일로 청구서가 발송됩니다. 입력하신 이메일의 유효성 검사를 진행해 주시기 바랍니다.</p>
+									</td>
+								</tr>	
+								<tr>
+									<th scope="row"><label class="essential">카드 종류</label></th>
+									<td>
+										<span class="select-box">
+											<select class="styled" style="width: 216px;">			
+												<option value="">선택</option>
+											</select>
+										</span>									
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential" for="txt21">카드 주</label></th>
+									<td>
+										<div class="input-text inline" style="width: 216px;">
+											<input type="text" id="txt21">
+										</div>									
+									</td>
+								</tr>							
+								<tr>
+									<th scope="row"><label class="essential" for="txt21">카드 번호</label></th>
+									<td>
+										<div class="input-text inline" style="width: 216px;">
+											<input type="text" id="txt21">
+										</div>
+										<p class="guide-txt mgl0">숫자만 표기(- 제외)</p>											
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential">유효일자</label></th>
+									<td>
+										<div class="input-card">
+											<span class="select-box">
+												<select class="styled" style="width: 70px;">			
+													<option value="">01</option>
+												</select>
+											</span>
+											<span class="divider">월</span>
+											
+											<span class="select-box">
+												<select class="styled" style="width: 70px;">			
+													<option value="">2021</option>
+												</select>
+											</span>
+											<span class="divider">년</span>
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential">카드 개설번호</label></th>
+									<td>
+										<div class="flex-area">
+											<span class="select-box">
+												<select class="styled" style="width: 216px;">			
+													<option value="">선택</option>
+												</select>
+											</span>
+											<div class="input-text mgl4" style="width: 216px;"><input type="text"></div>	
+										</div>																		
+										<p class="guide-txt mgl0 mgt5">숫자만 표기(- 제외) / 생년월일은 주민등록번호 앞자리를(YYMMDD) 입력해주세요 ex) 810212</p>								
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential">출금결제동의</label></th>
+									<td>
+										<p class="guide-txt f-pink mgl0 mgb15">
+											본인(예금주 또는 회원)이 납부하여야 할 요금에 대해 별도의 통지없이 상기 본인의 지정 계좌(카드번호)에서 <br>
+											지정된 출금(결제)일에 인출(결제)하여 주시기바랍니다.										
+										</p>						
+										<label><input type="checkbox" class="styled"> 상기 사항에 동의하신다면 체크박스를 클릭하시기 바랍니다.</label>										
+									</td>
+								</tr>
+																		
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="section mgt40">
+					<div class="flex-area justify">
+						<h3 class="tit">관리자 정보</h3>
+						<label class="guide-txt"><input type="checkbox" class="styled" checked> 기본정보와 동일</label>
+					</div>
+					
+					<div class="board-write">
+						<table>
+							<colgroup>
+								<col style="width:130px;">						
+								<col>											
+							</colgroup>
+							<tbody>								
+								<tr>
+									<th scope="row"><label class="essential" for="txt13">관리자명</label></th>
+									<td>
+										<div class="input-text inline" style="width: 216px;">
+											<input type="text" id="txt13">
+										</div>									
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">부서명</th>
+									<td>
+										<div class="input-text inline" style="width: 216px;">
+											<input type="text" id="txt14">
+										</div>									
+									</td>
+								</tr>								
+								<tr>
+									<th scope="row"><label class="essential">전화번호</label></th>
+									<td>
+										<div class="input-phone">
+											<span class="select-box">
+												<select class="styled">			
+													<option value="">선택</option>										
+													<option value="">010</option>
+													<option value="">011</option>						
+												</select>
+											</span>
+											<span class="hypen">-</span>
+											<div class="input-text"><input type="text"></div>
+											<span class="hypen">-</span>
+											<div class="input-text"><input type="text"></div>
+										</div>								
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">핸드폰</th>
+									<td>
+										<div class="input-phone inline">
+											<span class="select-box">
+												<select class="styled">			
+													<option value="">선택</option>										
+													<option value="">010</option>
+													<option value="">011</option>						
+												</select>
+											</span>
+											<span class="hypen">-</span>
+											<div class="input-text"><input type="text"></div>
+											<span class="hypen">-</span>
+											<div class="input-text"><input type="text"></div>
+										</div>		
+										<p class="guide-txt mgl50">비밀번호 분실 시 핸드폰 번호로 전송해 드립니다.</p>								
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential" for="txt15">이메일</label></th>
+									<td>
+										<div class="input-email inline">
+											<div class="input-text"><input type="text" id="txt15"></div>
+											<span class="divider">@</span>
+											<div class="input-text"><input type="text"></div>
+											<span class="select-box">
+												<select class="styled">																								
+													<option value="">naver.com</option>													
+												</select>
+											</span>
+										</div>										
+									</td>
+								</tr>	
+																		
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="section mgt40">
+					<h3 class="tit">부가정보</h3>
+					
+					<div class="board-write">
+						<table>
+							<colgroup>
+								<col style="width:130px;">						
+								<col>					
+							</colgroup>
+							<tbody>	
+								<tr>
+									<th scope="row"><label class="essential" >서비스 방식</label></th>
+									<td>
+										<div class="form-list inline">
+											<label class="form-wrap"><input type="radio" name="Rdo4" class="styled" checked> WEB방식</label>
+											<label class="form-wrap"><input type="radio" name="Rdo4" class="styled"> HOST방식</label>																									
+										</div>																		
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label class="essential" >자유통화웹팩스팩<br>신청여부</label></th>
+									<td>
+										<div class="form-list inline">
+											<label class="form-wrap"><input type="radio" name="Rdo5" class="styled"> 신청</label>
+											<label class="form-wrap"><input type="radio" name="Rdo5" class="styled" checked> 미신청</label>																									
+										</div>																		
+									</td>
+								</tr>	
+								<tr>
+									<th scope="row"><label class="essential" >가입경로</label></th>
+									<td>
+										<span class="select-box">
+											<select class="styled" style="width: 216px;">			
+												<option value="">선택</option>
+											</select>
+										</span>	
+										<label class="mgl20"><input type="checkbox" class="styled"> 카카오워크</label>								
+									</td>
+								</tr>						
+								<tr>
+									<th scope="row">추천 U+영업사원</th>
+									<td>
+										<ul class="form-list label">
+											<li>
+												<label for="txt16">부서명 :</label>
+												<div class="input-text inline" style="width: 170px;">
+													<input type="text" id="txt16">
+												</div>	
+											</li>
+											<li>
+												<label for="txt17">이름 :</label>
+												<div class="input-text inline" style="width: 170px;">
+													<input type="text" id="txt17">
+												</div>	
+											</li>
+										</ul>
+																			
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">메일 수신여부</th>
+									<td>
+										<div class="form-list inline">
+											<label class="form-wrap"><input type="radio" name="Rdo6" class="styled"> 예</label>
+											<label class="form-wrap"><input type="radio" name="Rdo6" class="styled" checked> 아니오</label>																									
+										</div>	
+										<p class="guide-txt">U+웹팩스에서 제공하는 정보의 이메일 수신</p>									
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">SMS 수신여부</th>
+									<td>
+										<div class="form-list inline">
+											<label class="form-wrap"><input type="radio" name="Rdo7" class="styled"> 예</label>
+											<label class="form-wrap"><input type="radio" name="Rdo7" class="styled" checked> 아니오</label>																									
+										</div>	
+										<p class="guide-txt">U+웹팩스에서 제공하는 정보의 SMS 수신</p>										
+									</td>
+								</tr>													
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="button-area center margin">			
+					<a href="#" class="btn-mid40 bg-pink">다음단계</a>			
+					<a href="#" class="btn-border btn-mid40 bg-white">취소</a>					
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="footer">
+		<ul class="link-area">
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">스팸정책</a></li>
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#" class="f-bold">개인정보처리방침</a></li>
+			<li><a href="#">이메일주소무단수집거부</a></li>
+		</ul>
+		<p class="copyright">Copyright © 2021 LG UPlus. All rights reserved.</p>
+	</div>
+	
+</div>
+
+
+<!-- 로그인 5회 이상 실패시 -->
+<div class="layer-popup" title="Popup01">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">일치하는 회원정보가 없습니다.</p>				
+		</div>
+		<div class="button-area center">			
+			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 6개월이상 비밀번호 변경하지 않은 경우 -->
+<div class="layer-popup" title="Popup02">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				입력하신 정보와 일치하는 아이디입니다<br>
+				<span class="f-pink">abce**@abc.com</span>
+			</p>				
+		</div>
+		<div class="button-area center margin">			
+			<button type="button" class="btn-mid btn-border bg-white">비밀번호 찾기</button>
+			<button type="button" class="btn-mid bg-pink">로그인</button>
+		</div>
+	</div>
+</div>
+
+<!-- 그룹웨어 연동 아이디일경우 -->
+<div class="layer-popup" title="Popup03">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				회원가입시 입력한 이메일과 휴대폰 메시지로<br>
+				임시 비밀번호가 발송되었습니다.<br>
+				<span class="f-light f-sm">(메일 수신이 되지 않은 경우, 스팸 메일함을 확인해 주세요.)</span>
+			</p>				
+		</div>
+		<div class="button-area center">			
+			<button type="button" class="btn-mid bg-pink">로그인</button>
+		</div>
+	</div>
+</div>
+
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
+<script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(document).ready(function(){
+	
+    
+});
+
+
+</script>
+</body>
+</html>
