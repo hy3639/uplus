@@ -455,7 +455,8 @@ footer  p {
 /* 발송현황 툴팁 */
 .cont-top .tooltip-layer {
 	padding:26px 0;
-	width:470px
+	min-width:470px;
+	width: inherit;
 }
 .send-status .list {display: flex;justify-content: space-between;}
 .send-status .list .item {
@@ -471,6 +472,7 @@ footer  p {
 	font-weight: 500;
 }
 .send-status .item .flex-list li{display: flex;}
+.send-status .item .flex-list li span.tit {padding-right: 10px;}
 .send-status .item .flex-list li > span {flex: 1;}
 .send-status .item .flex-list li > span.cont {position:relative;text-align: right;}
 .send-status .item .flex-list li > span.cont em:first-child {padding-right:15px; font-weight: 900;}
@@ -735,6 +737,7 @@ footer  p {
 .f-bold {font-weight:700 !important}
 
 .f-sm {font-size:12px}
+.f-13 {font-size:13px}
 
 .underline {text-decoration: underline;}
 
@@ -1423,6 +1426,7 @@ input[type=checkbox][class^=styled] {
 	overflow: hidden;
 	text-overflow: ellipsis;  /* 말줄임 적용 */
 }
+.board-list table td .link {font-size: 13px; font-weight: 300;}
 /* .board-list table td.subject {padding:0;}
 .board-list table tbody td.subject {padding:0 0 0 20px;text-align:left;}
 .board-list table tbody td.subject .link {
@@ -1556,6 +1560,8 @@ div.formSingle {display: none;}
 /* 스크롤테이블 */
 .scroll-board-list {
 	border:1px solid #dbdbdb;
+	/* height: inherit !important;
+	max-height: 498px; */
 	/* border-left:1px solid #dbdbdb;
 	border-right:1px solid #dbdbdb;
 	border-bottom:1px solid #dbdbdb; */
@@ -2051,10 +2057,8 @@ html.popOpen {overflow:hidden;}
 .layer-popup .popup-cont .guide-txt {font-size:13px; line-height: 18px;}
 .layer-popup .popup-cont .guide-txt + .guide-txt {margin-top:10px}
 .layer-popup .popup-cont .guide-txt2 {font-size:14px; line-height: 18px; margin-top:10px}
-.layer-popup .popup-cont .ul-list li {
-	margin-top:10px;
-	font-weight: 400;
-}.layer-popup .popup-cont .ul-list li .f-mid {margin-bottom: 0;}
+.layer-popup .popup-cont .ul-list li {margin-top:10px;font-weight: 400;}
+.layer-popup .popup-cont .ul-list li .f-mid {margin-bottom: 0;}
 .layer-popup .popup-cont .ul-list li:first-child {margin-top:0}
 .layer-popup .popup-cont label {font-weight: 500;}
 .layer-popup .popup-cont .form-list .chkbox{top:-2px}
@@ -2067,6 +2071,12 @@ html.popOpen {overflow:hidden;}
 	height:36px; 
 	line-height: 36px;
 }
+.layer-popup .popup-cont .search-area .group .item + button {float: right;}
+.layer-popup .popup-cont .search-area .group .item .input-text + .input-text,
+.layer-popup .popup-cont .search-area .group .item .select-box + .select-box,
+.layer-popup .popup-cont .search-area .group .item .input-text + .select-box,
+.layer-popup .popup-cont .search-area .group .item .select-box + .input-text{margin-left: 2px;}
+
 /* 팝업오픈 */
 .layer-popup .popup {
     /* transform:scale(1.1); */
@@ -2379,6 +2389,7 @@ html.popOpen {overflow:hidden;}
 	background:url(../images/img/img_monitor.png) no-repeat center top;
 }
 .bgNone .complete .complete-txt > span {font-weight: 700;}
+
 /* -----------팩스 -----------*/
 /* 팩스 보내기 */
 .count-area {margin-top: 10px;}
@@ -2927,11 +2938,11 @@ html.popOpen {overflow:hidden;}
 	font-family: Arial,Helvetica,sans-serif;
 	font-size: 1em;
 }
-.ui-widget.ui-widget-content {
+/* .ui-widget.ui-widget-content {
 	width: 100%;
 	border: 1px solid #dbdbdb;
 	background-color:#eceff1
-}
+} */
 .ui-widget-content {
 	border: 1px solid #eceff1;
 	background: #ffffff;
@@ -2940,12 +2951,12 @@ html.popOpen {overflow:hidden;}
 .ui-widget-content a {
 	color: #333333;
 }
-.ui-widget-header {
+/* .ui-widget-header {
 	border: 1px solid #eceff1;
 	background: #e9e9e9;
 	color: #333333;
 	font-weight: bold;
-}
+} */
 .ui-widget-header a {
 	color: #333333;
 }
@@ -2954,7 +2965,6 @@ html.popOpen {overflow:hidden;}
 	 background-color:#e03d7c;
 	 border-radius: 5px;
  }
- 
 
 /* 수신번호 신청,관리 */
 .receive-address .board-list tr td {font-weight: 300; font-size: 13px;}
@@ -2993,3 +3003,33 @@ html.popOpen {overflow:hidden;}
 .num-list + .btn-more span:before {
 	display: none;
 }
+
+/* -----------문자 -----------*/
+
+/* 문자보내기*/ 
+.emoticon-area{
+	padding: 15px;
+	
+}
+.button-emoticon {line-height: 13px; padding: 3px 0;}
+.emoticon-area span {font-size: 13px;}
+.emoticon-area button {
+	font-size: 13px; 
+	font-weight: 300;
+	line-height: 13px;
+}
+
+.save-msg .box-gray {
+	padding: 20px 30px;
+	margin-bottom: 20px;
+}
+.save-msg .grid-style  {padding-bottom: 0; border-bottom: 0;}
+.save-msg .grid-style .grid-item .tit {width: 60px;}
+.save-msg .grid-style .grid-item .tit + .cont {width: calc(100% - 60px);}
+.save-msg .grid-style .grid-item .tit + .cont .input-text input{width: 100%;}
+.save-msg .box-gray .grid-item .tit label {font-size: 13px;}
+.save-msg .grid-style .grid-item {margin-bottom: 10px;}
+.save-msg .grid-style.sms .content textarea {padding:10px}
+.layer-popup .popup-cont.save-msg .guide-txt {font-size: 12px;}
+.layer-popup  .lg .save-msg .button-area .btn-mid {min-width:55px !important; height: 32px; line-height: 30px;}
+.layer-popup .save-msg .pagenation {margin-top: 15px;}

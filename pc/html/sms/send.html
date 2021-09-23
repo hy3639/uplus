@@ -260,11 +260,11 @@
 								</div>
 								<div class="button-area justify">
 									<div class="left">
-										<a href="#" class="btn-border btn-mid bg-white">삭제</a>
-										<a href="#" class="btn-border btn-mid bg-white">중복삭제</a>
+										<a href="#" class="btn-border btn-mid bg-white btnPop" title="Popup03">삭제</a>
+										<a href="#" class="btn-border btn-mid bg-white btnPop" title="Popup02">중복삭제</a>
 									</div>
 									<div class="right">
-										<a href="#" class="btn-mid bg-pink">주소록</a>
+										<a href="#" class="btn-mid bg-pink btnPop" title="Popup04">주소록</a>
 										<a href="#" class="btn-mid bg-gray">엑셀 불러오기</a>
 									</div>
 								</div>
@@ -283,8 +283,8 @@
 									<textarea placeholder="문자 내용을 입력해주세요." style="height: 150px;"></textarea>
 								</div>
 								<div class="button-area margin right">								
-									<a href="#" class="btn-mid bg-pink">특수문자</a>
-									<a href="#" class="btn-mid bg-gray">메시지 저장함</a>
+									<a href="#" class="btn-mid bg-pink btnPop" title="Popup05">특수문자</a>
+									<a href="#" class="btn-mid bg-gray btnPop" title="Popup08">메시지 저장함</a>
 								</div>
 							</div>
 						</div>						
@@ -337,7 +337,7 @@
 															</div>
 															<div class="right">
 																<a href="#" class="btn-mid bg-pink">파일첨부</a>
-																<a href="#" class="btn-mid bg-gray btnPop" title="Popup01">문서보관함</a>										
+																<a href="#" class="btn-mid bg-gray">문서보관함</a>										
 															</div>
 														</div>
 														<div class="count-area right">
@@ -407,7 +407,7 @@
 						
 					</div>
 					<div class="button-area center">						
-						<div class="right"><a href="#" class="btn-lg bg-pink">보내기</a></div>
+						<div class="right"><a href="#" class="btn-lg bg-pink btnPop" title="Popup06">보내기</a></div>
 					</div>
 				</div>
 			</div>
@@ -450,7 +450,7 @@
 </div>
 
 <!-- 문서보관함 -->
-<div class="layer-popup noneClose" title="Popup01">
+<!-- <div class="layer-popup noneClose" title="Popup01">
 	<div class="popup xl">
 		<div class="popup-header">
 			<p class="title">문서 보관함</p>
@@ -481,20 +481,19 @@
 		</div>
 		<div class="button-area center">			
 			<button type="button" class="btn-mid bg-pink btnPop" title="Popup02">문서 적용</button>			
-		</div>
-		
+		</div>		
 	</div>
-</div>
+</div> -->
 
 <!-- 중복제거 -->
-<div class="layer-popup scroll" title="Popup02">
+<div class="layer-popup" title="Popup02">
 	<div class="popup sm">
 		<div class="popup-header">			
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
 		<div class="popup-cont">
 			<p class="guide-txt center">
-				중복 항목을 삭제 하시겠습니까?
+				중복된 번호를 삭제 하시겠습니까?
 			</p>				
 		</div>
 		<div class="button-area center margin">			
@@ -503,6 +502,371 @@
 		</div>
 	</div>
 </div>
+
+<!-- 선택삭제 -->
+<div class="layer-popup" title="Popup03">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				선택한 번호를 삭제 하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area center margin">			
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>	
+			<button type="button" class="btn-mid bg-pink">확인</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 주소록 -->
+<div class="layer-popup" title="Popup04">
+	<div class="popup xl">
+		<div class="popup-header">
+			<p class="title">주소록</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<div class="box-gray search-area">
+				<div class="group">					
+					<div class="item">
+						<label>그룹 선택</label>
+						<span class="select-box">
+							<select class="styled" style="width:130px">
+								<option value="">그룹 전체</option>															
+							</select>
+						</span>
+						<span class="select-box">
+							<select class="styled" style="width:130px">
+								<option value="">이름</option>															
+							</select>
+						</span>
+						<div class="input-text">
+							<input type="text" style="width:166px;">
+						</div>
+					</div>
+					<button type="button" class="btn-mid bg-gray">검색</button>
+				</div>
+			</div>
+			<div class="button-area right">
+				<span class="select-box">
+					<select class="styled">
+						<option value="">20개씩 보기</option>															
+					</select>
+				</span>	
+			</div>
+			<div class="grid-area scroll-area">
+				그리드영역
+			</div>
+			
+		</div>
+		<div class="button-area center">			
+			<button type="button" class="btn-mid bg-pink">받는번호 추가</button>			
+		</div>
+		
+	</div>
+</div>
+
+<!-- 특수문자 -->
+<div class="layer-popup" title="Popup05">
+	<div class="popup mid">
+		<div class="popup-header">	
+			<p class="title">특수문자</p>		
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<div class="box-gray">
+				<div class="emoticon-area">
+					<div class="button-emoticon">
+						<button type="button">■</button>
+						<button type="button">□</button>
+						<button type="button">▣</button>
+						<button type="button">◆</button>
+						<button type="button">◇</button>
+						<button type="button">◈</button>
+						<button type="button">♥</button>
+						<button type="button">●</button>
+						<button type="button">○</button>
+						<button type="button">▲</button>
+						<button type="button">▼</button>
+						<button type="button">▶</button>
+						<button type="button">▷</button>
+						<button type="button">◀</button>
+						<button type="button">☎</button>
+						<button type="button">☏</button>
+						<button type="button">♠</button>
+						<button type="button">♤</button>
+						<button type="button">♣</button>
+						<button type="button">♧</button>
+						<button type="button">★</button>
+					</div>
+					<div class="button-emoticon">
+						<button type="button">☞</button>
+						<button type="button">☜</button>
+						<button type="button">▒</button>
+						<button type="button">⊙</button>
+						<button type="button">『</button>
+						<button type="button">』</button>
+						<button type="button">㉿</button>
+						<button type="button">♨</button>
+						<button type="button">℡</button>
+						<button type="button">∑</button>
+						<button type="button">∏</button>
+						<button type="button">♬</button>
+						<button type="button">♪</button>
+						<button type="button">♩</button>
+						<button type="button">※</button>
+						<button type="button"> →</button>
+						<button type="button">↑</button>
+						<button type="button">↓</button>
+						<button type="button">↗</button>
+						<button type="button">↙</button>
+						<button type="button">↖</button>
+					</div>
+					<div class="button-emoticon">
+						<button type="button">↘</button>
+						<button type="button">↕</button>
+						<button type="button">§</button>
+						<button type="button">Ω</button>
+						<button type="button">π</button>
+						<button type="button">╋</button>
+						<button type="button">┛</button>
+						<button type="button">┗</button>
+						<button type="button">┣</button>
+						<button type="button">┃</button>
+						<button type="button">━</button>
+						<button type="button">┻</button>
+						<button type="button">┳</button>
+						<button type="button">┏</button>
+						<button type="button">┓</button>
+						<button type="button">♡</button>
+						<button type="button">◁</button>
+						<button type="button">☆</button>
+						<button type="button">™</button>
+						<button type="button">←</button>
+						<button type="button">↔</button>
+						<button type="button">┫</button>
+					</div>
+					<div class="button-emoticon">
+						<span>웃음</span>
+						<button type="button">^.^</button>
+						<button type="button">*^^*</button>
+						<button type="button">^o^♬</button>
+						<button type="button">^.~</button>
+						<button type="button">(^^)V</button>					
+					</div>
+					<div class="button-emoticon">
+						<span>사랑 </span>
+						<button type="button">♡.♡</button>
+						<button type="button">@}->--</button>
+						<button type="button">^}{^</button>
+						<button type="button">(^*^) kiss (*_*)</button>								
+					</div>
+					<div class="button-emoticon">
+						<span>슬픔 </span>
+						<button type="button">ㅠ.ㅠ</button>
+						<button type="button">(&gt;_&lt;)</button>
+						<button type="button">T.T</button>
+						<button type="button">-_-</button>	
+						<button type="button">(v_v)</button>								
+					</div>
+					<div class="button-emoticon">
+						<span>놀람 </span>
+						<button type="button">★.★</button>
+						<button type="button">@_@</button>
+						<button type="button">-_-a</button>
+						<button type="button">⊙.⊙</button>	
+						<button type="button">q⊙.⊙p</button>								
+					</div>
+					<div class="button-emoticon">
+						<span>기타</span>
+						<button type="button">＼o/</button>
+						<button type="button">Θ.Θ</button>
+						<button type="button">(-_-)Zz</button>
+						<button type="button">ご,.ご</button>	
+						<button type="button">^,.^+</button>								
+					</div>
+				</div>				
+				<!-- <p>
+					■ □ ▣ ◆ ◇ ◈ ♥ ● ○ ▲ ▼ ▶ ▷ ◀ ☎ ☏ ♠ ♤ ♣ ♧ ★ <br>
+
+					☞ ☜ ▒ ⊙ 『 』 ㉿ ♨ ℡ ∑ ∏ ♬ ♪ ♩ ※ → ↑ ↓ ↗ ↙ ↖ <br>
+					↘ ↕ § Ω π ╋ ┛ ┗ ┣ ┃ ━ ┻ ┳ ┏ ┓ ♡ ◁ ☆ ™ ← ↔ ┫<br>
+					웃음  ^.^ *^^* ^o^♬ ^.~ (^^)V<br>
+					사랑  ♡.♡ @}->-- ^}{^ (^*^) kiss (*_*)<br>
+					슬픔  ㅠ.ㅠ (&gt;_&lt;) T.T -_- (v_v)<br>
+					놀람  ★.★ @_@ -_-a ⊙.⊙ q⊙.⊙p<br>
+					기타  ＼o/ Θ.Θ (-_-)Zz ご,.ご ^,.^+
+				</p> -->
+			</div>
+							
+		</div>
+		<div class="button-area center">			
+			<button type="button" class="btn-border btn-mid bg-white popClose">닫기</button>				
+		</div>
+	</div>
+</div>
+
+<!-- 문자보내기버튼 클릭시 -->
+<div class="layer-popup" title="Popup06">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				문자를 전송 하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area center margin">			
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>	
+			<button type="button" class="btn-mid bg-pink btnPop" title="Popup07">확인</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 첨부 alert -->
+<div class="layer-popup" title="Popup07">
+	<div class="popup sm">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				허용되지 않은 파일이 첨부되어 있습니다.<br>
+				다시 확인하여 주십시오.<br><br>
+
+			*첨부 파일 참고 사항<br>
+			- 이미지: 150Kb이하 / jpg형식(해상도 16배수 권장)<br>
+			- 오디오: 20Kb이하 / ma3형식<br>
+			- 비디오: 300Kb이하/ k3g형식
+			</p>
+			<!-- <ul class="ul-list">
+				<li>*첨부 파일 참고 사항</li>
+				<li>- 이미지: 150Kb이하 / jpg형식(해상도 16배수 권장)</li>
+				<li>- 오디오: 20Kb이하 / ma3형식</li>
+				<li>- 비디오: 300Kb이하/ k3g형식</li>
+			</ul>			 -->
+		</div>		
+	</div>
+</div>
+
+<!-- 메시지 저장함 -->
+<div class="layer-popup" title="Popup08">
+	<div class="popup lg">
+		<div class="popup-header">
+			<p class="title">메시지 저장함</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont save-msg">
+			<div class="box-gray">
+				<div class="grid-style sms">
+					<div class="grid-item">
+						<div class="tit">
+							<label for="popinput1">제목</span>							
+						</div>
+						<div class="cont">
+							<div class="input-text">
+								<input type="text" id="popinput1">
+							</div>
+						</div>
+					</div>					
+					<div class="grid-item content">
+						<div class="tit">
+							<label for="popinput2">내용</span>									
+						</div>
+						<div class="cont">							
+							<div class="input-text">
+								<textarea id="popinput2"></textarea>
+							</div>
+							<div class="flex-area justify">
+								<p class="guide-txt"><span class="f-mid">0 Byte</span> (건당 18원)</p>
+								<div class="button-area margin right">								
+									<a href="#" class="btn-mid bg-pink">저장</a>
+									<a href="#" class="btn-mid bg-gray">신규</a>
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="board-list fax">
+				<table>
+					<caption>메시지저장 리스트</caption>
+					<colgroup>
+						<col style="width:30%;">
+						<col >
+						<col style="width:20%;">												
+					</colgroup>
+					<thead>
+						<tr>							
+							<th scope="col">제목</th>
+							<th scope="col">내용</th>						
+							<th scope="col">기능</th>
+						</tr>
+					</thead>
+					<tbody>							
+						<tr>											
+							<td class="subject"><p class="tit ellipsis">마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요</p></td>																	
+							<td class="subject"><p class="tit ellipsis">마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요</p></td>
+							<td>
+								<button type="button" class="btn-border btn-xxs bg-white">사용</button>
+								<button type="button" class="btn-border btn-xxs bg-white">삭제</button>
+							</td>
+						</tr>
+						<tr>											
+							<td class="subject"><p class="tit ellipsis">마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요</p></td>																	
+							<td class="subject"><p class="tit ellipsis">마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요</p></td>
+							<td>
+								<button type="button" class="btn-border btn-xxs bg-white">사용</button>
+								<button type="button" class="btn-border btn-xxs bg-white">삭제</button>
+							</td>
+						</tr>
+						<tr>											
+							<td class="subject"><p class="tit ellipsis">마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요</p></td>																	
+							<td class="subject"><p class="tit ellipsis">마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요</p></td>
+							<td>
+								<button type="button" class="btn-border btn-xxs bg-white">사용</button>
+								<button type="button" class="btn-border btn-xxs bg-white">삭제</button>
+							</td>
+						</tr>
+						<tr>											
+							<td class="subject"><p class="tit ellipsis">마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요</p></td>																	
+							<td class="subject"><p class="tit ellipsis">마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요</p></td>
+							<td>
+								<button type="button" class="btn-border btn-xxs bg-white">사용</button>
+								<button type="button" class="btn-border btn-xxs bg-white">삭제</button>
+							</td>
+						</tr>
+						<tr>											
+							<td class="subject"><p class="tit ellipsis">마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요</p></td>																	
+							<td class="subject"><p class="tit ellipsis">마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요마음은보는것이아니라느끼는거래요</p></td>
+							<td>
+								<button type="button" class="btn-border btn-xxs bg-white">사용</button>
+								<button type="button" class="btn-border btn-xxs bg-white">삭제</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="pagenation">
+				<a href="#" class="btn-first page">처음</a>
+				<a href="#" class="btn-prev page">이전</a>
+				<span class="page now">1</span>
+				<a href="#" class="page">2</a>
+				<a href="#" class="page">3</a>
+				<a href="#" class="page">4</a>
+				<a href="#" class="page">5</a>				
+				<a href="#" class="btn-next page">다음</a>
+				<a href="#" class="btn-last page">마지막</a>
+			</div>	
+		</div>
+		
+	</div>
+</div>
+
 
 <script src="../../js/jquery-3.3.1.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>

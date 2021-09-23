@@ -42,22 +42,22 @@
 				<a href="#" class="btn-border btn-xs bg-gray col1">충전하기</a>
 			</div>
 			<div class="gnb">
-				<div class="gnb-item on">
+				<div class="gnb-item">
 					<button class="link"><span class="txt fax">팩스</span></button>
-					<div class="depth on">
+					<div class="depth">
 						<a href="#">팩스 보내기</a> 
 						<a href="#">받은 팩스함</a>
-						<a href="#"  class="on">보낸 팩스함</a><!-- 메뉴 선택시 on 추가 -->
+						<a href="#" >보낸 팩스함</a>
 						<a href="#">문서 보관함</a>
 						<a href="#">수신번호 신청/관리</a>
 						<a href="#">휴지통</a>
 					</div>
 				</div>
-				<div class="gnb-item">
+				<div class="gnb-item on">
 					<button class="link"><span class="txt sms">문자</span></button>
 					<div class="depth">
 						<a href="#">문자 보내기</a>
-						<a href="#">보낸 문자함</a>					
+						<a href="#"  class="on">보낸 문자함</a>	<!-- 메뉴 선택시 on 추가 -->				
 					</div>
 				</div>
 				<div class="gnb-item">
@@ -224,16 +224,15 @@
 			</div>
 			<div class="cont-area">
 				<div class="tit-area">
-					<h2 class="tit">보낸 팩스함</h2>					
+					<h2 class="tit">보낸 문자함</h2>					
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
-						<li><a href="#">팩스</a></li>
-						<li>보낸 팩스함</li>
+						<li><a href="#">문자</a></li>
+						<li>보낸 문자함</li>
 					</ul>
 				</div>
 				<p class="sub-txt">
-					보낸 문서의 미리보기 파일 및 발송 내역은 4개월간 보관됩니다.<br>
-					중요한 문서는 먼저 중요문서함에 등록 하시고 '보내기'시 보관함에서 선택하시면 편리합니다.
+					보낸 문자의  발송 내역은 <span class="f-pink">6개월간 보관</span>됩니다.
 				</p>							
 				<div class="section">
 					<div class="box-gray search-area">
@@ -269,8 +268,20 @@
 							<div class="item">
 								<label>진행상태</label>
 								<span class="select-box">
-									<select class="styled" style="width:231px;">
-										<option value="">진행상태 전체</option>
+									<select class="styled" style="width:108px;">
+										<option value="">전체</option>
+										<option value="">진행완료</option>	
+										<option value="">작업중</option>	
+										<option value="">예약중</option>	
+										<option value="">예약취소</option>										
+									</select>
+								</span>
+							</div>	
+							<div class="item">
+								<label>구분</label>
+								<span class="select-box">
+									<select class="styled" style="width:108px;">
+										<option value="">전체</option>
 										<option value="">진행완료</option>	
 										<option value="">작업중</option>	
 										<option value="">예약중</option>	
@@ -279,33 +290,17 @@
 								</span>
 							</div>							
 							<div class="item">
-								<label for="txt2" style="width:52px">제목</label>
+								<label for="txt2">문자내용</label>
 								<div class="input-text">
-									<input id="txt2" type="text" placeholder="" style="width:326px;">
+									<input id="txt2" type="text" placeholder="" style="width:287px;">
 								</div>
 							</div>
 						</div>
 						<button type="button" class="btn-search"><span>검색</span></button>
 					</div>
 					<div class="button-area justify board">
-						<div class="left">
-							<button type="button" class="btn-border btn-mid bg-white">저장</button>
-							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup01">재전송</button>							
+						<div class="left">												
 							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
-
-							<div class="select-area" style="width:140px">
-								<button type="button" class="button-select">문서보관함으로</button>
-								<div class="select-layer">												
-									<ul class="selBox">
-										<li><button type="button">문서보관함으로</button></li>
-										<li><button type="button">폴더1</button></li>
-										<li><button type="button">폴더2</button></li>
-										<li><button type="button">폴더3</button></li>
-									</ul>
-									<button type="button" class="btnPop" title="Popup03">새 폴더 만들기</button>
-								</div>
-							</div>
-							<button type="button" class="btn-border btn-mid bd-pink">이동</button>
 						</div>
 						<div class="right">
 							<span class="select-box">
@@ -317,12 +312,11 @@
 					</div>
 					<div class="board-list fax sent">
 						<table>
-							<caption>보낸팩스함 리스트</caption>
+							<caption>보낸 문자함 리스트</caption>
 							<colgroup>
 								<col style="width:4%;">
 								<col style="width:10%;">								
-								<col style="width:14%;">								
-								<col style="width:14%;">
+								<col style="width:14%;">	
 								<col>
 								<col style="width:6%;">
 								<col style="width:6%;">
@@ -333,8 +327,7 @@
 								<tr>
 									<th scope="col"><input type="checkbox" class="styled"></th>
 									<th scope="col"><button type="button" class="sort">보낸시간</button></th> <!-- 정렬기능 있는경우 버튼추가 -->
-									<th scope="col"><button type="button" class="sort">수신번호</button></th>
-									<th scope="col"><button type="button" class="sort">받는사람</button></th>
+									<th scope="col"><button type="button" class="sort">발신번호</button></th>									
 									<th scope="col">제목</th>
 									<th scope="col"><button type="button" class="sort">건수</button></th>
 									<th scope="col"><button type="button" class="sort">성공</button></th>
@@ -345,7 +338,7 @@
 							<tbody>	
 								<!-- data가 없는경우 -->
 								<!-- <tr class="no-data">
-									<td colspan="9">
+									<td colspan="8">
 										<p>
 											내역이 없습니다.
 										</p>
@@ -354,72 +347,66 @@
 								<!--// data가 없는경우 -->	
 								<tr>
 									<td><input type="checkbox" class="styled" name="tableChk"></td>
-									<td><a href="#" class="">오후 2:20</a></td>
+									<td><button type="button" class="link btnPop" title="Popup02">오후 2:20</button></td>
 									<td>
-										<div class="layer-box">
-											<p class="tit ellipsis">02-6928-8051</p>											
-											<button type="button" class="btn-border btn-xxs bg-white btn-show btnPop" title="Popup02" style="width:80px">주소록추가</button>											
-										</div>										
+										<button type="button" class="link btnPop" title="Popup02">010-9999-8888</button>																		
 									</td>
-									<td><p class="tit ellipsis">-</p></td>
-									<td class="subject">
-										<a href="#" class="tit ellipsis">해지신청서.docx</a>
-									</td>
+									<td class="subject"><button type="button" class="tit ellipsis link btnPop" title="Popup02">세금계산서 발행 및 사업자등록증 첨부</button></td>									
 									<td>99</td>
 									<td>99</td>
 									<td>0</td>
 									<td>
-										<button type="button" class="btn-border btn-xxs bg-white btn-show">진행완료</button>
+										<button type="button" class="btn-border btn-xxs bg-white btnPop" title="Popup01">진행완료</button>
 									</td>
 								</tr>
 								<tr>
 									<td><input type="checkbox" class="styled" name="tableChk"></td>
-									<td><a href="#" class="">오전 9:15</a></td>
+									<td><button type="button" class="link btnPop" title="Popup02">오후 2:20</button></td>
 									<td>
-										<div class="layer-box">
-											<p class="tit ellipsis">070-0000-1111<br>외 49건</p>											
-											<button type="button" class="btn-border btn-xxs bg-white btn-show" style="width:80px">주소록추가</button>											
-										</div>										
+										<button type="button" class="link btnPop" title="Popup02">010-9999-8888</button>																		
 									</td>
-									<td>
-										<div class="layer-box">
-											<p class="tit ellipsis">조규찬</p>
-											<p class="tit ellipsis">010-7777-8888</p>										
-											<button type="button" class="btn-border btn-xxs bg-white btn-show btnPop" title="Popup05" style="width:80px">문자발송</button>											
-										</div>
-									</td>
-									<td class="subject">
-										<a href="#" class="tit ellipsis">자동이체 출금동의서.docx</a>
-									</td>
+									<td class="subject"><button type="button" class="tit ellipsis link btnPop" title="Popup02">세금계산서 발행 및 사업자등록증 첨부</button></td>									
 									<td>99</td>
 									<td>99</td>
-									<td><span class="f-pink">1</span></td>
+									<td>0</td>
 									<td>
-										<button type="button" class="btn-border btn-xxs bg-white btn-show">작업중</button>
+										<button type="button" class="btn-border btn-xxs bg-white btnPop" title="Popup01">대기</button>
+									</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" class="styled" name="tableChk"></td>
+									<td><button type="button" class="link btnPop" title="Popup02">오후 2:20</button></td>
+									<td>
+										<button type="button" class="link btnPop" title="Popup02">010-9999-8888</button>																		
+									</td>
+									<td class="subject"><button type="button" class="tit ellipsis link btnPop" title="Popup02">세금계산서 발행 및 사업자등록증 첨부</button></td>									
+									<td>99</td>
+									<td>99</td>
+									<td>0</td>
+									<td>
+										<button type="button" class="btn-border btn-xxs bg-white btnPop" title="Popup01">예약중</button>
+									</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" class="styled" name="tableChk"></td>
+									<td><button type="button" class="link btnPop" title="Popup02">오후 2:20</button></td>
+									<td>
+										<button type="button" class="link btnPop" title="Popup02">010-9999-8888</button>																		
+									</td>
+									<td class="subject"><button type="button" class="tit ellipsis link btnPop" title="Popup02">세금계산서 발행 및 사업자등록증 첨부</button></td>									
+									<td>99</td>
+									<td>99</td>
+									<td>0</td>
+									<td>
+										<button type="button" class="btn-border btn-xxs bg-white btnPop" title="Popup01">예약취소</button>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 					<div class="button-area justify board">
-						<div class="left">
-							<button type="button" class="btn-border btn-mid bg-white">저장</button>
-							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup01">재전송</button>							
+						<div class="left">													
 							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
-
-							<div class="select-area" style="width:140px">
-								<button type="button" class="button-select">문서보관함으로</button>
-								<div class="select-layer">												
-									<ul class="selBox">
-										<li><button type="button">문서보관함으로</button></li>
-										<li><button type="button">폴더1</button></li>
-										<li><button type="button">폴더2</button></li>
-										<li><button type="button">폴더3</button></li>
-									</ul>
-									<button type="button" class="btnPop" title="Popup03">새 폴더 만들기</button>
-								</div>
-							</div>
-							<button type="button" class="btn-border btn-mid bd-pink">이동</button>
 						</div>
 						<div class="right">
 							<span class="select-box">
@@ -531,7 +518,7 @@
 								</tfoot>
 							</table>
 						</div>
-						<div class="scroll-board-list scroll-area" style="height:419px;">
+						<div class="scroll-board-list scroll-area" style="max-height: 191px;">
 							<table>
 								<caption>진행상태 리스트</caption>
 								<colgroup>
@@ -542,54 +529,24 @@
 								</colgroup>							
 								<tbody>							
 									<tr>
-										<td rowspan="2" class="f-mid">전달</td>
+										<td class="f-mid">전달</td>
 										<td class="left">성공</td>										
 										<td>2명</td>	
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
-									<tr>										
-										<td class="left">부분 전달</td>										
-										<td>0명</td>	
-										<td><input type="checkbox" class="styled"></td>
-									</tr>
 									<tr>
-										<td rowspan="9" class="f-mid">미전달</td>
-										<td class="left">사용자 자동응답기 받음</td>										
+										<td rowspan="4" class="f-mid">미전달</td>
+										<td class="left">잘못된 전화번호</td>										
 										<td>2명</td>	
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>										
-										<td class="left">통화중</td>										
+										<td class="left">네트워크 BUSY</td>										
 										<td>1명</td>	
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>										
-										<td class="left">잘못된 전화번호</td>										
-										<td>1명</td>	
-										<td><input type="checkbox" class="styled"></td>
-									</tr>
-									<tr>										
-										<td class="left">응답없음</td>										
-										<td>1명</td>	
-										<td><input type="checkbox" class="styled"></td>
-									</tr>
-									<tr>										
-										<td class="left">발송차단</td>										
-										<td>1명</td>	
-										<td><input type="checkbox" class="styled"></td>
-									</tr>
-									<tr>										
-										<td class="left">전송 중 끊김</td>										
-										<td>1명</td>	
-										<td><input type="checkbox" class="styled"></td>
-									</tr>
-									<tr>										
-										<td class="left">중복차단</td>										
-										<td>1명</td>	
-										<td><input type="checkbox" class="styled"></td>
-									</tr>
-									<tr>										
-										<td class="left">예약취소</td>										
+										<td class="left">수신거부번호</td>										
 										<td>1명</td>	
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
@@ -597,7 +554,7 @@
 										<td class="left">기타</td>										
 										<td>1명</td>	
 										<td><input type="checkbox" class="styled"></td>
-									</tr>
+									</tr>									
 								</tbody>
 							</table>
 						</div>		
@@ -608,7 +565,7 @@
 								<div class="item">
 									<label for="txt1" style="width:52px">수신번호</label>
 									<div class="input-text">
-										<input id="txt1" type="text" placeholder="" style="width:139px;">
+										<input id="txt1" type="text" placeholder="" style="width:139px">
 									</div>
 								</div>							
 								<div class="item">
@@ -630,316 +587,174 @@
 								<colgroup>
 									<col style="width:25%;">
 									<col style="width:20%;">
-									<col>	
-									<col style="width:12%;">
+									<col>										
 									<col style="width:10%;">																	
 								</colgroup>	
 								<thead>
 									<tr>
 										<th scope="col">보낸시간</th>
 										<th scope="col">수신번호</th>
-										<th scope="col">결과</th>
-										<th scope="col">성공장수</th>
+										<th scope="col">결과</th>									
 										<th scope="col"><input type="checkbox" class="styled"></th>									
 									</tr>
 								</thead>							
 							</table>
 						</div>
-						<div class="scroll-board-list scroll-area" style="height:309.5px;">
+						<div class="scroll-board-list scroll-area" style="max-height: 191px;">
 							<table>
 								<caption>진행상태 리스트</caption>
 								<colgroup>
 									<col style="width:25%;">
 									<col style="width:20%;">
-									<col>	
-									<col style="width:12%;">
+									<col>										
 									<col style="width:10%;">																	
 								</colgroup>							
 								<tbody>	
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>잘못된 전화번호</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>성공</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>중복차단</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>부분 전달</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>통화중</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>사용자 자동응답기 받음</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>잘못된 전화번호</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>성공</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>성공</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>중복차단</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>부분 전달</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>통화중</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 									<tr>
 										<td>21.08.26 13:45:22</td>							
 										<td>0303-9999-9999</td>										
-										<td>사용자 자동응답기 받음</td>
-										<td>99</td>	
+										<td>잘못된 전화번호</td>										
+										<td><input type="checkbox" class="styled"></td>
+									</tr>
+									<tr>
+										<td>21.08.26 13:45:22</td>							
+										<td>0303-9999-9999</td>										
+										<td>잘못된 전화번호</td>										
+										<td><input type="checkbox" class="styled"></td>
+									</tr>
+									<tr>
+										<td>21.08.26 13:45:22</td>							
+										<td>0303-9999-9999</td>										
+										<td>잘못된 전화번호</td>										
+										<td><input type="checkbox" class="styled"></td>
+									</tr>
+									<tr>
+										<td>21.08.26 13:45:22</td>							
+										<td>0303-9999-9999</td>										
+										<td>잘못된 전화번호</td>										
+										<td><input type="checkbox" class="styled"></td>
+									</tr>
+									<tr>
+										<td>21.08.26 13:45:22</td>							
+										<td>0303-9999-9999</td>										
+										<td>잘못된 전화번호</td>										
+										<td><input type="checkbox" class="styled"></td>
+									</tr>
+									<tr>
+										<td>21.08.26 13:45:22</td>							
+										<td>0303-9999-9999</td>										
+										<td>잘못된 전화번호</td>										
 										<td><input type="checkbox" class="styled"></td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 						<button type="button" class="btn-more"><span>더보기</span></button>
-						<p class="guide-txt right">표시 항목 11개 / <span>총 20개</span></p>	
+						<p class="guide-txt right">표시 항목 3개 / <span>총 3개</span></p>	
 					</div>
 
 				</div>
 			</div>
 		</div>
 		<div class="button-area center margin">
-			<button type="button" class="btn-mid btn-mid bg-gray">엑셀저장하기</button>
+			<button type="button" class="btn-border btn-mid bg-white">취소</button>
+			<button type="button" class="btn-mid bg-gray">엑셀저장하기</button>
 			<button type="button" class="btn-mid bg-pink">재전송</button>			
 		</div>
 	</div>
 </div>
 
-<!-- 주소/그룹추가 -->
-<div class="layer-popup noneClose" title="Popup02">
-	<div class="popup">
-		<div class="popup-header">
-			<p class="title">주소/그룹추가</p>
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt mgb15">
-				대표번호를 등록하실 경우 해당 지역번호까지 입력해주셔야 합니다<br>
-				(예시 : 대표번호가 1544-8007(서울)일 경우 02-1544-8007 입력)
-			</p>
-			<div class="board-write">
-				<table>
-					<colgroup>
-						<col style="width:35%;">						
-						<col>					
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="row">그룹명</th>
-							<td>
-								<div class="select-area wide">
-									<button type="button" class="button-select">그룹명을 선택하세요</button>
-									<div class="select-layer">												
-										<ul class="selBox">
-											<li><button type="button">보험사 그룹</button></li>
-											<li><button type="button">캠페인 그룹</button></li>											
-										</ul>
-										<button type="button" class="btnPop" title="Popup04">그룹 만들기</button>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><label for="txt1">이름</label></th>
-							<td>
-								<div class="input-text wide">
-									<input type="text" id="txt1">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><label for="txt2">발신번호</label></th>
-							<td>
-								<div class="input-text wide">
-									<input type="text" id="txt2" placeholder="0212347895">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><label for="txt3">휴대전화</label></th>
-							<td>
-								<div class="input-text wide">
-									<input type="text" id="txt3">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><label for="txt4">이메일</label></th>
-							<td>
-								<div class="input-text wide">
-									<input type="text" id="txt4">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><label for="txt5">메모</label></th>
-							<td>
-								<div class="input-text">
-									<textarea id="txt5"></textarea>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-		<div class="button-area center margin">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
-			<button type="button" class="btn-mid bg-pink">등록</button>			
-		</div>
-	</div>
-</div>
 
-<!-- 문서보관함 폴더 관리 -->
-<div class="layer-popup" title="Popup03">
-	<div class="popup sm">
-		<div class="popup-header">
-			<p class="title">문서 보관함 폴더 관리</p>
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<ul class="form-list block">
-				<li>
-					<label for="newFolder">새 폴더 이름</label>
-					<div class="input-text">
-						<input type="text" id="newFolder" style="width:100%">
-					</div>
-				</li>
-			</ul>				
-		</div>
-		<div class="button-area center margin">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
-			<button type="button" class="btn-mid bg-pink">만들기</button>			
-		</div>
-	</div>
-</div>
-
-<!-- 주소록 그룹만들기 -->
-<div class="layer-popup scroll" title="Popup04">
-	<div class="popup sm">
-		<div class="popup-header">
-			<p class="title">주소록 그룹 만들기</p>
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<ul class="form-list block">
-				<li>
-					<label for="newFolder2">새 그룹 이름</label>
-					<div class="input-text">
-						<input type="text" id="newFolder2" style="width:100%">
-					</div>
-				</li>
-			</ul>				
-		</div>
-		<div class="button-area center margin">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
-			<button type="button" class="btn-mid bg-pink">만들기</button>			
-		</div>
-	</div>
-</div>
-
-<!-- 수신확인 문자발송 -->
-<div class="layer-popup" title="Popup05">
+<!-- 문자내용 보기 -->
+<div class="layer-popup" title="Popup02">
 	<div class="popup mid">
 		<div class="popup-header">
-			<p class="title">수신확인 문자발송</p>
+			<p class="title">문자내용 보기</p>
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
-		<div class="popup-cont">
-			<p class="guide-txt">
-				주소록에 저장 되어 있는 발신번호와 매칭되는 핸드폰 번호로 송신 완료 <br>
-				메시지를 전송합니다. 송신완료 메시를 전송하시겠습니까? <br>
-				(유료: 건 당 18원)
-			</p>
-			<div class="box-gray padding">
-				<p class="f-mid">메시지 예)</p>
-				[U+웹팩스] (홍길동)님이 032-0000-0000로 팩스를 <br>
+		<div class="popup-cont">			
+			<div class="box-gray padding f-13">				
+				[U+ 웹팩스] (이영하)님이 032-468-8998로 팩스를 <br>
 				전송했습니다.
 			</div>				
 		</div>
-		<div class="button-area center margin">		
-			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>			
-			<button type="button" class="btn-mid bg-pink btnPop" title="Popup06">예</button>				
-		</div>
-	</div>
-</div>
-
-<!-- 문자발송 결과 -->
-<div class="layer-popup" title="Popup06">
-	<div class="popup xs">
-		<div class="popup-header">
-			<p class="title">문자발송 결과</p>
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">SMS <span class="f-pink">[0]</span>건이 발송 되었습니다.</p>
-						
-		</div>
-		<div class="button-area center margin">				
+		<div class="button-area center">				
 			<button type="button" class="btn-mid bg-pink popClose">확인</button>				
 		</div>
 	</div>
 </div>
-
 
 <script src="../../js/jquery-3.3.1.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>
