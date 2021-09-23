@@ -1613,7 +1613,7 @@ div.formSingle {display: none;}
 .grid-style .grid-item {display: flex; margin-bottom:40px}
 .grid-style .grid-item .tit {
 	width:150px;
-	font-size:18px;
+	font-size:16px;
 	font-weight:700
 }
 .grid-style .grid-item .tit span {display:inline-block;padding-right:30px;position:relative;}
@@ -1639,7 +1639,14 @@ div.formSingle {display: none;}
 	font-size:12px
 }
 .grid-style .cont .guide-txt span {font-weight: 700;}
+.grid-style.sms .content textarea {padding: 20px;}
+.grid-style.sms .content textarea::-webkit-input-placeholder {font-size: 14px;}
 
+.grid-style.sms .attach .cont .board-write {border-bottom: 0;}
+.grid-style.sms .attach .cont .board-write .form-area tr:first-child th, 
+.grid-style.sms .attach .cont .board-write .form-area tr:first-child td{ border-bottom:1px solid #dbdbdb}
+.grid-style.sms .attach .cont .formSingle > td {padding: 7px 0; border-bottom: 0;}
+.grid-style.sms .attach .cont .formSingle .count-area .count span {color:#000}
 /*페이징*/
 .pagenation {
 	position:relative;
