@@ -1665,7 +1665,8 @@ div.formSingle {display: none;}
 }
 .pagenation .page {
 	display:inline-block;	
-	margin:0 8px;
+	margin:0 4px;
+	padding: 0 4px;
 	color:#000;
 	font-size:14px;
 	vertical-align:middle;
@@ -1677,6 +1678,8 @@ div.formSingle {display: none;}
 	position:relative;
 	width:28px;
 	height:28px;
+	margin: 0 8px;
+	padding: 0;
 	font-size:0;
 	text-indent:-99999px;
 	line-height:0;
