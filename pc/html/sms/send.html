@@ -283,8 +283,8 @@
 									<textarea placeholder="문자 내용을 입력해주세요." style="height: 150px;"></textarea>
 								</div>
 								<div class="button-area margin right">								
-									<a href="#" class="btn-mid bg-pink btnPop" title="Popup05">특수문자</a>
-									<a href="#" class="btn-mid bg-gray btnPop" title="Popup08">메시지 저장함</a>
+									<button type="button" class="btn-mid bg-pink btnPop" title="Popup05">특수문자</button>
+									<button type="button" class="btn-mid bg-gray btnPop" title="Popup08">메시지 저장함</button>
 								</div>
 							</div>
 						</div>						
@@ -570,7 +570,7 @@
 </div>
 
 <!-- 특수문자 -->
-<div class="layer-popup" title="Popup05">
+<div class="layer-popup" id="emoticon" title="Popup05">
 	<div class="popup mid">
 		<div class="popup-header">	
 			<p class="title">특수문자</p>		
@@ -875,8 +875,8 @@
 <script src="../../js/common.js"></script>
 <script>
 $(document).ready(function(){
-
-	
+	//특수문자 레이어 드래그
+	$( "#emoticon .popup" ).draggable();
     
 });
 
