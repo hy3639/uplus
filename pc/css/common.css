@@ -880,6 +880,28 @@ footer  p {
 	top: 0;
 }
 
+.ul-list.dot li {
+	position: relative;
+	font-size: 13px; 
+	font-weight: 400;
+	padding-left: 12px;
+	line-height: 19px;
+}
+.ul-list.dot li .indent {
+	display: block;
+}
+.ul-list.dot li:before {
+	content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 9px;   
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #c0bfc4;
+}
+
 
 /* 버튼 */
 [class^=btn-] {
@@ -1342,6 +1364,7 @@ input[type=checkbox][class^=styled] {
 	border:1px solid #dbdbdb;
 	font-size:13px;
 }
+.input-text.wide input {width: 100%;}
 
 /*인풋 폰, 사업자*/
 .input-phone {display:flex; align-items: center;}
@@ -1477,7 +1500,24 @@ input[type=checkbox][class^=styled] {
 .board-list.type2 table td > ul {margin-top:5px}
 .board-list.type2 table td > ul > li {line-height:21px}
 
-
+/*전체보더 type3*/
+.board-list.type3 thead th {
+	height: 30px;
+	font-size: 13px;
+	font-weight: 500;
+	border-right: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+	background-color:#ecedef;
+}
+.board-list.type3 thead th:first-child,
+.board-list.type3 tbody td:first-child {border-left: 1px solid #dbdbdb;}
+.board-list.type3 tbody td {
+	height: 30px;
+	border-right: 1px solid #dbdbdb;
+	font-size: 13px;
+	font-weight: 300;
+	padding: 0;
+}
 
 /* 뷰 */
 .board-write {
@@ -1656,6 +1696,10 @@ div.formSingle {display: none;}
 .grid-style.sms .attach .cont .board-write .form-area tr:first-child td{ border-bottom:1px solid #dbdbdb}
 .grid-style.sms .attach .cont .formSingle > td {padding: 7px 0; border-bottom: 0;}
 .grid-style.sms .attach .cont .formSingle .count-area .count span {color:#000}
+
+/* 그리드영역 스타일 */
+.board-grid {min-height: 630px; background-color:#ddd}
+
 /*페이징*/
 .pagenation {
 	position:relative;
@@ -3050,3 +3094,22 @@ html.popOpen {overflow:hidden;}
 .layer-popup .popup-cont.save-msg .guide-txt {font-size: 12px;}
 .layer-popup  .lg .save-msg .button-area .btn-mid {min-width:55px !important; height: 32px; line-height: 30px;}
 .layer-popup .save-msg .pagenation {margin-top: 15px;}
+
+/* ----------- 주소록 -----------*/
+.button-area.address + [class^=board-]{margin-top: 10px;}
+.button-area.address .btn-border.bd-pink {margin: 0 10px;}
+.pop-address .search-area {display: flex; margin-bottom: 15px;}
+.pop-address .search-area .input-text {flex: 1; margin-right: 4px;}
+.pop-address .box-gray {
+	border:1px solid #dbdbdb;
+	border-bottom: 0;
+	padding: 7px 10px 7px 12px;
+}
+.pop-address .box-gray label {font-size: 13px; font-weight: 400;vertical-align: initial;}
+.pop-address .box-gray label .chkbox {margin-right: 8px;}
+
+.pop-excel .popup-cont .ul-list li{margin-top: 0;}
+.pop-excel .popup-cont .section {margin-bottom: 10px; margin-top: 15px;}
+.pop-excel  .popup-cont .section + .section {margin-top: 20px;}
+.pop-excel  .popup-cont .board-list.type3 {margin-top: 10px;}
+.layer-popup .popup-cont .section .flex-area p.tit {font-size:13px; font-weight: 500;}
