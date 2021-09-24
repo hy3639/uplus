@@ -720,6 +720,7 @@ footer  p {
 .mgr8 {margin-right:8px;}
 .mgb15 {margin-bottom:15px;}
 .mgt5 {margin-top:5px;}
+.mgt10 {margin-top:10px;}
 .mgt20 {margin-top:20px;}
 .mgt40 {margin-top:40px;}
 .mgt50 {margin-top:50px !important;}
@@ -812,6 +813,7 @@ footer  p {
 }
 .flex-area.justify h3.tit + .f-pink {font-size:14px;}
 .flex-area.justify h3.tit + .guide-txt {font-size:13px;}
+.flex-area.right .guide-txt {font-size:13px;}
 
 /* 블릿 text */
 .alert-txt {position:relative; font-size:12px; text-indent: -19px;margin-left: 19px;}
@@ -833,6 +835,7 @@ footer  p {
 .flex-area {display:flex; align-items: center;}
 .guide-area.justify,
 .flex-area.justify {justify-content: space-between;}
+.flex-area.right {justify-content: flex-end;}
 .guide-area p {font-size:12px; font-weight: 300;}
 .guide-area p span {font-weight:500}
 
@@ -2978,16 +2981,27 @@ html.popOpen {overflow:hidden;}
 	font-weight: 500;
 }
 .num-list {
+	position:relative;
 	border-top:1px solid #dbdbdb;
-	border-bottom:1px solid #dbdbdb
+	/* border-bottom:1px solid #dbdbdb */
+}
+.num-list:before {
+	content: '';
+	display: block;
+	height: 1px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:#dbdbdb
 }
 
 .num-list > .form-wrap {
 	border-bottom: 1px solid #f2f2f2;
 	margin-right: 0;
-	padding:12px 15.5px;
+	padding:12px 15.4px;
 }
-.num-list .form-wrap:nth-last-child(-n+10) {border-bottom: 0;}
+/* .num-list .form-wrap:nth-last-child(-n+10) {border-bottom: 0;} */
 .num-list + .btn-more {
 	height: inherit;
 	border:0;
