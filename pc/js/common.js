@@ -218,6 +218,10 @@ $('.cal').each(function(){
 		dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
 		showOtherMonths:true,
 	});
+	 //경로 변경시
+	if($(this).closest('.calendar-area').hasClass('src')){	
+		$('img.ui-datepicker-trigger').attr('src' , '../../../images/icon/icon_20_date.png');
+	}
 });
 /*=======// 달력 ======= */
 
