@@ -3225,5 +3225,19 @@ html.popOpen {overflow:hidden;}
 	background-color:#f6f6f6;
 	border-radius: 29px;
 }
-
 .payment-list + .ul-list {margin:50px 0 20px}
+
+/* 이용통계조회 */
+.statistics .tab-wrap {padding-top: 20px;}
+.statistics .search-area {margin-top:40px;}
+.statistics .search-area select.styled {padding-right: 25px;}
+.statistics .tab-wrap  .section + .section {margin-top: 40px;}
+.statistics .board-list table td, 
+.statistics .board-list table th {height: 32px;}
+.statistics .board-list table td {font-weight: 300;}
+.statistics .board-list table td.left {padding: 10px;}
+.statistics .board-list thead tr:nth-child(2) th:first-child,
+.statistics .board-list thead tr:nth-child(3) th:first-child {border-left: 1px solid #dbdbdb;}
+.statistics .board-list tbody td:first-child {border-left: 0;}
+.statistics .board-list tbody .total td {background-color:#fff9f9; font-weight: 500;}
+.statistics .tab-conts .tab-cont + .tab-cont .board-list tbody .total td  {height: 50px;}
