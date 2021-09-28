@@ -1744,7 +1744,7 @@ div.formSingle {display: none;}
 .pagenation .page {
 	display:inline-block;	
 	margin:0 4px;
-	padding: 0 4px;
+	padding: 0 8px;
 	color:#000;
 	font-size:14px;
 	vertical-align:middle;
@@ -1789,9 +1789,7 @@ div.formSingle {display: none;}
 	transform:rotate(180deg);
 	background-image:url(../images/icon/icon_28_firstpage.png);
 }
-.pagenation .page.now {
-	/* border-color:#1d98e3; */
-	/* background-color:#1d98e3; */
+.pagenation .page.now {	
 	position:relative;
 	color:#e03d7c;
 	font-weight:700;
@@ -1801,7 +1799,7 @@ div.formSingle {display: none;}
 	display:block;
 	height:2px;
 	position:absolute;
-	left:0;right:-1px;
+	left:6px;right:6px;
 	bottom:0;
 	background-color:#e03d7c;
 }
@@ -2579,6 +2577,7 @@ html.popOpen {overflow:hidden;}
 }
 .board-list.fax table thead th {font-weight: 500; font-size:13px}
 .board-list.fax td {height:48px; padding:0 5px;font-weight: 300; font-size:13px}
+.board-list.fax td > .btnPop.sm {font-weight: 300; font-size: 13px;}
 .board-list.fax td .tooltip-area .tooltip-layer.w140 {padding:20px}
 .board-list.fax td .tooltip-area .tooltip-layer.w140 li {margin-top: 5px;}
 .board-list.fax td .tooltip-area .tooltip-layer.w140 li:first-child {margin-top:0}

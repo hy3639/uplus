@@ -437,3 +437,7 @@ function popClose(){
 }
 
 	
+//윈도우팝업
+function openWindowPop(url, name, options){ 
+    window.open(url, name, options);
+}

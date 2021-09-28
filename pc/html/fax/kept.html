@@ -276,7 +276,7 @@
 					<div class="button-area justify board">
 						<div class="left">
 							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
-							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup01">저장</button>
+							<button type="button" class="btn-border btn-mid bg-white">저장</button>
 							<button type="button" class="btn-border btn-mid bg-white">팩스전송</button>						
 
 							<div class="select-area" style="width:140px">
@@ -448,7 +448,7 @@
 					<div class="button-area justify board">
 						<div class="left">
 							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
-							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup01">저장</button>
+							<button type="button" class="btn-border btn-mid bg-white">저장</button>
 							<button type="button" class="btn-border btn-mid bg-white">팩스전송</button>						
 
 							<div class="select-area" style="width:140px">
@@ -533,29 +533,6 @@
 
 
 
-<!-- 폴더 관리 (새폴더만들기) -->
-<div class="layer-popup scroll" title="Popup01">
-	<div class="popup sm">
-		<div class="popup-header">
-			<p class="title">폴더 관리</p>
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<ul class="form-list block">
-				<li>
-					<label for="newFolder">새 폴더 이름</label>
-					<div class="input-text">
-						<input type="text" id="newFolder" style="width:100%">
-					</div>
-				</li>
-			</ul>				
-		</div>
-		<div class="button-area center margin">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
-			<button type="button" class="btn-mid bg-pink">만들기</button>			
-		</div>
-	</div>
-</div>
 
 <!-- 폴더 관리 (폴더이름 수정) -->
 <div class="layer-popup" title="Popup02">
@@ -653,6 +630,31 @@
 		</div>
 	</div>
 </div>
+
+<!-- 폴더 관리 (새폴더만들기) -->
+<div class="layer-popup scroll" title="Popup01">
+	<div class="popup sm">
+		<div class="popup-header">
+			<p class="title">폴더 관리</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<ul class="form-list block">
+				<li>
+					<label for="newFolder">새 폴더 이름</label>
+					<div class="input-text">
+						<input type="text" id="newFolder" style="width:100%">
+					</div>
+				</li>
+			</ul>				
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink">만들기</button>			
+		</div>
+	</div>
+</div>
+
 
 <!-- 파일등록 -->
 <div class="layer-popup" title="Popup05">
