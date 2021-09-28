@@ -723,7 +723,7 @@ footer  p {
 .mgt5 {margin-top:5px;}
 .mgt10 {margin-top:10px;}
 .mgt20 {margin-top:20px;}
-.mgt40 {margin-top:40px;}
+.mgt40 {margin-top:40px !important;}
 .mgt50 {margin-top:50px !important;}
 .pdb10 {padding-bottom: 10px;}
 
@@ -783,6 +783,7 @@ footer  p {
 	font-size:14px;
 	line-height: 20px;
 }
+.tit-area + .box-gray.search-area {margin-top: 30px;}
 .tit-area .tit {
 	font-size:30px;
 	font-weight:700;
@@ -919,7 +920,7 @@ footer  p {
 	padding-left: 12px;
 	line-height: 19px;
 }
-.ul-list.dot li .indent {
+.ul-list li .indent {
 	display: block;
 }
 .ul-list.dot li:before {
@@ -932,6 +933,31 @@ footer  p {
     height: 4px;
     border-radius: 2px;
     background-color: #c0bfc4;
+}
+.ul-list.dot.sm li {font-weight: 300; font-size: 12px; padding-left: 8px;}
+.ul-list.dot.sm li:before {
+	width: 1px;
+	height: 1px;	
+	border-radius: 1px;
+	background-color:#000;
+}
+.ul-list.arrow > li {
+	position: relative;
+	font-size: 13px; 
+	font-weight: 400;
+	padding-left: 15px;
+	line-height: 20px;
+}
+/* .ul-list.arrow li .indent {
+	display: block;
+} */
+.ul-list.arrow > li:before {
+	content: '▶';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;  
+	color:#000;
 }
 
 
@@ -1477,7 +1503,7 @@ input[type=checkbox][class^=styled] {
 }
 .board-list table tr:first-child td,
 .board-list table tbody tr:first-child th {border-top:0} 
-
+.board-list table tbody tr:first-child td {border-top: 1px solid #dbdbdb;}
 .board-list table td p.tit {
 	max-width: 100%;
 	white-space: nowrap;
@@ -1550,6 +1576,9 @@ input[type=checkbox][class^=styled] {
 	font-weight: 300;
 	padding: 0;
 }
+
+/* td light */
+.board-list.light td {font-weight: 300;font-size: 13px;}
 
 /* 뷰 */
 .board-write {
@@ -2448,9 +2477,12 @@ html.popOpen {overflow:hidden;}
 .join .ul-list.bar {margin-top:10px;}
 .join .ul-list.bar li:last-child {margin-left: 65px;text-indent: -65px;}
 
-.join .section .tit-area {position: inherit;}
-.join .section .tit-area:after {display: none;}
-.join .section .tit-area + .sub-txt {margin-top: 0;}
+.join .section .tit-area,
+.receive-address.section .tit-area  {position: inherit;}
+.join .section .tit-area:after,
+.receive-address.section .tit-area:after  {display: none;}
+.join .section .tit-area + .sub-txt,
+.receive-address.section .tit-area + .sub-txt {margin-top: 0;}
 .join .add-box {display: inline-block;}
 .join .add-box [class*=button-]  {margin:0 7px 0 6px}
 .join .add-box [class*=button-]  + .btn-mid {margin-right: 4px;}
@@ -3051,6 +3083,10 @@ html.popOpen {overflow:hidden;}
  }
 
 /* 수신번호 신청,관리 */
+
+.receive-address.section {margin-top: 40px !important;}
+.sub-txt + .receive-address.section {margin-top: 20px !important;}
+.receive-address .board-write td {padding: 15px;}
 .receive-address .board-list tr td {font-weight: 300; font-size: 13px;}
 .receive-address .board-list tr td:last-child button {min-width:73px;}
 .receive-address .border-box + .box-gray{margin-top: 20px;}
@@ -3229,7 +3265,7 @@ html.popOpen {overflow:hidden;}
 /* 이용통계조회 */
 .statistics .tab-wrap {padding-top: 20px;}
 .statistics .search-area {margin-top:40px;}
-.statistics .search-area select.styled {padding-right: 25px;}
+.search-area .range select.styled {padding-right: 25px;}
 .statistics .tab-wrap  .section + .section {margin-top: 40px;}
 .statistics .board-list table td, 
 .statistics .board-list table th {height: 32px;}
