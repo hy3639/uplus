@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>U+ 웹팩스</title>
-	<link rel="stylesheet" type="text/css" href="../../../css/common.css">
-	<link rel="stylesheet" type="text/css" href="../../../css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.css">
 </head>
 
 <body>
@@ -63,10 +63,10 @@
 				<div class="gnb-item">
 					<a href="#none" class="link"><span class="txt address">주소록</span></a>
 				</div>
-				<div class="gnb-item on"> <!-- 메뉴 선택시 on 추가 -->
+				<div class="gnb-item"> 
 					<button class="link"><span class="txt mypage">마이페이지</span></button>
-					<div class="depth on"> <!-- 메뉴 펼침시 on 추가 및 스타일추가 -->
-						<a href="#" class="on">회원정보변경</a> <!-- 메뉴 선택시 on 추가 -->
+					<div class="depth">
+						<a href="#" >회원정보변경</a> 
 						<a href="#">충전하기</a>
 						<a href="#">이용통계조회</a>
 						<a href="#">수신번호 신청/관리</a>
@@ -224,27 +224,76 @@
 			</div>
 			<div class="cont-area">
 				<div class="tit-area">
-					<h2 class="tit">회원정보변경</h2>					
+					<h2 class="tit">서비스 일시정지</h2>					
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
-						<li><a href="#">마이페이지</a></li>
-						<li>회원정보변경</li>
+						<li><a href="#">관리자</a></li>
+						<li>서비스 일시정지</li>
 					</ul>
 				</div>
-				<p class="sub-txt">
-					회원님의 정보를 안전하게 보호하기 위해 비밀번호를 다시한번 입력해 주시기 바랍니다.
-				</p>
+			
 				<div class="section">
-					<div class="box-gray search-area center">
-						<div class="group">						
-							<div class="item">
-								<label for="txt1">비밀번호 입력</label>
+					<h3 class="tit">후불요금 상품 가입 현황</h3>
+					<div class="board-write">
+						<table>
+							<colgroup>
+								<col style="width:130px;">						
+								<col>
+								<col style="width:130px;">						
+								<col>											
+							</colgroup>
+							<tbody>		
+								<tr>
+									<th scope="row">가입자번호</th>
+									<td>00000000000</td>
+									<th scope="row">납입자번호</th>
+									<td>00000000000</td>
+								</tr>	
+								<tr>
+									<th scope="row">관리자명</th>
+									<td>홍길동</td>
+									<th scope="row">납부방법</th>
+									<td>지로</td>
+								</tr>
+								<tr>
+									<th scope="row">요금청구주소</th>
+									<td colspan="3">서울시 중구 남대문로5가 (주)엘지유플러스 응용솔루션사업팀</td>
+								</tr>						
+														
+							</tbody>
+						</table>
+					</div>					
+				</div>
+				<div class="section">
+					<h3 class="tit">정지신청</h3>
+					<p class="sub-txt f-14">						
+						서비스를 정지하실 경우 팩스 보내기, 문자 보내기 및 받은 팩스함 기능이 제한과 <span class="f-pink">로그인이 불가합니다.</span><br>
+						정지 후 1년 동안 <span class="f-pink">정지 해제</span>를 하지 않으실 경우에는 자동해지(서비스탈퇴)되오니 정지 해제를 원하실 경우 고객센터 <span class="f-pink">1544-8007</span>로 문의 주시기 바랍니다.
+					</p>			
+					<div class="box-gray form-box">
+						<div class="form-list">
+							<label class="form-wrap"><input type="radio" name="Rdo1" class="styled" checked> 사용업무 종료</label>
+							<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> 통신장애과다</label>
+							<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> 담당자교체</label>
+							<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> E-Mail로 전환</label>
+							<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> 요금과다</label>
+							<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> S/W 기능불만</label>
+							<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> 타사상품가입</label>											
+							<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> 사용량저조</label>
+							<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> A/S 불만</label>
+							<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> FAX 배달품질 불만</label>
+							<div class="form-group">
+								<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> 직접입력</label>
 								<div class="input-text">
-									<input id="txt1" type="password" placeholder="" style="width:260px;">
+									<input type="text" >
 								</div>
 							</div>
-							<button type="button" class="btn-mid bg-gray btnPop" title="Popup01">확인</button>
 						</div>
+					</div>					
+				</div>
+				<div class="section">
+					<div class="button-area center">
+						<a href="#" class="btn-lg bg-pink">서비스 정지 신청</a>					
 					</div>
 				</div>
 			</div>
@@ -263,14 +312,14 @@
 			<div class="quick-item on">
 				<button type="button" class="link"><span class="txt admin">관리자</span></button>
 				<div class="depth on">
-					<a href="#" class="on">내 가입 정보</a> <!-- 메뉴 선택시 on 추가 -->
+					<a href="#">내 가입 정보</a> 
 					<a href="#">가입정보 및 변경신청</a>
 					<a href="#">아이디(서브계정)관리</a>
 					<a href="#">수신번호 신청/관리</a>
 					<a href="#">사용자 설정</a>
 					<a href="#">부가서비스 신청</a>
 					<a href="#">카카오워크 연동</a>
-					<a href="#">서비스 일시정지</a>
+					<a href="#" class="on">서비스 일시정지</a><!-- 메뉴 선택시 on 추가 -->
 					<a href="#">서비스해지</a>
 					<a href="#">신청이력</a>
 				</div>
@@ -289,66 +338,12 @@
 	</div>
 </div>
 
-<!-- 비밀번호가 일치하지 않는경우 -->
-<div class="layer-popup" title="Popup01">
-	<div class="popup sm">
-		<div class="popup-header">				
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				비밀번호가 일치하지 않습니다.
-			</p>				
-		</div>
-		<div class="button-area center">		
-			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
-		</div>
-	</div>
-</div>
 
-<!-- 그룹웨어 연동아이디일경우 -->
-<div class="layer-popup" title="Popup02">
-	<div class="popup sm">
-		<div class="popup-header">			
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				그룹웨어 연동 아이디는 <br>
-				그룹웨어에서 변경하시기 바랍니다.<br>
-				그룹웨어로 이동 할까요?
-			</p>				
-		</div>
-		<div class="button-area  margin center">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
-			<button type="button" class="btn-mid bg-pink">이동</button>			
-		</div>
-	</div>
-</div>
-<!-- 그룹웨어 연동아이디일경우 -->
-<div class="layer-popup" title="Popup03">
-	<div class="popup sm">
-		<div class="popup-header">			
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				그룹웨어 연동 아이디는<br>
-				그룹웨어에서 변경하시기 바랍니다.
-			</p>				
-		</div>
-		<div class="button-area center">			
-			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
-		</div>
-	</div>
-</div>
-
-
-<script src="../../../js/jquery-3.3.1.js"></script>
-<script src="../../../js/jquery-ui.min.js"></script>
-<script src="../../../js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="../../../js/swiper.min.js"></script>
-<script src="../../../js/common.js"></script>
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
+<script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
 <script>
 $(document).ready(function(){
 	

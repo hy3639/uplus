@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>U+ 웹팩스</title>
-	<link rel="stylesheet" type="text/css" href="../../../css/common.css">
-	<link rel="stylesheet" type="text/css" href="../../../css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
 					<button type="button" class="f-pink">충전하기</button>
 				</div>
 			</div>
-			<div class="button-area justify">
+			<div class="button-area justify margin">
 				<a href="#" class="btn-border btn-xs bg-gray col1">마이페이지</a>
 				<a href="#" class="btn-border btn-xs bg-gray col1">로그아웃</a>				
 			</div>
@@ -42,15 +42,15 @@
 				<a href="#" class="btn-border btn-xs bg-gray col1">충전하기</a>
 			</div>
 			<div class="gnb">
-				<div class="gnb-item"> 
+				<div class="gnb-item">
 					<button class="link"><span class="txt fax">팩스</span></button>
-					<div class="depth">  
-						<a href="#">팩스 보내기</a>
+					<div class="depth">
+						<a href="#">팩스 보내기</a> 
 						<a href="#">받은 팩스함</a>
 						<a href="#">보낸 팩스함</a>
 						<a href="#">문서 보관함</a>
-						<a href="#">수신번호 신청/관리</a>
-						<a href="#">휴지통</a>  
+						<a href="#" >수신번호 신청/관리</a>
+						<a href="#">휴지통</a>
 					</div>
 				</div>
 				<div class="gnb-item">
@@ -62,18 +62,18 @@
 				</div>
 				<div class="gnb-item">
 					<a href="#none" class="link"><span class="txt address">주소록</span></a>
-				</div>
-				<div class="gnb-item on"> <!-- 메뉴 선택시 on 추가 -->
+				</div>	
+				<div class="gnb-item">
 					<button class="link"><span class="txt mypage">마이페이지</span></button>
-					<div class="depth on"> <!-- 메뉴 펼침시 on 추가 및 스타일추가 -->
-						<a href="#" class="on">회원정보변경</a> <!-- 메뉴 선택시 on 추가 -->
+					<div class="depth">
+						<a href="#">회원정보변경</a>
 						<a href="#">충전하기</a>
 						<a href="#">이용통계조회</a>
 						<a href="#">수신번호 신청/관리</a>
 						<a href="#">실시간 요금조회</a>
 						<a href="#">회원탈퇴</a>
 					</div>
-				</div>	
+				</div>			
 				<div class="gnb-item">
 					<button class="link"><span class="txt support">고객지원</span></button>
 					<div class="depth">
@@ -87,17 +87,17 @@
 			
 			<div class="util">
 				<a href="#" class="guide">영상 이용가이드</a>
-				<a href="#" class="tip">사용 tip</a>
+				<a href="#" class="tip">사용 Tip</a>
 				<a href="#" class="down-fax">간편팩스 다운로드</a>
 				<a href="#" class="num-magage">수신번호 신청/관리</a>
-				<a href="#" class="api">API 신청</a>
-				<a href="#" class="mobile">모바일</a>
+				<a href="#" class="api">호스트모듈 신청</a>
+				<a href="#" class="mobile">모바일앱</a>
 			</div>
 		</div>
 	</header>
 	<div class="container">
 		<div class="cont-wrap">
-			<div class="cont-top click">
+			<div class="cont-top">
 				<div class="shadow-box">
 					<div class="fax-area">
 						<div class="fax">
@@ -224,28 +224,104 @@
 			</div>
 			<div class="cont-area">
 				<div class="tit-area">
-					<h2 class="tit">회원정보변경</h2>					
+					<h2 class="tit">신청이력</h2>					
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
-						<li><a href="#">마이페이지</a></li>
-						<li>회원정보변경</li>
+						<li><a href="#">관리자</a></li>
+						<li>신청이력</li>
 					</ul>
 				</div>
-				<p class="sub-txt">
-					회원님의 정보를 안전하게 보호하기 위해 비밀번호를 다시한번 입력해 주시기 바랍니다.
-				</p>
-				<div class="section">
-					<div class="box-gray search-area center">
-						<div class="group">						
-							<div class="item">
-								<label for="txt1">비밀번호 입력</label>
-								<div class="input-text">
-									<input id="txt1" type="password" placeholder="" style="width:260px;">
+				<div class="box-gray search-area center">
+					<div class="group range">
+						<div class="item">
+							<label>기간</label>							
+							<div class="calendar-area">
+								<div class="input-text cal">
+									<input type="text" name="from" style="width:108px">	
 								</div>
-							</div>
-							<button type="button" class="btn-mid bg-gray btnPop" title="Popup01">확인</button>
+								~
+								<div class="input-text cal">									
+									<input type="text" name="to" style="width:108px">
+								</div>
+							</div>										
 						</div>
+						<button type="button" class="btn-mid bg-gray">검색</button>
 					</div>
+				</div>				
+				<div class="section fax">	
+					<div class="button-area board right">						
+						<span class="select-box">
+							<select class="styled">
+								<option value="">20개씩 보기</option>															
+							</select>
+						</span>	
+					</div>
+					<div class="board-list light">
+						<table>
+							<caption>신청이력 리스트</caption>
+							<colgroup>
+								<col style="width: 20%;">
+								<col style="width: 30%;">								
+								<col >					
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><button type="button" class="sort">접수일자</button></th>
+									<th scope="col"><button type="button" class="sort">신청내용</button></th> <!-- 정렬기능 있는경우 버튼추가 -->
+									<th scope="col"><button type="button" class="sort">처리상황</button></th>
+								</tr>
+							</thead>
+							<tbody>	
+								<!-- data가 없는경우 -->
+								<!-- <tr class="no-data">
+									<td colspan="3">
+										<p>
+											내역이 없습니다.
+										</p>
+									</td>
+								</tr> -->
+								<!--// data가 없는경우 -->	
+								<tr>
+									<td>오후 2:23</td>
+									<td>후불 수신번호 신청</td>
+									<td>개인정보발송차단 신청 완료</td>
+								</tr>
+								<tr>
+									<td>21.08.19</td>
+									<td>후불 수신번호 신청</td>
+									<td>개인정보발송차단 신청 완료</td>
+								</tr>
+								<tr>
+									<td>21.08.19</td>
+									<td>후불 개인정보발송차단 신청</td>
+									<td>수신 번호 해지 신청</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="button-area board right">						
+						<span class="select-box">
+							<select class="styled">
+								<option value="">20개씩 보기</option>															
+							</select>
+						</span>	
+					</div>
+					<div class="pagenation">
+						<a href="#" class="btn-first page">처음</a>
+						<a href="#" class="btn-prev page">이전</a>
+						<span class="page now">1</span>
+						<a href="#" class="page">2</a>
+						<a href="#" class="page">3</a>
+						<a href="#" class="page">4</a>
+						<a href="#" class="page">5</a>
+						<a href="#" class="page">6</a>
+						<a href="#" class="page">7</a>
+						<a href="#" class="page">8</a>
+						<a href="#" class="page">9</a>
+						<a href="#" class="page">10</a>
+						<a href="#" class="btn-next page">다음</a>
+						<a href="#" class="btn-last page">마지막</a>
+					</div>			
 				</div>
 			</div>
 		</div>
@@ -263,7 +339,7 @@
 			<div class="quick-item on">
 				<button type="button" class="link"><span class="txt admin">관리자</span></button>
 				<div class="depth on">
-					<a href="#" class="on">내 가입 정보</a> <!-- 메뉴 선택시 on 추가 -->
+					<a href="#">내 가입 정보</a> 
 					<a href="#">가입정보 및 변경신청</a>
 					<a href="#">아이디(서브계정)관리</a>
 					<a href="#">수신번호 신청/관리</a>
@@ -272,7 +348,7 @@
 					<a href="#">카카오워크 연동</a>
 					<a href="#">서비스 일시정지</a>
 					<a href="#">서비스해지</a>
-					<a href="#">신청이력</a>
+					<a href="#" class="on">신청이력</a><!-- 메뉴 선택시 on 추가 -->
 				</div>
 			</div>
 			<div class="quick-item">
@@ -289,70 +365,16 @@
 	</div>
 </div>
 
-<!-- 비밀번호가 일치하지 않는경우 -->
-<div class="layer-popup" title="Popup01">
-	<div class="popup sm">
-		<div class="popup-header">				
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				비밀번호가 일치하지 않습니다.
-			</p>				
-		</div>
-		<div class="button-area center">		
-			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
-		</div>
-	</div>
-</div>
 
-<!-- 그룹웨어 연동아이디일경우 -->
-<div class="layer-popup" title="Popup02">
-	<div class="popup sm">
-		<div class="popup-header">			
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				그룹웨어 연동 아이디는 <br>
-				그룹웨어에서 변경하시기 바랍니다.<br>
-				그룹웨어로 이동 할까요?
-			</p>				
-		</div>
-		<div class="button-area  margin center">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
-			<button type="button" class="btn-mid bg-pink">이동</button>			
-		</div>
-	</div>
-</div>
-<!-- 그룹웨어 연동아이디일경우 -->
-<div class="layer-popup" title="Popup03">
-	<div class="popup sm">
-		<div class="popup-header">			
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				그룹웨어 연동 아이디는<br>
-				그룹웨어에서 변경하시기 바랍니다.
-			</p>				
-		</div>
-		<div class="button-area center">			
-			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
-		</div>
-	</div>
-</div>
-
-
-<script src="../../../js/jquery-3.3.1.js"></script>
-<script src="../../../js/jquery-ui.min.js"></script>
-<script src="../../../js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="../../../js/swiper.min.js"></script>
-<script src="../../../js/common.js"></script>
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
+<script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
 <script>
 $(document).ready(function(){
 	
-	
+    
 });
 
 

@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>U+ 웹팩스</title>
-	<link rel="stylesheet" type="text/css" href="../../../css/common.css">
-	<link rel="stylesheet" type="text/css" href="../../../css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.css">
 </head>
 
 <body>
@@ -63,10 +63,10 @@
 				<div class="gnb-item">
 					<a href="#none" class="link"><span class="txt address">주소록</span></a>
 				</div>
-				<div class="gnb-item on"> <!-- 메뉴 선택시 on 추가 -->
+				<div class="gnb-item"> 
 					<button class="link"><span class="txt mypage">마이페이지</span></button>
-					<div class="depth on"> <!-- 메뉴 펼침시 on 추가 및 스타일추가 -->
-						<a href="#" class="on">회원정보변경</a> <!-- 메뉴 선택시 on 추가 -->
+					<div class="depth">
+						<a href="#" >회원정보변경</a> 
 						<a href="#">충전하기</a>
 						<a href="#">이용통계조회</a>
 						<a href="#">수신번호 신청/관리</a>
@@ -224,29 +224,39 @@
 			</div>
 			<div class="cont-area">
 				<div class="tit-area">
-					<h2 class="tit">회원정보변경</h2>					
+					<h2 class="tit">부가서비스 신청</h2>					
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
-						<li><a href="#">마이페이지</a></li>
-						<li>회원정보변경</li>
+						<li><a href="#">관리자</a></li>
+						<li>부가서비스 신청</li>
 					</ul>
 				</div>
 				<p class="sub-txt">
-					회원님의 정보를 안전하게 보호하기 위해 비밀번호를 다시한번 입력해 주시기 바랍니다.
+					팩스를 더욱 안전하고 편리하게 사용할 수 있는 부가서비스입니다.
 				</p>
-				<div class="section">
-					<div class="box-gray search-area center">
-						<div class="group">						
-							<div class="item">
-								<label for="txt1">비밀번호 입력</label>
-								<div class="input-text">
-									<input id="txt1" type="password" placeholder="" style="width:260px;">
-								</div>
-							</div>
-							<button type="button" class="btn-mid bg-gray btnPop" title="Popup01">확인</button>
+			
+				<div class="section security-service">
+					<div class="security-service-list">
+						<div class="border-box-light category">
+							<p class="tit">자동 서식 분류</p>
+							<span>
+								<em class="f-pink">팩스 수신 시,</em> 일정한 서식을 가진 문서를 자동으로 분류해주어 <br>
+								팩스 관리를 편리하게 해줍니다.<br>
+								<em class="f-light">(서식분류 유형 기본 3개 제공)</em>
+							</span>
+							<a href="#" class="btn-mid40 bg-pink">자세히 보기</a>
 						</div>
-					</div>
-				</div>
+						<div class="border-box-light send">
+							<p class="tit">개인정보 발송 차단</p>
+							<span>
+								<em class="f-pink">팩스 발송 시,</em> 발송 팩스 문서에 대인정보가 포함되어 있을 경우 <br>
+								자동으로 발송을 차단합니다.<br>
+								<em class="f-light">(후불 관리자회원만 신청 가능합니다.)</em>
+							</span>
+							<a href="#" class="btn-mid40 bg-pink">자세히 보기</a>
+						</div>
+					</div>				
+				</div>				
 			</div>
 		</div>
 		
@@ -263,12 +273,12 @@
 			<div class="quick-item on">
 				<button type="button" class="link"><span class="txt admin">관리자</span></button>
 				<div class="depth on">
-					<a href="#" class="on">내 가입 정보</a> <!-- 메뉴 선택시 on 추가 -->
+					<a href="#">내 가입 정보</a> 
 					<a href="#">가입정보 및 변경신청</a>
 					<a href="#">아이디(서브계정)관리</a>
 					<a href="#">수신번호 신청/관리</a>
 					<a href="#">사용자 설정</a>
-					<a href="#">부가서비스 신청</a>
+					<a href="#"  class="on">부가서비스 신청</a><!-- 메뉴 선택시 on 추가 -->
 					<a href="#">카카오워크 연동</a>
 					<a href="#">서비스 일시정지</a>
 					<a href="#">서비스해지</a>
@@ -344,11 +354,11 @@
 </div>
 
 
-<script src="../../../js/jquery-3.3.1.js"></script>
-<script src="../../../js/jquery-ui.min.js"></script>
-<script src="../../../js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="../../../js/swiper.min.js"></script>
-<script src="../../../js/common.js"></script>
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
+<script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
 <script>
 $(document).ready(function(){
 	

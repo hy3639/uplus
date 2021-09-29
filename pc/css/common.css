@@ -582,7 +582,7 @@ footer  p {
 	 text-indent:55px;
 }
 /* on */
-.quick-area .quick-item.on .depth {opacity:1;}
+.quick-area .quick-item.on .depth {opacity:1; display: block;}
 
 .quick .depth a {
 	position: relative;
@@ -885,7 +885,10 @@ footer  p {
 	left: 0;
 	top: 0;
 }
-
+.ul-list li {
+	font-size: 14px;
+}
+.ul-list li > .ul-list {margin-left: 5px;}
 .ul-list.tit li {
 	font-size: 12px; 
 	line-height: 19px;
@@ -940,6 +943,21 @@ footer  p {
 	height: 1px;	
 	border-radius: 1px;
 	background-color:#000;
+}
+.ul-list.arrow > li {
+	position: relative;
+	font-size: 13px; 
+	font-weight: 400;
+	padding-left: 15px;
+	line-height: 20px;
+}
+.ul-list.dot.mid li {font-weight: 400; font-size: 14px; padding-left: 8px; line-height: 20px;}
+.ul-list.dot.mid li:before {
+	width: 2px;
+	height: 2px;	
+	border-radius: 1px;
+	background-color:#000;
+	opacity: .6;
 }
 .ul-list.arrow > li {
 	position: relative;
@@ -3276,3 +3294,37 @@ html.popOpen {overflow:hidden;}
 .statistics .board-list tbody td:first-child {border-left: 0;}
 .statistics .board-list tbody .total td {background-color:#fff9f9; font-weight: 500;}
 .statistics .tab-conts .tab-cont + .tab-cont .board-list tbody .total td  {height: 50px;}
+
+
+/* ----------- 관리자 -----------*/
+.security-service-list .border-box-light {
+	padding: 34px 55px;
+}
+.security-service-list .border-box-light + .border-box-light {margin-top: 10px;} 
+.border-box-light.category {	background:url(../images/img/img_security1.png) no-repeat 585px center;}
+.border-box-light.send {	background:url(../images/img/img_security2.png) no-repeat 585px center;}
+.security-service-list .tit {
+	padding-bottom: 8px;
+	font-size: 23px;
+	font-weight: 700;
+}
+.security-service-list .tit + span {
+	display: block;
+	line-height: 22px;
+	font-size: 15px;
+}
+.security-service-list .tit + span + .bg-pink {margin-top: 25px;}
+.security-service-list .flex-area {margin-top: 30px;}
+.security-service-list .flex-area .btn-mid + .btn-mid {margin-left: 4px;}
+.security-service-list .underline {font-size:14px; margin-right:20px}
+
+/*서비스 일시정지*/
+.box-gray.form-box {
+	padding: 40px 60px;
+	margin-top:20px;
+}
+.box-gray.form-box .form-list .form-wrap {width: 20%; margin-right: 0; margin-bottom: 20px;}
+.box-gray.form-box .form-list .form-group  {width: 100%; border-top: 1px solid #dbdbdb;padding-top: 20px; margin-top: 10px;}
+.box-gray.form-box .form-list .form-group .form-wrap {width: 85px; margin-bottom:0; font-size: 13px;}
+.box-gray.form-box .form-list .form-group .input-text {display: inline-block;}
+.box-gray.form-box .form-list .form-group .input-text input{width: 600px;}
