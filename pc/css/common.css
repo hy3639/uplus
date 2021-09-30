@@ -888,6 +888,7 @@ footer  p {
 .ul-list li {
 	font-size: 14px;
 }
+.ul-list.f-13 li {font-size: 13px !important;}
 .ul-list li > .ul-list {margin-left: 5px;}
 .ul-list.tit li {
 	font-size: 12px; 
@@ -1156,6 +1157,13 @@ footer  p {
 	font-size:13px;
 	font-weight:400;
 }
+.btn-mid36 {
+	min-width:104px;
+	height:36px;
+	line-height:34px;
+	font-size:13px;
+	font-weight:400;
+}
 .btn-mid40 {
 	min-width:148px;
 	height:40px;
@@ -1225,17 +1233,27 @@ footer  p {
 .form-list > .form-wrap .chkbox{margin-right:5px}
 .form-list > .form-wrap:first-child {margin-left:0}
 .form-list.block > .form-wrap {display: block; margin-left:0; margin-top:5px} */
-.form-list {display: flex; justify-content: left; flex-wrap: wrap;}
-.form-list.inline {display: inline-flex;}
-.form-list.center {justify-content: center;} 
-.form-list > .form-wrap {margin-right:30px;  font-size:13px}
-.form-list > .form-wrap .chkbox{margin-right:5px}
-.form-list.block {display:inherit}
-.form-list.block > .form-wrap {display: block;margin-top:10px;margin-right:0}
-.form-list > .form-wrap:first-child {margin-top:0}
-.form-list.center.block {text-align: center;}
-.form-list.label li > label {padding-right: 4px;}
-.form-list.label li + li {margin-left:15px ;}
+.form-list,.form-list2 {display: flex; justify-content: left; flex-wrap: wrap;}
+.form-list.inline,
+.form-list2.inline {display: inline-flex;}
+.form-list.center,
+.form-list2.center {justify-content: center;} 
+.form-list > .form-wrap,
+.form-list2 > .form-wrap {margin-right:30px;  font-size:13px}
+.form-list > .form-wrap .chkbox,
+.form-list2 > .form-wrap .chkbox{margin-right:5px}
+.form-list.block,
+.form-list2.block {display:inherit}
+.form-list.block > .form-wrap,
+.form-list2.block > .form-wrap {display: block;margin-top:10px;margin-right:0}
+.form-list > .form-wrap:first-child,
+.form-list2 > .form-wrap:first-child {margin-top:0}
+.form-list.center.block,
+.form-list2.center.block {text-align: center;}
+.form-list.label li > label,
+.form-list2.label li > label {padding-right: 4px;}
+.form-list.label li + li,
+.form-list2.label li + li {margin-left:15px ;}
 .formChange .formItem {display: none;}
 
 input[type=radio][class^=styled],
@@ -2505,7 +2523,8 @@ html.popOpen {overflow:hidden;}
 .join .add-box [class*=button-]  {margin:0 7px 0 6px}
 .join .add-box [class*=button-]  + .btn-mid {margin-right: 4px;}
 .join .input-email.inline + button {margin-left: 4px;}
-.join .form-list.position {position: relative; top: -8px;}
+.join .form-list.position,
+.join .form-list2.position {position: relative; top: -8px;}
 
 .join td .guide-txt + label {margin-bottom: 5px;}
 
@@ -3328,3 +3347,14 @@ html.popOpen {overflow:hidden;}
 .box-gray.form-box .form-list .form-group .form-wrap {width: 85px; margin-bottom:0; font-size: 13px;}
 .box-gray.form-box .form-list .form-group .input-text {display: inline-block;}
 .box-gray.form-box .form-list .form-group .input-text input{width: 600px;}
+
+/* 가입정보 및 변경신청 */ 
+.join .formItem .ul-list.f-13 {margin: 20px 0;}
+.join .formItem .ul-list.f-13 li .indent {margin-left: 12px;}
+
+/* ----------- 설정 -----------*/
+.preferences .tab-wrap .tab-cont .section {margin-top: 30px;}
+.preferences .board-write th {padding:15px}
+.preferences .board-write td > span {vertical-align: middle;}
+.preferences .board-write .input-phone > .input-text{width: 66px;} 
+.preferences .board-write .input-phone .select-box select.styled {padding-right: 30px;}
