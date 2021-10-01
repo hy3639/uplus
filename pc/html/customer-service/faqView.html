@@ -42,15 +42,15 @@
 				<a href="#" class="btn-border btn-xs bg-gray col1">충전하기</a>
 			</div>
 			<div class="gnb">
-				<div class="gnb-item"> 
+				<div class="gnb-item">
 					<button class="link"><span class="txt fax">팩스</span></button>
-					<div class="depth">  
-						<a href="#">팩스 보내기</a>
+					<div class="depth">
+						<a href="#">팩스 보내기</a> 
 						<a href="#">받은 팩스함</a>
 						<a href="#">보낸 팩스함</a>
 						<a href="#">문서 보관함</a>
-						<a href="#">수신번호 신청/관리</a>
-						<a href="#">휴지통</a>  
+						<a href="#" >수신번호 신청/관리</a>
+						<a href="#">휴지통</a>
 					</div>
 				</div>
 				<div class="gnb-item">
@@ -62,24 +62,24 @@
 				</div>
 				<div class="gnb-item">
 					<a href="#none" class="link"><span class="txt address">주소록</span></a>
-				</div>
-				<div class="gnb-item"> 
+				</div>	
+				<div class="gnb-item">
 					<button class="link"><span class="txt mypage">마이페이지</span></button>
 					<div class="depth">
-						<a href="#" >회원정보변경</a> 
+						<a href="#">회원정보변경</a>
 						<a href="#">충전하기</a>
 						<a href="#">이용통계조회</a>
 						<a href="#">수신번호 신청/관리</a>
 						<a href="#">실시간 요금조회</a>
 						<a href="#">회원탈퇴</a>
 					</div>
-				</div>	
-				<div class="gnb-item">
+				</div>			
+				<div class="gnb-item on">
 					<button class="link"><span class="txt support">고객지원</span></button>
-					<div class="depth">
+					<div class="depth on">
 						<a href="#">공지사항</a>
 						<a href="#">자료실</a>
-						<a href="#">자주하는 질문</a>
+						<a href="#" class="on">자주하는 질문</a>
 						<a href="#">문의하기</a>
 					</div>
 				</div>
@@ -87,17 +87,17 @@
 			
 			<div class="util">
 				<a href="#" class="guide">영상 이용가이드</a>
-				<a href="#" class="tip">사용 tip</a>
+				<a href="#" class="tip">사용 Tip</a>
 				<a href="#" class="down-fax">간편팩스 다운로드</a>
 				<a href="#" class="num-magage">수신번호 신청/관리</a>
-				<a href="#" class="api">API 신청</a>
-				<a href="#" class="mobile">모바일</a>
+				<a href="#" class="api">호스트모듈 신청</a>
+				<a href="#" class="mobile">모바일앱</a>
 			</div>
 		</div>
 	</header>
 	<div class="container">
 		<div class="cont-wrap">
-			<div class="cont-top click">
+			<div class="cont-top">
 				<div class="shadow-box">
 					<div class="fax-area">
 						<div class="fax">
@@ -222,87 +222,53 @@
 					</div>
 				</div>
 			</div>
-			<div class="cont-area">
+			<div class="cont-area customer-service">
 				<div class="tit-area">
-					<h2 class="tit">내 가입 정보</h2>					
+					<h2 class="tit">자주하는 질문</h2>					
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
-						<li><a href="#">관리자</a></li>
-						<li>내 가입 정보</li>
+						<li><a href="#">고객지원</a></li>
+						<li>자주하는 질문</li>
 					</ul>
-				</div>
-			
-				<div class="section">
-					<div class="flex-area">
-						<h3 class="tit">후불요금 상품 가입 현황</h3>						
-					</div>
+				</div>					
+				<div class="section">						
 					<div class="board-write">
 						<table>
 							<colgroup>
-								<col style="width:130px;">						
-								<col>
 								<col style="width:130px;">						
 								<col>											
 							</colgroup>
 							<tbody>		
 								<tr>
-									<th scope="row">가입자번호</th>
-									<td>00000000000</td>
-									<th scope="row">납입자번호</th>
-									<td>00000000000</td>
+									<th scope="row">제목</th>
+									<td>본문은 1장인데 수신처에는 여러 장 송신이 됐다고 합니다.(첫 장에만 내용이 있고 백지상태로 여러 장 전송)</td>
 								</tr>	
 								<tr>
-									<th scope="row">관리자명</th>
-									<td>홍길동</td>
-									<th scope="row">납부방법</th>
-									<td>지로</td>
+									<th scope="row">등록일</th>
+									<td>2021.01.01</td>
 								</tr>
-								<tr>
-									<th scope="row">요금청구주소</th>
-									<td colspan="3">서울시 중구 남대문로5가 (주)엘지유플러스 응용솔루션사업팀</td>
-								</tr>						
-														
+								<tr>									
+									<td colspan="2">
+										<div class="board-content">
+											작성하신 문서의 enter 값이 아래의 페이지로 많이 내려가 있지는 않은지 확인해주세요.<br>
+											정상적이라면 문제가 되는 수신처의 번호를 확인하신 후 고객센터(1544-8007)로 연락주세요.<br><br>
+
+											감사합니다. 
+										</div>
+									</td>
+								</tr>					
 							</tbody>
 						</table>
-					</div>					
-				</div>
-				<div class="section">
-					<div class="flex-area">
-						<h3 class="tit">사업자 정보</h3>						
+					</div>	
+					<div class="button-area justify board">
+						<div class="left">
+							<a href="#" class="btn-border btn-mid bg-white">이전</a>
+							<a href="#" class="btn-border btn-mid bg-white">다음</a>
+						</div>
+						<div class="right">
+							<a href="#" class="btn-border btn-mid bg-white">목록</a>							
+						</div>
 					</div>
-					<div class="board-write">
-						<table>
-							<colgroup>
-								<col style="width:130px;">						
-								<col>
-								<col style="width:130px;">						
-								<col>											
-							</colgroup>
-							<tbody>		
-								<tr>
-									<th scope="row">가입자번호</th>
-									<td colspan="3">00000000000</td>								
-								</tr>	
-								<tr>
-									<th scope="row">회사명</th>
-									<td>홍길동 주식회사</td>
-									<th scope="row">대표자명</th>
-									<td>테스트</td>
-								</tr>
-								<tr>
-									<th scope="row">업태</th>
-									<td>테스트업</td>
-									<th scope="row">종목</th>
-									<td>테스트</td>
-								</tr>
-								<tr>
-									<th scope="row">주소</th>
-									<td colspan="3">서울시 중구 남대문로5가 (주)엘지유플러스 응용솔루션사업팀</td>
-								</tr>						
-														
-							</tbody>
-						</table>
-					</div>					
 				</div>
 			</div>
 		</div>
@@ -346,60 +312,6 @@
 	</div>
 </div>
 
-<!-- 비밀번호가 일치하지 않는경우 -->
-<div class="layer-popup" title="Popup01">
-	<div class="popup sm">
-		<div class="popup-header">				
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				비밀번호가 일치하지 않습니다.
-			</p>				
-		</div>
-		<div class="button-area center">		
-			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
-		</div>
-	</div>
-</div>
-
-<!-- 그룹웨어 연동아이디일경우 -->
-<div class="layer-popup" title="Popup02">
-	<div class="popup sm">
-		<div class="popup-header">			
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				그룹웨어 연동 아이디는 <br>
-				그룹웨어에서 변경하시기 바랍니다.<br>
-				그룹웨어로 이동 할까요?
-			</p>				
-		</div>
-		<div class="button-area  margin center">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
-			<button type="button" class="btn-mid bg-pink">이동</button>			
-		</div>
-	</div>
-</div>
-<!-- 그룹웨어 연동아이디일경우 -->
-<div class="layer-popup" title="Popup03">
-	<div class="popup sm">
-		<div class="popup-header">			
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				그룹웨어 연동 아이디는<br>
-				그룹웨어에서 변경하시기 바랍니다.
-			</p>				
-		</div>
-		<div class="button-area center">			
-			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
-		</div>
-	</div>
-</div>
-
 
 <script src="../../js/jquery-3.3.1.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>
@@ -409,7 +321,7 @@
 <script>
 $(document).ready(function(){
 	
-	
+    
 });
 
 

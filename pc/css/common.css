@@ -496,6 +496,7 @@ footer  p {
 	bottom:0;
 	background-color: #fff;
 	border-left:1px solid #dbdbdb;
+	z-index: 50;
 }
 .quick-area .quick {
 	width:60px;
@@ -722,7 +723,7 @@ footer  p {
 .mgb15 {margin-bottom:15px;}
 .mgt5 {margin-top:5px;}
 .mgt10 {margin-top:10px;}
-.mgt20 {margin-top:20px;}
+.mgt20 {margin-top:20px !important}
 .mgt40 {margin-top:40px !important;}
 .mgt50 {margin-top:50px !important;}
 .pdb10 {padding-bottom: 10px;}
@@ -915,6 +916,7 @@ footer  p {
 .ul-list.bar li.none {padding-left: 0;}
 .ul-list.bar li.none:before {display: none;}
 .ul-list.bar.big li{font-size: 14px; font-weight: normal; line-height: 21px;}
+.ul-list.bar.mid li{font-size: 13px; font-weight: normal; line-height: 20px;}
 
 
 .ul-list.dot li {
@@ -2494,8 +2496,11 @@ html.popOpen {overflow:hidden;}
 /*step2*/
 
 .join .board-write .input-phone > .input-text,
-.join .board-write .input-phone .select-box {width: 66px;}
-.join .board-write .input-phone .select-box select.styled {padding-right: 30px;}
+.join .board-write .input-phone .select-box,
+.customer-service .board-write .input-phone > .input-text,
+.customer-service .board-write .input-phone > .select-box{width: 66px;}
+.join .board-write .input-phone .select-box select.styled,
+.customer-service .board-write .input-phone .select-box select.styled{padding-right: 30px;}
 
 .section + .button-area {margin-top: 30px;}
 
@@ -3353,8 +3358,35 @@ html.popOpen {overflow:hidden;}
 .join .formItem .ul-list.f-13 li .indent {margin-left: 12px;}
 
 /* ----------- 설정 -----------*/
+/*알림설정*/
 .preferences .tab-wrap .tab-cont .section {margin-top: 30px;}
 .preferences .board-write th {padding:15px}
 .preferences .board-write td > span {vertical-align: middle;}
 .preferences .board-write .input-phone > .input-text{width: 66px;} 
 .preferences .board-write .input-phone .select-box select.styled {padding-right: 30px;}
+
+.preferences .border-dot-box {
+	background:url(../images/img/bg_gray_dot.png) repeat-x  0 0;
+}
+.preferences .formChange {margin-top: 20px;}
+.preferences .formChange .formItem {margin-top: 15px;}
+.preferences .border-dot-box {margin-top: 15px;}
+.preferences .border-dot-box .tit {padding-top: 15px;}
+.preferences .border-dot-box .img {text-align: center; font-size: 0;}
+.preferences  .board-write td {padding: 15px 15px 20px 15px;}
+.preferences .ul-list.dot.mid li {font-size: 13px;}
+
+/* ----------- 고객지원 -----------*/
+.customer-service .board-list tbody td.subject {text-align: left;padding-left: 30px;}
+.customer-service .board-list table td .tit {display: block;}
+.customer-service .board-content {
+	padding:40px 20px ;
+	font-size: 13px;
+	line-height: 22px;
+}
+.customer-service .board-list.type2 tbody td:first-child {border-left: 0;}
+.customer-service .terms-area {height: inherit;}
+.customer-service .terms-area .ul-list > li {font-weight: 700; font-size: 13px; margin-bottom: 10px;}
+.customer-service .terms-area .ul-list .ul-list li {font-size: 13px; font-weight: 400;}
+.customer-service .terms-area .tit {margin-bottom: 10px;}
+.customer-service .terms-area + .box-gray .form-list {justify-content: left; margin-left: 20px;}

@@ -34,7 +34,7 @@
 					<button type="button" class="f-pink">충전하기</button>
 				</div>
 			</div>
-			<div class="button-area justify">
+			<div class="button-area justify margin">
 				<a href="#" class="btn-border btn-xs bg-gray col1">마이페이지</a>
 				<a href="#" class="btn-border btn-xs bg-gray col1">로그아웃</a>				
 			</div>
@@ -573,19 +573,29 @@
 														<tr>
 															<th scope="row">Return Fax 란?</th>
 															<td>
-																					
+																
+																<ul class="ul-list bar mid">
+																	<li>외부 발신자로부터 팩스를 성공적으로 수신 받으면, <span class="f-pink">자동으로 외부발신자 팩스번호로 전송 완료 메시지를 FAX로 보내는 기능</span>입니다.</li>
+																	<li>발신 팩스 비용은 <span class="f-pink">장당 요금으로 계산</span>하여 청구됩니다.</li>
+																	<li>Return FAX 메시지를 변경하고 싶으신 경우, 고객센터(1544-8007)로 문의 바랍니다.</li>
+																	<li>타입 변경을 원하시는 경우 'Return FAX 해지' 후 다시 신청해 주시기 바랍니다.</li>
+																</ul>	
+																<div class="border-dot-box">
+																	<p class="tit f-pink">※ 발송 예시</p>
+																	<div class="img"><img src="../../images/img/diagram_fax.png" alt="1. fax수신(u+웹팩스 수신번호 070-0000-1111) 2.팩스 정상 수신 시 return-fax 3. 각 발신자 팩스번호로 fax 자동 발송/ [return-fax 예시 팩스] 0221391100으로 발송한 fax를 성공적으로 수신하였습니다. 수신일 :2021/08/07 송신번호 : 0269281095"></div>
+																</div>		
 															</td>
 														</tr>
 														<tr>
 															<th scope="row">타입선택 및 신청</th>
-															<td>
+															<td>																
 																<ul class="ul-list dot mid">
 																	<li>모든 수신팩스 적용: <span class="f-pink">수신되는 모든 팩스에 대해서 Return FAX 를 발송</span>하고 싶은 경우.</li>
 																	<li>주소록 팩스번호만 적용: <span class="f-pink">주소록에 있는 팩스 번호</span>에서 송신된 팩스에 대해서 Return FAX 를 발송하고 싶은 경우.</li>
 																</ul>
 																<div class="button-area margin">
-																	<a href="#" class="btn-border btn-mid bd-pink">Return FAX 신청(모든 수신팩스 적용)</a>
-																	<a href="#" class="btn-border btn-mid bd-pink">Return FAX 신청(주소록 팩스번호만 적용)</a>
+																	<a href="#" class="btn-border btn-mid bd-pink btnPop" title="Popup05">Return FAX 신청(모든 수신팩스 적용)</a>
+																	<a href="#" class="btn-border btn-mid bd-pink btnPop" title="Popup06">Return FAX 신청(주소록 팩스번호만 적용)</a>
 																</div>
 															</td>
 														</tr>																		
@@ -593,104 +603,51 @@
 												</table>
 											</div>
 										</div>
-										<div class="formItem">
-											<ul class="ul-list f-13">
-												<li class="f-pink">※ 자동이체 선택시 요금의 1% 할인</li>	
-												<li class="f-pink">※ 이메일청구서 신청시 별도 세금계산서가 제공되며, 매월 15일 전후로 청구서 수령이 가능합니다.
-													   <span class="indent">(16.02.01부터 LG유플러스 정책에 따라 신규 가입 시 이메일청구만 가능합니다.)</span>
-												</li>	
-												<li>해당 이메일로 청구서가 발송됩니다. 입력하신 이메일의 유효성 검사를 진행해 주시기 바랍니다.</li>					
-											</ul>										
+										<div class="formItem">										
 											<div class="board-write">
 												<table>
 													<colgroup>
 														<col style="width:130px;">						
-														<col>											
+														<col>																		
 													</colgroup>
 													<tbody>
 														<tr>
-															<th scope="row"><label class="essential">납부 방법</label></th>
+															<th scope="row">Return SMS 란?</th>
 															<td>
-																<div class="form-list2 inline">
-																	<label class="form-wrap"><input type="radio" name="radio2-1-1" class="styled" checked> 지로</label>
-																	<label class="form-wrap"><input type="radio" name="radio2-1-1" class="styled"> 자동이체</label>
-																	<label class="form-wrap"><input type="radio" name="radio2-1-1" class="styled"> 신용카드</label>																									
-																</div>	
-																<p class="guide-txt">자동이체 선택시 요금의 1% 할인</p>									
+																<ul class="ul-list bar mid">
+																	<li><span class="f-pink">주소록에 등록되어 있는 발신자</span>로부터 팩스를 성공적으로 수신 받으면, <br>자동으로 발신자의 휴대폰 번호로 <span class="f-pink">팩스전송 완료 SMS를 보내는 기능</span>입니다.</li>
+																	<li>주소록에 <span class="f-pink">저장되어 있지 않은 팩스 번호로 수신</span>하거나, 해당 팩스번호에 <span class="f-pink">매칭되는 핸드폰 번호가 없을 경우</span>는<br>Return SMS가 발송되지 않습니다.</li>
+																	<li>원하는 팩스번호만 선택하여 Return SMS 발송은 불가합니다.</li>
+																	<li>SMS 발송 비용은 <span class="f-pink">건당 18원(VAT별도)</span>로 청구됩니다.</li>
+																</ul>
+																
+																<div class="border-dot-box">
+																	<p class="tit f-pink">※ 발송 예시</p>
+																	<ul class="ul-list bar mid">
+																		<li>
+																			주소록에 저장된 번호가 아래와 같을경우
+																			<ul class="ul-list dot mid">
+																				<li>이름: LG U+</li>
+																				<li>팩스번호: 02-1234-5678</li>
+																				<li>핸드폰: 010-1111-2222
+																					<span class="indent">▶ '02-1234-5678' 로 부터 팩스 수신시, 자동으로 등록되어 있던 핸드폰번호 '010-1111-2222'로 Return SMS가 발송됩니다.</span>
+																				</li>
+																			</ul>
+																		</li>																		
+																	</ul>	
+
+																	<div class="img mgt20"><img src="../../images/img/diagram_sms.png" alt="1. fax수신(u+웹팩스 수신번호 070-0000-1111) 2.팩스 정상 수신 시 return-SMS 3. 각 발신자 팩스번호로 SMS 자동 발송/ [return-SMS 예시 문자] 070********로 발송한 fax를 성공적으로 수신하였습니다."></div>
+																</div>		
 															</td>
 														</tr>
 														<tr>
-															<th scope="row"><label class="essential">청구방법</label></th>
+															<th scope="row">신청</th>
 															<td>
-																<div class="form-list2 inline position">
-																	<label class="form-wrap"><input type="radio" name="radio2-1-2" class="styled" checked> 이메일</label>	
-																	<label class="form-wrap"><input type="radio" name="radio2-1-2" class="styled">우편</label>																																			
-																</div>	
-																<p class="guide-txt">
-																	이메일청구서 신청시 별도 세금계산서가 제공되며, 매월 15일 전후로 청구서 수령이 가능합니다.<br>
-																	(16.02.01부터 LG유플러스 정책에 따라 신규 가입 시 이메일청구만 가능합니다.)
-																</p>									
-															</td>
-														</tr>	
-														<tr>
-															<th scope="row"><label class="essential" for="form2-1-1">상호명</label></th>
-															<td>
-																<div class="input-text inline" style="width: 216px;">
-																	<input type="text" id="form2-1-1">
-																</div>									
-															</td>
-														</tr>
-														<tr>
-															<th scope="row"><label class="essential" for="form2-1-2">청구서 수령인</label></th>
-															<td>
-																<div class="input-text inline" style="width: 216px;">
-																	<input type="text" id="form2-1-2">
-																</div>									
-															</td>
-														</tr>							
-														<tr>
-															<th scope="row"><label class="essential" for="form2-1-3">부서명</label></th>
-															<td>
-																<div class="input-text inline" style="width: 216px;">
-																	<input type="text" id="form2-1-3">
-																</div>									
-															</td>
-														</tr>
-														<tr>
-															<th scope="row"><label class="essential">전화번호</label></th>
-															<td>
-																<div class="input-phone">
-																	<span class="select-box">
-																		<select class="styled">			
-																			<option value="">선택</option>										
-																			<option value="">010</option>
-																			<option value="">011</option>						
-																		</select>
-																	</span>
-																	<span class="hypen">-</span>
-																	<div class="input-text"><input type="text"></div>
-																	<span class="hypen">-</span>
-																	<div class="input-text"><input type="text"></div>
-																</div>								
-															</td>
-														</tr>
-														<tr>
-															<th scope="row"><label class="essential" for="form2-1-4">이메일</label></th>
-															<td>
-																<div class="input-email inline">
-																	<div class="input-text"><input type="text" id="form2-1-4"></div>
-																	<span class="divider">@</span>
-																	<div class="input-text"><input type="text"></div>
-																	<span class="select-box">
-																		<select class="styled">																								
-																			<option value="">naver.com</option>													
-																		</select>
-																	</span>
+																<div class="button-area">
+																	<a href="#" class="btn-border btn-mid bd-pink btnPop" title="Popup07">Return SMS 신청</a>
 																</div>
-																<button type="button" class="btn-border btn-mid bd-pink">유효성 검사</button>
-																<p class="guide-txt mgl0 mgt5">해당 이메일로 청구서가 발송됩니다. 입력하신 이메일의 유효성 검사를 진행해 주시기 바랍니다.</p>
 															</td>
-														</tr>																					
+														</tr>																		
 													</tbody>
 												</table>
 											</div>
@@ -813,6 +770,65 @@
 		<div class="popup-cont">
 			<p class="guide-txt center">
 				문자알림 받을 번호를 해지 하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area  margin center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>			
+			<button type="button" class="btn-mid bg-pink">예</button>			
+		</div>
+	</div>
+</div>
+
+<!-- Return FAX 신청(모든수신팩스) -->
+<div class="layer-popup" title="Popup05">
+	<div class="popup sm">
+		<div class="popup-header">		
+			<p class="title">Return FAX 신청</p>	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				모든 수신 팩스에 대해서<br>
+				Return FAX를 전송하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area  margin center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>			
+			<button type="button" class="btn-mid bg-pink">예</button>			
+		</div>
+	</div>
+</div>
+
+<!-- Return FAX 신청(주소록에 둥록된 팩스) -->
+<div class="layer-popup" title="Popup06">
+	<div class="popup sm">
+		<div class="popup-header">		
+			<p class="title">Return FAX 신청</p>	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				주소록에 등록된 팩스 번호에 대해서<br>
+				Return FAX를 전송하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area  margin center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>			
+			<button type="button" class="btn-mid bg-pink">예</button>			
+		</div>
+	</div>
+</div>
+
+<!-- Return SMS 신청 -->
+<div class="layer-popup" title="Popup07">
+	<div class="popup sm">
+		<div class="popup-header">		
+			<p class="title">Return SMS 신청</p>	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				Return SMS 서비스를 신청합니다.
 			</p>				
 		</div>
 		<div class="button-area  margin center">
