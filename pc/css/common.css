@@ -818,6 +818,11 @@ footer  p {
 }
 .flex-area.justify h3.tit + .f-pink {font-size:14px;}
 .flex-area.justify h3.tit + .guide-txt {font-size:13px;}
+.section h4.tit {
+	font-size:16px;
+	font-weight: 700;
+	padding-bottom: 10px;
+}
 .flex-area.right .guide-txt {font-size:13px;}
 
 /* 블릿 text */
@@ -3357,6 +3362,9 @@ html.popOpen {overflow:hidden;}
 .join .formItem .ul-list.f-13 {margin: 20px 0;}
 .join .formItem .ul-list.f-13 li .indent {margin-left: 12px;}
 
+/* 아이디 등록*/
+.join .board-write + .button-area {margin-top: 40px;}
+
 /* ----------- 설정 -----------*/
 /*알림설정*/
 .preferences .tab-wrap .tab-cont .section {margin-top: 30px;}
@@ -3390,3 +3398,15 @@ html.popOpen {overflow:hidden;}
 .customer-service .terms-area .ul-list .ul-list li {font-size: 13px; font-weight: 400;}
 .customer-service .terms-area .tit {margin-bottom: 10px;}
 .customer-service .terms-area + .box-gray .form-list {justify-content: left; margin-left: 20px;}
+
+.spam .border-box > p {font-size: 15px; font-weight: 500;}
+.spam .board-write td {padding: 20px 15px;}
+.spam .board-write th,
+.spam .board-write td .ul-list li {font-size:13px}
+.spam .board-write td .ul-list li {text-indent:-13px; margin-left:13px;}
+.spam .board-write td .ul-list li.none-indent {text-indent: 0; margin-left: 0;}
+.spam .board-write td .ul-list li.none-indent + li {margin-top: 10px;}
+.spam .board-write + .board-write {margin-top: 10px;}
+
+.cont-area.term .section {font-size: 13px; line-height: 20px;}
+.cont-area.term .terms-box {margin-top:20px}
