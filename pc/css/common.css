@@ -721,6 +721,7 @@ footer  p {
 .mgl50 {margin-left:50px !important;}
 .mgr8 {margin-right:8px;}
 .mgb15 {margin-bottom:15px;}
+.mgb30 {margin-bottom:30px;}
 .mgt5 {margin-top:5px;}
 .mgt10 {margin-top:10px;}
 .mgt20 {margin-top:20px !important}
@@ -3408,5 +3409,13 @@ html.popOpen {overflow:hidden;}
 .spam .board-write td .ul-list li.none-indent + li {margin-top: 10px;}
 .spam .board-write + .board-write {margin-top: 10px;}
 
+/* 이용약관 */
 .cont-area.term .section {font-size: 13px; line-height: 20px;}
 .cont-area.term .terms-box {margin-top:20px}
+.term.statistics .board-list.type2 table {table-layout: inherit;}
+.term.statistics .board-list.type2 table tbody th {
+    border-right: 1px solid #dbdbdb;
+}
+.term.statistics .section > table > tbody >tr > td {vertical-align: top;}
+.term.statistics .section > table > tbody >tr > td:first-child { padding-right: 5px;}
+.term.statistics .section > table > tbody >tr > td + td {padding-left: 5px;}
