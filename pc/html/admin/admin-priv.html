@@ -42,15 +42,15 @@
 				<a href="#" class="btn-border btn-xs bg-gray col1">충전하기</a>
 			</div>
 			<div class="gnb">
-				<div class="gnb-item">
+				<div class="gnb-item"> 
 					<button class="link"><span class="txt fax">팩스</span></button>
-					<div class="depth">
-						<a href="#">팩스 보내기</a> 
+					<div class="depth">  
+						<a href="#">팩스 보내기</a>
 						<a href="#">받은 팩스함</a>
 						<a href="#">보낸 팩스함</a>
 						<a href="#">문서 보관함</a>
-						<a href="#" >수신번호 신청/관리</a>
-						<a href="#">휴지통</a>
+						<a href="#">수신번호 신청/관리</a>
+						<a href="#">휴지통</a>  
 					</div>
 				</div>
 				<div class="gnb-item">
@@ -62,24 +62,24 @@
 				</div>
 				<div class="gnb-item">
 					<a href="#none" class="link"><span class="txt address">주소록</span></a>
-				</div>	
-				<div class="gnb-item">
+				</div>
+				<div class="gnb-item"> 
 					<button class="link"><span class="txt mypage">마이페이지</span></button>
 					<div class="depth">
-						<a href="#">회원정보변경</a>
+						<a href="#" >회원정보변경</a> 
 						<a href="#">충전하기</a>
 						<a href="#">이용통계조회</a>
 						<a href="#">수신번호 신청/관리</a>
 						<a href="#">실시간 요금조회</a>
 						<a href="#">회원탈퇴</a>
 					</div>
-				</div>			
-				<div class="gnb-item on">
+				</div>	
+				<div class="gnb-item">
 					<button class="link"><span class="txt support">고객지원</span></button>
-					<div class="depth on">
+					<div class="depth">
 						<a href="#">공지사항</a>
 						<a href="#">자료실</a>
-						<a href="#" class="on">자주하는 질문</a>
+						<a href="#">자주하는 질문</a>
 						<a href="#">문의하기</a>
 					</div>
 				</div>
@@ -87,17 +87,17 @@
 			
 			<div class="util">
 				<a href="#" class="guide">영상 이용가이드</a>
-				<a href="#" class="tip">사용 Tip</a>
+				<a href="#" class="tip">사용 tip</a>
 				<a href="#" class="down-fax">간편팩스 다운로드</a>
 				<a href="#" class="num-magage">수신번호 신청/관리</a>
-				<a href="#" class="api">호스트모듈 신청</a>
-				<a href="#" class="mobile">모바일앱</a>
+				<a href="#" class="api">API 신청</a>
+				<a href="#" class="mobile">모바일</a>
 			</div>
 		</div>
 	</header>
 	<div class="container">
 		<div class="cont-wrap">
-			<div class="cont-top">
+			<div class="cont-top click">
 				<div class="shadow-box">
 					<div class="fax-area">
 						<div class="fax">
@@ -222,150 +222,75 @@
 					</div>
 				</div>
 			</div>
-			<div class="cont-area customer-service">
+			<div class="cont-area setting">
 				<div class="tit-area">
-					<h2 class="tit">자주하는 질문</h2>					
+					<h2 class="tit">사용자 설정</h2>					
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
-						<li><a href="#">고객지원</a></li>
-						<li>자주하는 질문</li>
+						<li><a href="#">관리자</a></li>
+						<li>사용자 설정</li>
 					</ul>
-				</div>
-				<div class="box-gray search-area center">
-					<div class="group range">
-						<div class="item">							
-							<span class="select-box">
-								<select class="styled" style="width:100px;">
-									<option value="">선택하세요</option>												
-								</select>
-							</span>
-							<div class="input-text">
-								<input type="text"style="width:228px">	
-							</div>								
-						</div>
-						<button type="button" class="btn-mid bg-gray">검색</button>
+				</div>			
+			
+				<div class="section">
+					<h3 class="tit">직원 아이디 기능 제한 설정</h3>
+					<span class="sub-txt">모든 설정은 직원 아이디에만 적용되며(관리자 아이디는 적용되지 않음) 설정 확인 후 재로그인부터 적용됩니다.</span>
+
+					<div class="form-list chk-list">
+						<label class="form-wrap"><input type="checkbox" class="styled" checked> 이메일알리미 기능 제한 ( 설정 &gt; 이메일 알리미설정 기능을 사용할 수 없도록 합니다. )</label>
+						<label class="form-wrap"><input type="checkbox" class="styled"> 문자알리미 기능 제한 ( 설정 &gt; 문자 알리미설정 기능을 사용할 수 없도록 합니다. )</label>
+						<label class="form-wrap"><input type="checkbox" class="styled"> SMS 발송 기능 제한 ( 문자 보내기 기능을 사용할 수 없거나, 지정된 시간/아이디만 사용 가능하도록 합니다. )</label>
+						<label class="form-wrap"><input type="checkbox" class="styled"> 받은팩스함/보낸팩스함 문자 알림 기능 제한</label>
+						<label class="form-wrap"><input type="checkbox" class="styled"> 받은팩스함/중요문서함 팩스보내기, 다운로드, 이메일 보내기 기능 제한</label>
+						<label class="form-wrap"><input type="checkbox" class="styled"> 보낸팩스함 미리보기 기능 제한</label>											
+						<label class="form-wrap"><input type="checkbox" class="styled"> 주소록 업로드 기능 제한</label>
 					</div>
-				</div>				
-				<div class="section fax">						
-					<div class="board-list light">
+					<div class="button-area center">						
+						<a href="#" class="btn-mid40 bg-pink">확인</a>					
+					</div>
+				</div>
+				<div class="section">
+					<h3 class="tit">받은 팩스함 설정</h3>
+
+					<div class="form-list chk-list">
+						<label class="form-wrap"><input type="checkbox" class="styled" checked> 받은 팩스함 문서 삭제 시 모든 아이디(직원 아이디, 관리자 아이디)에 동시 적용 <em class="f-pink">* 받은 팩스함의 문서 암호화 보관 설정은 "관리자 &gt; 수신번호 관리" 에서 제공합니다.</em></label>
+						<label class="form-wrap"><input type="checkbox" class="styled"> 받은 팩스함 문서메모 공유 적용 ( 체크시 메모내용을 모든 아이디(직원 아이디, 관리자 아이디) 간 공유합니다. )</label>
+					</div>
+					<div class="button-area center">						
+						<a href="#" class="btn-mid40 bg-pink">확인</a>					
+					</div>
+				</div>
+				<div class="section">
+					<h3 class="tit">접근 제한 기능</h3>
+					<span class="sub-txt f-pink">
+						하나의 IP만 가능하며 직원 아이디는 입력한 IP 에서만 로그인이 허용됩니다.<br>
+						관리자 IP제한 설정은 별도 문의해 주시기 바랍니다.</span>
+					<div class="board-write">
 						<table>
-							<caption>자주하는 질문 리스트</caption>
 							<colgroup>
-								<col >
-								<col style="width: 18%;">
+								<col style="width:130px;">						
+								<col>					
 							</colgroup>
-							<thead>
-								<tr>							
-									<th scope="col">제목</th>
-									<th scope="col"><button type="button" class="sort">작성일</button></th>
-								</tr>
-							</thead>
-							<tbody>	
-								<!-- data가 없는경우 -->
-								<!-- <tr class="no-data">
-									<td colspan="2">
-										<p>
-											내역이 없습니다.
-										</p>
+							<tbody>		
+								<tr>
+									<th scope="row" class="center"><label for="txt1">접근 가능 IP 설정</label></th>
+									<td>
+										<div class="input-btn">
+											<div class="input-text"><input type="text" id="txt1" style="width: 216px;"></div>
+											<button type="button" class="btn-border btn-mid bd-pink">확인</button>												
+										</div>										
 									</td>
-								</tr> -->
-								<!--// data가 없는경우 -->	
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">팩스번호가 없으면 팩스를 보낼 수 없나요?</a></td>
-									<td>2021.07.29</td>									
 								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">0505팩스랑 웹팩스랑 어떻게 다르죠?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">선불요금상품 사용 시 수신번호 이용료는?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">선불상품에서 후불요금상품 전환시, 잔여금액 환불은 어떻게 되나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">LG U+ 웹팩스 알리미 로그인 실패 시 확인해야할 것이 무엇인가요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">실패된 건만 재전송 할 수 없나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">주소록의 그룹명은 몇 글자까지 쓸 수 있나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">엑셀에서 주소록을 어떻게 만드나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">팩스를 전송했는데 송신결과를 확인하면 전체가 통화중이거나 전송장애의 이유로 수령실패 되는 이유</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">본문은 1장인데 수신처에는 여러 장 송신이 됐다고 합니다. (같은 내용이 여러 번 들어가는 경우)</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">본문은 1장인데 수신처에는 여러 장 송신이 됐다고 합니다.(첫 장에만 내용이 있고 백지상태로 여러 장 전송)</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">발신이 가능한 문서 프로그램은 어떤 것이 있나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">기존 번호 그대로 U+ 웹팩스를 이용하려면 어떻게 해야 하나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">선불요금상품에서 후불요금상품으로 전환할 수 있나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">이메일 알리미 서비스와 문자 알리미 서비스는 무료인가요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">“아이디 등록”은 어떤 기능인가요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">가입 시 필요한 서류는 무엇인가요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">후불요금제와 선불요금제의 차이점은 무엇인가요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">전송 확인을 하면 수령 실패 이유가 궁금합니다.</a></td>
-									<td>2021.07.29</td>									
-								</tr>								
 							</tbody>
 						</table>
-					</div>				
-					<div class="pagenation">
-						<a href="#" class="btn-first page">처음</a>
-						<a href="#" class="btn-prev page">이전</a>
-						<span class="page now">1</span>
-						<a href="#" class="page">2</a>
-						<a href="#" class="page">3</a>
-						<a href="#" class="page">4</a>
-						<a href="#" class="page">5</a>
-						<a href="#" class="page">6</a>
-						<a href="#" class="page">7</a>
-						<a href="#" class="page">8</a>
-						<a href="#" class="page">9</a>
-						<a href="#" class="page">10</a>
-						<a href="#" class="btn-next page">다음</a>
-						<a href="#" class="btn-last page">마지막</a>
-					</div>			
+					</div>
 				</div>
+				<div class="section mgt40">
+					<div class="button-area center margin">						
+						<a href="#" class="btn-border btn-lg bg-white">취소</a>
+						<a href="#" class="btn-lg bg-pink">변경</a>					
+					</div>
+				</div>			
 			</div>
 		</div>
 		
@@ -382,11 +307,11 @@
 			<div class="quick-item on">
 				<button type="button" class="link"><span class="txt admin">관리자</span></button>
 				<div class="depth on">
-					<a href="#" class="on">내 가입 정보</a> <!-- 메뉴 선택시 on 추가 -->
+					<a href="#">내 가입 정보</a> 
 					<a href="#">가입정보 및 변경신청</a>
 					<a href="#">아이디(서브계정)관리</a>
 					<a href="#">수신번호 신청/관리</a>
-					<a href="#">사용자 설정</a>
+					<a href="#" class="on">사용자 설정</a><!-- 메뉴 선택시 on 추가 -->
 					<a href="#">서식분류관리</a>
 					<a href="#">부가서비스 신청</a>
 					<a href="#">카카오워크 연동</a>
@@ -418,7 +343,7 @@
 <script>
 $(document).ready(function(){
 	
-    
+	
 });
 
 

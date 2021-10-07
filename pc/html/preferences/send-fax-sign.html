@@ -42,15 +42,15 @@
 				<a href="#" class="btn-border btn-xs bg-gray col1">충전하기</a>
 			</div>
 			<div class="gnb">
-				<div class="gnb-item">
+				<div class="gnb-item"> 
 					<button class="link"><span class="txt fax">팩스</span></button>
-					<div class="depth">
-						<a href="#">팩스 보내기</a> 
+					<div class="depth">  
+						<a href="#">팩스 보내기</a>
 						<a href="#">받은 팩스함</a>
 						<a href="#">보낸 팩스함</a>
 						<a href="#">문서 보관함</a>
-						<a href="#" >수신번호 신청/관리</a>
-						<a href="#">휴지통</a>
+						<a href="#">수신번호 신청/관리</a>
+						<a href="#">휴지통</a>  
 					</div>
 				</div>
 				<div class="gnb-item">
@@ -62,24 +62,24 @@
 				</div>
 				<div class="gnb-item">
 					<a href="#none" class="link"><span class="txt address">주소록</span></a>
-				</div>	
-				<div class="gnb-item">
+				</div>
+				<div class="gnb-item"> 
 					<button class="link"><span class="txt mypage">마이페이지</span></button>
 					<div class="depth">
-						<a href="#">회원정보변경</a>
+						<a href="#" >회원정보변경</a> 
 						<a href="#">충전하기</a>
 						<a href="#">이용통계조회</a>
 						<a href="#">수신번호 신청/관리</a>
 						<a href="#">실시간 요금조회</a>
 						<a href="#">회원탈퇴</a>
 					</div>
-				</div>			
-				<div class="gnb-item on">
+				</div>	
+				<div class="gnb-item">
 					<button class="link"><span class="txt support">고객지원</span></button>
-					<div class="depth on">
+					<div class="depth">
 						<a href="#">공지사항</a>
 						<a href="#">자료실</a>
-						<a href="#" class="on">자주하는 질문</a>
+						<a href="#">자주하는 질문</a>
 						<a href="#">문의하기</a>
 					</div>
 				</div>
@@ -87,17 +87,17 @@
 			
 			<div class="util">
 				<a href="#" class="guide">영상 이용가이드</a>
-				<a href="#" class="tip">사용 Tip</a>
+				<a href="#" class="tip">사용 tip</a>
 				<a href="#" class="down-fax">간편팩스 다운로드</a>
 				<a href="#" class="num-magage">수신번호 신청/관리</a>
-				<a href="#" class="api">호스트모듈 신청</a>
-				<a href="#" class="mobile">모바일앱</a>
+				<a href="#" class="api">API 신청</a>
+				<a href="#" class="mobile">모바일</a>
 			</div>
 		</div>
 	</header>
 	<div class="container">
 		<div class="cont-wrap">
-			<div class="cont-top">
+			<div class="cont-top click">
 				<div class="shadow-box">
 					<div class="fax-area">
 						<div class="fax">
@@ -222,133 +222,185 @@
 					</div>
 				</div>
 			</div>
-			<div class="cont-area customer-service">
+			<div class="cont-area preference">
 				<div class="tit-area">
-					<h2 class="tit">자주하는 질문</h2>					
+					<h2 class="tit">팩스발신번호 인증</h2>					
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
-						<li><a href="#">고객지원</a></li>
-						<li>자주하는 질문</li>
+						<li><a href="#">환경설정</a></li>
+						<li>팩스발신번호 인증</li>
 					</ul>
 				</div>
-				<div class="box-gray search-area center">
-					<div class="group range">
-						<div class="item">							
-							<span class="select-box">
-								<select class="styled" style="width:100px;">
-									<option value="">선택하세요</option>												
-								</select>
-							</span>
-							<div class="input-text">
-								<input type="text"style="width:228px">	
-							</div>								
-						</div>
-						<button type="button" class="btn-mid bg-gray">검색</button>
-					</div>
-				</div>				
-				<div class="section fax">						
-					<div class="board-list light">
+				<p class="sub-txt">
+					사용 중인 웹팩스 수신번호 혹은 소유하고 있는 팩스 기기(타사 웹팩스 기능)로 인증된 번호만 등록이 가능합니다.<br>
+					자세한 사항은 <a href="#" class="f-pink">'웹팩스 원발신번호 표기 의무화란?'</a> 을 클릭해주세요.
+				
+				</p>
+			
+				<div class="section">				
+					<div class="board-write">
 						<table>
-							<caption>자주하는 질문 리스트</caption>
 							<colgroup>
-								<col >
-								<col style="width: 18%;">
+								<col style="width:165px;">						
+								<col>													
+							</colgroup>
+							<tbody>		
+								<tr>
+									<th scope="row">수신 번호에서 등록하기</th>
+									<td>
+										<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup01">번호 선택하기</button>								
+									</td>									
+								</tr>	
+								<tr>
+									<th scope="row"><label for="txt01">팩스 기기 인증 받기</label></th>
+									<td>
+										<div class="input-btn">
+											<div class="input-text"><input type="text" id="txt1" style="width: 216px;"></div>
+											<button type="button" class="btn-border btn-mid bd-pink">인증</button>												
+										</div>
+										<p class="guide-txt mgl0 mgt5">수신이 가능한 팩스번호 입력 후 <span class="f-pink">'기기 인증'버튼을 누르면 해당 번호로 인증 요청 팩스가 전송</span>됩니다.</p>			
+									</td>
+								</tr>																						
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+				<div class="section">
+					<div class="button-area justify board">
+						<div class="left">
+							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
+						</div>					
+					</div>
+					<div class="board-list fax">
+						<table>
+							<caption>팩스발신번호 인증 리스트</caption>
+							<colgroup>
+								<col style="width:4%;">
+								<col style="width:18%;">
+								<col style="width:18%;">								
+								<col style="width:20%;">
+								<col>		
+								<col style="width:10%;">										
 							</colgroup>
 							<thead>
-								<tr>							
-									<th scope="col">제목</th>
-									<th scope="col"><button type="button" class="sort">작성일</button></th>
+								<tr>
+									<th scope="col"><input type="checkbox" class="styled"></th>
+									<th scope="col"><button type="button" class="sort">발신번호</button></th>
+									<th scope="col"><button type="button" class="sort">등록일</button></th>
+									<th scope="col"><button type="button" class="sort">상태</button></th>
+									<th scope="col">메모</th>
+									<th scope="col">기능</th>
 								</tr>
 							</thead>
 							<tbody>	
 								<!-- data가 없는경우 -->
 								<!-- <tr class="no-data">
-									<td colspan="2">
+									<td colspan="6">
 										<p>
-											내역이 없습니다.
+											내역이 없습니다.											
 										</p>
 									</td>
 								</tr> -->
 								<!--// data가 없는경우 -->	
 								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">팩스번호가 없으면 팩스를 보낼 수 없나요?</a></td>
-									<td>2021.07.29</td>									
+									<td><input type="checkbox" class="styled" name="tableChk"></td>
+									<td>010-9999-9999</td>
+									<td>2020.01.21 12:31:58</td>									
+									<td>인증완료</td>
+									<td colspan="2" class="subject">
+										<div class="layer-box block">
+											<p class="tit ellipsis" title="내용내용">내용내용</p>
+											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:38px">수정</button>											
+										</div>
+										<div class="title-input">
+											<div class="input-text">
+												<input type="text" id="txt1" value="내용내용">
+											</div>
+											<button type="button" class="btn-border btn-sm bg-white btn-save">저장</button>
+										</div>
+									</td>
 								</tr>
 								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">0505팩스랑 웹팩스랑 어떻게 다르죠?</a></td>
-									<td>2021.07.29</td>									
+									<td><input type="checkbox" class="styled" name="tableChk"></td>
+									<td>010-9999-9999</td>
+									<td>2020.01.21 12:31:58</td>									
+									<td><button type="button" class="btn-border btn-xxs bd-pink">인증번호 입력하기</button></td>
+									<td colspan="2" class="subject">
+										<div class="layer-box block">
+											<p class="tit ellipsis" title=""></p>
+											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:38px">수정</button>											
+										</div>
+										<div class="title-input">
+											<div class="input-text">
+												<input type="text" id="txt1" value="">
+											</div>
+											<button type="button" class="btn-border btn-sm bg-white btn-save">저장</button>
+										</div>
+									</td>
 								</tr>
 								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">선불요금상품 사용 시 수신번호 이용료는?</a></td>
-									<td>2021.07.29</td>									
+									<td><input type="checkbox" class="styled" name="tableChk"></td>
+									<td>010-9999-9999</td>
+									<td>2020.01.21 12:31:58</td>									
+									<td>인증완료</td>
+									<td colspan="2" class="subject">
+										<div class="layer-box block">
+											<p class="tit ellipsis" title=""></p>
+											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:38px">수정</button>											
+										</div>
+										<div class="title-input">
+											<div class="input-text">
+												<input type="text" id="txt1" value="">
+											</div>
+											<button type="button" class="btn-border btn-sm bg-white btn-save">저장</button>
+										</div>
+									</td>
 								</tr>
 								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">선불상품에서 후불요금상품 전환시, 잔여금액 환불은 어떻게 되나요?</a></td>
-									<td>2021.07.29</td>									
+									<td><input type="checkbox" class="styled" name="tableChk"></td>
+									<td>010-9999-9999</td>
+									<td>2020.01.21 12:31:58</td>									
+									<td>인증완료</td>
+									<td colspan="2" class="subject">
+										<div class="layer-box block">
+											<p class="tit ellipsis" title=""></p>
+											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:38px">수정</button>											
+										</div>
+										<div class="title-input">
+											<div class="input-text">
+												<input type="text" id="txt1" value="">
+											</div>
+											<button type="button" class="btn-border btn-sm bg-white btn-save">저장</button>
+										</div>
+									</td>
 								</tr>
 								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">LG U+ 웹팩스 알리미 로그인 실패 시 확인해야할 것이 무엇인가요?</a></td>
-									<td>2021.07.29</td>									
+									<td><input type="checkbox" class="styled" name="tableChk"></td>
+									<td>010-9999-9999</td>
+									<td>2020.01.21 12:31:58</td>									
+									<td>인증완료</td>
+									<td colspan="2" class="subject">
+										<div class="layer-box block">
+											<p class="tit ellipsis" title=""></p>
+											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:38px">수정</button>											
+										</div>
+										<div class="title-input">
+											<div class="input-text">
+												<input type="text" id="txt1" value="">
+											</div>
+											<button type="button" class="btn-border btn-sm bg-white btn-save">저장</button>
+										</div>
+									</td>
 								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">실패된 건만 재전송 할 수 없나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">주소록의 그룹명은 몇 글자까지 쓸 수 있나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">엑셀에서 주소록을 어떻게 만드나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">팩스를 전송했는데 송신결과를 확인하면 전체가 통화중이거나 전송장애의 이유로 수령실패 되는 이유</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">본문은 1장인데 수신처에는 여러 장 송신이 됐다고 합니다. (같은 내용이 여러 번 들어가는 경우)</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">본문은 1장인데 수신처에는 여러 장 송신이 됐다고 합니다.(첫 장에만 내용이 있고 백지상태로 여러 장 전송)</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">발신이 가능한 문서 프로그램은 어떤 것이 있나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">기존 번호 그대로 U+ 웹팩스를 이용하려면 어떻게 해야 하나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">선불요금상품에서 후불요금상품으로 전환할 수 있나요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">이메일 알리미 서비스와 문자 알리미 서비스는 무료인가요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">“아이디 등록”은 어떤 기능인가요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">가입 시 필요한 서류는 무엇인가요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">후불요금제와 선불요금제의 차이점은 무엇인가요?</a></td>
-									<td>2021.07.29</td>									
-								</tr>
-								<tr>
-									<td class="subject"><a href="#" class="tit ellipsis">전송 확인을 하면 수령 실패 이유가 궁금합니다.</a></td>
-									<td>2021.07.29</td>									
-								</tr>								
 							</tbody>
 						</table>
-					</div>				
+					</div>
+					<div class="button-area justify board">
+						<div class="left">
+							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
+						</div>					
+					</div>
 					<div class="pagenation">
 						<a href="#" class="btn-first page">처음</a>
 						<a href="#" class="btn-prev page">이전</a>
@@ -364,8 +416,8 @@
 						<a href="#" class="page">10</a>
 						<a href="#" class="btn-next page">다음</a>
 						<a href="#" class="btn-last page">마지막</a>
-					</div>			
-				</div>
+					</div>	
+				</div>					
 			</div>
 		</div>
 		
@@ -379,10 +431,10 @@
 			<div class="quick-item">
 				<a href="#" class="link"><span class="txt setting">설정</span></a>
 			</div>		
-			<div class="quick-item on">
+			<div class="quick-item">
 				<button type="button" class="link"><span class="txt admin">관리자</span></button>
-				<div class="depth on">
-					<a href="#" class="on">내 가입 정보</a> <!-- 메뉴 선택시 on 추가 -->
+				<div class="depth">
+					<a href="#">내 가입 정보</a> 
 					<a href="#">가입정보 및 변경신청</a>
 					<a href="#">아이디(서브계정)관리</a>
 					<a href="#">수신번호 신청/관리</a>
@@ -395,19 +447,89 @@
 					<a href="#">신청이력</a>
 				</div>
 			</div>
-			<div class="quick-item">
+			<div class="quick-item on">
 				<button type="button" class="link"><span class="txt preferences">환경설정</span></button>
-				<div class="depth">
+				<div class="depth on">
 					<a href="#">알림설정</a>
 					<a href="#">스팸번호 차단</a>
 					<a href="#">전송금지 번호 설정</a>
 					<a href="#">문자발신번호 인증</a>
-					<a href="#">팩스발신번호 인증</a>					
+					<a href="#" class="on">팩스발신번호 인증</a>					
 				</div>
 			</div>			
 		</div>	
 	</div>
 </div>
+
+<!-- 수신번호 선택 -->
+<div class="layer-popup noneClose pop-address" title="Popup01">
+	<div class="popup sm">
+		<div class="popup-header">	
+			<p class="title">수신번호 선택</p>	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">		
+			<div class="box-gray">
+				<label><input type="checkbox" class="styled"> 전체선택</label>
+			</div>
+			<div class="scroll-board-list scroll-area" style="height:289px;">
+				<table class="height32">
+					<caption>수신번호 리스트</caption>
+					<colgroup>
+						<col style="width:13%;">						
+						<col>																
+					</colgroup>							
+					<tbody>	
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled" checked></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>					
+		</div>
+		<div class="button-area  center">					
+			<button type="button" class="btn-mid bg-pink">등록</button>				
+		</div>
+	</div>
+</div>
+
 
 
 <script src="../../js/jquery-3.3.1.js"></script>
@@ -418,7 +540,7 @@
 <script>
 $(document).ready(function(){
 	
-    
+	
 });
 
 

@@ -42,13 +42,13 @@
 				<a href="#" class="btn-border btn-xs bg-gray col1">충전하기</a>
 			</div>
 			<div class="gnb">
-				<div class="gnb-item on">
+				<div class="gnb-item">
 					<button class="link"><span class="txt fax">팩스</span></button>
-					<div class="depth on">
+					<div class="depth">
 						<a href="#">팩스 보내기</a> 
 						<a href="#">받은 팩스함</a>
 						<a href="#">보낸 팩스함</a>
-						<a href="#" class="on">문서 보관함</a><!-- 메뉴 선택시 on 추가 -->
+						<a href="#">문서 보관함</a>
 						<a href="#">수신번호 신청/관리</a>
 						<a href="#">휴지통</a>
 					</div>
@@ -222,114 +222,61 @@
 					</div>
 				</div>
 			</div>
-			<div class="cont-area">
+			<div class="cont-area category">
 				<div class="tit-area">
-					<h2 class="tit">문서 보관함</h2>					
+					<h2 class="tit">서식분류관리</h2>					
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
-						<li><a href="#">팩스</a></li>
-						<li>문서 보관함</li>
+						<li><a href="#">관리자</a></li>
+						<li>서식분류관리</li>
 					</ul>
 				</div>
 				<p class="sub-txt">
-					<span class="f-pink">문서보관함의 보관기간은 정책에 의해 사전 고지 후 변경 될 수 있습니다.</span><br>
-					보관중인 파일 용량 : 2,650 Kb
+					서식 등록 후 반드시 받은팩스함에서 서식 1개당 이미지 5개를 훈련 시켜주시기 바랍니다.(훈련된 문서 수가 많을 수록 신뢰도가 올라갑니다.)<br>
+					기타 문서의 분류도 5개 이상 훈련시켜주면 분류가 정확해집니다. 원하지 않는 서식은 기타 분류로 훈련 시켜 주시기 바랍니다.<br>
+					오 탐지된 문서도 정상 서식으로 재훈련 시킬수록 정확도가 올라갑니다.
 				</p>
-						
+					
 				<div class="section">
-					<div class="box-gray search-area">
-						<div class="group">
-							<div class="item">
-								<label>받은시간</label>
-								<div class="calendar-area">
-									<div class="input-text cal">
-										<input type="text" name="from" style="width:108px">	
-									</div>
-									~
-									<div class="input-text cal">									
-										<input type="text" name="to" style="width:108px">
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<label>폴더</label>
-								<span class="select-box">
-									<select class="styled" style="width:350px;">
-										<option value="">폴더 선택</option>
-										<option value="">거래명세서</option>
-										<option value="">세금계산서</option>	
-										<option value="">계약서</option>	
-									</select>
-								</span>
-							</div>							
-						</div>
-						<div class="group">							
-							<div class="item">
-								<label for="txt2" style="width:51px">제목</label>
+					<div class="box-gray search-area center">
+						<div class="group range">
+							<div class="item">							
+								<label for="txt1">서식분류명</label>
 								<div class="input-text">
-									<input id="txt2" type="text" placeholder="" style="width:636px;">
-								</div>
+									<input type="text" id="txt1" style="width:260px">	
+								</div>								
 							</div>
+							<button type="button" class="btn-mid bg-gray">서식등록</button>
 						</div>
-						<button type="button" class="btn-search"><span>검색</span></button>
-					</div>
+					</div>	
 					<div class="button-area justify board">
 						<div class="left">
-							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
-							<button type="button" class="btn-border btn-mid bg-white">저장</button>
-							<button type="button" class="btn-border btn-mid bg-white">팩스전송</button>						
-
-							<div class="select-area" style="width:140px">
-								<button type="button" class="button-select">폴더선택</button>
-								<div class="select-layer">												
-									<ul class="selBox">
-										<li><button type="button">폴더선택</button></li>
-										<li><button type="button">폴더1</button></li>
-										<li><button type="button">폴더2</button></li>
-										<li><button type="button">폴더3</button></li>
-									</ul>
-									<button type="button" class="btnPop" title="Popup01">새 폴더 만들기</button>
-								</div>
-							</div>
-							<button type="button" class="btn-border btn-mid bd-pink">이동</button>
-							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup04">폴더관리</button>
-						</div>
-						<div class="right">
-							<button type="button" class="btn-border btn-mid bg-pink btnPop" title="Popup05">파일등록</button>
-							<span class="select-box">
-								<select class="styled">
-									<option value="">20개씩 보기</option>															
-								</select>
-							</span>								
+							<button type="button" class="btn-border btn-mid bg-white">삭제</button>						
 						</div>
 					</div>
 					<div class="board-list fax">
 						<table>
-							<caption>문서보관함 리스트</caption>
+							<caption>서식분류관리 리스트</caption>
 							<colgroup>
 								<col style="width:4%;">
-								<col style="width:15%;">
-								<col style="width:12%;">
-								<col>
-								<col style="width:10%;">	
-								<col style="width:13%;">
-								<col style="width:16%;">
+								<col>								
+								<col style="width:15%;">	
+								<col style="width:18%;">
+								<col style="width:10%;">
 							</colgroup>
 							<thead>
 								<tr>
 									<th scope="col"><input type="checkbox" class="styled"></th>
-									<th scope="col"><button type="button" class="sort">발신번호</button></th>
-									<th scope="col"><button type="button" class="sort">폴더</button></th>
-									<th scope="col">제목</th>
-									<th scope="col"><button type="button" class="sort">크기</button></th>
-									<th scope="col"><button type="button" class="sort">등록일</button></th>								
+									<th scope="col">서식분류명</th>
+									<th scope="col"><button type="button" class="sort">훈련된 문서 수</button></th>
+									<th scope="col"><button type="button" class="sort">등록일</button></th>														
 									<th scope="col">기능</th>
 								</tr>
 							</thead>
 							<tbody>	
 								<!-- data가 없는경우 -->
 								<!-- <tr class="no-data">
-									<td colspan="7">
+									<td colspan="5">
 										<p>
 											내역이 없습니다.											
 										</p>
@@ -337,142 +284,91 @@
 								</tr> -->
 								<!--// data가 없는경우 -->	
 								<tr>
-									<td><input type="checkbox" class="styled" name="tableChk"></td>
-									<td>-</td>
-									<td>세금계산서</td>
+									<td><input type="checkbox" class="styled" name="tableChk"></td>								
 									<td class="subject">
 										<div class="layer-box">
-											<p class="tit ellipsis" title="진료비영수증_진료비영수증진료비영수증_진료비영수증_진료비영수증_12.28.jpg">진료비영수증_진료비영수증진료비영수증_진료비영수증_진료비영수증_12.28.jpg</p>
-											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:54px">제목수정</button>											
+											<p class="tit ellipsis" title="전자세금계산서">전자세금계산서</p>
+											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:85px">서식분류명 수정</button>											
 										</div>
 										<div class="title-input">
 											<div class="input-text">
-												<input type="text" id="txt1" value="진료비영수증_진료비영수증진료비영수증_진료비영수증_진료비영수증_12.28.jpg">
+												<input type="text" id="txt1" value="전자세금계산서">
 											</div>
 											<button type="button" class="btn-border btn-sm bg-white btn-save">저장</button>
 										</div>
 									</td>
-									<td>99Kb</td>	
-									<td>오후 2:30</td>								
-									<td>
-										<button type="button" class="btn-border btn-xxs bg-white">보기</button>
-										<button type="button" class="btn-border btn-xxs bg-white">편집</button>
-										<button type="button" class="btn-border btn-xxs bg-white">저장</button>
-									</td>
-								</tr>		
-								<tr>
-									<td><input type="checkbox" class="styled" name="tableChk"></td>
-									<td>
-										<div class="layer-box">										
-											<p class="tit ellipsis">02-9999-9999</p>
-											<button type="button" class="btn-border btn-xxs bg-white btn-show" style="width:70px">주소록 추가</button>											
-										</div>
-									</td>
-									<td>광고</td>
-									<td class="subject">
-										<div class="layer-box">
-											<p class="tit ellipsis" title="자동이체 출금동의서.docx">자동이체 출금동의서.docx</p>
-											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:54px">제목수정</button>											
-										</div>
-										<div class="title-input">
-											<div class="input-text">
-												<input type="text" id="txt1" value="자동이체 출금동의서.docx">
-											</div>
-											<button type="button" class="btn-border btn-sm bg-white btn-save">저장</button>
-										</div>
-									</td>
-									<td>99Kb</td>	
-									<td>오후 2:30</td>								
-									<td>
-										<button type="button" class="btn-border btn-xxs bg-white">보기</button>
-										<button type="button" class="btn-border btn-xxs bg-white">편집</button>
-										<button type="button" class="btn-border btn-xxs bg-white">저장</button>
+									<td>0</td>	
+									<td>2020.01.21 12:31:58</td>								
+									<td>										
+										<button type="button" class="btn-border btn-xxs bg-white">수정</button>
 									</td>
 								</tr>
 								<tr>
-									<td><input type="checkbox" class="styled" name="tableChk"></td>
-									<td>박사장님</td>
-									<td>광고</td>
+									<td><input type="checkbox" class="styled" name="tableChk"></td>								
 									<td class="subject">
 										<div class="layer-box">
-											<p class="tit ellipsis" title="진료비납입확인서(4)">진료비납입확인서(4)</p>
-											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:54px">제목수정</button>											
+											<p class="tit ellipsis" title="광고">광고</p>
+											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:85px">서식분류명 수정</button>											
 										</div>
 										<div class="title-input">
 											<div class="input-text">
-												<input type="text" id="txt1" value="진료비납입확인서(4)">
+												<input type="text" id="txt1" value="광고">
 											</div>
 											<button type="button" class="btn-border btn-sm bg-white btn-save">저장</button>
 										</div>
 									</td>
-									<td>99Kb</td>	
-									<td>오후 2:30</td>								
-									<td>
-										<button type="button" class="btn-border btn-xxs bg-white">보기</button>
-										<button type="button" class="btn-border btn-xxs bg-white">편집</button>
-										<button type="button" class="btn-border btn-xxs bg-white">저장</button>
+									<td>0</td>	
+									<td>2020.01.21 12:31:58</td>								
+									<td>										
+										<button type="button" class="btn-border btn-xxs bg-white">수정</button>
 									</td>
 								</tr>
 								<tr>
-									<td><input type="checkbox" class="styled" name="tableChk"></td>
-									<td>
-										<div class="layer-box">										
-											<p class="tit ellipsis">02-9999-9999</p>
-											<button type="button" class="btn-border btn-xxs bg-white btn-show" style="width:70px">주소록 추가</button>											
-										</div>
-									</td>
-									<td>-</td>
+									<td><input type="checkbox" class="styled" name="tableChk"></td>								
 									<td class="subject">
 										<div class="layer-box">
-											<p class="tit ellipsis" title="진료비납입확인서(4)">진료비납입확인서(4)</p>
-											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:54px">제목수정</button>											
+											<p class="tit ellipsis" title="계산서">계산서</p>
+											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:85px">서식분류명 수정</button>											
 										</div>
 										<div class="title-input">
 											<div class="input-text">
-												<input type="text" id="txt1" value="진료비납입확인서(4)">
+												<input type="text" id="txt1" value="계산서">
 											</div>
 											<button type="button" class="btn-border btn-sm bg-white btn-save">저장</button>
 										</div>
 									</td>
-									<td>99Kb</td>	
-									<td>오후 2:30</td>								
-									<td>
-										<button type="button" class="btn-border btn-xxs bg-white">보기</button>
-										<button type="button" class="btn-border btn-xxs bg-white">편집</button>
-										<button type="button" class="btn-border btn-xxs bg-white">저장</button>
+									<td>0</td>	
+									<td>2020.01.21 12:31:58</td>								
+									<td>										
+										<button type="button" class="btn-border btn-xxs bg-white">수정</button>
 									</td>
-								</tr>		
+								</tr>
+								<tr>
+									<td><input type="checkbox" class="styled" name="tableChk"></td>								
+									<td class="subject">
+										<div class="layer-box">
+											<p class="tit ellipsis" title="기타">기타</p>
+											<button type="button" class="btn-border btn-xxs bg-white btn-modify" style="width:85px">서식분류명 수정</button>											
+										</div>
+										<div class="title-input">
+											<div class="input-text">
+												<input type="text" id="txt1" value="기타">
+											</div>
+											<button type="button" class="btn-border btn-sm bg-white btn-save">저장</button>
+										</div>
+									</td>
+									<td>0</td>	
+									<td>2020.01.21 12:31:58</td>								
+									<td>										
+										<button type="button" class="btn-border btn-xxs bg-white">수정</button>
+									</td>
+								</tr>										
 							</tbody>
 						</table>
 					</div>
 					<div class="button-area justify board">
 						<div class="left">
-							<button type="button" class="btn-border btn-mid bg-white">삭제</button>
-							<button type="button" class="btn-border btn-mid bg-white">저장</button>
-							<button type="button" class="btn-border btn-mid bg-white">팩스전송</button>						
-
-							<div class="select-area" style="width:140px">
-								<button type="button" class="button-select">폴더선택</button>
-								<div class="select-layer">												
-									<ul class="selBox">
-										<li><button type="button">폴더선택</button></li>
-										<li><button type="button">폴더1</button></li>
-										<li><button type="button">폴더2</button></li>
-										<li><button type="button">폴더3</button></li>
-									</ul>
-									<button type="button" class="btnPop" title="Popup01">새 폴더 만들기</button>
-								</div>
-							</div>
-							<button type="button" class="btn-border btn-mid bd-pink">이동</button>
-							<button type="button" class="btn-border btn-mid bg-white btnPop" title="Popup04">폴더관리</button>
-						</div>
-						<div class="right">
-							<button type="button" class="btn-border btn-mid bg-pink">파일등록</button>
-							<span class="select-box">
-								<select class="styled">
-									<option value="">20개씩 보기</option>															
-								</select>
-							</span>								
+							<button type="button" class="btn-border btn-mid bg-white">삭제</button>						
 						</div>
 					</div>
 					<div class="pagenation">
@@ -508,12 +404,12 @@
 			<div class="quick-item on">
 				<button type="button" class="link"><span class="txt admin">관리자</span></button>
 				<div class="depth on">
-					<a href="#" class="on">내 가입 정보</a> <!-- 메뉴 선택시 on 추가 -->
+					<a href="#">내 가입 정보</a> 
 					<a href="#">가입정보 및 변경신청</a>
 					<a href="#">아이디(서브계정)관리</a>
 					<a href="#">수신번호 신청/관리</a>
 					<a href="#">사용자 설정</a>
-					<a href="#">서식분류관리</a>
+					<a href="#" class="on">서식분류관리</a><!-- 메뉴 선택시 on 추가 -->
 					<a href="#">부가서비스 신청</a>
 					<a href="#">카카오워크 연동</a>
 					<a href="#">서비스 일시정지</a>

@@ -2648,6 +2648,7 @@ html.popOpen {overflow:hidden;}
 .board-list table td .layer-box {position:relative}
 .board-list table .subject.on .layer-box {display: none;}
 .board-list table td .layer-box > button {display:none;position:absolute;}
+.board-list table td .layer-box.block > button {display:block;} 
 .board-list table td .layer-box > button.btn-modify {right:0; top:0}
 .board-list table td .layer-box > button.btn-show {left:50%; top:50%;transform:translate(-50%,-50%)}
 .board-list.fax tr:hover {background-color: #fdfcfc;}
@@ -3172,7 +3173,6 @@ html.popOpen {overflow:hidden;}
 	border:0;
 	width: inherit;
 	margin: 20px 0 0 0;
-	
 }
 .num-list + .btn-more span {
 	padding-right: 20px;
@@ -3366,6 +3366,41 @@ html.popOpen {overflow:hidden;}
 /* 아이디 등록*/
 .join .board-write + .button-area {margin-top: 40px;}
 
+/* 사용자 설정 */
+.chk-list {
+	position:relative;
+	border-top:1px solid #dbdbdb;
+}
+.chk-list:before {
+	content: '';
+	display: block;
+	height: 1px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:#dbdbdb
+}
+
+.chk-list > .form-wrap {
+	width: 100%;
+	border-bottom: 1px solid #f2f2f2;
+	margin-right: 0;
+	padding:14px 15.4px;
+}
+.chk-list > .form-wrap .f-pink {display: block; margin-left: 25px; padding-top: 5px;}
+.chk-list + .button-area {margin-top: 20px;}
+.cont-area.setting .section + .section{margin-top: 40px;}
+.cont-area.setting h3.tit  {padding-bottom: 0;}
+.cont-area.setting h3.tit + .sub-txt {display:inline-block; font-size: 13px; line-height: 18px; margin-top: 5px;}
+
+.cont-area.setting .chk-list {margin-top: 15px;}
+.cont-area.setting .board-write {margin-top: 15px;}
+.cont-area.setting .board-write th {padding: 15px 18px;}
+
+/* 서식분류관리 */
+.cont-area.category .board-list.fax td.subject {padding-left: 25px;}
+
 /* ----------- 설정 -----------*/
 /*알림설정*/
 .preferences .tab-wrap .tab-cont .section {margin-top: 30px;}
@@ -3384,6 +3419,16 @@ html.popOpen {overflow:hidden;}
 .preferences .border-dot-box .img {text-align: center; font-size: 0;}
 .preferences  .board-write td {padding: 15px 15px 20px 15px;}
 .preferences .ul-list.dot.mid li {font-size: 13px;}
+
+/*전송금지번호설정*/
+.reject .board-write + .button-area {margin-top: 20px;}
+
+/* 문자발신번호 인증 */
+.search-area .group .item > .input-phone input {width: 66px;}
+
+/* 팩스발신번호 인증*/
+.preference .board-list.fax td.subject {padding-right: 25px;}
+.preference .board-list.fax td.subject p.tit {height: 19px;}
 
 /* ----------- 고객지원 -----------*/
 .customer-service .board-list tbody td.subject {text-align: left;padding-left: 30px;}

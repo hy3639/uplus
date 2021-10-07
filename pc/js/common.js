@@ -161,11 +161,17 @@ $('th .sort').click(function(){
 
 /* 테이블 오버시 버튼노출 */
 $('.layer-box').mouseenter(function(){
-	$(this).find('[class^=btn-]').show();
+	if(!$(this).hasClass('block')){
+		$(this).find('[class^=btn-]').show();
+	}
+
 //	$(this).closest('.layer-box').find('.tit').hide();
 });
 $('.layer-box').mouseleave(function(){
-	$(this).find('[class^=btn-]').hide();
+	if(!$(this).hasClass('block')){
+		$(this).find('[class^=btn-]').hide();
+	}
+
 //	$(this).closest('.layer-box').find('.tit').show();
 });
 
