@@ -418,6 +418,7 @@ function layerPop(){
         var mgB = $(this).find('.popup').css('margin-bottom');
         var space = mgB.replace(/px/g, '') * 2;
 
+		console.log(hei);
 	
         if(hei - space < popH){
             $(this).css({'padding-top':mgB});

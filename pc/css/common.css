@@ -636,6 +636,7 @@ footer  p {
 .bgNone {
 	background-color:#f9f9f9;
 }
+.popOpen .bgNone {height: 100vh;}
 .bgNone .header {
 	display: flex;
 	align-items: center;
@@ -3331,8 +3332,8 @@ html.popOpen {overflow:hidden;}
 	padding: 34px 55px;
 }
 .security-service-list .border-box-light + .border-box-light {margin-top: 10px;} 
-.border-box-light.category {	background:url(../images/img/img_security1.png) no-repeat 585px center;}
-.border-box-light.send {	background:url(../images/img/img_security2.png) no-repeat 585px center;}
+.border-box-light.category {background:url(../images/img/img_security1.png) no-repeat 585px center;}
+.border-box-light.send {background:url(../images/img/img_security2.png) no-repeat 585px center;}
 .security-service-list .tit {
 	padding-bottom: 8px;
 	font-size: 23px;
@@ -3464,3 +3465,26 @@ html.popOpen {overflow:hidden;}
 .term.statistics .section > table > tbody >tr > td {vertical-align: top;}
 .term.statistics .section > table > tbody >tr > td:first-child { padding-right: 5px;}
 .term.statistics .section > table > tbody >tr > td + td {padding-left: 5px;}
+
+/* ----------- 기타 -----------*/
+.wrapper.error {display: flex; align-items: center; justify-content: center;}
+/*에러페이지*/
+.error-area {
+	text-align: center;
+}
+.error-area .error-txt {
+	padding-top: 220px;
+	font-size: 46px;
+	font-weight: 700;
+}
+.error-area .error-txt.type1 {background:url(../images/img/img_error2.png) no-repeat center top;}
+.error-area .error-txt.type2 {background:url(../images/img/img_error.png) no-repeat center top;}
+.error-area .error-txt .sub {
+	display: block;
+	font-size: 18px; 
+	line-height: 28px; 
+	margin-top: 15px;
+	font-weight: 400;
+}
+.error-area  .button-area {margin-top: 40px;}
+.error-area  .button-area .btn-lg + .btn-lg {margin-left: 10px;}
