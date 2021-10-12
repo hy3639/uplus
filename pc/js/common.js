@@ -56,8 +56,7 @@ var swiper = new Swiper(".cont-top .swiper-container", {
 
 /* 탭영역 */
 $(document).on('click', '.tab-item .btn', function(){
-	var idx = $(this).closest('.tab-item').index();
-	console.log(idx);
+	var idx = $(this).closest('.tab-item').index();	
 	if(!$(this).closest('.tab-item').hasClass('on')){
 		$(this).closest('.tab-item').addClass('on').siblings('.tab-item').removeClass('on');
 		$(this).closest('.tab-lst').next('.tab-conts').children('.tab-cont').hide().removeClass('on').eq(idx).fadeIn(200).addClass('on');

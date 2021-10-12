@@ -262,6 +262,7 @@
 									<div class="left">
 										<a href="#" class="btn-border btn-mid bg-white btnPop" title="Popup03">삭제</a>
 										<a href="#" class="btn-border btn-mid bg-white btnPop" title="Popup02">중복삭제</a>
+										<a href="#" class="btn-border btn-mid bg-white btnPop" title="Popup09">주소록 추가</a>
 									</div>
 									<div class="right">
 										<a href="#" class="btn-mid bg-pink btnPop" title="Popup04">주소록</a>
@@ -868,6 +869,74 @@
 			</div>	
 		</div>
 		
+	</div>
+</div>
+
+<!-- 주소록 추가 -->
+<div class="layer-popup noneClose" title="Popup09">
+	<div class="popup">
+		<div class="popup-header">
+			<p class="title">주소록 추가</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt mgb15">
+				※ 선택한 항목이 해당 그룹으로 추가 됩니다
+			</p>
+			<div class="board-write">
+				<table>
+					<colgroup>
+						<col style="width:35%;">						
+						<col>					
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">그룹명</th>
+							<td>
+								<div class="select-area wide">
+									<button type="button" class="button-select">그룹명을 선택하세요</button>
+									<div class="select-layer">												
+										<ul class="selBox">
+											<li><button type="button">보험사 그룹</button></li>
+											<li><button type="button">캠페인 그룹</button></li>											
+										</ul>
+										<button type="button" class="btnPop" title="Popup10">그룹 만들기</button>
+									</div>
+								</div>
+							</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink">등록</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 주소록 그룹만들기 -->
+<div class="layer-popup scroll" title="Popup10">
+	<div class="popup sm">
+		<div class="popup-header">
+			<p class="title">주소록 그룹 만들기</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<ul class="form-list block">
+				<li>
+					<label for="newFolder2">새 그룹 이름</label>
+					<div class="input-text">
+						<input type="text" id="newFolder2" style="width:100%">
+					</div>
+				</li>
+			</ul>				
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink">만들기</button>			
+		</div>
 	</div>
 </div>
 
