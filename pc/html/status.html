@@ -821,9 +821,9 @@
 				<td></td>
 				<td></td>
 				<td class="right">kakaowork/</td>
-				<td class="right"><a target="_blank" href="#"></a></td>
+				<td class="right"><a target="_blank" href="kakaowork/admin-join.html">admin-join.html</a></td>
 				<td class="stat"></td>
-				<td class="date"></td>
+				<td class="date">-</td>
 				<td></td>
 			</tr>
 		</tbody>
@@ -969,7 +969,7 @@
 				<td></td>
 				<td></td>
 				<td class="right">tip/</td>
-				<td class="right"><a target="_blank" href="tip/tip.html">tip.html</a></td>
+				<td class="right"><a href="javascript:openWindowPop('tip/tip.html', 'popup', 'width=858, height=794, status=no, menubar=no, toolbar=no, resizable=no');">tip.html</a></td>
 				<td class="stat"></td>
 				<td class="date">2021-10-12</td>
 				<td></td>
@@ -980,6 +980,10 @@
 
 <script src="../js/jquery-3.3.1.js"></script>
 <script>
+	//윈도우팝업
+	function openWindowPop(url, name, options){ 
+		window.open(url, name, options);
+	}
 $(window).on('load', function(){
 	/* 테이블정의 */
 	$('table').each(function(){
@@ -1010,17 +1014,7 @@ $(window).on('load', function(){
 		$(this).prepend(tbl);
 	});
 
-	/* 재미 */
-	// $('h1').css({'transform':'scale(1.5) translateX(10%)', 'opacity':'.1', 'transition':'all 60s'});
-	// $(document).on({
-	// 	'mouseenter':function(){
-	// 		$('h1').removeAttr('style').css({'transition':'all .2s ease-in'});
-	// 	},
-	// 	'mouseleave':function(){
-	// 		$('h1').css({'transform':'scale(1.5) translateX(10%)', 'opacity':'.1', 'transition':'all 60s'});
-	// 	}
-	// });
-
+	
 	/* 작업일자 */
 	$('table .date').each(function(){
 		if($(this).text().length == 0){
@@ -1028,20 +1022,6 @@ $(window).on('load', function(){
 		}
 	});
 
-	// $('html').each(function(){
-	// 	var $date = $(this).find('table .date');
-	// 	var dateArray = $date.map(function(){
-	// 		return $(this).text().replace(/-/g, '');
-	// 	});
-	// 	var dateMin = Math.min.apply(Math, dateArray);
-	// 	$('header .date-start').text(dateMin);
-	// 	var dateS = $('header .date-start').text();
-	// 	$('header .date-start').text(dateS.slice(0, 4) + '-' + dateS.slice(4, 6) + '-' + dateS.slice(6, 8));
-	// 	var dateMax = Math.max.apply(Math, dateArray);
-	// 	$('header .date-end').text(dateMax);
-	// 	var dateE = $('header .date-end').text();
-	// 	$('header .date-end').text(dateE.slice(0, 4) + '-' + dateE.slice(4, 6) + '-' + dateE.slice(6, 8));
-	// });
 
 	/* 작업공수 */
 	$('header .starBefore').each(function(){
@@ -1080,102 +1060,10 @@ $(window).on('load', function(){
 		$(this).closest('section').find('table').toggleClass('hide');
 	});
 
-	/* 셀렉트 (1depth) */
-	// $(document).on('change', 'header select', function(){
-	// 	var vlu = $(this).val();
-	// 	if($(this).find('option:first-child').is(':selected') == true){
-	// 		$('section').removeClass('hide').show();
-	// 	}else{
-	// 		$('section').addClass('hide').hide();
-	// 		$('h2:contains("' + vlu + '")').closest('section').removeClass('hide').show();
-	// 	}
-	// 	$('header input').val('');
-	// 	srch();
-	// });
-	// $(document).on('keyup', 'header select', function(e){
-	// 	if(e.keyCode == 27){
-	// 		$(this).find('option:first-child').prop('selected', true);
-	// 		$(this).trigger('change');
-	// 	}
-	//});
 
-	/* 검색 */
-	// $(document).on('keyup', 'header input', function(e){
-	// 	if(e.keyCode == 27) $(this).val('');
-	// 	srch();
-	// });
-
-	/* 컨텍트메뉴 */
-	// $(document).bind('contextmenu rightclick', function(e){
-	// 	e.preventDefault();
-	// 	var x = e.pageX;
-	// 	var y = e.pageY;
-	// 	var top = $(window).scrollTop();
-	// 	var lft = $(window).scrollLeft();
-	// 	$('.contextmenu').css({'display':'block', 'top':y - top, 'left':x - lft,});
-	// });
-	// $(document).on('click', '.contextmenu button', function(){
-	// 	if($(this).hasClass('all-show')){
-	// 		$('table').removeClass('hide');
-	// 	}else{
-	// 		$('table').addClass('hide');
-	// 	}
-	// 	$('.contextmenu').css({'transform':'skewY(-2deg) scale(.9)','transition':'all .1s ease-in'});
-	// 	$('.contextmenu').bind('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(){
-	// 		$(this).delay(100).fadeOut(100, function(){
-	// 			$(this).removeAttr('style');
-	// 		});
-	// 	});
-	// });
-
-	// $(document).mouseup(function(e){
-	// 	var menu = $('.contextmenu');
-	// 	if(!menu.is(e.target) && menu.has(e.target).length === 0){
-	// 		menu.hide();
-	// 	}
-	// });
 });
 
-// $(window).scroll(function(){
-// 	var winTop = $(window).scrollTop();
-// 	if(winTop > 0){
-// 		$('header').addClass('scrl');
-// 	}else{
-// 		$('header').removeClass('scrl');
-// 	}
-// });
 
-// function srch(){
-// 	$('header input').each(function(){
-// 		var txt = $(this).val();
-// 		if(txt.length == 0){
-// 			$('span.pTxt').each(function(){
-// 				var reTxt = $(this).text();
-// 				$(this).replaceWith(reTxt);
-// 			});
-// 			$('section, tr').show();
-// 		}else{
-// 			$('section, tr').hide();
-// 			$('thead tr').show();
-// 			$('td:contains("' + txt + '")').closest('tr').show().closest('section').show();
-
-// 			$('table td').each(function(){
-// 				var sTxt = $(this).text();
-// 				var pTxt = sTxt.replace(new RegExp(txt,'gi'), '<span class="pTxt" style="color:red;font-weight:500;">' + txt + '</span>');
-
-// 				if($(this).find('a').length == 0){
-// 					$(this).html(pTxt);
-// 				}else{
-// 					$(this).find('a').html(pTxt);
-// 				}
-// 			});
-// 		}
-// 		$('section.hide').hide();
-// 		$('table').removeClass('hide');
-
-// 		$('html, body').scrollTop(0);
-// 	});
-// }
 </script>
 </body>
 
