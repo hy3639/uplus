@@ -3401,7 +3401,8 @@ html.popOpen {overflow:hidden;}
 .id-management .border-box .info ul li {display: inline-block;}
 .id-management .border-box .btn-mid36 {width: 146px;}
 .id-management .board-list table th {position: relative}
-.id-management .board-list table th .tooltip-area {position: absolute; right:3px; bottom: 6px;}
+.id-management .board-list table th .tooltip-area {position: absolute; right:5px; bottom: 6px;}
+.id-management .board-list table th .tooltip-area .tooltip-layer {right: 0;}
 .id-management .board-list table tbody td {padding: 14px 5px;}
 .id-management .board-list table tbody td .btn-xxs {min-width: 54px; height: 23px;}
 .id-management .receive-num li button {vertical-align: baseline; margin-left: 10px;}
