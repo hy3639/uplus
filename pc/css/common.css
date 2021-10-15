@@ -3395,7 +3395,7 @@ html.popOpen {overflow:hidden;}
 .join .formItem .ul-list.f-13 li .indent {margin-left: 12px;}
 
 /* 아이디 관리 */
-.id-management .border-box {margin-top: 20px;}
+.id-management .border-box {margin-top: 20px; padding: 20px 30px}
 .id-management .border-box .info ul li {display: inline-block;}
 .id-management .border-box .btn-mid36 {width: 146px;}
 .id-management .board-list table th {position: relative}
