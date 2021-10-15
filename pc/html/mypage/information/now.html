@@ -346,6 +346,16 @@
 												</td>
 											</tr>
 											<tr>
+												<th scope="row">SMS 인증</th>
+												<td>
+													<div class="form-list inline">
+														<label class="form-wrap"><input type="radio" name="Rdo3" class="styled"> 예</label>
+														<label class="form-wrap"><input type="radio" name="Rdo3" class="styled" checked> 아니오</label>																									
+													</div>	
+													<button type="button" class="btn-border btn-mid bd-pink btnPop" title="Popup01">SMS 인증</button>		
+												</td>
+											</tr>
+											<tr>
 												<th scope="row"><label class="essential" for="txt1">이메일</label></th>
 												<td>
 													<div class="input-email">
@@ -383,6 +393,7 @@
 										</tbody>
 									</table>
 								</div>
+								<p class="guide-txt mgl0 mgt10 f-pink"> ※ SMS 인증 설정 시, 로그인 시에 인증을 위해 해당 핸드폰 번호로 인증번호가 발송됩니다.</p>
 							</div>
 						</div>
 						<div class="grid-item">
@@ -490,6 +501,65 @@
 				</div>
 			</div>			
 		</div>	
+	</div>
+</div>
+
+<!-- 인증 번호 입력 -->
+<div class="layer-popup sms-confirm" title="Popup01">
+	<div class="popup sm">
+		<div class="popup-header">	
+			<p class="title">인증 번호 입력</p>	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			
+			<label class="tit" for="txt1">발송된 인증번호를 입력 하세요.</label>
+			<div class="input-btn">
+				<div class="input-text"><input type="text" id="txt1" style="width: 176px;"></div>
+				<button type="button" class="btn-border btn-mid bd-pink btnPop" title="Popup03">확인</button>		
+				<button type="button" class="btn-border btn-mid bg-white">재발송</button>												
+			</div>
+			<p class="guide-txt f-pink">인증 성공!</p>
+			<!-- <p class="guide-txt f-pink">인증 실패. 인증 번호를 확인하시기 바랍니다</p> -->
+		</div>
+		<div class="button-area  margin center">				
+			<button type="button" class="btn-mid bg-pink popClose">닫기</button>			
+		</div>
+	</div>
+</div>
+
+<!-- alert -->
+<div class="layer-popup" title="Popup02">
+	<div class="popup sm">
+		<div class="popup-header">	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				SMS 인증 설정하기 전에,<br>
+				핸드폰 번호가 정확한지 확인하시기 바랍니다.
+			</p>				
+		</div>
+		<div class="button-area center margin">			
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>	
+			<button type="button" class="btn-mid bg-pink">확인</button>			
+		</div>
+	</div>
+</div>
+<div class="layer-popup" title="Popup03">
+	<div class="popup sm">
+		<div class="popup-header">	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				3회 연속 SMS 인증 실패로 접속이 제한되었습니다.<br>
+				30분 후에 다시 로그인하시기 바랍니다.
+			</p>				
+		</div>
+		<div class="button-area center">
+			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
+		</div>
 	</div>
 </div>
 

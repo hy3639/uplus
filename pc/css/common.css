@@ -3447,6 +3447,13 @@ html.popOpen {overflow:hidden;}
 .cont-area.setting .board-write {margin-top: 15px;}
 .cont-area.setting .board-write th {padding: 15px 18px;}
 
+.cont-area.setting .dl-list {margin-top: 15px;}
+.cont-area.setting .dl-list dt {font-size: 14px; padding-bottom: 7px;}
+.cont-area.setting .dl-list dd {font-size: 13px; font-weight: 300; line-height: 19px; margin-left: 10px;}
+.cont-area.setting .dl-list dd + dt {margin-top: 15px;}
+
+.cont-area.setting .form-list.inline .form-wrap {min-width:100px;padding: 6px 0;}
+
 /* 서식분류관리 */
 .cont-area.category .board-list.fax td.subject {padding-left: 25px;}
 
@@ -3618,3 +3625,10 @@ html.popOpen {overflow:hidden;}
 	line-height: 14px;
 	font-size: 10px;
 }
+
+/*SMS인증*/
+.sms-confirm label.tit {padding-bottom:10px;font-size: 13px; font-weight: 500;}
+.sms-confirm .input-btn {display: flex;}
+.sms-confirm .input-btn .bd-pink {margin-left: 4px;}
+.sms-confirm .input-btn .bg-white {margin-left: 10px;}
+.sms-confirm .input-btn + .guide-txt {margin-top: 5px;}
