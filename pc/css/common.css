@@ -118,6 +118,8 @@ textarea::placeholder {color:#bbb;}
 
 select::-ms-expand {display:none}
 
+.readonly input[type="text"]{color:#bbb}
+
 /* ==============
 	레이아웃
 ============== */
@@ -3406,11 +3408,16 @@ html.popOpen {overflow:hidden;}
 
 .kakao-linkage .ul-list li {margin-top: 0 !important; line-height: 15px;}
 .kakao-linkage .box-gray {margin-top: 10px;}
-.kakao-linkage .box-gray .input-btn {display: flex; justify-content: center;}
-.kakao-linkage .box-gray .input-btn .btn-border{ margin-left: 4px;}
+.kakao-linkage .box-gray .input-btn,
+.id-register  .box-gray .input-btn{display: flex; justify-content: center;}
+.kakao-linkage .box-gray .input-btn .btn-border,
+.id-register .popup-cont .input-btn .btn-mid{ margin-left: 4px;}
 
-.pop-address .popup-cont .input-btn {display: flex; margin-bottom: 15px;}
-.pop-address .popup-cont .input-btn .btn-mid {margin-left: 4px;}
+.pop-address .popup-cont .input-btn{display: flex; margin-bottom: 15px;}
+.pop-address .popup-cont .input-btn .btn-mid{margin-left: 4px;}
+
+.id-register .box-gray {margin-top: 10px;}
+.id-register .ul-list.bar li{margin-top: 0; font-weight: 300;}
 
 /* 아이디 등록*/
 .join .board-write + .button-area {margin-top: 40px;}
