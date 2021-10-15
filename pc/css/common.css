@@ -3468,6 +3468,11 @@ html.popOpen {overflow:hidden;}
 .kakao .box-gray .dl-list dd + dt {margin-top: 10px;}
 .kakao .box-gray .img-area {margin: 30px -10px 0 -10px;font-size: 0;}
 
+.kakao .box-gray .dl-list dd.img-area {margin-left: -20px;margin-bottom: 20px;}
+
+.kakao .box-gray  .dl-list dd .ul-list.bar {margin-left: 15px;}
+/* .kakao .box-gray .dl-list dd .ul-list.bar {margin-left: 0;} */
+
 
 /* ----------- 설정 -----------*/
 /*알림설정*/
