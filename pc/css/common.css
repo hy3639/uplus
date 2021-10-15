@@ -756,6 +756,7 @@ footer  p {
 
 /* 말줄임 */
 .ellipsis {
+	display: inline-block;
 	max-width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -2244,6 +2245,31 @@ html.popOpen {overflow:hidden;}
     opacity:1;
     transition:transform .3s, opacity .3s;
 }
+/* ==============
+	로딩바
+============== */
+#loaderImage {position: absolute; top: calc(50% - 80px); left:50%; margin-left: -34px;}
+.loding {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 500;
+
+}
+#loaderImage + p {
+	padding-top: 20px;
+	font-weight: 500; 
+	color:#fff; 
+	font-size:25px;
+}
+
 
 /* ==============
 	로그인
@@ -2662,7 +2688,7 @@ html.popOpen {overflow:hidden;}
 	text-align: left;
 }
 .board-list.fax table thead th {font-weight: 500; font-size:13px}
-.board-list.fax td {height:48px; padding:0 5px;font-weight: 300; font-size:13px}
+.board-list.fax td {height:48px;/*padding:0 5px;*/font-weight: 300; font-size:13px}
 .board-list.fax td > .btnPop.sm {font-weight: 300; font-size: 13px;}
 .board-list.fax td .tooltip-area .tooltip-layer.w140 {padding:20px}
 .board-list.fax td .tooltip-area .tooltip-layer.w140 li {margin-top: 5px;}
@@ -3368,6 +3394,24 @@ html.popOpen {overflow:hidden;}
 .join .formItem .ul-list.f-13 {margin: 20px 0;}
 .join .formItem .ul-list.f-13 li .indent {margin-left: 12px;}
 
+/* 아이디 관리 */
+.id-management .border-box {margin-top: 20px;}
+.id-management .border-box .info ul li {display: inline-block;}
+.id-management .border-box .btn-mid36 {width: 146px;}
+.id-management .board-list table th {position: relative}
+.id-management .board-list table th .tooltip-area {position: absolute; right:3px; bottom: 6px;}
+.id-management .board-list table tbody td {padding: 14px 5px;}
+.id-management .board-list table tbody td .btn-xxs {min-width: 54px; height: 23px;}
+.id-management .receive-num li button {vertical-align: baseline; margin-left: 10px;}
+
+.kakao-linkage .ul-list li {margin-top: 0 !important; line-height: 15px;}
+.kakao-linkage .box-gray {margin-top: 10px;}
+.kakao-linkage .box-gray .input-btn {display: flex; justify-content: center;}
+.kakao-linkage .box-gray .input-btn .btn-border{ margin-left: 4px;}
+
+.pop-address .popup-cont .input-btn {display: flex; margin-bottom: 15px;}
+.pop-address .popup-cont .input-btn .btn-mid {margin-left: 4px;}
+
 /* 아이디 등록*/
 .join .board-write + .button-area {margin-top: 40px;}
 
@@ -3416,6 +3460,7 @@ html.popOpen {overflow:hidden;}
 .kakao .box-gray .dl-list dd {font-size: 14px; padding-left: 12px;}
 .kakao .box-gray .dl-list dd + dt {margin-top: 10px;}
 .kakao .box-gray .img-area {margin: 30px -10px 0 -10px;font-size: 0;}
+
 
 /* ----------- 설정 -----------*/
 /*알림설정*/

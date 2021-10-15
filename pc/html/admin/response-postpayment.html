@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>U+ 웹팩스</title>
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<header class="scroll-area">
+		<div class="header">
+			<h1 class="s-logo"><a href="#" class="logo">U+ 웹팩스</a></h1>
+			<a href="#" class="btn-lg bg-pink wide"><span class="icon-send">팩스 보내기</span></a>
+			<div class="info-area">
+				<ul class="list-wrap">
+					<li class="list-item">
+						<span class="tit">수신번호</span>
+						<span class="cont">0269191342</span>
+					</li>
+					<li class="list-item">
+						<span class="tit">고객명</span>
+						<span class="cont">이영하</span>
+					</li>
+					<li class="list-item">
+						<span class="tit">요금유형</span>
+						<span class="cont">선불</span>
+					</li>
+				</ul>
+				<div class="balance-area">
+					<span class="balance">잔액 <em class="f-white">1,000,000</em>원</span>
+					<button type="button" class="f-pink">충전하기</button>
+				</div>
+			</div>
+			<div class="button-area justify margin">
+				<a href="#" class="btn-border btn-xs bg-gray col1">마이페이지</a>
+				<a href="#" class="btn-border btn-xs bg-gray col1">로그아웃</a>				
+			</div>
+			<div class="button-area justify">			
+				<a href="#" class="btn-border btn-xs bg-gray col1">충전하기</a>
+			</div>
+			<div class="gnb">
+				<div class="gnb-item">
+					<button class="link"><span class="txt fax">팩스</span></button>
+					<div class="depth">
+						<a href="#">팩스 보내기</a> 
+						<a href="#">받은 팩스함</a>
+						<a href="#">보낸 팩스함</a>
+						<a href="#">문서 보관함</a>
+						<a href="#">수신번호 신청/관리</a>
+						<a href="#">휴지통</a>
+					</div>
+				</div>
+				<div class="gnb-item">
+					<button class="link"><span class="txt sms">문자</span></button>
+					<div class="depth">
+						<a href="#">문자 보내기</a>
+						<a href="#">보낸 문자함</a>					
+					</div>
+				</div>
+				<div class="gnb-item">
+					<a href="#none" class="link"><span class="txt address">주소록</span></a>
+				</div>
+				<div class="gnb-item">
+					<button class="link"><span class="txt mypage">마이페이지</span></button>
+					<div class="depth">
+						<a href="#">회원정보변경</a>
+						<a href="#">충전하기</a>
+						<a href="#">이용통계조회</a>
+						<a href="#">수신번호 신청/관리</a>
+						<a href="#">실시간 요금조회</a>
+						<a href="#">회원탈퇴</a>
+					</div>
+				</div>		
+				<div class="gnb-item">
+					<button class="link"><span class="txt support">고객지원</span></button>
+					<div class="depth">
+						<a href="#">공지사항</a>
+						<a href="#">자료실</a>
+						<a href="#">자주하는 질문</a>
+						<a href="#">문의하기</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="util">
+				<a href="#" class="guide">영상 이용가이드</a>
+				<a href="#" class="tip">사용 Tip</a>
+				<a href="#" class="down-fax">간편팩스 다운로드</a>
+				<a href="#" class="num-magage">수신번호 신청/관리</a>
+				<a href="#" class="api">호스트모듈 신청</a>
+				<a href="#" class="mobile">모바일앱</a>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="cont-wrap">
+			<div class="cont-top">
+				<div class="shadow-box">
+					<div class="fax-area">
+						<div class="fax">
+							<a href="#" class="btn-fax-receive">
+								받은팩스함 <span class="txt">미확인 <em class="f-mint">0</em> 건</span>
+							</a>
+							<!-- <a href="#" class="btn-num-apply">
+								수신번호 <span class="txt arrow">신청하기</span>
+							</a> -->
+							<a href="#" class="btn-fax-send">
+								보낸 팩스함 <span class="txt">실패 <em class="f-pink">2</em> 건</span>
+							</a>
+						</div>					
+						<div class="tooltip-area click">
+							<button type="button" class="btn-border btn-sm bg-white btn-layer">발송현황</button>
+							<div class="tooltip-layer">
+								<button type="button" class="btn-tooltip-close">툴팁닫기</button>
+								<div class="send-status">
+									<div class="list">
+										<div class="item">
+											<p class="tit">받은 팩스</p>
+											<ul class="flex-list">
+												<li>
+													<span class="tit">수신요청</span>
+													<span class="cont">
+														<em class="f-mint">172</em> 
+														<em class="unit">건</em>
+													</span>
+												</li>
+												<li>
+													<span class="tit">페이지</span>
+													<span class="cont">
+														<em class="f-mint">2</em>
+														<em class="unit">P</em>
+													</span>
+												</li>
+											</ul>
+										</div>
+										<div class="item">
+											<p class="tit">보낸 팩스</p>
+											<ul class="flex-list">
+												<li>
+													<span class="tit">발신요청</span>
+													<span class="cont">
+														<em class="f-pink">172</em>
+														<em class="unit">건</em> 
+													</span>
+												</li>
+												<li>
+													<span class="tit">발신성공</span>
+													<span class="cont">
+														<em class="f-pink">12</em>
+														<em class="unit">건</em> 
+													</span>
+												</li>
+												<li>
+													<span class="tit">페이지</span>
+													<span class="cont">
+														<em class="f-pink">2</em>
+														<em class="unit">P</em>
+													</span>
+												</li>
+											</ul>
+										</div>
+										<div class="item">
+											<p class="tit">문자발송</p>
+											<ul class="flex-list">
+												<li>
+													<span class="tit">SMS</span>
+													<span class="cont">
+														<em class="f-purple">172</em>
+														<em class="unit">건</em>
+													</span>
+												</li>
+												<li>
+													<span class="tit">LMS</span>
+													<span class="cont">
+														<em class="f-purple">2</em>
+														<em class="unit">건</em>
+													</span>
+												</li>
+												<li>
+													<span class="tit">MMS</span>
+													<span class="cont">
+														<em class="f-purple">1</em>
+														<em class="unit">건</em>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="inner">
+										<div class="box-gray center">
+											<p class="txt">이용기간 : 2021-08-01 ~ 2021-08-31</p>
+										</div>
+										<p class="alert-txt">팩스 12시간, 단문 26시간 장문/포토문자 49시간 이내에 발송결과가 정리됩니다.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="noti-area">					
+						<div class="swiper-container">
+							<div class="swiper-wrapper">							
+								<div class="swiper-slide">
+									<div class="item">
+										<p class="tit">[공지] 카카오워크 &amp; 웹팩스 연동기능 8월초 오픈</p>
+										<span class="date">2021-07-29</span>
+									</div>	
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<p class="tit">[공지] 카카오워크 &amp; 웹팩스 연동기능 8월초 오픈</p>
+										<span class="date">2021-07-29</span>
+									</div>	
+								</div>				
+							</div>	
+							<!-- If we need navigation buttons -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cont-area id-management">
+				<div class="tit-area">
+					<h2 class="tit">아이디(서브계정) 관리</h2>					
+					<ul class="navi">
+						<li><a href="#">홈</a></li>
+						<li><a href="#">관리자</a></li>
+						<li>아이디(서브계정) 관리</li>
+					</ul>
+				</div>
+				<p class="sub-txt f-pink">
+					아래 사용자가 귀 사의 후불제 요금에 신청하였습니다. <br>
+					같은 회사 직원이고 이용 요금을 같은 청구서로 받길 원하신다면 '승인' 버튼을 클릭하여 주시기 바랍니다.
+				</p>
+					
+				<div class="border-box">
+					<div class="flex-area justify">
+						<div class="info">
+							<ul>
+								<li>승인된 아이디 : <span class="f-bold">10</span>개 /</li>
+								<li>승인대기 : <span class="f-bold">0</span>개</li>
+							</ul>
+						</div>
+						<div>
+							<a href="#" class="btn-mid36 bg-pink btnPop" title="Popup05">아이디 일괄등록</a>
+							<a href="#" class="btn-mid36 bg-pink">아이디 등록</a>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="box-gray search-area center">
+						<div class="group range">
+							<div class="item">							
+								<span class="select-box">
+									<select class="styled" style="width:120px;">
+										<option value="">선택하세요</option>												
+									</select>
+								</span>
+								<div class="input-text">
+									<input type="text"style="width:228px">	
+								</div>								
+							</div>
+							<button type="button" class="btn-mid bg-gray">검색</button>
+						</div>
+					</div>
+
+					<div class="button-area justify board">
+						<div class="left">							
+							<button type="button" class="btn-border btn-mid bg-pink">승인</button>
+							<button type="button" class="btn-border btn-mid bd-pink">해지</button>
+							<button type="button" class="btn-border btn-mid bg-white">다운로드 차단설정</button>
+							<button type="button" class="btn-border btn-mid bg-white">다운로드 차단해지</button>	
+							<button type="button" class="btn-border btn-mid bg-pink mgl10">전체아이디 엑셀 다운로드</button>						
+						</div>
+						<div class="right">
+							<span class="select-box">
+								<select class="styled">
+									<option value="">20개씩 보기</option>															
+								</select>
+							</span>								
+						</div>
+					</div>
+					<div class="board-list fax">
+						<table>
+							<caption>아이디 서브계정관리 리스트</caption>
+							<colgroup>
+								<col style="width:4%;">
+								<col style="width:6%;">	
+								<col style="width:15%;">	
+								<col>								
+								<col style="width:12%;">	
+								<col style="width:8%;">
+								<col style="width:8%;">
+								<col style="width:13%;">
+								<col style="width:8%;">
+								<col style="width:8%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><input type="checkbox" class="styled"></th>
+									<th scope="col"><button type="button" class="sort">성명</button></th>
+									<th scope="col"><button type="button" class="sort">부서명</button></th>
+									<th scope="col"><button type="button" class="sort">아이디</button></th>
+									<th scope="col"><button type="button" class="sort">휴대폰번호</button></th>
+									<th scope="col"><button type="button" class="sort">SMS인증</button></th>
+									<th scope="col"><button type="button" class="sort">상태</button></th>														
+									<th scope="col">수신번호</th>
+									<th scope="col">
+										다운로드<br>차단
+										<div class="tooltip-area">
+											<button type="button" class="btn-tooltip">툴팁</button>
+											<div class="tooltip-layer left">
+												<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
+												<p class="txt">
+													다운로드 차단 기능은 개인 정보를 보호하기 위한 무료 서비스입니다. <br>
+													· 차단 설정이 된 서브아이디로 로그인을 하게되면 아래 서비스가 제한됩니다.
+													<ul class="mgt10">
+														<li>1. "받은 팩스함" - PC저장/미리보기/이메일 보내기/카테고리 복사 기능 등 차단</li>
+														<li>2. "보낸 팩스함" - 미리보기 기능 등 차단</li>
+													</ul>
+												</p>
+												<br>
+												<!-- <a href="#" class="btn-link">서비스 신청하기</a> -->
+											</div>
+										</div>
+									</th>
+									<th scope="col">
+										카카오워크<br>연동
+										<div class="tooltip-area">
+											<button type="button" class="btn-tooltip">툴팁</button>
+											<div class="tooltip-layer left">
+												<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
+												<p class="txt">
+													카카오워크 이용 고객이 웹팩스와 연동하여 카카오워크 채팅방에서
+													팩스 수신 알림을 받을 수 있는 기능입니다.
+												</p>
+												<br>
+												<a href="#" class="btn-link">카카오워크 연동 가이드</a>
+											</div>
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>	
+								<!-- data가 없는경우 -->
+								<!-- <tr class="no-data">
+									<td colspan="10">
+										<p>
+											내역이 없습니다.											
+										</p>
+									</td>
+								</tr> -->
+								<!--// data가 없는경우 -->	
+								<tr>
+									<td><input type="checkbox" class="styled" name="tableChk"></td>			
+									<td><p class="tit ellipsis" title="홍길동">홍길동</p></td>					
+									<td><p class="tit ellipsis" title="SME 솔루션 사업부">SME 솔루션 사업부 사업부</p></td>
+									<td><a href="#" class="tit ellipsis" title="user1@uplusdemo2.onnet">user1@uplusdemo2.onnetonnetonnet</a></td>
+									<td>010-8080-4824</td>															
+									<td><button type="button" class="btn-border btn-xxs bg-white btnPop" title="Popup01">설정</button></td>
+									<td>
+										승인완료
+										<button type="button" class="btn-border btn-xxs bd-pink mgt5 btnPop" title="Popup07">번호부여</button>
+									</td>
+									<td>
+										<ul class="receive-num">
+											<li>0255556666 <button type="button"><img src="../../images/btn/btn_del.png" alt="삭제"></button></li>
+										</ul>
+									</td>
+									<td>차단</td>		
+									<td><button type="button" class="btn-border btn-xxs bg-white btnPop" title="Popup04">연동설정</button></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" class="styled" name="tableChk"></td>			
+									<td><p class="tit ellipsis" title="홍길동">홍길동</p></td>					
+									<td><p class="tit ellipsis" title="계열사">계열사</p></td>
+									<td><a href="#" class="tit ellipsis" title="user1@uplusdemo2.onnet">user1@uplusdemo2.onnetonnetonnet</a></td>
+									<td>010-8080-4824</td>															
+									<td>적용</td>
+									<td>
+										승인완료
+										<button type="button" class="btn-border btn-xxs bd-pink mgt5 btnPop" title="Popup07">번호부여</button>
+									</td>
+									<td>
+										<ul class="receive-num">
+											<li>0255556666 <button type="button"><img src="../../images/btn/btn_del.png" alt="삭제"></button></li>
+										</ul>
+									</td>
+									<td>차단</td>		
+									<td><button type="button" class="btn-border btn-xxs bg-white btnPop" title="Popup04">연동설정</button></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" class="styled" name="tableChk"></td>			
+									<td><p class="tit ellipsis" title="홍길동">홍길동</p></td>					
+									<td><p class="tit ellipsis" title="계열사">계열사</p></td>
+									<td><a href="#" class="tit ellipsis" title="user1@uplusdemo2.onnet">user1@uplusdemo2.onnetonnetonnet</a></td>
+									<td>010-8080-4824</td>															
+									<td>적용</td>
+									<td>
+										승인완료
+										<button type="button" class="btn-border btn-xxs bd-pink mgt5 btnPop" title="Popup07">번호부여</button>
+									</td>
+									<td>
+										<ul class="receive-num">
+											<li>0255556666 <button type="button"><img src="../../images/btn/btn_del.png" alt="삭제"></button></li>
+											<li>0255556666 <button type="button"><img src="../../images/btn/btn_del.png" alt="삭제"></button></li>
+											<li>0255556666 <button type="button"><img src="../../images/btn/btn_del.png" alt="삭제"></button></li>
+										</ul>
+									</td>
+									<td>차단</td>		
+									<td><button type="button" class="btn-border btn-xxs bg-white btnPop" title="Popup04">연동설정</button></td>
+								</tr>							
+							</tbody>
+						</table>
+					</div>
+					<div class="button-area justify board">
+						<div class="left">							
+							<button type="button" class="btn-border btn-mid bg-pink">승인</button>
+							<button type="button" class="btn-border btn-mid bd-pink">해지</button>
+							<button type="button" class="btn-border btn-mid bg-white">다운로드 차단설정</button>
+							<button type="button" class="btn-border btn-mid bg-white">다운로드 차단해지</button>	
+							<button type="button" class="btn-border btn-mid bg-pink mgl10">전체아이디 엑셀 다운로드</button>						
+						</div>
+						<div class="right">
+							<span class="select-box">
+								<select class="styled">
+									<option value="">20개씩 보기</option>															
+								</select>
+							</span>								
+						</div>
+					</div>
+					<div class="pagenation">
+						<a href="#" class="btn-first page">처음</a>
+						<a href="#" class="btn-prev page">이전</a>
+						<span class="page now">1</span>
+						<a href="#" class="page">2</a>
+						<a href="#" class="page">3</a>
+						<a href="#" class="page">4</a>
+						<a href="#" class="page">5</a>
+						<a href="#" class="page">6</a>
+						<a href="#" class="page">7</a>
+						<a href="#" class="page">8</a>
+						<a href="#" class="page">9</a>
+						<a href="#" class="page">10</a>
+						<a href="#" class="btn-next page">다음</a>
+						<a href="#" class="btn-last page">마지막</a>
+					</div>			
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+			<p>Copyright © 2021 <span class="f-pink">LG UPlus.</span> All rights reserved.</p>
+		</footer>
+	</div>
+	
+	<div class="quick-area">
+		<div class="quick">
+			<div class="quick-item">
+				<a href="#" class="link"><span class="txt setting">설정</span></a>
+			</div>		
+			<div class="quick-item on">
+				<button type="button" class="link"><span class="txt admin">관리자</span></button>
+				<div class="depth on">
+					<a href="#">내 가입 정보</a> 
+					<a href="#">가입정보 및 변경신청</a>
+					<a href="#" class="on">아이디(서브계정)관리</a><!-- 메뉴 선택시 on 추가 -->
+					<a href="#">수신번호 신청/관리</a>
+					<a href="#">사용자 설정</a>
+					<a href="#">서식분류관리</a>
+					<a href="#">부가서비스 신청</a>
+					<a href="#">카카오워크 연동</a>
+					<a href="#">서비스 일시정지</a>
+					<a href="#">서비스해지</a>
+					<a href="#">신청이력</a>
+				</div>
+			</div>
+			<div class="quick-item">
+				<button type="button" class="link"><span class="txt preferences">환경설정</span></button>
+				<div class="depth">
+					<a href="#">알림설정</a>
+					<a href="#">스팸번호 차단</a>
+					<a href="#">전송금지 번호 설정</a>
+					<a href="#">문자발신번호 인증</a>
+					<a href="#">팩스발신번호 인증</a>					
+				</div>
+			</div>			
+		</div>	
+	</div>
+</div>
+
+
+<!-- SMS 인증 설정 -->
+<div class="layer-popup" title="Popup01">
+	<div class="popup xs">
+		<div class="popup-header">	
+			<p class="title">SMS 인증 설정</p>	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<div class="form-list block">
+				<label class="form-wrap"><input type="radio" name="Rdo1" class="styled" checked> 적용</label>
+				<label class="form-wrap"><input type="radio" name="Rdo1" class="styled"> 적용 안 함</label>
+			</div>				
+		</div>
+		<div class="button-area  margin center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
+			<button type="button" class="btn-mid bg-pink btnPop" title="Popup02">저장</button>			
+		</div>
+	</div>
+</div>
+
+
+<!-- alert -->
+<div class="layer-popup" title="Popup02">
+	<div class="popup xs">
+		<div class="popup-header">	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				SMS 인증 기능이 적용되었습니다.
+			</p>				
+		</div>
+		<div class="button-area center">			
+			<button type="button" class="btn-mid bg-pink">확인</button>			
+		</div>
+	</div>
+</div>
+<div class="layer-popup" title="Popup03">
+	<div class="popup xs">
+		<div class="popup-header">	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				휴대폰 번호가 없습니다.<br>
+				SMS 인증 기능 적용이 불가합니다.
+			</p>				
+		</div>
+		<div class="button-area center">			
+			<button type="button" class="btn-mid bg-pink">확인</button>			
+		</div>
+	</div>
+</div>
+
+
+<!-- 아이디 일괄등록 -->
+<!-- <div class="layer-popup " title="Popup04">
+	<div class="popup sm">
+		<div class="popup-header">	
+			<p class="title">아이디 일괄등록</p>	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<ul class="ul-list bar">
+				<li>확장자가 xls,csv인 파일만 지원 합니다.</li>
+				<li>수신번호 여러개 등록시 ','(콤마)로 구분해주세요.</li>
+			</ul>
+			<div class="button-area">
+				<button type="button" class="btn-border btn-xxs bg-white">샘플파일 다운로드</button>
+			</div>
+			<div class="box-gray">
+				<div class="input-btn">
+					<div class="input-text"><input type="text" id="txt1" style="width: 189px;" value="선택된 파일 없음" readonly></div>
+					<button type="button" class="btn-border btn-mid bd-pink">파일선택</button>												
+				</div>
+			</div>
+		</div>
+		<div class="button-area  margin center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
+			<button type="button" class="btn-mid bg-pink">추가</button>			
+		</div>
+	</div>
+</div> -->
+<!-- 카카오워크 연동 설정 -->
+<div class="layer-popup kakao-linkage" title="Popup04">
+	<div class="popup sm">
+		<div class="popup-header">	
+			<p class="title">카카오워크 연동 설정</p>	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<ul class="ul-list bar">
+				<li>연동할 카카오워크 게정을 입력 후 [연동]버튼을 클릭하세요.</li>
+				<li>연동되어 있는 게정의 해제 또는 계정 변경은 [해제]버튼을 클릭하세요</li>
+			</ul>
+			<!-- <div class="button-area">
+				<button type="button" class="btn-border btn-xxs bg-white">샘플파일 다운로드</button>
+			</div> -->
+			<div class="box-gray">
+				<div class="input-btn">
+					<div class="input-text"><input type="text" id="txt1" style="width: 189px;"></div>
+					<button type="button" class="btn-border btn-mid bd-pink">연동</button>												
+				</div>
+			</div>
+		</div>
+		<!-- <div class="button-area  margin center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
+			<button type="button" class="btn-mid bg-pink">추가</button>			
+		</div> -->
+	</div>
+</div>
+
+
+<!-- 엑셀 불러오기 -->
+<div class="layer-popup pop-excel" title="Popup05">
+	<div class="popup xl">
+		<div class="popup-header">
+			<p class="title">엑셀 불러오기</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<ul class="ul-list dot">
+				<li><span class="f-pink">'샘플파일 다운로드'</span>를 클릭하여 문서를 다운받으신 후 주소록 파일을 작성하여 주시기 바랍니다.</li>
+				<li>반드시 아래 예시와 같은 순서로 작성되어야 하며, <span class="f-pink">'텍스트'</span>형식으로 입력해주시기 바랍니다.</li>
+				<li>
+					대표번호를 등록하실 경우 <span class="f-pink">해당 지역번호</span>까지 입력해주셔야 합니다.
+					<span class="indent">*예시: 대표번호가 1544-8007(서울)일 경우 02-1544-8007 입력</span>
+				</li>
+				<li>작성하신 파일을 '파일선택'버튼을 클릭하여 선택하신 후 '등록'버튼을 클릭하여 주시기 바랍니다.</li>
+			</ul>
+			<div class="section">
+				<div class="flex-area justify">
+					<p class="tit">등록예시</p>
+					<button type="button" class="btn-border btn-xxs bg-white">샘플파일 다운로드</button>
+				</div>			
+				<div class="mgt10">
+					<img src="../../images/temp/temp_excel.png" alt="엑셀다운로드 샘플">		
+				</div>
+			</div>			
+			<div class="attach-wrap">
+				<div class="box-gray attach-area">
+					<p class="txt">마우스로 파일을 끌어오세요.</p>
+				</div>
+				<a href="#" class="btn-mid bg-pink">파일첨부</a>				
+			</div>			
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>
+			<button type="button" class="btn-mid bg-pink btnPop" title="Popup06">등록</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 엑셀 등록결과 -->
+<div class="layer-popup pop-excel" title="Popup06">
+	<div class="popup xl">
+		<div class="popup-header">
+			<p class="title">엑셀 불러오기 등록 결과</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">		
+			<div class="section">
+				<div class="flex-area">
+					<p class="tit">등록 결과</p>					
+				</div>			
+				<div class="board-list type3">
+					<table>
+						<caption>등록결과 리스트</caption>
+						<colgroup>
+							<col >
+							<col >
+							<col >							
+						</colgroup>
+						<thead>
+							<tr>								
+								<th scope="col">총 건수</th>
+								<th scope="col">성공 건수</th>
+								<th scope="col">실패 건수</th>
+							</tr>
+						</thead>
+						<tbody>							
+							<tr>
+								<td>5</td>
+								<td>5</td>
+								<td>5</td>									
+							</tr>							
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="section">
+				<div class="flex-area">
+					<p class="tit">실패 건</p>					
+				</div>			
+				<div class="board-list type3">
+					<table>
+						<caption>실패 건 리스트</caption>
+						<colgroup>
+							<col >
+							<col >
+							<col >
+							<col >							
+						</colgroup>
+						<thead>
+							<tr>								
+								<th scope="col">No.</th>
+								<th scope="col">그룹명</th>
+								<th scope="col">이름</th>
+								<th scope="col">실패 사유</th>
+							</tr>
+						</thead>
+						<tbody>													
+							<tr class="no-data">
+								<td colspan="4">모든 주소가 정상적으로 등록되었습니다.</td>																
+							</tr>							
+						</tbody>
+					</table>
+				</div>
+			</div>					
+		</div>
+		<div class="button-area center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">닫기</button>				
+		</div>
+	</div>
+</div>
+
+<!-- 수신번호 목록 -->
+<div class="layer-popup noneClose pop-address" title="Popup07">
+	<div class="popup sm">
+		<div class="popup-header">	
+			<p class="title">수신번호 목록</p>	
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<div class="input-btn">
+				<div class="input-text">
+					<input type="text" style="width:241px">	
+				</div>		
+				<button type="button" class="btn-mid bg-gray">검색</button>
+			</div>			
+			<div class="box-gray">
+				<label><input type="checkbox" class="styled"> 전체선택</label>
+			</div>
+			<div class="scroll-board-list scroll-area" style="height:289px;">
+				<table class="height32">
+					<caption>수신번호 리스트</caption>
+					<colgroup>
+						<col style="width:13%;">						
+						<col>																
+					</colgroup>							
+					<tbody>	
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled" checked></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+						<tr>
+							<td class="bd-none"><input type="checkbox" class="styled"></td>
+							<td class="left">0267161931</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>					
+		</div>
+		<div class="button-area  center">					
+			<button type="button" class="btn-mid bg-pink">추가</button>				
+		</div>
+	</div>
+</div>
+
+
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
+<script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(document).ready(function(){
+	
+    
+});
+
+
+</script>
+</body>
+</html>
