@@ -106,10 +106,11 @@
 							<span class="f-sm">
 								현재 U+웍스(그룹웨어) / 카카오워크 가입고객은 연동이 되어있어 <br>
 								웹팩스내에서 연동 설정이 가능합니다.
-							</span> <br>
+							</span> 
 							<a href="#" class="btn-mid40 bg-gray">자세히 보기</a>
 						</div>
 					</li>
+				</ul>
 			</div>
 		</div>
 		<div class="section">
@@ -129,8 +130,8 @@
 		</div>
 		<div class="section">
 			<div class="cont cont4">
-				<span>더 많은 기업 솔루션이 필요하시다면</span>
-				<p>
+				<span class="sub-txt">더 많은 기업 솔루션이 필요하시다면</span>
+				<p class="tit">
 					<span class="f-pink">U<em>+</em>비즈마켓</span>을 방문해보세요!
 				</p>
 				<a href="#" class="btn-lg bg-pink">U+비즈마켓 방문하기</a>
@@ -147,9 +148,42 @@
 		</ul>
 		<p class="copyright">Copyright © 2021 LG UPlus. All rights reserved.</p>
 	</div>
-	
 </div>
-
+<div id="quickLink">
+	<ul class="qLinkList">
+		<li class="qlnks bg01"><a href="#"><span class="LinkTit">간편상담</span></a></li>
+		<li class="qlnks bg02"><a href="#"><span class="LinkTit">이벤트</span></a></li>
+		<li class="qlnks bg03">
+			<a href="#"><span class="LinkTit">고객센터</span></a>
+			<div class="telList"> 
+				<div class="cont">
+					<a href="javascript:void(0);" class="close"></a>
+					<div class="calls">
+						<p class="callTit">
+							<span>고객센터 안내</span>
+							<strong>1544-7003 <em>+3번</em></strong>					
+						</p>
+						<ul class="">
+							<li class="callList">
+								<strong>ARS 3번:</strong>
+								<em>웹팩스 문의</em>
+							</li>
+						</ul> 
+						<dl class="callLast">
+							<dt>상담 가능시간</dt>
+							<dd>평일 오전 9시~오후 6시 토,일, 공휴일 휴무 </dd>		
+						</dl>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="qlnks top">
+			<a href="#none">
+				<span class="LinkTit">TOP</span>
+			</a>			
+		</li>	
+	</ul>
+</div>
 <script src="../../js/jquery-3.3.1.js"></script>
 <script src="../../js/jquery-ui.min.js"></script>
 <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -159,6 +193,18 @@
 $(document).ready(function(){
 	
     
+
+	/* 고객센터 툴팁 */
+	$('.qlnks.bg03').mouseenter(function(){
+		$(this).find('.telList').addClass('on');		
+	});
+	$('.qlnks.bg03').mouseleave(function(){
+		$(this).find('.telList').removeClass('on');
+	});
+	$('#quickLink a.close').click(function(){
+		$(this).closest('.telList').removeClass('on');
+	});
+
 });
 
 

@@ -94,6 +94,12 @@ $(document).on('click', '.btn-tooltip-close', function(){
 })
 /*=======// 탭, 툴팁 ======= */
 
+/*======= top ======= */
+$('.qlnks.top').click(function(){
+	$('html, body').animate({scrollTop: '0'}, 680);
+});
+/*=======// top ======= */
+
 /*======= 폼 ======= */
 
 /* 디자인셀렉트 */
