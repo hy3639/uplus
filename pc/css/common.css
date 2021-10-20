@@ -290,6 +290,15 @@ header .util .num-magage {background:url(../images/layout/gnb/icon_dial.png) no-
 header .util .api {background:url(../images/layout/gnb/icon_api.png) no-repeat left center;}
 header .util .mobile {background:url(../images/layout/gnb/icon_mobile.png) no-repeat left center;}
 
+header.scroll-area .mCSB_scrollTools {width: 4px !important;}
+header.scroll-area .mCSB_scrollTools .mCSB_draggerContainer {top: 0 !important; bottom: 0 !important;}
+/* header.scroll-area .mCSB_scrollTools {opacity: 1 !important;} */
+header.scroll-area .mCSB_scrollTools .mCSB_draggerRail {background-color:#000;	border-radius: 0 !important;}
+header.scroll-area .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color:#e03d7c !important;
+	border-radius: 0 !important;
+}
+
 /* 푸터 */
  footer {
 	/* position:fixed;
@@ -346,19 +355,20 @@ footer  p {
 	
 }
 .cont-top .shadow-box {
-	padding:14px 35px;
+	padding:14px 25px;
 	display: flex;
 	align-items: center;
 }
 
-.cont-top .shadow-box > div {flex:1}
+
 .cont-top .fax-area {
 	position:relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-right:30px;
+	padding-right:20px;
 	box-sizing: border-box;
+	flex:1.1;
 }
 .cont-top .fax-area:before {
 	content: '';
@@ -374,7 +384,7 @@ footer  p {
 }
 .cont-top .fax-area a {
 	/* height:63px; */
-	padding:8px 0 8px 73px;
+	padding:8px 0 8px 65px;
 	color:#000;
 	font-size:13px;
 	text-align: left;
@@ -415,7 +425,8 @@ footer  p {
 .cont-top .noti-area{
 	position: relative;
 	overflow:hidden;
-	padding:0 25px 
+	padding:0 0 0 20px ;
+	flex:1;
 }
 .cont-top .noti-area .swiper-container {
 	width:100%;
@@ -715,6 +726,7 @@ footer  p {
 /*너비*/
 .w140 {width:140px !important}
 .w450 {width:450px !important}
+.w530 {width:530px !important}
 
 /*간격*/
 .mgl0 {margin-left:0 !important;}
@@ -737,7 +749,7 @@ footer  p {
 /*폰트*/
 .f-white {color:#fff !important}
 .f-pink {color:#e03d7c !important}
-.f-mint {color:#30b9a0 !important}
+.f-mint {color:#3d8fe0 !important}
 .f-purple {color:#898af7 !important}
 .f-gray {color:#999 !important}
 .f-black {color:#000 !important}
@@ -3766,6 +3778,7 @@ html.popOpen {overflow:hidden;}
 #quickLink .qlnks.bg01 span{background: url(../images/img/icon_40_talk.png) no-repeat 25px 32%;}
 #quickLink .qlnks.bg02 span{background: url(../images/img/icon_40_event.png) no-repeat 28px 33%;}
 #quickLink .qlnks.bg03 span{background: url(../images/img/icon_40_call.png) no-repeat 25px 32%;}
+#quickLink .qlnks.bg03 {background-color: #c439c6;}
 #quickLink .telList{ opacity:0; width: 0; height: 0;  transition:all .4s ease;}
 #quickLink .telList.on {position: absolute; top: 15px; right: 0; bottom: 0;width: 365px; height: 60px;opacity: 1;}
 #quickLink .telList .cont { width:0; height: 0;opacity:0; background:#FFF; border: 1px solid #c439c6; border-radius: 10px; text-align: left; }
@@ -3892,6 +3905,8 @@ html.popOpen {overflow:hidden;}
 .wrapper.service .tab-cont3 .ul-list li .ul-list li {font-weight: 400;}
 .wrapper.service .tab-cont3 .ul-list.dot {margin-top: 25px;}
 .wrapper.service .tab-cont3 .btn-lg {min-width: 141px;}
+.wrapper.service .tab-cont3 .btn-tooltip {vertical-align: top;}
+.wrapper.service .tab-cont3 .tooltip-area .txt {line-height: 20px;}
 
 /* ----------- 기타 -----------*/
 .wrapper.error {display: flex; align-items: center; justify-content: center;}
