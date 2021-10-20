@@ -226,8 +226,7 @@
 			</div>
 			<div class="cont-area">
 				<div class="tit-area">
-					<h2 class="tit">팩스 보내기</h2>
-					<!-- <p class="txt">U+ 웹팩스로 더욱 빠르고 간편하게 팩스를 보내실 수 있습니다.</p> -->
+					<h2 class="tit">팩스 보내기 <a class="btn-xxs bg-pink round" href="javascript:openWindowPop('../tip/tip.html', 'popup', 'width=858, height=794, status=no, menubar=no, toolbar=no, resizable=no');">가이드</a></h2>				
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
 						<li><a href="#">팩스</a></li>
@@ -242,9 +241,14 @@
 									
 									 <div class="tooltip-area">
 										<button type="button" class="btn-tooltip">툴팁</button>
-										<div class="tooltip-layer">
+										<div class="tooltip-layer w360">
 											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
-											<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다.</p>
+											<div class="txt tip">
+												<ul class="ul-list bar">
+													<li>기본번호인 02-6969-5000번호로 발송됩니다.</li>
+													<li>팩스기기번호나 수신번호를 이용하시려면 <br> '환경설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다.</li>
+												</ul>
+											</div>
 										</div>
 									</div>
 								</span>							
@@ -259,20 +263,18 @@
 						</div>
 						<div class="grid-item">
 							<div class="tit">
-								<span>수신번호 입력
-									
-									 <div class="tooltip-area">
-										<button type="button" class="btn-tooltip">툴팁</button>
-										<div class="tooltip-layer">
-											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
-											<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다.</p>
-										</div>
-									</div>
-								</span>							
+								<span>수신번호 입력</span>							
 							</div>
 							<div class="cont">
-								<div class="box-gray center">
-									<p class="txt"><span class="f-pink">이름·팩스번호</span>를 항목에 <span class="f-pink">직접 입력</span>하세요. <span class="f-pink">복사·붙여넣기</span>도 가능합니다.</p>
+								<div class="box-gray">
+									<div class="txt">
+										<ul class="ul-list bar big">
+											<li><span class="f-pink">이름·팩스번호</span>를 항목에 직접 입력하세요. <span class="f-pink">복사·붙여넣기</span>도 가능합니다.</li>
+											<li>수신번호 입력 후 삭제/중복삭제가 필요한 경우 체크박스내 체크를 하고 <span class="f-pink">[삭제] [중복삭제]</span> 버튼을 이용하여 <br>
+												수정하시기 바랍니다.</li>
+											<li>체크박스에 체크 후 <span class="f-pink">[주소록 추가]</span> 버튼을 이용하여 주소록에 추가할 수 있습니다.</li>
+										</ul>
+									</div>
 								</div>
 								<div class="grid-area">
 									그리드 영역
@@ -295,16 +297,7 @@
 						</div>
 						<div class="grid-item">
 							<div class="tit">
-								<span>문서제목
-									
-									 <div class="tooltip-area">
-										<button type="button" class="btn-tooltip">툴팁</button>
-										<div class="tooltip-layer">
-											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
-											<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다.</p>
-										</div>
-									</div>
-								</span>							
+								<span>문서제목</span>							
 							</div>
 							<div class="cont">
 								<div class="board-write">
@@ -380,9 +373,18 @@
 									
 									 <div class="tooltip-area">
 										<button type="button" class="btn-tooltip">툴팁</button>
-										<div class="tooltip-layer">
+										<div class="tooltip-layer w440">
 											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
-											<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다.</p>
+											<div class="txt">
+												<dl class="dl-list">
+													<dt>특정 폰트는 표시되지 않을 수 있으니 미리보기에서 확인하세요.</dt>
+													<dd>
+														(엑셀파일 첨부 시, 내용이 입력된 시트는 모두 발송됩니다. <br>
+														특정 시트만 발송하려는 경우, 발송하려는 시트 외엔 '숨기기'로 지정하거나 <br>
+														시트 삭제 후 발송해 주십시오.)
+													</dd>
+												</dl>
+											</div>
 										</div>
 									</div>
 								</span>							
@@ -410,16 +412,7 @@
 						</div>
 						<div class="grid-item">
 							<div class="tit">
-								<span>예약발송
-									
-									 <div class="tooltip-area">
-										<button type="button" class="btn-tooltip">툴팁</button>
-										<div class="tooltip-layer">
-											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
-											<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다.</p>
-										</div>
-									</div>
-								</span>							
+								<span>예약발송</span>							
 							</div>
 							<div class="cont">
 								<div class="board-write">
@@ -476,9 +469,16 @@
 									
 									 <div class="tooltip-area">
 										<button type="button" class="btn-tooltip">툴팁</button>
-										<div class="tooltip-layer">
+										<div class="tooltip-layer w360">
 											<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
-											<p class="txt">'설정 &gt; <a href="#" class="f-pink underline">팩스발신번호설정</a>'에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다. 에서 등록 가능합니다.</p>
+											<div class="txt tip">
+												<ul class="ul-list bar big">													
+													<li>체크 해제 시 미리보기 없이 바로 발송됩니다.</li>
+													<li>미리보기 클릭 시 바로 보내기 버튼 선택
+														<span class="f-light">(미리보기 창을 닫고 다시 보내게 되면, 문서변환이 2번 되기 때문에 전송시간이 오래 걸립니다)</span>
+													</li>
+												</ul>
+											</div>
 										</div>
 									</div>
 								</span>							

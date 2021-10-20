@@ -737,7 +737,7 @@ footer  p {
 .mgr8 {margin-right:8px;}
 .mgb15 {margin-bottom:15px;}
 .mgb30 {margin-bottom:30px;}
-.mgt5 {margin-top:5px;}
+.mgt5 {margin-top:5px !important;}
 .mgt10 {margin-top:10px;}
 .mgt20 {margin-top:20px !important}
 .mgt40 {margin-top:40px !important;}
@@ -771,7 +771,7 @@ footer  p {
 
 /* 말줄임 */
 .ellipsis {
-	display: inline-block;
+	/* display: inline-block; */
 	max-width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -803,6 +803,7 @@ footer  p {
 	font-size:14px;
 	line-height: 20px;
 }
+.tit-area + .sub-txt.inline {display: inline-block;}
 .tit-area + .box-gray.search-area {margin-top: 30px;}
 .tit-area .tit {
 	font-size:30px;
@@ -845,18 +846,17 @@ footer  p {
 .flex-area.right .guide-txt {font-size:13px;}
 
 /* 블릿 text */
-.alert-txt {position:relative; font-size:12px; text-indent: -19px;margin-left: 19px;}
+.alert-txt {position:relative; font-size:12px; text-indent: -18px;margin-left: 18px;}
 .alert-txt:before {
 	content: '';
 	display:inline-block;
-	vertical-align: -2px;
-	margin-right:5px;
+	vertical-align: -4px;
 	/* position:absolute;
 	left:0;
 	top:3px;	 */
-	width:14px;
-	height:14px;
-	background:url(../images/icon/icon_12_info.png) no-repeat 0 0;
+	width:18px;
+	height:18px;
+	background:url(../images/icon/icon_18_info.png) no-repeat 0 0;
 }
 
 /*텍스트 스타일*/
@@ -1021,6 +1021,7 @@ footer  p {
 [class^=btn-].bg-pink {background-color: #e03d7c; border:1px solid #e03d7c; }
 [class^=btn-].bg-gray {background-color: #565864; border:1px solid #565864}
 [class^=btn-].bg-white {background-color: #fff; border:1px solid #fff}
+[class^=btn-].round {border-radius: 15px;vertical-align: middle;}
 
 /* border버튼 */
 [class*=btn-border] {	
@@ -1931,7 +1932,7 @@ div.formSingle {display: none;}
 	position:relative;
 	margin-left:-1px;
 }
-.tab-lst .tab-item .btn {
+.tab-lst .tab-item > .btn {
 	display:block;
 	width:100%;
 	height:44px;
@@ -1942,32 +1943,35 @@ div.formSingle {display: none;}
 	text-align:center;
 	outline:0;
 }
-.tab-lst .tab-item .btn .txt {
+.tab-lst .tab-item > .btn > .txt {
 	display:block;
 	position:relative;
 	border:1px solid #dbdbdb;
 	background-color:#f6f7f8;
 	line-height:44px;
 }
-.tab-lst.sm .tab-item .btn {
+.tab-lst.sm .tab-item > .btn {
 	height:38px;
 	line-height: 38px;
 	font-size:13px;
 }
-.tab-lst .tab-item .btn .txt {line-height: 38px;}
+.tab-lst .tab-item .btn > .txt {line-height: 38px;}
 /* on */
 .tab-lst .tab-item.on .btn,
-.tab-lst .tab-item.on .btn .txt {transition:all .2s;}
+.tab-lst .tab-item.on .btn > .txt {transition:all .2s;}
 .tab-lst .tab-item.on {z-index:10;}
 .tab-lst .tab-item.on .btn {
 	color:#000;
 }
-.tab-lst .tab-item.on .btn .txt {
+.tab-lst .tab-item.on .btn > .txt {
 	background-color:#fff;
 	border-color:#dbdbdb;
 	border-bottom-color:#fff;
 	/* line-height:44px; */
 }
+.tab-lst .tab-item .btn .txt .btn-tooltip {vertical-align: text-bottom;}
+.tab-lst .tab-item .btn .txt .tooltip-area {display: none;}
+.tab-lst .tab-item.on .btn .txt .tooltip-area {display: inline-block;}
 
 .tab-cont {display:none;}
 .tab-cont.on {display:block;}
@@ -2013,6 +2017,7 @@ div.formSingle {display: none;}
 	font-weight:400;
 	z-index:100
 }
+.tooltip-layer.w440 {width: 440px;}
 .tooltip-layer .tit-tooltip {
 	display: block;
 	margin-bottom: 10px;
@@ -2023,8 +2028,7 @@ div.formSingle {display: none;}
 	display:block;
 	margin-top:10px
 }
-.btn-tooltip {
-	
+.btn-tooltip {	
 	width:18px;
 	height:18px;
 	background:url(../images/icon/icon_18_info.png) no-repeat 0 0;
@@ -2069,6 +2073,19 @@ div.formSingle {display: none;}
 	transform:translate(-50%,-50%) rotate(45deg)
   }
 
+  /* 툴팁 일괄수정 */
+  .tooltip-layer.w360 {width: 360px;}
+  .tooltip-layer.w400 {width: 400px;}
+  .tooltip-layer .txt.tip .ul-list.bar li {
+	  font-size: 13px;
+	  font-weight: 400;
+	  line-height: 18px;
+  }
+  .tooltip-layer .txt .f-pink {padding-right: 0 !important;}
+  .tooltip-layer .dl-list dt {font-weight: 400;}
+  .tooltip-layer .dl-list dd {font-weight:300; line-height: 18px;}
+  .tab-wrap .tab-item .tooltip-layer .txt{ line-height: 18px; text-align: left;}
+  .tab-wrap .tab-item:last-child .tooltip-layer {right: 100px;}
 /* ==============
 	datepicker
 ============== */
@@ -2627,6 +2644,9 @@ html.popOpen {overflow:hidden;}
 	font-size:16px; 
 	line-height: 40px;
 }
+.grid-item .cont .box-gray {padding: 20px;}
+.grid-item .cont .box-gray .ul-list.big li {margin-top: 5px;}
+.grid-item .cont .box-gray .ul-list.big li:first-child {margin-top: 0;}
 
 /* 받은 팩스함 */
 .calendar-area {
@@ -2673,14 +2693,15 @@ html.popOpen {overflow:hidden;}
 	border-radius: 5px;
 }
 .search-area .btn-search span {position:relative; padding-left:23px;background:url(../images/icon/icon_20_search.png) no-repeat left center;}
-.search-area .btn-tooltip,
+.search-area .btn-tooltip {vertical-align: bottom;}
+/* .search-area .btn-tooltip,
 .btn-tooltip.type2 {
 	width: 14px;
     height: 14px;
 	margin-top: -3px;
 	padding:0;
     background: url(../images/icon/icon_12_info.png) no-repeat 0 0;
-}
+} */
 .board-list .title-input {position:relative; display:none;}
 .board-list .title-input.no-tit {display:block}
 .board-list .title-input.no-tit .btn-save {display:none}
@@ -3272,7 +3293,8 @@ html.popOpen {overflow:hidden;}
 .pop-address .box-gray label {font-size: 13px; font-weight: 400;vertical-align: initial;}
 .pop-address .box-gray label .chkbox {margin-right: 8px;}
 
-.pop-excel .popup-cont .ul-list li{margin-top: 0;}
+.pop-excel .popup-cont .ul-list li{margin-top: 0; font-size: 13px;}
+.pop-excel .popup-cont .ul-list li .indent {text-indent: 6px; font-weight: 300;}
 .pop-excel .popup-cont .section {margin-bottom: 10px; margin-top: 15px;}
 .pop-excel  .popup-cont .section + .section {margin-top: 20px;}
 .pop-excel  .popup-cont .board-list.type3 {margin-top: 10px;}
@@ -3511,8 +3533,10 @@ html.popOpen {overflow:hidden;}
 .preferences .border-dot-box {margin-top: 15px;}
 .preferences .border-dot-box .tit {padding-top: 15px;}
 .preferences .border-dot-box .img {text-align: center; font-size: 0;}
-.preferences  .board-write td {padding: 15px 15px 20px 15px;}
+.preferences  .board-write td {padding: 15px;}
 .preferences .ul-list.dot.mid li {font-size: 13px;}
+
+.preferences .formChange .formItem .ul-list li > .ul-list {margin-left: 0;}
 
 /*전송금지번호설정*/
 .reject .board-write + .button-area {margin-top: 20px;}
