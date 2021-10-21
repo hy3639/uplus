@@ -498,7 +498,7 @@ footer  p {
 
 
 
-.container .cont-area {padding:50px 50px 80px 50px;}
+.container .cont-area {padding:50px 50px 80px 50px; position: relative;}
 .container .cont-area > .section {margin-top:30px}
 .container .cont-area > .section .search-area:first-child {margin-top:-10px}
 
@@ -727,6 +727,7 @@ footer  p {
 .w140 {width:140px !important}
 .w450 {width:450px !important}
 .w530 {width:530px !important}
+.w550 {width:550px !important}
 
 /*간격*/
 .mgl0 {margin-left:0 !important;}
@@ -737,6 +738,7 @@ footer  p {
 .mgr8 {margin-right:8px;}
 .mgb15 {margin-bottom:15px;}
 .mgb30 {margin-bottom:30px;}
+.mgt0 {margin-top:0 	 !important;}
 .mgt5 {margin-top:5px !important;}
 .mgt10 {margin-top:10px;}
 .mgt20 {margin-top:20px !important}
@@ -771,7 +773,7 @@ footer  p {
 
 /* 말줄임 */
 .ellipsis {
-	/* display: inline-block; */
+	display: block; 
 	max-width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -2076,7 +2078,8 @@ div.formSingle {display: none;}
   /* 툴팁 일괄수정 */
   .tooltip-layer.w360 {width: 360px;}
   .tooltip-layer.w400 {width: 400px;}
-  .tooltip-layer .txt.tip .ul-list.bar li {
+  .tooltip-layer.w500 {width: 500px;}
+  .tooltip-layer .txt.tip .ul-list li {
 	  font-size: 13px;
 	  font-weight: 400;
 	  line-height: 18px;
@@ -2086,6 +2089,17 @@ div.formSingle {display: none;}
   .tooltip-layer .dl-list dd {font-weight:300; line-height: 18px;}
   .tab-wrap .tab-item .tooltip-layer .txt{ line-height: 18px; text-align: left;}
   .tab-wrap .tab-item:last-child .tooltip-layer {right: 100px;}
+
+  .tooltip-area.right .tooltip-layer{ right: 0;}
+
+  .tooltip-area .txt .tit-tooltip + .sub-txt {margin: 10px 0;}
+  .tooltip-area .txt > .ul-list.bar {margin-left: 10px;}
+  .tooltip-area .txt > .ul-list.bar .ul-list{margin-left: 0;}
+
+  .tooltip-area .txt .highlight {margin-top:10px;text-indent: -14px;margin-left: 14px;}
+  .tooltip-area .txt .highlight .ul-list {margin-left: 6px;}
+  .tooltip-area .txt .ul-list.dot .ul-list {margin-left: -8px;} 
+  .tooltip-area .txt .ul-list.dot .ul-list li {}
 /* ==============
 	datepicker
 ============== */
@@ -2713,6 +2727,7 @@ html.popOpen {overflow:hidden;}
 .button-area.board .btn-border + .select-area + .btn-border {margin-right:10px}
 
 .board-list table td .layer-box {position:relative}
+/* .board-list table td .layer-box p.tit.ellipsis {display: block;} */
 .board-list table .subject.on .layer-box {display: none;}
 .board-list table td .layer-box > button {display:none;position:absolute;}
 .board-list table td .layer-box.block > button {display:block;} 
@@ -3370,13 +3385,14 @@ html.popOpen {overflow:hidden;}
 }
 .payment-list .item label {
 	padding:12px 18px;
-	width: 160px;
+	min-width: 160px;
 	font-size: 15px;
 	font-weight: 500;
 	background-color:#f6f6f6;
 	border-radius: 29px;
 }
 .payment-list + .ul-list {margin:50px 0 20px}
+.payment-list .item label .btn-tooltip {vertical-align: text-bottom;}
 
 /* 이용통계조회 */
 .statistics .tab-wrap {padding-top: 20px;}

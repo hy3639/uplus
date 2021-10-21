@@ -224,7 +224,7 @@
 			</div>
 			<div class="cont-area id-management">
 				<div class="tit-area">
-					<h2 class="tit">아이디(서브계정) 관리</h2>					
+					<h2 class="tit">아이디(서브계정) 관리 <a class="btn-xxs bg-pink round" href="javascript:openWindowPop('../tip/tip.html', 'popup', 'width=858, height=794, status=no, menubar=no, toolbar=no, resizable=no');">가이드</a></h2>					
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
 						<li><a href="#">관리자</a></li>
@@ -310,18 +310,23 @@
 									<th scope="col">수신번호</th>
 									<th scope="col">
 										다운로드<br>차단
-										<div class="tooltip-area click">
-											<button type="button" class="btn-tooltip type2 btn-layer">툴팁</button>
-											<div class="tooltip-layer left">
-												<button type="button" class="btn-tooltip-close">툴팁닫기</button>
-												<p class="txt">
-													다운로드 차단 기능은 개인 정보를 보호하기 위한 무료 서비스입니다. <br>
-													· 차단 설정이 된 서브아이디로 로그인을 하게되면 아래 서비스가 제한됩니다.
-													<ul class="mgt10">
-														<li>1. "받은 팩스함" - PC저장/미리보기/이메일 보내기/카테고리 복사 기능 등 차단</li>
-														<li>2. "보낸 팩스함" - 미리보기 기능 등 차단</li>
+										<div class="tooltip-area" >
+											<button type="button" class="btn-tooltip type2">툴팁</button>
+											<div class="tooltip-layer w500 left" style="display: block;">
+												<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
+												<div class="txt tip">
+													<span class="tit-tooltip">다운로드 차단 기능?</span>
+													<ul class="ul-list dot mid">
+														<li>다운로드 차단 기능은 개인 정보를 보호하기 위한 무료 서비스입니다.</li>
+														<li>차단 설정이 된 서브아이디로 로그인을 하게되면 아래 서비스가 제한됩니다.
+															<ul class="ul-list mgt5">
+																<li>1. "받은 팩스함" - PC저장/미리보기/이메일 보내기/카테고리 복사 기능 등 차단</li>
+																<li>2. "보낸 팩스함" - 미리보기 기능 등 차단</li>
+															</ul>
+														</li>
 													</ul>
-												</p>
+													
+												</div>
 												<br>
 												<!-- <a href="#" class="btn-link">서비스 신청하기</a> -->
 											</div>
@@ -329,16 +334,21 @@
 									</th>
 									<th scope="col">
 										카카오워크<br>연동
-										<div class="tooltip-area click">
-											<button type="button" class="btn-tooltip type2 btn-layer">툴팁</button>
-											<div class="tooltip-layer left">
-												<button type="button" class="btn-tooltip-close">툴팁닫기</button>
-												<p class="txt">
-													카카오워크 이용 고객이 웹팩스와 연동하여 카카오워크 채팅방에서
-													팩스 수신 알림을 받을 수 있는 기능입니다.
-												</p>
-												<br>
-												<a href="#" class="btn-link">카카오워크 연동 가이드</a>
+										<div class="tooltip-area">
+											<button type="button" class="btn-tooltip type2">툴팁</button>
+											<div class="tooltip-layer left w450">
+												<!-- <button type="button" class="btn-tooltip-close">툴팁닫기</button> -->
+												<div class="txt tip">
+													<span class="tit-tooltip">카카오워크 연동이란?</span>
+													<p>카카오워크 이용 고객이 웹팩스와 연동하여 카카오워크 채팅방에서
+														팩스 수신 알림을 받을 수 있는 기능입니다.
+													</p>
+													<div class="button-area center">
+														<button type="button" class="btn-border btn-mid bg-pink">카카오워크 연동 가이드 바로가기</button>												
+													</div>
+													
+												</div>
+											
 											</div>
 										</div>
 									</th>

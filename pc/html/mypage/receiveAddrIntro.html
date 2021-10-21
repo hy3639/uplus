@@ -224,71 +224,18 @@
 			</div>
 			<div class="cont-area">
 				<div class="tit-area">
-					<h2 class="tit">수신번호 신청/관리</h2>					
+					<h2 class="tit">수신번호 신청/관리 <a class="btn-xxs bg-pink round" href="javascript:openWindowPop('../tip/tip.html', 'popup', 'width=858, height=794, status=no, menubar=no, toolbar=no, resizable=no');">가이드</a></h2>					
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
 						<li><a href="#">마이페이지</a></li>
 						<li>수신번호 신청/관리</li>
 					</ul>
 				</div>
-				<p class="sub-txt f-pink">
-					수신번호 신청 시 아래 내용을 확인해주세요. (선불요금상품 가입고객에 한함)
-				</p>	
-				<div class="section receive-address">
-					<div class="board-write">
-						<table>
-							<colgroup>
-								<col style="width:130px;">
-								<col>								
-							</colgroup>
-							<tbody>											
-								<tr>
-									<th scope="row">일반번호/070</th>
-									<td>
-										<ul class="ul-list arrow">
-											<li>수신번호를 신청하면 매월 1일에 충전금액에서 이용료 6,000원(VAT 미포함)이 차감됩니다.
-												<span class="indent f-pink">※ 매월 1일 잔여금액이 6,000원 이하일 경우 수신번호 상태가 자동으로 변경되므로 반드시 충전해 주셔야 합니다.</span>
-											</li>
-											<li> 이미 "일시정지"가 된 경우, 해당 금액을 충전하고 내정보관리 > 수신번호관리에서 "수신번호 재사용"을 클릭해야 정상 수신이 가능합니다.</li>
-											<li>"일시정지"상태에서 남아있는 수신번호 사용 일 수가 잔액의 범위 안에 있는 경우 (1일 200원으로 계산) 자동 차감되면서 정상 상태로 복구됩니다.</li>
-											<li>2회차 때 충전하지 않고, "수신번호 재사용을" 클릭하지 않을 경우 수신번호가 자동 해지되오니 양해 부탁드립니다.
-												<span class="indent">예 ) 5/15일 가입 후 수신번호 신청</span>
-												<ul class="ul-list dot sm">
-													<li>6/1일(1회차) - 충전금액이 6,000원 이하일 경우 -> 번호 일시정지</li>
-													<li>6/6일 - 충전금액이 5,000원 남아 있는 경우 -> 5,000원 차감되면서 정상 상태로 복구</li>
-													<li>7/1일(1회차) - 충전금액이 6,000원 이하일 경우 -> 번호 일시정지</li>
-													<li>8/1일(2회차) - 충전금액이 200원 이하일 경우 -> 번호 해지</li>
-												</ul>
-											</li>
-											<li>해지된 번호는 재사용하실 수 없으니 이점 양해 부탁드립니다.</li>
-										</ul>										
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">0503번호</th>
-									<td>
-										<ul class="ul-list arrow">
-											<li>수신번호를 신청하면 매월 1일에 충전금액에서 이용료 1,000원이 차감됩니다.
-												<span class="indent f-pink">※ 매월 1일 잔여금액이 1,000원 이하일 경우 수신번호 상태가 자동으로 변경되므로 반드시 충전해 주셔야 합니다.</span>
-												<ul class="ul-list dot sm">
-													<li>1회차: 일시중지 / ㆍ2회차: 해지</li>												
-												</ul>
-											</li>
-											<li>해지된 번호는 재사용하실 수 없습니다.</li>
-											<li>한 번 사용한 번호 이용료는 환불 불가합니다.</li>											
-										</ul>										
-									</td>
-								</tr>											
-							</tbody>
-						</table>
-					</div>
-				</div>
+				
 				<div class="section receive-address">
 					<h3 class="tit tit-area">수신번호 신청하기</h3>
 					<p class="sub-txt mgb15">
-						<span class="f-pink">수신번호를 약정 시 최저 이용료 3,000원은 면제됩니다.</span><br>
-						- 지역번호 및 국번을 선택하시면 신청가능한 번호를 선택하실 수 있습니다.<br>
-						- 0503번호는 선불고객 전용 번호로 후불고객은 사용이 불가합니다.
+						<span class="f-pink">수신번호를 약정 시 최저 이용료 3,000원은 면제됩니다.</span>
 					</p>
 					<div class="border-box">
 						<div class="group">
@@ -312,7 +259,12 @@
 									</span>
 								</div>
 								<a href="#" class="btn-mid bg-pink btnPop">신청하기</a>
-								<!-- <a href="#" class="btn-mid bg-gray btnPop" title="Popup01">선점하기</a> -->
+								<div class="tooltip-area right">
+									<button type="button" class="btn-tooltip">툴팁</button>
+									<div class="tooltip-layer left">
+										<p class="txt">선불 고객은 0503번호로 사용하실 수 있습니다.</p>
+									</div>
+								</div>
 							</div>							
 						</div>
 						<div class="group"> <!-- 번호선택시 노출 -->
@@ -344,7 +296,7 @@
 				</div>								
 				<div class="section fax receive-address">		
 					<h3 class="tit tit-area">수신번호 목록</h3>		
-					<div class="box-gray search-area">
+					<div class="box-gray search-area mgt0">
 						<div class="group">
 							<div class="item">
 								<label style="width:63px">신청일자</label>

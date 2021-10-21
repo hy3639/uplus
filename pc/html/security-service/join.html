@@ -232,28 +232,36 @@
 					</ul>
 				</div>
 				<p class="sub-txt">
-					팩스를 더욱 안전하고 편리하게 사용할 수 있는 부가서비스입니다.
+					팩스를 더욱 안전하고 편리하게 사용할 수 있는 무료 부가서비스입니다.
 				</p>
 			
 				<div class="section security-service">
 					<div class="security-service-list">
 						<div class="border-box-light category">
-							<p class="tit">자동 서식 분류</p>
+							<p class="tit">자동 서식 분류 <a class="btn-xxs bg-pink round" href="javascript:openWindowPop('../tip/tip.html', 'popup', 'width=858, height=794, status=no, menubar=no, toolbar=no, resizable=no');">가이드</a></p>
 							<span>
 								<em class="f-pink">팩스 수신 시,</em> 일정한 서식을 가진 문서를 자동으로 분류해주어 <br>
 								팩스 관리를 편리하게 해줍니다.<br>
 								<em class="f-light">(서식분류 유형 기본 3개 제공)</em>
 							</span>
-							<a href="#" class="btn-mid40 bg-pink">자세히 보기</a>
+							<div class="flex-area">
+								<span class="underline">2016.11.18 /  서비스사용중</span>
+								<button type="button" class="btn-border btn-mid bg-white btnPop" layer-name="Popup01">신청</button>
+								<button type="button" class="btn-border btn-mid bg-white btnPop" layer-name="Popup05">해지</button>
+							</div>
 						</div>
 						<div class="border-box-light send">
-							<p class="tit">개인정보 발송 차단</p>
+							<p class="tit">개인정보 발송 차단 <a class="btn-xxs bg-pink round" href="javascript:openWindowPop('../tip/tip.html', 'popup', 'width=858, height=794, status=no, menubar=no, toolbar=no, resizable=no');">가이드</a></p>
 							<span>
 								<em class="f-pink">팩스 발송 시,</em> 발송 팩스 문서에 대인정보가 포함되어 있을 경우 <br>
 								자동으로 발송을 차단합니다.<br>
 								<em class="f-light">(후불 관리자회원만 신청 가능합니다.)</em>
 							</span>
-							<a href="#" class="btn-mid40 bg-pink">자세히 보기</a>
+							<div class="flex-area">
+								<span class="underline">2016.11.18 /  서비스사용중</span>
+								<button type="button" class="btn-border btn-mid bg-white btnPop" layer-name="Popup01">신청</button>
+								<button type="button" class="btn-border btn-mid bg-white btnPop" layer-name="Popup03">해지</button>
+							</div>
 						</div>
 					</div>				
 				</div>				
@@ -299,59 +307,100 @@
 	</div>
 </div>
 
-<!-- 비밀번호가 일치하지 않는경우 -->
+<!-- 팩스 부가서비스 동의 -->
 <div class="layer-popup" title="Popup01">
 	<div class="popup sm">
-		<div class="popup-header">				
+		<div class="popup-header">
+			<p class="title">팩스 부가서비스 동의</p>			
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
 		<div class="popup-cont">
 			<p class="guide-txt center">
-				비밀번호가 일치하지 않습니다.
-			</p>				
+				정책 및 운영의 필요상<br>
+				'회원'에게 SMS,이메일 등을 통해 충분한 안내 후 <br>
+				수정, 중단, 변경할 수 있음에 동의합니다.
+			</p>
+			<div class="box-gray padding center">
+				<label>
+					<input type="checkbox" class="styled"> 이용에 동의합니다.
+				</label>
+			</div>				
 		</div>
 		<div class="button-area center">		
+			<button type="button" class="btn-mid bg-pink btnPop" title="Popup02">동의</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 신청완료 alert -->
+<div class="layer-popup" title="Popup02">
+	<div class="popup xs">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">신청되었습니다.</p>				
+		</div>
+		<div class="button-area center">					
+			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
+		</div>
+	</div>
+</div>
+<!-- 개인정보 발송 차단 서비스 해지 -->
+<div class="layer-popup" title="Popup03">
+	<div class="popup sm">
+		<div class="popup-header">		
+			<p class="title">개인정보 발송 차단 서비스 해지</p>				
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				개인정보 발송 차단 서비스를 해지합니다.<br>
+				동의하시겠습니까?
+			</p>				
+		</div>
+		<div class="button-area margin center">		
+			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>	
+			<button type="button" class="btn-mid bg-pink popClose btnPop" title="Popup04">예</button>			
+		</div>
+	</div>
+</div>
+
+<!-- 서비스 해지 alert -->
+<div class="layer-popup" title="Popup04">
+	<div class="popup xs">
+		<div class="popup-header">			
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			<p class="guide-txt center">서비스 해지가 완료되었습니다.</p>				
+		</div>
+		<div class="button-area center">					
 			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
 		</div>
 	</div>
 </div>
 
-<!-- 그룹웨어 연동아이디일경우 -->
-<div class="layer-popup" title="Popup02">
+<!-- 자동 서식 분류 서비스 해지 -->
+<div class="layer-popup" title="Popup05">
 	<div class="popup sm">
-		<div class="popup-header">			
+		<div class="popup-header">		
+			<p class="title">자동 서식 분류 서비스 해지</p>				
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
 		<div class="popup-cont">
 			<p class="guide-txt center">
-				그룹웨어 연동 아이디는 <br>
-				그룹웨어에서 변경하시기 바랍니다.<br>
-				그룹웨어로 이동 할까요?
+				자동 서식 분류 서비스를 해지합니다.<br>
+				동의하시겠습니까?
 			</p>				
 		</div>
-		<div class="button-area  margin center">
-			<button type="button" class="btn-border btn-mid bg-white popClose">취소</button>			
-			<button type="button" class="btn-mid bg-pink">이동</button>			
+		<div class="button-area margin center">		
+			<button type="button" class="btn-border btn-mid bg-white popClose">아니오</button>	
+			<button type="button" class="btn-mid bg-pink popClose btnPop" title="Popup04">예</button>			
 		</div>
 	</div>
 </div>
-<!-- 그룹웨어 연동아이디일경우 -->
-<div class="layer-popup" title="Popup03">
-	<div class="popup sm">
-		<div class="popup-header">			
-			<button class="btn-close popClose">팝업닫기</button>	
-		</div>
-		<div class="popup-cont">
-			<p class="guide-txt center">
-				그룹웨어 연동 아이디는<br>
-				그룹웨어에서 변경하시기 바랍니다.
-			</p>				
-		</div>
-		<div class="button-area center">			
-			<button type="button" class="btn-mid bg-pink popClose">확인</button>			
-		</div>
-	</div>
-</div>
+
 
 
 <script src="../../js/jquery-3.3.1.js"></script>
