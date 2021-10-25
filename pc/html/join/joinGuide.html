@@ -40,7 +40,7 @@
 				<div class="section">
 					<div class="flex-area justify">
 						<h3 class="tit">요금/신청하기</h3>
-						<span class="f-pink">부가세 미포함</span>
+						<span class="f-pink">부가세 포함</span>
 					</div>					
 					<div class="board-list type2">
 						<table>
@@ -55,9 +55,9 @@
 							<thead>
 								<tr>
 									<th scope="col" colspan="2">요금 항목</th>
-									<th scope="col">웹(web)형 선불</th>
-									<th scope="col">웹(web)형 후불</th>
-									<th scope="col">기업연동형</th>
+									<th scope="col">웹 선불</th>
+									<th scope="col">웹 후불</th>
+									<th scope="col">호스트 후불</th>
 								</tr>
 							</thead>
 							<tbody>							
@@ -68,20 +68,33 @@
 								</tr>
 								<tr>
 									<th scope="row" colspan="2">대상</th>
-									<td>개인고객 전용</td>
-									<td>사업자/법인 고객</td>
-									<td>사업자/법인/재판매 고객</td>									
+									<td>개인고객</td>
+									<td>사업자/법인</td>
+									<td>사업자/법인/재판매</td>									
 								</tr>
 								<tr>
-									<th scope="row"colspan="2">이용 플랫폼</th>
+									<th scope="row" colspan="2">이용 플랫폼</th>
 									<td colspan="2">웹사이트</td>
 									<td>기업 기간계 시스템 연동(ERP 등)</td>																		
 								</tr>
 								<tr class="padding">
-									<th  scope="row" colspan="2">수신번호 이용료<br>(수신 필요 시)</th>
-									<td>무약정 6,000원/번호당/월</td>
-									<td >
-										무약정 6,000원/번호당/월<br>
+									<th scope="row" colspan="2">수신번호 이용료<br>(수신 필요 시)
+										<div class="tooltip-area">
+											<button type="button" class="btn-tooltip">툴팁</button>
+											<div class="tooltip-layer w530 left" style="display: none;">																	
+												<p class="txt">
+													<span class="tit-tooltip">웹(Web)형 선불 수신 서비스 </span>
+													- 수신 서비스의 경우 매월 1일 기준으로 충전금액 6,600원 미달 시 바로 수신 중지됨.<br>
+													- 매월 1일 6,600원 이상 충전되어 있지 않을 경우 수신 서비스가 자동 중지되며, 충전 후에는 내정보관리 &gt; 수신번호 관리에서 "수신번호 재사용"을 클릭해야 정상 수신 가능.<br>
+													- 2개월 동안 충전하지 않고, "수신번호 재사용"을 클릭하지 않을 경우 수신번호 자동 해지.<br>
+													- "수신번호 해지 신청"을 해야 수신 서비스가 중지되고 과금이 발생하지 않음.																		
+												</p>
+											</div>
+										</div>
+									</th>
+									<td>무약정 6,600원/번호당/월</td>
+									<td>
+										무약정 6,600원/번호당/월<br>
 										<ul>
 											<li>1년약정 (5%할인)</li>
 											<li>2년약정 (10%할인)</li>
@@ -89,11 +102,11 @@
 										</ul>
 										
 									</td>
-									<td>6,000원/번호당/월</td>									
+									<td>6,600원/번호당/월</td>									
 								</tr>
 								<tr>
 									<th scope="row" colspan="2">발신 이용료(국내)</th>
-									<td colspan="3">39원/장</td>																	
+									<td colspan="3">42.9원/장</td>																	
 								</tr>
 								<tr>
 									<th scope="row" colspan="2">발신 이용료(국외)</th>
@@ -105,40 +118,52 @@
 								</tr>
 								<tr>
 									<th scope="row" rowspan="3" colspan="2">문자서비스</th>
-									<td colspan="3">SMS : 18원/건</td>																	
+									<td colspan="3">SMS : 19.8원/건</td>																	
 								</tr>
 								<tr>									
-									<td colspan="3">LMS : 30원/건</td>																	
+									<td colspan="3">LMS : 33원/건</td>																	
 								</tr>
 								<tr>									
-									<td colspan="3">MMS : 190원/건</td>																	
+									<td colspan="3">MMS : 209원/건</td>																	
 								</tr>
 								<tr>
 									<th scope="row" rowspan="2">부가서비스</th>
-									<td>수신 알리미</td>
-									<td colspan="3">Email : 무료      SMS : 18원/건 (19.8원/건)</td>																
+									<td>수신 알림</td>
+									<td colspan="3">Email : 무료      SMS : 19.8원/건</td>																
 								</tr>
 								<tr>									
-									<td>Return알리미</td>
+									<td>Return 알림</td>
 									<td>없음</td>
-									<td colspan="3">FAX : 39원/장 (42.9원/장)      SMS : 18원/건 (19.8원/건)</td>									
+									<td colspan="3">FAX : 42.9원/장      SMS : 19.8원/건</td>									
 								</tr>
 								<tr class="padding">
 									<th scope="row" colspan="2">최저이용료<br><span class="f-pink">(수신번호없이 발신전용 시에 적용됨)</span></th>
 									<td>없음</td>
-									<td>3,000원/월</td>
-									<td>30,000원/월</td>																									
+									<td>3,300원/월</td>
+									<td>33,000원/월</td>																									
 								</tr>
 							</tbody>
 						</table>
 					</div>
+					<ul class="ul-list dot mgt10">
+						<li>수신번호 이용료는 약정에 따라 추가 할인됩니다. (1년 약정 시(5%), 2년 약정(10%), 3년 약정(15%))</li>
+						<li>수신번호는 발수신이 모두 가능한 번호입니다. (최초 가입시 발신만 가능한 번호가 부여됩니다.)</li>
+						<li>발신 : 팩스 발송 성공된 요금만 과금됩니다.</li>
+						<li>수신 : 팩스 발신 요금과는 별도로 수신번호 이용료가 적용됩니다.</li>
+						<li>발신 최저 이용료 : 발신 사용량이 없거나, 발신요금이 최저 이용료 이하일 경우 부과됩니다.
+							<ul class="ul-list bar">
+								<li>웹(Web)형 서비스 : 발신 요금 3,300원 이하일 경우 부과(수신 발신 모두 이용 시 최저이용료가 부과되지 않습니다)</li>
+								<li>기업연동형 서비스 : 발신 요금 33,000원 이하일 경우 부과</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 				<div class="section">
 					<h3 class="tit">서비스 변경하기</h3>
 					<dl class="dl-list">
 						<dt>서비스를 아래의 항목으로 변경요청 시에는 1544-7003로 문의 주시기 바랍니다.</dt>
-						<dd>① 웹(후불) → 기업연동형</dd>
-						<dd>② 기업연동형 → 웹(후불)</dd>
+						<dd>① 웹(후불) → 호스트</dd>
+						<dd>② 호스트 → 웹(후불)</dd>
 					</dl>
 				</div>
 			</div>
@@ -201,7 +226,7 @@
 		</div>
 		<div class="popup-cont">
 			<p class="guide-txt center">
-				회원가입시 입력한 이메일과 휴대폰 메시지로<br>
+				서비스 신청시 입력한 이메일과 휴대폰 메시지로<br>
 				임시 비밀번호가 발송되었습니다.<br>
 				<span class="f-light f-sm">(메일 수신이 되지 않은 경우, 스팸 메일함을 확인해 주세요.)</span>
 			</p>				

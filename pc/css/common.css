@@ -2036,6 +2036,7 @@ div.formSingle {display: none;}
 	background:url(../images/icon/icon_18_info.png) no-repeat 0 0;
 	font-size:0;
 }
+.btn-tooltip.middle {vertical-align: middle;}
 .btn-tooltip.txt {
 	padding:0;
 	font-size: inherit;
@@ -2093,7 +2094,7 @@ div.formSingle {display: none;}
   .tooltip-area.right .tooltip-layer{ right: 0;}
 
   .tooltip-area .txt .tit-tooltip + .sub-txt {margin: 10px 0;}
-  .tooltip-area .txt > .ul-list.bar {margin-left: 10px;}
+  /* .tooltip-area .txt > .ul-list.bar {margin-left: 10px;} */
   .tooltip-area .txt > .ul-list.bar .ul-list{margin-left: 0;}
 
   .tooltip-area .txt .highlight {margin-top:10px;text-indent: -14px;margin-left: 14px;}
@@ -2498,14 +2499,14 @@ html.popOpen {overflow:hidden;}
 	font-size: 15px;
 }
 
-/* 회원가입 */
+/* 서비스 신청 */
 .tab-wrap.term .box-gray.border{padding:14px 0}
 .tab-wrap.term  .section + .button-area {margin-top: 30px;}
 
 /* ==========================================
 	서브 컨텐츠
 ========================================== */
-/* -----------회원가입 -----------*/
+/* -----------서비스 신청 -----------*/
 .step-area {
 	position:relative;
 	width:578px;
@@ -2783,6 +2784,8 @@ html.popOpen {overflow:hidden;}
 	flex: 1;
 	margin-right: 5px;
 }
+
+.button-area .right .btn-tooltip {vertical-align: middle;}
 
 /* 팩스 미리보기 */
 .faxviewer {min-width: initial; height:calc(100vh - 52px);	background-color:#b5b8bc; }
@@ -3453,6 +3456,7 @@ html.popOpen {overflow:hidden;}
 .id-management .border-box .btn-mid36 {width: 146px;}
 .id-management .board-list table th {position: relative}
 .id-management .board-list table th .tooltip-area {position: absolute; right:5px; bottom: 6px;}
+.id-management .board-list table th .tooltip-area.middle {bottom: 12px;}
 .id-management .board-list table th .tooltip-area .tooltip-layer {right: 0;}
 .id-management .board-list table tbody td {padding: 14px 5px;}
 .id-management .board-list table tbody td .btn-xxs {min-width: 54px; height: 23px;}
@@ -3741,7 +3745,7 @@ html.popOpen {overflow:hidden;}
 	display:flex; 
 	align-items:center;
 	height: 300px;
-	padding: 38px 82px 38px 60px;
+	padding: 38px 60px 38px 60px;
 	background-color:#fff;
 	border-bottom: 2px solid #e2e2e2;
 	font-size: 18px;
@@ -3947,6 +3951,11 @@ html.popOpen {overflow:hidden;}
 .wrapper.service .tab-cont3 .btn-lg {min-width: 141px;}
 .wrapper.service .tab-cont3 .btn-tooltip {vertical-align: top;}
 .wrapper.service .tab-cont3 .tooltip-area .txt {line-height: 20px;}
+.wrapper.service .tab-cont3 table tbody th {line-height: 22px;}
+.wrapper.service .tab-cont3 table tbody td {font-size: 17px; }
+.wrapper.service .tab-cont3 .box-list li .section {margin-top: 40px;}
+.wrapper.service .tab-cont3 .box-list li .section h3 {font-size: 18px; font-weight: 700; padding-bottom: 15px;}
+.wrapper.service .tab-cont3 .box-list li .section h3::before {display: none;}
 
 /* ----------- 기타 -----------*/
 .wrapper.error {display: flex; align-items: center; justify-content: center;}

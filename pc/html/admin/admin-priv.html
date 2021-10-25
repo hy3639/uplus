@@ -102,7 +102,7 @@
 					<div class="fax-area">
 						<div class="fax">
 							<a href="#" class="btn-fax-receive">
-								받은팩스함 <span class="txt">미확인 <em class="f-mint">0</em> 건</span>
+								받은 팩스함 <span class="txt">미확인 <em class="f-mint">0</em> 건</span>
 							</a>
 							<!-- <a href="#" class="btn-num-apply">
 								수신번호 <span class="txt arrow">신청하기</span>
@@ -234,11 +234,9 @@
 				<div class="section">
 					<h3 class="tit">SMS 인증 접속</h3>					
 					<dl class="dl-list"> 
-						<dt>설정 시, 전체 사용자 대하여 적용되므로, 설정 전 아이디관리에서 서브아이디별 핸드폰번호 유무를 확인하세요.</dt>
-						<dd>- 설정 후 서브아이디별 해제는 아이디관리에서 가능합니다.</dd>
-						<dd>- 서브아이디당 1개의 핸드폰으로 인증이 가능하므로 다수가 공유하는 경우 개별 아이디를 생성하여 적용하시기 바랍니다.</dd>
-						<dt>적용 설정 후, 인증프로세스를 적용할 부문을 1개이상 선택 필수 (로그인 / 팩스발송 / 문자발송 / 회원정보변경 / 아이디관리)</dt>
-						<dd>- 단,  U+웍스로부터 SSO로 접속될 경우에는 웹팩스로 자동로그인이 되기 때문에 로그인 시 SMS 인증은 적용되지 않습니다.</dd>
+						<dt>- 전체 사용자에게 적용되며 각 아이디별로 적용 여부 및 휴대폰 번호 설정은 아이디관리에서 하실 수  있습니다.(관리자>아이디 관리)</dt>
+						<dt>- U+웍스에서 SSO 연동으로 접속한 경우, 웹팩스는 자동로그인되기 때문에 로그인 시 SMS 인증이 적용되지 않습니다.</dt>
+						<dt>- 서브 아이디당 1개의 번호로만 인증이 가능하므로, 다수가 아이디를 공유하는 경우에는 개별 아이디를 생성하여 적용하시기 바랍니다.</dt>	
 					</dl>
 
 					<div class="board-write">
@@ -284,6 +282,7 @@
 											<label class="form-wrap"><input type="checkbox" class="styled"> 회원정보변경</label>
 											<label class="form-wrap"><input type="checkbox" class="styled"> 문자 발송</label>
 										</div>	
+										<div class="sub-txt f-pink">(인증 설정 시 1개 이상 선택 필수)</div>
 									</td>
 								</tr>
 								<tr>
@@ -299,12 +298,12 @@
 				</div>
 
 				<div class="section">
-					<h3 class="tit">직원 아이디 기능 제한 설정</h3>
-					<span class="sub-txt">모든 설정은 직원 아이디에만 적용되며(관리자 아이디는 적용되지 않음) 설정 확인 후 재로그인부터 적용됩니다.</span>
+					<h3 class="tit">서브 아이디 기능 제한 설정</h3>
+					<span class="sub-txt">모든 설정은 서브 아이디에만 적용되며(관리자 아이디는 적용되지 않음) 설정 확인 후 재로그인부터 적용됩니다.</span>
 
 					<div class="form-list chk-list">
-						<label class="form-wrap"><input type="checkbox" class="styled" checked> 이메일알리미 기능 제한 ( 설정 &gt; 이메일 알리미설정 기능을 사용할 수 없도록 합니다. )</label>
-						<label class="form-wrap"><input type="checkbox" class="styled"> 문자알리미 기능 제한 ( 설정 &gt; 문자 알리미설정 기능을 사용할 수 없도록 합니다. )</label>
+						<label class="form-wrap"><input type="checkbox" class="styled" checked> 이메일알림 기능 제한 ( 설정 &gt; 이메일 알림설정 기능을 사용할 수 없도록 합니다. )</label>
+						<label class="form-wrap"><input type="checkbox" class="styled"> 문자알림 기능 제한 ( 설정 &gt; 문자 알림설정 기능을 사용할 수 없도록 합니다. )</label>
 						<label class="form-wrap"><input type="checkbox" class="styled"> SMS 발송 기능 제한 ( 문자 보내기 기능을 사용할 수 없거나, 지정된 시간/아이디만 사용 가능하도록 합니다. )</label>
 						<label class="form-wrap"><input type="checkbox" class="styled"> 받은팩스함/보낸팩스함 문자 알림 기능 제한</label>
 						<label class="form-wrap"><input type="checkbox" class="styled"> 받은팩스함/중요문서함 팩스보내기, 다운로드, 이메일 보내기 기능 제한</label>
@@ -319,21 +318,21 @@
 					<h3 class="tit">받은 팩스함 설정</h3>
 
 					<div class="form-list chk-list">
-						<label class="form-wrap"><input type="checkbox" class="styled" checked> 받은 팩스함 문서 삭제 시 모든 아이디(직원 아이디, 관리자 아이디)에 동시 적용 <em class="f-pink">* 받은 팩스함의 문서 암호화 보관 설정은 "관리자 &gt; 수신번호 관리" 에서 제공합니다.</em></label>
-						<label class="form-wrap"><input type="checkbox" class="styled"> 받은 팩스함 문서메모 공유 적용 ( 체크시 메모내용을 모든 아이디(직원 아이디, 관리자 아이디) 간 공유합니다. )</label>
+						<label class="form-wrap"><input type="checkbox" class="styled" checked> 받은 팩스함 문서 삭제 시 모든 아이디의 팩스함 동시 삭제 연동<!--em class="f-pink">* 받은 팩스함의 문서 암호화 보관 설정은 "관리자 &gt; 수신번호 관리" 에서 제공합니다.</em--></label>
+						<label class="form-wrap"><input type="checkbox" class="styled"> 받은 팩스함 문서 메모 내용, 아이디간  동시 연동</label>
 					</div>
 					<div class="button-area center">						
 						<a href="#" class="btn-mid40 bg-pink">확인</a>					
 					</div>
 				</div>
 				<div class="section">
-					<h3 class="tit">접근 제한 기능
+					<h3 class="tit">서브 아이디 접속 전용 IP 설정
 						<div class="tooltip-area">
 							<button type="button" class="btn-tooltip">툴팁</button>
 							<div class="tooltip-layer left w450">
 								<p class="txt">
-									하나의 IP만 가능하며 직원 아이디는 입력한 IP 에서만 로그인이 허용됩니다.<br>
-									관리자 IP제한 설정은 별도 문의해 주시기 바랍니다.
+									하나의 IP만 가능하며 서브 아이디는 입력한 IP 에서만 로그인이 허용됩니다.<br>
+									관리자 IP제한 설정은 별도 문의해 주시기 바랍니다. (고객센터: 1544-8007)
 								</p>
 							</div>
 						</div>
@@ -348,7 +347,7 @@
 							</colgroup>
 							<tbody>		
 								<tr>
-									<th scope="row" class="center"><label for="txt1">접근 가능 IP 설정</label></th>
+									<th scope="row" class="center"><label for="txt1">접속 IP 설정</label></th>
 									<td>
 										<div class="input-btn">
 											<div class="input-text"><input type="text" id="txt1" style="width: 216px;"></div>
@@ -384,7 +383,7 @@
 				<div class="depth on">
 					<a href="#">내 가입 정보</a> 
 					<a href="#">가입정보 및 변경신청</a>
-					<a href="#">아이디(서브계정)관리</a>
+					<a href="#">아이디(서브 아이디)관리</a>
 					<a href="#">수신번호 신청/관리</a>
 					<a href="#" class="on">사용자 설정</a><!-- 메뉴 선택시 on 추가 -->
 					<a href="#">서식분류관리</a>

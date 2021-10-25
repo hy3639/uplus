@@ -102,7 +102,7 @@
 					<div class="fax-area">
 						<div class="fax">
 							<a href="#" class="btn-fax-receive">
-								받은팩스함 <span class="txt">미확인 <em class="f-mint">0</em> 건</span>
+								받은 팩스함 <span class="txt">미확인 <em class="f-mint">0</em> 건</span>
 							</a>
 							<!-- <a href="#" class="btn-num-apply">
 								수신번호 <span class="txt arrow">신청하기</span>
@@ -224,7 +224,7 @@
 			</div>
 			<div class="cont-area kakao">
 				<div class="tit-area">
-					<h2 class="tit">카카오워크 연동</h2>					
+					<h2 class="tit">카카오워크 연동 <a class="btn-xxs bg-pink round" href="javascript:openWindowPop('../tip/tip.html', 'popup', 'width=858, height=794, status=no, menubar=no, toolbar=no, resizable=no');">가이드</a></h2>					
 					<ul class="navi">
 						<li><a href="#">홈</a></li>
 						<li><a href="#">관리자</a></li>
@@ -235,20 +235,31 @@
 				<div class="section">
 					<h3 class="tit tit-area">수신번호 신청하기</h3>
 					<p class="sub-txt mgb15">
-						- U+웹팩스와 연동 설정을 위해 카카오워크에서 U+웹팩스 봇을 활성화한 관리자 ID를 입력해 주세요.<br>
-						- 웹팩스 관리자 계정과 연동한 카카오워크 관리자는 수신 알림을 받지 않습니다.<br>
-						- 수신 알림을 원할 시 아이디관리 메뉴에서 서브아이디를 생성하여 수신번호 매칭 후 동일한 카카오워크 관리자 계정을 연동해 주시기 바랍니다.<br>
-						- 관리자 아이디 연동 해제 시 서브 계정도 함께 연동이 자동 해제됩니다.
+						- U+웹팩스와 연동 설정을 위해 카카오워크에서 U+웹팩스 봇을 활성화한 관리자 아이디를 입력해 주세요.<br>
+						- 관리자 아이디 연동 해제 시 서브 아이디도 함께 연동이 자동 해제됩니다.
 					</p>
 					<div class="board-write">
 						<table>
 							<colgroup>
-								<col style="width:165px;">						
+								<col style="width:195px;">						
 								<col>													
 							</colgroup>
 							<tbody>	
 								<tr>
-									<th scope="row"><label for="txt01">관리자 카카오워크 ID</label></th>
+									<th scope="row"><label for="txt01">관리자 카카오워크 아이디 </label>
+										<div class="tooltip-area">
+											<button type="button" class="btn-tooltip">툴팁</button>
+											<div class="tooltip-layer w400 left">
+												<div class="txt tip">
+													<ul class="ul-list mgl0">
+														<li>웹팩스 관리자 아이디로 연동된 카카오워크 아이디는 수신 알림을 받을 수 없습니다.<br>
+														수신 알림을 원하시는 경우 아이디관리에서 다른 서브 아이디와 동일한 카카오워크 아이디를 연동하시기 바랍니다.
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>	
+									</th>
 									<td>
 										<div class="input-btn">
 											<div class="input-text"><input type="text" id="txt1" style="width: 216px;"></div>
@@ -264,7 +275,7 @@
 					<h3 class="tit tit-area">카카오워크에서 U+웹팩스 팩스 수신 알림 받기</h3>		
 					<div class="box-gray pdb0">
 						<p class="tit"><span class="f-pink">01</span> 기능소개</p>
-						<span class="sub-txt">웹팩스와 카카오워크 계정을 연동하여, 사용자의 카카오워크에서 팩스 수신 알림을 받을 수 있습니다.</span>
+						<span class="sub-txt">웹팩스와 카카오워크 아이디를 연동하여, 사용자의 카카오워크에서 팩스 수신 알림을 받을 수 있습니다.</span>
 						<dl class="dl-list">
 							<dt>· 팩스 확인 방법</dt>
 								<dd>
@@ -289,7 +300,7 @@
 					</div>
 
 					<div class="box-gray">
-						<p class="tit"><span class="f-pink">03</span> 웹팩스 설정 방법(가입/수신번호/계정생성)</p>
+						<p class="tit"><span class="f-pink">03</span> 웹팩스 설정 방법(가입/수신번호/아이디생성)</p>
 					
 						<dl class="dl-list mgt0">
 							<dt>· 가입하기</dt>
@@ -299,8 +310,8 @@
 							<dd class="img-area">
 								<img src="../../images/img/img_kakao3.png" alt="웹팩스 설정방법 설명">
 							</dd>
-							<dt class="mgt40">· 서브 계정 생성</dt>
-							<dd>① 관리자는 관리자 아이디관리 메뉴에서 다수의 서브아이디를 생성할 수 있으며, 임직원에게 부여할 수 있습니다.
+							<dt class="mgt40">· 서브 아이디 생성</dt>
+							<dd>① 관리자는 서브 아이디 관리 메뉴에서 다수의 서브 아이디를 생성할 수 있으며, 임직원에게 부여할 수 있습니다.
 								<ul class="ul-list bar sm">
 									<li>아이디 개별 등록: 기본정보사항을 넣어 등록하면 1개의 아이디가 생성됩니다.</li>
 									<li>아이디 일괄 등록: 샘플파일을 다운로드하여 기본정보사항을 넣어 업로드하면 다수의 아이디가 생성됩니다.</li>
@@ -309,15 +320,15 @@
 							<dd class="img-area">
 								<img src="../../images/img/img_kakao4.png" alt="웹팩스 설정방법 설명">
 							</dd>
-							<dd>② 서브아이디 생성 후 카카오워크 멤버와 연동을 완료하세요.
+							<dd>② 서브 아이디 생성 후 카카오워크 멤버와 연동을 완료하세요.
 								<ul class="ul-list bar sm">
-									<li class="none">* 수신번호 부여와 카카오워크 계정 연동은 순서 상관없이 진행 가능하며, 연동 후 수신번호를 부여하셔도 수신 알림을 받을 수 있습니다.</li>
+									<li class="none">* 수신번호 부여와 카카오워크 아이디 연동은 순서 상관없이 진행 가능하며, 연동 후 수신번호를 부여하셔도 수신 알림을 받을 수 있습니다.</li>
 								</ul>
 							</dd>
 							<dt class="mgt40">· 수신번호 분배</dt>
 							<dd>
 								<ul class="ul-list bar sm">
-									<li>만들었던 서브 계정의 [번호부여] 버튼을 클릭합니다.</li>
+									<li>만들었던 서브 아이디의 [번호부여] 버튼을 클릭합니다.</li>
 									<li>수신번호 중 해당 아이디에 부과할 번호를 선택하여 추가합니다.</li>
 									<li class="none">* 아이디 일괄등록 시 수신번호도 한번에 넣어서 등록할 수 있습니다.</li>
 								</ul>
@@ -347,7 +358,7 @@
 				<div class="depth on">
 					<a href="#">내 가입 정보</a> 
 					<a href="#">가입정보 및 변경신청</a>
-					<a href="#">아이디(서브계정)관리</a>
+					<a href="#">서브 아이디 관리</a>
 					<a href="#">수신번호 신청/관리</a>
 					<a href="#">사용자 설정</a>
 					<a href="#">서식분류관리</a>
