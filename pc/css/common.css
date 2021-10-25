@@ -760,7 +760,7 @@ footer  p {
 .f-light {font-weight:300 !important}
 .f-bold {font-weight:700 !important}
 
-.f-sm {font-size:12px}
+.f-sm {font-size:12px !important}
 .f-13 {font-size:13px}
 .f-14 {font-size:14px}
 
@@ -1713,6 +1713,7 @@ input[type=checkbox][class^=styled] {
 	font-size: 12px; 
 	font-weight: 300; 
 }
+.board-write td .guide-txt.type2 {font-size:12px; color:#e03d7c; margin-left: 0; margin-top: 4px;line-height: 16px;}
 .board-write td .input-email {display: inline-flex; align-items: center;}
 .board-write td .input-email + label {margin-left: 25px;}
 .board-write td .input-email .input-text {width: 141px;}
@@ -1824,6 +1825,7 @@ div.formSingle {display: none;}
 .grid-style.sms .attach .cont .formSingle .count-area .count span {color:#000}
 .grid-style .cont .board-write td .btn-xxs {vertical-align: initial;}
 .grid-style .cont .board-write td .tooltip-area .btn-tooltip {vertical-align: middle; margin-left: 3px;}
+.grid-style .cont .board-write td .tooltip-area .btn-tooltip.middle {vertical-align: text-bottom;}
 
 /* 그리드영역 스타일 */
 .board-grid {min-height: 630px; background-color:#ddd}
@@ -2036,7 +2038,7 @@ div.formSingle {display: none;}
 	background:url(../images/icon/icon_18_info.png) no-repeat 0 0;
 	font-size:0;
 }
-.btn-tooltip.middle {vertical-align: middle;}
+.btn-tooltip.middle {vertical-align: middle !important;}
 .btn-tooltip.txt {
 	padding:0;
 	font-size: inherit;
@@ -3386,7 +3388,8 @@ html.popOpen {overflow:hidden;}
 .payment-list .item.phone {
 	background:url(../images/img/img_120_phone.png) no-repeat center top;
 }
-.payment-list .item label {
+.payment-list .item .txt {
+	display: inline-block;
 	padding:12px 18px;
 	min-width: 160px;
 	font-size: 15px;
