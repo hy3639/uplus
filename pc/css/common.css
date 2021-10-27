@@ -771,6 +771,9 @@ footer  p {
 .right {text-align: right !important;}
 .left {text-align: left !important;}
 
+/*인라인/블록*/
+.block {display: block;}
+
 /* 말줄임 */
 .ellipsis {
 	display: block; 
