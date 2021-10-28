@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	resQuick(); // 반응형 퀵
 	loding(); //로딩바
-	slideInfo();
+	initSwiper();
 
 /*======= 공통 (레이아웃) ======= */
 	
@@ -323,6 +323,9 @@ $(window).on('load', function(){
 $(window).resize(function(){
 	resQuick(); // 반응형 퀵
 	layerPop(); //레이어팝업
+
+	ww = $(window).width();
+	initSwiper();
 });
 
 /* 라디오,체크박스*/
@@ -488,14 +491,24 @@ function loding(){
 /*=======// 로딩바 ======= */
 
 
-/* 상단 공지 슬라이드 */
-function slideInfo() {
-	$('.info-slide').each(function(){
-		var swiper = new Swiper(".info-slide", {			
-			pagination: {
-				el: ".swiper-pagination",
-			  },
-		});
+/*======= 서비스소개 모바일 슬라이드 ======= */
+var ww = $(window).width();
+var mySwiper = undefined;
+function initSwiper() {
+
+  if (ww < 768 && mySwiper == undefined) {
+    mySwiper = new Swiper(".info-slide", {
+		pagination: {
+			el: ".swiper-pagination",
+		  },
 	});
-	
+  } else if (ww >= 768 && mySwiper != undefined) {
+    mySwiper.destroy();
+    mySwiper = undefined;
+  }
 }
+/*=======// 서비스소개 모바일 슬라이드 ======= */
+
+
+ 
+ 
