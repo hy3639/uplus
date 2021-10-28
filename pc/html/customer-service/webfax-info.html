@@ -2,7 +2,8 @@
 <html lang="ko">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>U+ 웹팩스</title>
 	<link rel="stylesheet" type="text/css" href="../../css/common.css">
 	<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.css">
@@ -13,11 +14,11 @@
 	<div class="header">
 		<h1 class="s-logo"><a href="#" class="logo">U+ 웹팩스</a></h1>
 		<ul class="link-area">
-			<li><a href="#">웹팩스란?</a></li>
+			<li class="on"><a href="#">웹팩스란?</a></li>
 			<li><a href="#">상세소개</a></li>
 			<li><a href="#">이벤트</a></li>
-			<li><a href="#" class="btn-mid bg-pink">로그인</a></li>
-			<li><a href="#" class="btn-border btn-mid bg-white">서비스 신청</a></li>
+			<li class="mo-hide"><a href="#" class="btn-mid bg-pink">로그인</a></li>
+			<li class="mo-hide"><a href="#" class="btn-border btn-mid bg-white">서비스 신청</a></li>
 		</ul>
 	</div>
 	<div class="container">		
@@ -32,38 +33,62 @@
 							U+웹팩스로 팩스기기 대체하여 <br>
 							직원별 1인 1팩스로 사용해보세요.
 						</span>
-						<div class="button-area">
-							<a href="#" class="btn-lg bg-pink">서비스 신청</a>
-							<a href="#" class="btn-border btn-lg bg-white">영상 가이드</a>
+						<div class="button-area mo-hide">
+							<a href="#" class="btn-lg bg-pink ">서비스 신청</a>
+							<a href="#" class="btn-border btn-lg bg-white">영상 가이드</a>							
 						</div>
 					</div>
 					<div class="right">
 						<img src="../../images/img/img_service_icon.png" alt="신규가입하면 수신번호요금 50% 할인 (팩스발송 39원/장, 수신번호 3,000원/월)" >
 					</div>
+					<div class="button-area pc-hide">						
+						<a href="#" class="btn-border btn-mid bg-white mgl0"><span class="icon-apple">App Store</span></a>
+						<a href="#" class="btn-border btn-mid bg-white"><span class="icon-android">Google Play</span></a>
+					</div>
 				</div>			
 			</div>
-			<p class="txt-banner">U+웹팩스는 메일처럼 PC/모바일로 팩스를 수발신 및 관리하는 서비스입니다.</p>
+			<p class="txt-banner">U+웹팩스는 메일처럼 PC/모바일로 팩스를<br class="pc-hide"> 수발신 및 관리하는 서비스입니다.</p>
 		</div>
 		<div class="section">
 			<div class="cont cont1">
-				<h2><span class="f-pink">U<em class="plus">+</em>웹팩스</span>를 왜 사용해야 하는가</h2>
-				<ul class="flex-area">
+				<h2><span class="f-pink">U<em class="plus">+</em>웹팩스</span>를<br class="pc-hide"> 왜 사용해야 하는가</h2>
+				<div class="info-slide">
+					<div class="swiper-wrapper">							
+						<div class="swiper-slide">
+							<div class="item">
+								모바일로<span class="f-bold">언제 어디서나 수발신</span>
+							</div>	
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+								직원별 계정으로<span class="f-bold">1인 1팩스 업무</span>
+							</div>	
+						</div>	
+						<div class="swiper-slide">
+							<div class="item">
+								팩스기기 대체로<span class="f-bold">페이퍼리스 업무
+							</div>	
+						</div>				
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- <ul class="flex-area">
 					<li>모바일로<span class="f-bold">언제 어디서나 수발신</span></li>
 					<li>직원별 계정으로<span class="f-bold">1인 1팩스 업무</span></li>
 					<li>팩스기기 대체로<span class="f-bold">페이퍼리스 업무</span></li>
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 		<div class="section gray">
 			<div class="cont cont2">
-				<h2><span class="f-pink">U<em class="plus">+</em>웹팩스</span> 이렇게 사용하세요</h2>
+				<h2 class="mo"><span class="f-pink">U<em class="plus">+</em>웹팩스</span> 이렇게 사용하세요</h2>
 				<ul class="box-list">
 					<li class="left item1">
 						<div>
 							<span class="f-bold">메일처럼 팩스 발송 및 관리</span>
 							U+웹팩스는 메일과 동일한 프로세스로 메일을 작성하는 것처럼<br>
 							팩스를 발송하고 보낸/받은 팩스함에서 관리할 수 있습니다.<br>
-							<a href="#" class="btn-mid40 bg-gray">자세히 보기</a>
+							<a href="#" class="btn-mid40 bg-gray mo-hide">자세히 보기</a>
 						</div>
 					</li>
 					<li class="right item2">
@@ -71,7 +96,7 @@
 							<span class="f-bold">임직원별 팩스 계정생성 및 부여</span>
 							직원별 팩스계정생성 및 부여가 가능하여 <br>
 							직원 자리에 팩스가 있는 것처럼 업무가 가능합니다.<br>
-							<a href="#" class="btn-mid40 bg-gray">자세히 보기</a>
+							<a href="#" class="btn-mid40 bg-gray mo-hide">자세히 보기</a>
 						</div>
 					</li>
 					<li class="left item3">
@@ -79,7 +104,7 @@
 							<span class="f-bold">모바일로 휴대형 &amp; 개인형 팩스기기로 활용</span>
 							개인은 모바일앱에서 간편서비스 신청을 할 수 있으며,<br>
 							사진을 촬영하여 발송 및 PC웹과 동일하게 관리가 가능합니다.<br>
-							<a href="#" class="btn-mid40 bg-gray">자세히 보기</a>
+							<a href="#" class="btn-mid40 bg-gray mo-hide">자세히 보기</a>
 						</div>
 					</li>
 					<li class="right item4">
@@ -87,7 +112,7 @@
 							<span class="f-bold">문서에서 [인쇄] 버튼으로 팩스 발송</span>
 							간편팩스 프로그램 설치 후 문서를 열어 인쇄 버튼으로 <br>
 							팩스를 간편하게 발송합니다.<br>
-							<a href="#" class="btn-mid40 bg-gray">자세히 보기</a>
+							<a href="#" class="btn-mid40 bg-gray mo-hide">자세히 보기</a>
 						</div>
 					</li>
 					<li class="left item5">
@@ -95,7 +120,7 @@
 							<span class="f-bold">팩스 수발신 알림으로 팩스 분실 방지</span>
 							다양한 방법(문자/이메일/카카오톡/팩스)으로 <br>
 							팩스 수신, 발신 알림이 전달됩니다.<br>
-							<a href="#" class="btn-mid40 bg-gray">자세히 보기</a>
+							<a href="#" class="btn-mid40 bg-gray mo-hide">자세히 보기</a>
 						</div>
 					</li>
 					<li class="right item6">
@@ -107,7 +132,7 @@
 								현재 U+웍스(그룹웨어) / 카카오워크 가입고객은 연동이 되어있어 <br>
 								웹팩스내에서 연동 설정이 가능합니다.
 							</span> 
-							<a href="#" class="btn-mid40 bg-gray">자세히 보기</a>
+							<a href="#" class="btn-mid40 bg-gray mo-hide">자세히 보기</a>
 						</div>
 					</li>
 				</ul>
@@ -115,10 +140,10 @@
 		</div>
 		<div class="section">
 			<div class="img-banner">
-				<a href="#"><img src="../../images/img/img_sevice_banner.png" alt="신규가입하면 수신번호 요금 50%할인 / 기존 수신번호 이용료 6000원 에서 3000원"></a>
+				<a href="#"><img src="../../images/mo/img_sevice_banner.png" alt="신규가입하면 수신번호 요금 50%할인 / 기존 수신번호 이용료 6000원 에서 3000원"></a>
 			</div>
 		</div>
-		<div class="section gray">
+		<div class="section gray mo-hide">
 			<div class="cont cont3">				
 				<ul class="flex-area">
 					<li><a href="#">호스트 모듈 신청</a></li>

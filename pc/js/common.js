@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	resQuick(); // 반응형 퀵
 	loding(); //로딩바
-	
+	slideInfo();
 
 /*======= 공통 (레이아웃) ======= */
 	
@@ -486,3 +486,16 @@ function loding(){
 }
 
 /*=======// 로딩바 ======= */
+
+
+/* 상단 공지 슬라이드 */
+function slideInfo() {
+	$('.info-slide').each(function(){
+		var swiper = new Swiper(".info-slide", {			
+			pagination: {
+				el: ".swiper-pagination",
+			  },
+		});
+	});
+	
+}
