@@ -2,6 +2,7 @@ $(document).ready(function(){
 	resQuick(); // 반응형 퀵
 	loding(); //로딩바
 	initSwiper();
+	fixedHeader();
 
 /*======= 공통 (레이아웃) ======= */
 	
@@ -330,6 +331,10 @@ $(window).resize(function(){
 	initSwiper();
 });
 
+$(window).scroll(function(){
+	fixedHeader();
+});
+
 /* 라디오,체크박스*/
 function rdoCheck(){
     $('input[type=radio].styled, input[type=checkbox].styled,input[type=checkbox].styled2').each(function(){
@@ -514,6 +519,16 @@ function initSwiper() {
 }
 /*=======// 서비스소개 모바일 슬라이드 ======= */
 
+
+function fixedHeader(){
+	var winH = $(this).scrollTop();
+
+    if(0 < winH) {
+      $(".header").addClass("fixed");
+    } else {
+      $(".header").removeClass("fixed");
+    }
+}
 
  
  

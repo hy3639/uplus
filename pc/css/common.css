@@ -740,6 +740,7 @@ footer  p {
 .mgr8 {margin-right:8px;}
 .mgb15 {margin-bottom:15px;}
 .mgb30 {margin-bottom:30px;}
+.mgb40 {margin-bottom:40px;}
 .mgt0 {margin-top:0 	 !important;}
 .mgt5 {margin-top:5px !important;}
 .mgt10 {margin-top:10px;}
@@ -4077,8 +4078,38 @@ html.popOpen {overflow:hidden;}
 .sms-confirm .input-btn .bg-white {margin-left: 10px;}
 .sms-confirm .input-btn + .guide-txt {margin-top: 5px;}
 
+/*
+.wrapper.service .header.fixed {position:fixed; left:0; top:0; right:0;background-color:#fff; z-index: 100; transition: ease-in-out .2s;}
+.wrapper.service .header.fixed h1 .logo {
+	display: block;
+	width:137px;
+	height:40px;
+	background:url(../images/layout/login/h1_login_bk2.png) no-repeat 0 0;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+}
+.wrapper.service .header.fixed  .link-area:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 
+.wrapper.service .header.fixed  .link-area li{
+	position: relative;
+	float:left;
+} 
+.wrapper.service .header.fixed  .link-area a {
+	color:#000;
+	font-size: 18px;
+	font-weight: 500;
+}
 
+.wrapper.service .header.fixed  .link-area .bg-pink {color:#fff}
+.wrapper.service .header.fixed .link-area a.btn-mid {font-size: 13px; font-weight: normal;}
+.wrapper.service.header.fixed  .link-area li + li{margin-left: 40px;}
+.wrapper.service .header.fixed  .link-area li:last-child a {color:#333}
+*/
 
 /* 서비스소개 모바일 */
 @media screen and (max-width: 768px) {
@@ -4086,20 +4117,31 @@ html.popOpen {overflow:hidden;}
 	.pc-hide {display: block !important;}
 	.mo-hide {display: none !important;}
 	#quickLink {display: none;}
+
+	.wrapper.service {min-width: 100%;background: url(../images/mo/visual_service.jpg) no-repeat 0 0; background-size:100% 554px}
 	.wrapper.service .section.gray {background-color:#fff; padding: 0 25px;}
 	.wrapper.service .cont {width: 100%;padding: 40px 0;}
 	
-	.wrapper.service .header .link-area a {font-size: 15px;}
-	.wrapper.service .header .link-area li.on a {color:#e03d7c}
-	.wrapper.service {min-width: 100%;background: url(../images/mo/visual_service.jpg) no-repeat 0 0; background-size:100% 554px}
 	.wrapper.service .header {
 		padding: 0;
 		justify-content: center;
 		height: 56px;
 		background-color: rgba(0, 0, 0, 0.5);
 	}
+	.wrapper.service .header.fixed {
+		background-color: #fff;
+	}	
+	
+	
+
+
+
 	.wrapper.service .header h1 {display: none;}
-	.wrapper.service .visual .sub-txt {font-size: 15px; line-height: 23px; font-weight: 300;}
+	.wrapper.service .header .link-area a {font-size: 15px;}
+	.wrapper.service .header .link-area li.on a {color:#e03d7c}
+	
+	
+	
 
 	.wrapper.service .footer {padding: 15px 0;}
 	.wrapper.service .footer .link-area {margin-bottom: 5px;}
@@ -4111,6 +4153,7 @@ html.popOpen {overflow:hidden;}
 	.wrapper.service  .visual .cont .flex-area .left .button-area {justify-content: center;}
 	.wrapper.service  .visual .cont .flex-area .right {margin:30px auto 35px;width: 233px;}
 	.wrapper.service  .visual .cont .flex-area .right img {width: 100%;}
+	.wrapper.service .visual .sub-txt {font-size: 15px; line-height: 23px; font-weight: 300;}
 	.wrapper.service  .visual .button-area {margin-top: 0;}
 	.wrapper.service  .visual .button-area > .btn-mid {width: 135px; border-radius: 5px; border: 0;}
 	.wrapper.service  .visual .button-area > .btn-mid + .btn-mid {margin-left: 4px;}
@@ -4224,8 +4267,17 @@ html.popOpen {overflow:hidden;}
 	.wrapper.service .cont4 .btn-lg:after { margin-left: 5px; width:12px; height:12px;  background: url(../images/mo/arrow_big.png) no-repeat 0 0;vertical-align: -1px; background-size: 12px auto;}
 
 
-	.wrapper.service .tab-wrap {padding: 0 16px;}
+	.wrapper.service .tab-wrap {padding: 0 16px; margin-top: 30px;}
+	.wrapper.service .tab-wrap .section.gray {padding: 0;}
 	.wrapper.service .tab-wrap .tab-lst{ width: 100%;}
+	.wrapper.service .tab-wrap .tab-item .txt {height: 46px; line-height: 46px; font-size: 15px;}
 
+	.wrapper.service .tab-cont h3:before {display: none;}
+	.wrapper.service .tab-cont > .section:first-child > .cont {text-align: center;}
+	.wrapper.service .tab-cont1 .section:first-child .cont {background: url(../images/mo/img_h3_1.png) no-repeat center; background-size: 207px auto;}
 
+	.wrapper.service .tab-cont h3 {font-size: 30px;}
+	.wrapper.service .tab-cont h3 + p {padding-top: 200px; font-size: 15px; line-height: 22px;}
+
+	.wrapper.service .tab-cont .box-list > li > div {width: 100%;}
 }
