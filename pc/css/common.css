@@ -2017,8 +2017,7 @@ div.formSingle {display: none;}
 ============== */
 .tooltip-area {display: inline-block;}
 .tooltip-layer {
-	/* display:none; */
-	display: block;
+	display:none;
 	position:absolute;
 	width:320px;
 	padding:15px 37px 15px 15px;
