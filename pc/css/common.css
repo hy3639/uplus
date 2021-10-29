@@ -1430,8 +1430,7 @@ input[type=checkbox][class^=styled] {
 	appearance: none;
 	box-sizing: border-box;
 }	
-.select-box select.styled option {position: relative; z-index: 10;}
-.select-box select.styled {position: relative; z-index: 10;}
+
 .select-box.wide {display:block;}
 .select-box.wide select{
 	width:100%; 
