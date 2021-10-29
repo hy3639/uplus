@@ -68,6 +68,8 @@ $(document).on('click', '.tab-item .btn', function(){
 $('.tooltip-area').mouseenter(function(){
 	if(!$(this).hasClass('click')){
 		$(this).find('.tooltip-layer').show();
+	
+		$('select').blur(); 
 	}
 	
 });
@@ -497,11 +499,14 @@ var mySwiper = undefined;
 function initSwiper() {
 
   if (ww < 768 && mySwiper == undefined) {
-    mySwiper = new Swiper(".info-slide", {
-		pagination: {
-			el: ".swiper-pagination",
-		  },
+	$('.info-slide').each(function(){
+		mySwiper = new Swiper(".info-slide", {
+			pagination: {
+				el: ".swiper-pagination",
+			  },
+		});
 	});
+  
   } else if (ww >= 768 && mySwiper != undefined) {
     mySwiper.destroy();
     mySwiper = undefined;
