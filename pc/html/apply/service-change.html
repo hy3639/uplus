@@ -853,28 +853,117 @@
 </div>
 
 <!-- 우편번호 검색 -->
-<div class="layer-popup" title="Popup01">
+<div class="layer-popup zip" title="Popup01">
 	<div class="popup xl">
 		<div class="popup-header">
 			<p class="title">우편번호 검색</p>
 			<button class="btn-close popClose">팝업닫기</button>	
 		</div>
 		<div class="popup-cont">
-			
 			<div class="section">
-				<div class="flex-area justify">
+				<div class="flex-area left">
 					<p class="tit">지역검색</p>
 					<div class="input-btn">
-						<div class="input-text"><input type="text" id="txt1" style="width: 176px;"></div>
-						<button type="button" class="btn-border btn-mid bd-pink btnPop" layer-name="Popup03">확인</button>
+						<div class="input-text"><input type="text" id="txt1" style="width: 300px;"></div>
+						<button type="button" class="btn-border btn-mid bd-pink">검색</button>
 					</div>
 				</div>			
 				<ul class="ul-list dot">
 					<li>찾고자하는 도로명과 건물명 혹은 건물번호를 공백(도로명 한칸띄고 건물번호)로 구분하여 입력하여 주시기 바랍니다.</li>
 					<li>도로명을 모르실 경우 도로명주소 안내시스템 <a href="#" class="underline" target="_blank">(http://www.juso.go.kr)</a> 에서 확인하시면 됩니다.</li>
-					<li class="none">예시) 한강대로 32 → "한강대로 (한 칸 띄고) 32"를 입력해주세요.</li>
-					<li>한강대로102길 32 → "한강대로102길 (한 칸 띄고) 32"를 입력해주세요.</li>
+					<li class="none f-pink">
+						예시) 한강대로 32 → "한강대로 (한 칸 띄고) 32"를 입력해주세요.<br>
+						<span class="indent">한강대로102길 32 → "한강대로102길 (한 칸 띄고) 32"를 입력해주세요.</span>
+					</li>				
 				</ul>
+
+				<div class="scroll-board-list bdb0">
+					<table>
+						<caption>우편번호 타이틀</caption>
+						<colgroup>
+							<col style="width:20%;">	
+							<col>																							
+						</colgroup>	
+						<thead>
+							<tr>
+								<th scope="col">우편번호</th>
+								<th scope="col">주소</th>															
+							</tr>
+						</thead>							
+					</table>
+				</div>
+				<div class="scroll-board-list scroll-area" style="max-height: 200px;">
+					<table>
+						<caption>우편번호 리스트</caption>
+						<colgroup>
+							<col style="width:10%;">	
+							<col>																	
+						</colgroup>							
+						<tbody>	
+							<!-- 데이터 없는경우 -->
+							<tr>
+								<td colspan="2">정보가 없습니다.</td>	
+							</tr>
+							<!--// 데이터 없는경우 -->
+							<tr>														
+								<td colspan="2">
+									<a href="#">
+										<span class="zip">03924</span>
+										<span class="address">서울시 마포구 월드컵북로 416 (상암동,(주)엘지유플러스 상암사옥) 울시 마포구 월드컵북로 416 (상암동,(주)엘지유플러스 상암사옥)</span>
+									</a>
+								</td>	
+							</tr>
+							<tr>														
+								<td colspan="2">
+									<a href="#">
+										<span class="zip">03924</span>
+										<span class="address">서울시 마포구 월드컵북로 416 (상암동,(주)엘지유플러스 상암사옥)</span>
+									</a>
+								</td>	
+							</tr>
+							<tr>														
+								<td colspan="2">
+									<a href="#">
+										<span class="zip">03924</span>
+										<span class="address">서울시 마포구 월드컵북로 416 (상암동,(주)엘지유플러스 상암사옥)</span>
+									</a>
+								</td>	
+							</tr>
+							<tr>														
+								<td colspan="2">
+									<a href="#">
+										<span class="zip">03924</span>
+										<span class="address">서울시 마포구 월드컵북로 416 (상암동,(주)엘지유플러스 상암사옥)</span>
+									</a>
+								</td>	
+							</tr>
+							<tr>														
+								<td colspan="2">
+									<a href="#">
+										<span class="zip">03924</span>
+										<span class="address">서울시 마포구 월드컵북로 416 (상암동,(주)엘지유플러스 상암사옥)</span>
+									</a>
+								</td>	
+							</tr>
+							<tr>														
+								<td colspan="2">
+									<a href="#">
+										<span class="zip">03924</span>
+										<span class="address">서울시 마포구 월드컵북로 416 (상암동,(주)엘지유플러스 상암사옥)</span>
+									</a>
+								</td>	
+							</tr>
+							<tr>														
+								<td colspan="2">
+									<a href="#">
+										<span class="zip">03924</span>
+										<span class="address">서울시 마포구 월드컵북로 416 (상암동,(주)엘지유플러스 상암사옥)</span>
+									</a>
+								</td>	
+							</tr>
+						</tbody>
+					</table>
+				</div>
 				
 			</div>			
 					

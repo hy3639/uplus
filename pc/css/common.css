@@ -646,11 +646,12 @@ footer  p {
 }
 
 /*로그인전 레이아웃*/
-.bgNone {
+.bgNone, .service.event {
 	background-color:#f9f9f9;
 }
 .popOpen .bgNone {height: 100vh;}
-.bgNone .header {
+.bgNone .header,
+.service.event .header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -658,27 +659,31 @@ footer  p {
 	background-color:#fff;
 	border-bottom: 1px solid #e8e8e8;
 }
-.bgNone .header h1 .logo {
+.bgNone .header h1 .logo,
+.service.event .header h1 .logo {
 	display: block;
 	width:137px;
 	height:40px;
-	background:url(../images/layout/login/h1_login_bk2.png) no-repeat 0 0;
+	background:url(../images/layout/login/h1_login_bk2.png) no-repeat 0 0 !important;
 	font-size: 0;
     line-height: 0;
     text-indent: -9999px;
 }
-.bgNone .header  .link-area:after {
+.bgNone .header  .link-area:after,
+.service.event .header  .link-area:after{
 	content: '';
 	display: block;
 	clear: both;
 }
 
-.bgNone .header  .link-area li{
+.bgNone .header  .link-area li,
+.service.event .header  .link-area li{
 	position: relative;
 	float:left;
 } 
-.bgNone .header  .link-area a {
-	color:#000;
+.bgNone .header  .link-area a,
+.service.event .header  .link-area a {
+	color:#000 !important;
 	font-size: 18px;
 	font-weight: 500;
 }
@@ -686,13 +691,16 @@ footer  p {
 .bgNone .header  .link-area .tooltip-area {vertical-align: top;}
 .bgNone .header  .link-area .tooltip-layer {right: 0;}
 
-.bgNone .container {
+.bgNone .container,
+.service.event .container {
 	position:inherit;
 	min-height: 100vh;
 	padding:40px 0 20px;
 }
-.bgNone .container .cont-wrap {width:960px}
-.bgNone .container .cont-area {
+.bgNone .container .cont-wrap,
+.service.event .container .cont-wrap {width:960px}
+.bgNone .container .cont-area,
+.service.event .container .cont-area {
 	padding:45px;
 	background-color:#fff;
 	border:1px solid #dbdbdb;
@@ -740,7 +748,7 @@ footer  p {
 .mgr8 {margin-right:8px;}
 .mgb15 {margin-bottom:15px;}
 .mgb30 {margin-bottom:30px;}
-.mgb40 {margin-bottom:40px;}
+.mgb40 {margin-bottom:40px !important;}
 .mgt0 {margin-top:0 	 !important;}
 .mgt5 {margin-top:5px !important;}
 .mgt10 {margin-top:10px;}
@@ -945,8 +953,10 @@ footer  p {
 	left: 0;
 	top: 0;
 }
-.ul-list.bar li.none {padding-left: 0;}
-.ul-list.bar li.none:before {display: none;}
+.ul-list.bar li.none,
+.ul-list.dot li.none {padding-left: 0;}
+.ul-list.bar li.none:before,
+.ul-list.dot li.none:before {display: none;}
 .ul-list.bar.big li{font-size: 14px; font-weight: normal; line-height: 21px;}
 .ul-list.bar.mid li{font-size: 13px; font-weight: normal; line-height: 20px;}
 
@@ -1967,6 +1977,7 @@ div.formSingle {display: none;}
 	font-size:13px;
 }
 .tab-lst .tab-item .btn > .txt {line-height: 38px;}
+
 /* on */
 .tab-lst .tab-item.on .btn,
 .tab-lst .tab-item.on .btn > .txt {transition:all .2s;}
@@ -3459,7 +3470,16 @@ html.popOpen {overflow:hidden;}
 /* 가입정보 및 변경신청 */ 
 .join .formItem .ul-list.f-13 {margin: 20px 0;}
 .join .formItem .ul-list.f-13 li .indent {margin-left: 12px;}
-
+.layer-popup.zip .popup-cont .flex-area.left {justify-content: left;}
+.layer-popup.zip .input-btn {display: flex;}
+.layer-popup.zip .flex-area .input-btn .input-text {margin: 0 5px 0 10px;}
+.layer-popup.zip .scroll-area td > a {display: flex; align-items: center; text-align: left; padding: 5px 0;}
+.layer-popup.zip .scroll-area td > a .zip {flex-shrink: 0; width: 123px; text-align: center;}
+.layer-popup.zip .scroll-area td > a .address {display:inline-block; padding: 0 20px 0 0;}
+.layer-popup.zip .ul-list.dot {margin-top: 15px;}
+.layer-popup.zip .ul-list.dot li{ margin-top: 0;}
+.layer-popup.zip .ul-list.dot li.none {margin: 15px 0 10px;}
+.layer-popup.zip .ul-list.dot li.none  .indent {margin-left: 30px;}
 /* 아이디 관리 */
 .id-management .border-box {margin-top: 20px; padding: 20px 30px}
 .id-management .border-box .info ul li {display: inline-block;}
@@ -3619,6 +3639,7 @@ html.popOpen {overflow:hidden;}
 	background:url(../images/img/visual_service.jpg) no-repeat 0 0;
 	background-size: auto;
 }
+.wrapper.service.event {background-image:none; background-color:#f9f9f9}
 .popOpen .wrapper.service {height: 100vh;}
 
 .wrapper.service .header {
@@ -3654,7 +3675,8 @@ html.popOpen {overflow:hidden;}
 	font-size: 18px;
 	font-weight: 500;
 }
-.header.service .link-area .bg-pink {color:#fff}
+.header.service .link-area .bg-pink,
+.service.event .header .link-area .bg-pink {color:#fff !important}
 .wrapper.service .header  .link-area a.btn-mid,
 .header.service  .link-area a.btn-mid {font-size: 13px; font-weight: normal;}
 .wrapper.service .header  .link-area li + li,
@@ -3667,6 +3689,7 @@ html.popOpen {overflow:hidden;}
 	text-align: center;
 	background-color:#333;
 }
+.service.event .footer {padding: 20px 0;}
 .wrapper.service .footer.gray {background-color:#f6f7f8}
 .wrapper.service .footer .link-area {
 	display: flex;
@@ -3738,9 +3761,10 @@ html.popOpen {overflow:hidden;}
 	margin-left: -31px;
 	width: 64px;
 	height: 4px;
-
 	background-color:#e03d7c;
 }
+.service.event h2 {font-size: 30px; padding-bottom: 0;}
+.service.event h2:before{display: none;}
 .wrapper.service h2 .f-pink .plus {vertical-align: super; font-size: 30px;}
 .wrapper.service .cont {text-align: center;}
 .wrapper.service .cont1 {}
@@ -3864,8 +3888,9 @@ html.popOpen {overflow:hidden;}
 /*상세*/
 .wrapper.service .tab-wrap {margin-top: 80px;}
 .wrapper.service .tab-wrap .tab-lst {width: 1100px; margin: 0 auto;}
-.wrapper.service .tab-wrap .tab-lst .tab-item .btn {font-weight: 700; height: inherit;}
-.wrapper.service .tab-wrap .tab-item .txt {height: 60px; line-height: 58px; font-size: 18px;}
+.wrapper.service.event .tab-wrap .tab-lst {width: 100%;}
+.wrapper.service:not(.event) .tab-wrap .tab-lst .tab-item .btn {font-weight: 700; height: inherit;}
+.wrapper.service:not(.event) .tab-wrap .tab-item .txt {height: 60px; line-height: 58px; font-size: 18px;}
 .wrapper.service .tab-cont > .section:first-child {padding:20px 0}
 .wrapper.service .tab-cont > .section:first-child > .cont {text-align: left;}
 .wrapper.service .tab-cont h3 {position:relative;font-size: 35px; font-weight: 700; padding-bottom: 25px;}
@@ -3978,6 +4003,8 @@ html.popOpen {overflow:hidden;}
 .wrapper.service .tab-cont3 .box-list li .section h3 {font-size: 18px; font-weight: 700; padding-bottom: 15px;}
 .wrapper.service .tab-cont3 .box-list li .section h3::before {display: none;}
 
+.service.event .tab-wrap {margin-top: 0;}
+
 /* ----------- 기타 -----------*/
 .wrapper.error {display: flex; align-items: center; justify-content: center;}
 /*에러페이지*/
@@ -4078,7 +4105,7 @@ html.popOpen {overflow:hidden;}
 .sms-confirm .input-btn .bg-white {margin-left: 10px;}
 .sms-confirm .input-btn + .guide-txt {margin-top: 5px;}
 
-.wrapper.service .header.fixed {position:fixed; left:0; top:0; right:0;background-color:#fff; z-index: 100; transition: ease-in-out .2s;}
+.wrapper.service .header.fixed {position:fixed; left:0; top:0; right:0;background-color:#fff; z-index: 100; transition: ease-in-out .2s; min-width: 1280px;}
 .wrapper.service .header.fixed h1 .logo {
 	display: block;
 	width:137px;
@@ -4117,6 +4144,7 @@ html.popOpen {overflow:hidden;}
 	#quickLink {display: none;}
 
 	.wrapper.service {min-width: 100%;background: url(../images/mo/visual_service.jpg) no-repeat 0 0; background-size:100% 554px}
+	.wrapper.service.event {background: none;}
 	.wrapper.service .section.gray {background-color:#fff; padding: 0 25px;}
 	.wrapper.service .cont {width: 100%;padding: 40px 13px;}
 	
@@ -4124,7 +4152,7 @@ html.popOpen {overflow:hidden;}
 		padding: 0;
 		justify-content: center;
 		height: 56px;
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: rgba(0, 0, 0, 0.7);
 	}
 	.wrapper.service .header.fixed {
 		background-color: #fff;
@@ -4133,7 +4161,10 @@ html.popOpen {overflow:hidden;}
 	.wrapper.service .header h1 {display: none;}
 	.wrapper.service .header .link-area a,
 	.wrapper.service .header.fixed .link-area a {font-size: 15px;}
-	.wrapper.service .header .link-area li.on a {color:#e03d7c}
+	.wrapper.service .header .link-area a {color:#fff !important;}
+	.wrapper.service .header.fixed .link-area a{ color:#000 !important}
+	.wrapper.service .header .link-area li.on a {color:#e03d7c !important}
+
 	
 	.wrapper.service .footer {padding: 15px 0;}
 	.wrapper.service .footer .link-area {margin-bottom: 5px;}
@@ -4262,7 +4293,7 @@ html.popOpen {overflow:hidden;}
 	.wrapper.service .tab-wrap {padding: 0 16px; margin-top: 30px;}
 	.wrapper.service .tab-wrap .section.gray {padding: 0;}
 	.wrapper.service .tab-wrap .tab-lst{ width: 100%;}
-	.wrapper.service .tab-wrap .tab-item .txt {height: 46px; line-height: 46px; font-size: 15px;}
+	.wrapper.service .tab-wrap .tab-item .txt {height: 46px !important; line-height: 46px !important; font-size: 15px !important;}
 
 	.wrapper.service .tab-cont .section:last-child {padding-bottom: 60px;}
 	.wrapper.service .tab-cont h3:before {display: none;}
@@ -4297,4 +4328,21 @@ html.popOpen {overflow:hidden;}
 	.wrapper.service .tab-cont .board-list table tbody tr:first-child td {border-top: 0;}
 	.wrapper.service .tab-cont3 .ul-list li {font-weight: 300;}
 	.wrapper.service .tab-cont3 .ul-list li + li {margin-top: 5px; }
+	
+	.service.event .container .cont-area {border: 0;}
+	.wrapper.event .tit-area{text-align: center;}
+	.wrapper.event .tit-area h2{font-size: 20px; padding-bottom: 0;}
+	.wrapper.event .tit-area:after {left: 50%; margin-left: -13px;}
+	.wrapper.event .container .cont-wrap {width: 100%;}
+	.wrapper.event .container .cont-area {padding:22px 17px 17px 17px}
+	.wrapper.event .container .cont-area .tab-wrap {padding: 0;}
+	.wrapper.event .tab-cont {margin-top: 17px;}
+	.wrapper.event .tab-cont img {width: 100%;}
+
+	.bgNone .container, .service.event .container {padding-top: 0;}
+	.wrapper.service .header.fixed {min-width: inherit;}
+
+	/* .wrapper.service .tab-wrap .tab-lst .tab-item .btn {font-weight: 700; height: inherit;}
+	.wrapper.service .tab-wrap .tab-item .txt {height: 60px; line-height: 58px; font-size: 18px;} */
+	
 }
