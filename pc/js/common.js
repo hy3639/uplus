@@ -522,12 +522,13 @@ function initSwiper() {
 
 function fixedHeader(){
 	var winH = $(this).scrollTop();
-
-    if(0 < winH) {
-      $(".header").addClass("fixed");
-    } else {
-      $(".header").removeClass("fixed");
-    }
+	$('.wrapper.service .header').each(function(){
+		if(0 < winH) {
+		$(this).addClass("fixed");
+		} else {
+			$(this).removeClass("fixed");
+		}
+	});
 }
 
  

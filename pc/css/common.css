@@ -4078,7 +4078,6 @@ html.popOpen {overflow:hidden;}
 .sms-confirm .input-btn .bg-white {margin-left: 10px;}
 .sms-confirm .input-btn + .guide-txt {margin-top: 5px;}
 
-/*
 .wrapper.service .header.fixed {position:fixed; left:0; top:0; right:0;background-color:#fff; z-index: 100; transition: ease-in-out .2s;}
 .wrapper.service .header.fixed h1 .logo {
 	display: block;
@@ -4109,7 +4108,6 @@ html.popOpen {overflow:hidden;}
 .wrapper.service .header.fixed .link-area a.btn-mid {font-size: 13px; font-weight: normal;}
 .wrapper.service.header.fixed  .link-area li + li{margin-left: 40px;}
 .wrapper.service .header.fixed  .link-area li:last-child a {color:#333}
-*/
 
 /* 서비스소개 모바일 */
 @media screen and (max-width: 768px) {
@@ -4120,7 +4118,7 @@ html.popOpen {overflow:hidden;}
 
 	.wrapper.service {min-width: 100%;background: url(../images/mo/visual_service.jpg) no-repeat 0 0; background-size:100% 554px}
 	.wrapper.service .section.gray {background-color:#fff; padding: 0 25px;}
-	.wrapper.service .cont {width: 100%;padding: 40px 0;}
+	.wrapper.service .cont {width: 100%;padding: 40px 13px;}
 	
 	.wrapper.service .header {
 		padding: 0;
@@ -4131,18 +4129,12 @@ html.popOpen {overflow:hidden;}
 	.wrapper.service .header.fixed {
 		background-color: #fff;
 	}	
-	
-	
-
-
-
+		
 	.wrapper.service .header h1 {display: none;}
-	.wrapper.service .header .link-area a {font-size: 15px;}
+	.wrapper.service .header .link-area a,
+	.wrapper.service .header.fixed .link-area a {font-size: 15px;}
 	.wrapper.service .header .link-area li.on a {color:#e03d7c}
 	
-	
-	
-
 	.wrapper.service .footer {padding: 15px 0;}
 	.wrapper.service .footer .link-area {margin-bottom: 5px;}
 
@@ -4172,7 +4164,7 @@ html.popOpen {overflow:hidden;}
 	.btn-mid  .icon-android:before {margin-top: -10px;}
 
 	.wrapper.service .visual .tit {display: block; margin-bottom:10px;text-align: center; font-size: 30px;}
-	.wrapper.service .visual .tit img {vertical-align: sub; width: 140px;}
+	.wrapper.service .visual .tit img {vertical-align: sub; width: 130px;}
 	.wrapper.service .visual .txt-banner {height:60px; padding:10px;font-size: 13px; line-height: 20px;}
 
 
@@ -4272,12 +4264,37 @@ html.popOpen {overflow:hidden;}
 	.wrapper.service .tab-wrap .tab-lst{ width: 100%;}
 	.wrapper.service .tab-wrap .tab-item .txt {height: 46px; line-height: 46px; font-size: 15px;}
 
+	.wrapper.service .tab-cont .section:last-child {padding-bottom: 60px;}
 	.wrapper.service .tab-cont h3:before {display: none;}
 	.wrapper.service .tab-cont > .section:first-child > .cont {text-align: center;}
-	.wrapper.service .tab-cont1 .section:first-child .cont {background: url(../images/mo/img_h3_1.png) no-repeat center; background-size: 207px auto;}
+	.wrapper.service .tab-cont1 .section:first-child .cont {background: url(../images/mo/img_h3_1.png) no-repeat center 150px; background-size: 207px auto;}
+	.wrapper.service .tab-cont2 .section:first-child .cont {background: url(../images/mo/img_h3_2.png) no-repeat center 150px; background-size: 256px auto;}
+	.wrapper.service .tab-cont3 .section:first-child .cont {background: url(../images/mo/img_h3_3.png) no-repeat center 115px; background-size: 291px auto;}
 
 	.wrapper.service .tab-cont h3 {font-size: 30px;}
-	.wrapper.service .tab-cont h3 + p {padding-top: 200px; font-size: 15px; line-height: 22px;}
-
+	.wrapper.service .tab-cont h3 + p {padding-top: 220px; font-size: 15px; line-height: 22px; font-weight: 500;}
+	.wrapper.service .tab-cont2 h3 + p {padding-top: 190px; }
+	.wrapper.service .tab-cont3 h3 + p {padding-top: 216px;}
 	.wrapper.service .tab-cont .box-list > li > div {width: 100%;}
+	.wrapper.service .cont > .box-list > li .f-bold em {display:block;font-weight: 400; letter-spacing: -2px;}
+
+	
+	.wrapper.service .tab1 .box-list li.item1 {padding-bottom: 185px; background: url(../images/mo/img_tab1_1.png) no-repeat center bottom; background-size:227px auto;}
+	.wrapper.service .tab1 .box-list li.item2 {padding-bottom: 128px; background: url(../images/mo/img_tab1_2.png) no-repeat center bottom; background-size:140px auto;}
+	.wrapper.service .tab1 .box-list li.item3 {padding-bottom: 135px; background: url(../images/mo/img_tab1_3.png) no-repeat center bottom; background-size:154px auto;}
+	.wrapper.service .tab1 .box-list li.item4 {padding-bottom: 195px; background: url(../images/mo/img_tab1_4.png) no-repeat center bottom; background-size:194px auto;}
+	
+	.wrapper.service .list-icon li {font-size: 13px; line-height: 26px;}
+
+
+	.wrapper.service .tab-cont2 .box-list p.tit {font-size: 15px;}
+	.wrapper.service .tab-cont table th,
+	.wrapper.service .tab-cont table tbody td {font-size: 13px; line-height: 20px;} 
+	.wrapper.service .tab-cont .board-list.type2 {border-top: 0;}
+	.wrapper.service .tab-cont .board-list.type2 thead th {border: 0;}
+	.wrapper.service .tab-cont .board-list.type2 thead th:first-child {border-right: 1px solid #dfdfdf;}
+	.wrapper.service .tab-cont table tbody td:last-child {border-left:1px solid #dfdfdf;padding:0 10px !important; text-align:left !important;}
+	.wrapper.service .tab-cont .board-list table tbody tr:first-child td {border-top: 0;}
+	.wrapper.service .tab-cont3 .ul-list li {font-weight: 300;}
+	.wrapper.service .tab-cont3 .ul-list li + li {margin-top: 5px; }
 }

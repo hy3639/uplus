@@ -388,7 +388,7 @@
 												<div class="address">
 													<div class="input-btn">
 														<div class="input-text"><input type="text"></div>
-														<button type="button" class="btn-border btn-mid bd-pink">우편번호</button>												
+														<button type="button" class="btn-border btn-mid bd-pink btnPop" title="Popup01">우편번호</button>												
 													</div>	
 													<div class="input-text"><input type="text"></div>
 													<div class="input-text"><input type="text"></div>	
@@ -849,6 +849,39 @@
 				</div>
 			</div>			
 		</div>	
+	</div>
+</div>
+
+<!-- 우편번호 검색 -->
+<div class="layer-popup" title="Popup01">
+	<div class="popup xl">
+		<div class="popup-header">
+			<p class="title">우편번호 검색</p>
+			<button class="btn-close popClose">팝업닫기</button>	
+		</div>
+		<div class="popup-cont">
+			
+			<div class="section">
+				<div class="flex-area justify">
+					<p class="tit">지역검색</p>
+					<div class="input-btn">
+						<div class="input-text"><input type="text" id="txt1" style="width: 176px;"></div>
+						<button type="button" class="btn-border btn-mid bd-pink btnPop" layer-name="Popup03">확인</button>
+					</div>
+				</div>			
+				<ul class="ul-list dot">
+					<li>찾고자하는 도로명과 건물명 혹은 건물번호를 공백(도로명 한칸띄고 건물번호)로 구분하여 입력하여 주시기 바랍니다.</li>
+					<li>도로명을 모르실 경우 도로명주소 안내시스템 <a href="#" class="underline" target="_blank">(http://www.juso.go.kr)</a> 에서 확인하시면 됩니다.</li>
+					<li class="none">예시) 한강대로 32 → "한강대로 (한 칸 띄고) 32"를 입력해주세요.</li>
+					<li>한강대로102길 32 → "한강대로102길 (한 칸 띄고) 32"를 입력해주세요.</li>
+				</ul>
+				
+			</div>			
+					
+		</div>
+		<div class="button-area center">
+			<button type="button" class="btn-border btn-mid bg-white popClose">닫기</button>
+		</div>
 	</div>
 </div>
 
