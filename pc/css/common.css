@@ -4104,8 +4104,8 @@ html.popOpen {overflow:hidden;}
 .sms-confirm .input-btn .bd-pink {margin-left: 4px;}
 .sms-confirm .input-btn .bg-white {margin-left: 10px;}
 .sms-confirm .input-btn + .guide-txt {margin-top: 5px;}
-
-.wrapper.service .header.fixed {position:fixed; left:0; top:0; right:0;background-color:#fff; z-index: 100; transition: ease-in-out .2s; min-width: 1280px;}
+.wrapper.service .header {transition:all linear .2s; }
+.wrapper.service .header.fixed {position:fixed; left:0; top:0; right:0;background-color:#fff; z-index: 100; min-width: 1280px;}
 .wrapper.service .header.fixed h1 .logo {
 	display: block;
 	width:137px;
