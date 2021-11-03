@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>U+ 웹팩스</title>
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+<div class="wrapper tip">
+	<div class="tip-header">
+		<h1>사용 TIP</h1>
+	</div>
+	<div class="tip-content">
+		<div class="lnb">
+			<div class="lnb-item">
+				<a href="fax_send_tab.html" class="link"><span class="txt">팩스 발송</span></a>
+			</div>
+			<div class="lnb-item">
+				<a href="number_add_tab.html" class="link"><span class="txt">수신번호/주소록 추가</span></a>
+			</div>
+			<div class="lnb-item">
+				<a href="fax_management_tab.html" class="link"><span class="txt">팩스함 관리/수신 받기</span></a>
+			</div>
+			<div class="lnb-item on">
+				<a href="alarm_tab.html" class="link"><span class="txt">알림</span></a>
+			</div>
+			<div class="lnb-item">
+				<a href="account_management_tab.html" class="link"><span class="txt">계정관리</span></a>
+			</div>
+			<div class="lnb-item">
+				<a href="simple_fax_tab.html" class="link"><span class="txt">간편팩스</span></a>
+			</div>
+			<div class="lnb-item">
+				<a href="data_management_tab.html" class="link"><span class="txt">자료관리</span></a>
+			</div>
+			<div class="lnb-item">
+				<a href="security_tab.html" class="link"><span class="txt">보안</span></a>
+			</div>
+			<div class="lnb-item">
+				<a href="services_link_tab.html" class="link"><span class="txt">타 서비스 연동</span></a>
+			</div>
+			<div class="lnb-item">
+				<a href="mobile_tab.html" class="link"><span class="txt">모바일</span></a>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="tit-area">
+				<h2 class="tit">알림 <a href="#" class="btn-mid bg-pink mgl10">영상 가이드</a></h2>
+			</div>
+			<div class="section">
+				<div class="tab-wrap">
+					<div class="tab-lst depth1">
+						<div class="tab-item on">
+							<button class="btn"><span class="txt">나에게 알림</span></button>
+						</div>
+						<div class="tab-item">
+							<button class="btn"><span class="txt">상대방에게 알림</span></button>
+						</div>				
+					</div>
+
+					<div class="tab-conts">						
+						<div class="tab-cont on">
+							<div class="section">
+								<h3 class="tit">[나에게 알림 - 팩스 수신 시에만 적용]</h3>	
+								<ul class="ul-list">
+									<li>
+										<em>①</em> 이메일 (자동발송) 
+										<ul class="ul-list dot mid no-indent">
+											<li>상대방으로부터 팩스가 수신이 되면 이메일로 알림을 보내드리는 기능입니다. <br>
+											(수신된 첨부문서는 포함하지 않습니다)</li>
+											<li>환경설정 > 알림설정 > 이메일알림에서 설정</li>
+										</ul>
+										<p class="img-area"><img src="../../images/img/img_tip4_1.png" alt="이메일 자동발송 설정방법"></p>
+									</li>
+									<li class="mgt25">
+										<em>②</em> 문자 (자동발송) (유료 : 18원/건)
+										<ul class="ul-list dot mid no-indent">
+											<li>상대방으로부터 팩스가 수신이 되면 문자로 알림을 보내드리는 기능입니다.</li>
+											<li>환경설정 > 알림설정 > 문자알림에서 설정</li>
+										</ul>
+										<p class="img-area"><img src="../../images/img/img_tip4_2.png" alt="문자 자동발송 설정방법"></p>
+									</li>
+								</ul>
+
+								<dl class="img-rt-box mgt30">
+									<dt>
+										<h3 class="tit">[나에게 알림 - 카카오워크 연동 시 수신알림]</h3>	
+										<p class="sub-txt">카카오워크 연동 시에는 카카오워크 메신저 창으로 <br>팩스 수신 시 알림을 받을 수 있습니다. </p>
+										<div class="button-area mgt10">
+											<a href="number_add_tab.html" class="btn-border btn-sm bd-pink">카카오워크 연동 가이드</a>
+										</div>
+									</dt>
+									<dd class="img-area">
+										<img src="../../images/img/img_tip4_3.png" alt="카카오워크 연동 시 수신알림">
+									</dd>
+								</dl>
+							</div><!-- // section -->
+						</div> <!-- // tab-cont -->
+
+						<div class="tab-cont">
+							<div class="section">
+								<h3 class="tit">[상대방에게 알림 - 팩스 발신 시]</h3>	
+								<ul class="ul-list">
+									<li>
+										<em>①</em> 문자 (보낸팩스함에서 직접전송) (유료 : 18원/건)
+										<ul class="ul-list dot mid no-indent">
+											<li>보낸팩스함에서 받는사람의 핸드폰번호가 주소록에 저장된 경우 받는사람 항목에 <br>핸드폰번호가 표기되며 마우스 오버시 [문자발송] 버튼을 이용하여 발송완료 문자 발송</li>
+											<li>사전에 받는사람의 정보를 주소록에 등록필요</li>
+										</ul>
+										<p class="img-area"><img src="../../images/img/img_tip4_4.png" alt="이메일 자동발송 설정방법"></p>
+									</li>
+								</ul>
+
+								<h3 class="tit">[상대방에게 알림 - 팩스 수신 시]</h3>	
+								<ul class="ul-list">									
+									<li>
+										<em>②</em> 문자 (받은팩스함에서 직접발송) (유료 : 18원/건)
+										<ul class="ul-list dot mid no-indent">
+											<li>받은팩스함에서 보낸사람의 핸드폰번호가 주소록에 저장된 경우 해당 보낸사람 항목에 <br>핸드폰번호가 표기되며 마우스 오버시 [문자발송] 버튼을 이용하여 수신완료 문자 발송</li>
+											<li>사전에 보낸사람의 정보를 주소록에 등록필요</li>
+										</ul>
+										<p class="img-area"><img src="../../images/img/img_tip4_5.png" alt="문자 자동발송 설정방법"></p>
+									</li>
+									<li>
+										<dl class="img-rt-box mgt30">
+											<dt>
+												<em>①</em> 리턴 FAX/문자 (자동발송)<br>(부가신청서비스_Fax장당요금, 문자 18원/건)
+												<ul class="ul-list dot mid no-indent">
+													<li>팩스 수시 시 자동으로 수신완료 내용을 <br>FAX와 문자로 전달하는 부가서비스 입니다.</li>
+													<li>
+														관리자 > 부가서비스신청 > 리턴 FAX/문자에서 설정
+													</li>
+												</ul>
+												<div class="button-area">
+													<a href="#" class="btn-border btn-sm bd-pink">Return 알림 신청</a>
+												</div>
+											</dt>
+											<dd class="img-area">
+												<img src="../../images/img/img_tip4_6.png" alt="카카오워크 연동 시 수신알림">
+											</dd>
+										</dl>
+									</li>
+								</ul>
+							</div><!-- //section -->
+						</div><!-- // tab-cont -->
+
+					</div><!-- //tab-conts -->
+				</div>			
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
+<script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(document).ready(function(){
+	
+	
+});
+
+
+</script>
+</body>
+</html>
