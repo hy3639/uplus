@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* ==============================================
+	리셋
+============================================== */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0;box-sizing: border-box;}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+input,select,textarea,button{border-radius:0;vertical-align:middle}
+input::-ms-clear{display:none}
+button{border:0 none;background-color:transparent;cursor:pointer}
+html {font-size:62.5%;}
+body{background:#fff;direction:ltr;-webkit-text-size-adjust:none; word-break: keep-all;}
+body,th,td,input,select,textarea,button {color:#000;font-size:16px;font-family:noto, sans-serif;font-weight:400;line-height:1.5;letter-spacing:-0.35px}
+a{color:#000;text-decoration:none}
+a:hover{text-decoration:none;}
+a:active{background-color:transparent;}
+address,caption,cite,code,dfn,em,var{font-style:normal;/*font-weight:300;*/}
+strong {font-weight:700;}
+table {table-layout:fixed;border-collapse:collapse;width:100%;border-spacing:0;border:0;}
+
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+a,
+span,
+label,
+input,
+:before,
+::before,
+:after,
+::after {box-sizing:border-box;}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance:none;
+	margin:0;
+}
+input[type=file]:focus,
+a:focus,
+button:focus,
+input,
+textarea {outline:0;}
+label {display:inline-block;vertical-align:middle;}
+textarea {width: 100%;min-height: 80px;resize: none;}
+input:-ms-input-placeholder {color:#bbb;}
+input::-webkit-input-placeholder {color:#bbb;}
+input::-moz-placeholder{color:#bbb;}
+input::placeholder {color:#bbb;}
+textarea:-ms-input-placeholder {color:#bbb;}
+textarea::-webkit-input-placeholder {color:#bbb;}
+textarea::-moz-placeholder{color:#bbb;}
+textarea::placeholder {color:#bbb;}
+select::-ms-expand {display:none}
+.readonly input[type="text"]{color:#bbb}
+

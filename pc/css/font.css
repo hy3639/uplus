@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* ==============================================
+	폰트
+============================================== */
+@font-face {
+	font-family:noto;
+	font-style:normal;
+	font-weight:300;
+	src: url('font/noto-sans-light.eot');
+	src: local(''),
+	url('font/noto-sans-light.eot?#iefix') format('embedded-opentype'),
+	url('font/noto-sans-light.woff2') format('woff2'),
+	url('font/noto-sans-light.woff') format('woff')
+	/*url(font/NanumBarunGothicLight.ttf) format('truetype');*/
+}
+
+@font-face {
+	font-family:noto;
+	font-style:normal;
+	font-weight:400;
+	src: url('font/noto-sans-regular.eot');
+	src: local(''),
+	url('font/noto-sans-regular.eot?#iefix') format('embedded-opentype'),
+	url('font/noto-sans-regular.woff2') format('woff2'),
+	url('font/noto-sans-regular.woff') format('woff')
+}
+
+@font-face {
+	font-family:noto;
+	font-style:normal;
+	font-weight:500;
+	src: url('font/noto-sans-medium.eot');
+	src: local(''),
+	url('font/noto-sans-medium.eot?#iefix') format('embedded-opentype'),
+	url('font/noto-sans-medium.woff2') format('woff2'),
+	url('font/noto-sans-medium.woff') format('woff')
+}
+@font-face {
+	font-family:noto;
+	font-style:normal;
+	font-weight:700;
+	src: url('font/noto-sans-bold.eot');
+	src: local(''),
+	url('font/noto-sans-bold.eot?#iefix') format('embedded-opentype'),
+	url('font/noto-sans-bold.woff2') format('woff2'),
+	url('font/noto-sans-bold.woff') format('woff')
+}
+@font-face {
+	font-family:noto;
+	font-style:normal;
+	font-weight:900;
+	src: url('font/noto-sans-black.eot');
+	src: local(''),
+	url('font/noto-sans-black.eot?#iefix') format('embedded-opentype'),
+	url('font/noto-sans-black.woff2') format('woff2'),
+	url('font/noto-sans-black.woff') format('woff')
+}
