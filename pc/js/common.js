@@ -321,6 +321,16 @@ $(window).on('load', function(){
 
 /*=======// 레이어팝업 ======= */
 
+/*======= 요금안내 탭 활성화 ======= */
+
+	if (location.hash == "#tabs-3"){
+		$(window).scrollTop(0);
+		$('.tab-lst').find('.tab-item').eq(2).addClass('tab-item on').siblings().removeClass('on');         
+		$('.tab-conts').find('#tabs-3').addClass('on').siblings().removeClass('on');    
+	} 
+
+/*=======// 요금안내 탭 활성화 ======= */
+
 });
 
 $(window).resize(function(){
