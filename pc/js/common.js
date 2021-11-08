@@ -160,6 +160,17 @@ $('.formChange').each(function(){
 	});
 });
 
+/* 인풋 파일 */
+$(".file").each(function(){
+	$(this).on('change',function(){
+		console.log('change');
+		var fileName = $(this).val();
+		console.log(fileName);
+		$(this).closest('.file-box').find('.upload-name').val(fileName);
+	  });
+});
+
+
 /*=======// 폼 ======= */
 
 /*======= 테이블 ======= */

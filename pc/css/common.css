@@ -318,7 +318,7 @@ footer  p {
 }
 .cont-top .noti-area .swiper-slide .item {
 	/* height:63px; */
-	padding:8px 0 8px 73px;
+	padding:8px 20px 8px 73px;
 	background:url(../images/icon/img_63_announcement.png) no-repeat left center;
 	font-size:13px;
 }
@@ -1383,6 +1383,7 @@ input[type=checkbox][class^=styled] {
 /* 인풋 */
 .input-text input,
 .input-text textarea{
+	width: 100%;
 	height:32px;
 	padding:0 10px;
 	line-height:30px;
@@ -1408,11 +1409,26 @@ input[type=checkbox][class^=styled] {
 .join .input-card .divider {padding-left: 2px;vertical-align: middle;}
 .join .input-card .divider + .select-box {margin-left: 20px;}
 
+
+/*인풋 파일*/
+.file-box input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+.file-box .btn-border {margin-left: 4px;}
+.join .file-box.inline {display: inline-flex;}
+.join .file-box .input-text {width:407px !important}
+.file-box .input-text input {width: 100%;}
 /* ==============
 	테이블
 ============== */
 [class^=board-] .input-text input[type="text"],
-[class^=board-] .input-text input[type="password"] {
+[class^=board-] .input-text input[type="password"],
+[class^=board-] .input-text input[type="number"] {
 	width:100%;
 }
 .bdb0{border-bottom:0 !important}
@@ -1605,6 +1621,7 @@ input[type=checkbox][class^=styled] {
 	font-size: 13px; 
 	font-weight: 300;
 	line-height: 20px;
+	word-break: break-all;
 }
 .board-write td .input-text.inline {display: inline-block;}
 .board-write td .input-text + button,

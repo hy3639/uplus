@@ -54,7 +54,6 @@
 	width: 500px;
 	position: absolute;
 	left:50%;
-	/* top:50%; */
 	margin:70px 0 0 -250px;
 	padding: 59px 60px 47px;
 	border-radius: 24px;
@@ -262,7 +261,7 @@
 .customer-service .board-write .input-phone > .input-text,
 .customer-service .board-write .input-phone > .select-box{width: 66px;}
 .join .board-write .input-phone .select-box select.styled,
-.customer-service .board-write .input-phone .select-box select.styled{padding-right: 30px;}
+.customer-service .board-write .input-phone .select-box select.styled{padding-right: 30px; width:100%}
 
 .section + .button-area {margin-top: 30px;}
 
@@ -324,14 +323,12 @@
 	color:#c0bfc4; 
 	font-weight:700
 }
-.count-area .count span .f-pink {}
 
 .attach-area {
 	display:flex;
 	align-items: center;
 	justify-content: center;
 	height:150px;
-
 }
 .attach-area .txt {
 	min-height: 40px;
@@ -418,9 +415,7 @@
 .board-list table td .layer-box > button.btn-show {left:50%; top:50%;transform:translate(-50%,-50%)}
 .board-list.fax tr:hover {background-color: #fdfcfc;}
 .board-list.fax tr.checked {background-color: #fff9f9;}
-.board-list.fax td.subject {
-	text-align: left;
-}
+.board-list.fax td.subject {text-align: left;}
 .board-list.fax table thead th {font-weight: 500; font-size:13px}
 .board-list.fax td {height:48px;/*padding:0 5px;*/font-weight: 300; font-size:13px}
 .board-list.fax td > .btnPop.sm {font-weight: 300; font-size: 13px;}
@@ -431,7 +426,6 @@
 .board-list.fax .new-fax td > *:not(.btn-xxs) {font-weight: 500 !important;}
 .board-list.sent td:last-child .btn-xxs {min-width:58px}
 .board-list.fax td.subject .btn-xxs {padding:0}
-.board-list.fax td.subject {}
 .board-list.fax .new-fax td .btn-tooltip.txt {font-weight:500}
 .board-list.fax td .button-input {
 	color:#bbb;
@@ -560,7 +554,6 @@
 }
 .side-cont .docu-list .docu-item + .docu-item {margin-top: 20px;}
 .side-cont .docu-list .docu-item > span {display: inline-block;}
-.side-cont .docu-list .docu-item .num {}
 .side-cont .docu-list .docu-item .img {width:130px; height: 180px;}
 .side-cont .docu-list .docu-item .img img {width: 100%; height: 100%;}
 .side-cont .docu-list .docu-item.on .img {border:2px solid #e03d7c}
@@ -2040,7 +2033,5 @@
 	.bgNone .container, .service.event .container {padding-top: 0;}
 	.wrapper.service .header.fixed {min-width: inherit;}
 
-	/* .wrapper.service .tab-wrap .tab-lst .tab-item .btn {font-weight: 700; height: inherit;}
-	.wrapper.service .tab-wrap .tab-item .txt {height: 60px; line-height: 58px; font-size: 18px;} */
 	
 }

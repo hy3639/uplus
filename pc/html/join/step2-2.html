@@ -163,11 +163,12 @@
 								</tr>
 								<tr>
 									<th scope="row">사업자등록증</th>
-									<td colspan="3">
-										<div class="input-btn">
-											<div class="input-text"><input type="text" placeholder="선택된 파일 없음"></div>
-											<button type="button" class="btn-border btn-mid bd-pink">파일선택</button>												
-										</div>				
+									<td colspan="3">										
+										<div class="file-box input-btn">
+											<div class="input-text"><input type="text" class="upload-name" readonly></div>
+											<label for="file1" class="btn-border btn-mid bd-pink">파일찾기</label> 
+											<input type="file" class="file" id="file1">
+										</div>		
 									</td>
 								</tr>
 
@@ -409,7 +410,7 @@
 					</div>
 
 					<!-- 자동이체일경우 -->
-					<div class="board-write" style="display:none">
+					<div class="board-write">
 						<table>
 							<colgroup>
 								<col style="width:130px;">						
@@ -504,12 +505,13 @@
 										<p class="guide-txt f-pink mgl0">
 											전자금융거래법 15조에 따라 은행자동이체 등록 시 납부인(예금주)의 출금동의 증빙 자료를 보관하도록 되어 있습니다.<br>
 											‘자동이체출금동의서’를 출력하셔서 작성하시고, 반드시 본인 서명 후 스캔(혹은 사진촬영)하여 첨부하여 주시기 바랍니다.											
-										</p>						
-										<div class="input-btn inline mgt5">
-											<div class="input-text"><input type="text" placeholder="선택된 파일 없음"></div>
-											<button type="button" class="btn-border btn-mid bd-pink">파일선택</button>		
-											<button type="button" class="btn-border btn-mid bg-white">출금동의서 다운로드</button>										
-										</div>
+										</p>	
+										<div class="file-box input-btn mgt5 inline">
+											<div class="input-text"><input type="text" class="upload-name" readonly></div>
+											<label for="file2" class="btn-border btn-mid bd-pink">파일찾기</label> 
+											<input type="file" class="file" id="file2">											
+										</div>	
+										<button type="button" class="btn-border btn-mid bg-white">출금동의서 다운로드</button>				
 										
 									</td>
 								</tr>
