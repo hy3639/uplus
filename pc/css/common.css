@@ -318,11 +318,18 @@ footer  p {
 }
 .cont-top .noti-area .swiper-slide .item {
 	/* height:63px; */
-	padding:8px 20px 8px 73px;
+	width: 100%;
+	padding:8px 24px 8px 73px;
 	background:url(../images/icon/img_63_announcement.png) no-repeat left center;
 	font-size:13px;
 }
-.cont-top .noti-area .swiper-slide .item .tit { color:#000}
+.cont-top .noti-area .swiper-slide .item .tit {
+	color:#000;	
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 .cont-top .noti-area .swiper-slide .item .date {color:#9c9c9c}
 .cont-top .noti-area .swiper-button-prev,
 .cont-top .noti-area .swiper-button-next {
@@ -675,7 +682,7 @@ footer  p {
 	max-width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-	text-overflow: ellipsis;  /* 말줄임 적용 */
+	text-overflow: ellipsis;  
   }
 
 /* 디자인스크롤 영역 */
@@ -1315,6 +1322,7 @@ input[type=checkbox][class^=styled] {
 }
 .select-box select.styled{
 	height: 34px;
+	min-width: 120px;
     padding:0 40px 0 10px;
     border: 1px solid #dbdbdb;    
     background: #fff url(../images/icon/icon_16_down.png) no-repeat right center;
@@ -1325,7 +1333,12 @@ input[type=checkbox][class^=styled] {
     -moz-appearance: none;
 	appearance: none;
 	box-sizing: border-box;
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }	
+.join .select-box select.styled {min-width: initial;}
 
 .select-box.wide {display:block;}
 .select-box.wide select{
@@ -1346,10 +1359,15 @@ input[type=checkbox][class^=styled] {
 	text-align: left;
     line-height: 30px;
     box-sizing: border-box;
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .button-select:disabled {opacity: .7;cursor: default;}
 .select-layer{
 	display:none; 
+	max-height: 182px;
 	position:absolute;
 	left:0;
 	top:32px;
@@ -1360,7 +1378,7 @@ input[type=checkbox][class^=styled] {
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
 }
 .select-layer.on {display: block;z-index: 100;}
-.select-layer .selBox {padding:10px 0}
+.select-layer .selBox {padding:10px 0; max-height: 150px; overflow: auto;}
 .select-layer .selBox li button{
 	width:100%; 
 	padding:3px 10px;

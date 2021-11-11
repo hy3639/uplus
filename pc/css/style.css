@@ -1267,6 +1267,7 @@
 	font-size: 13px;
 	line-height: 22px;
 }
+.customer-service .board-content img {max-width: 100%;}
 .customer-service .board-list.type2 tbody td:first-child {border-left: 0;}
 .customer-service .terms-area {height: inherit;}
 .customer-service .terms-area .ul-list > li {font-weight: 700; font-size: 13px; margin-bottom: 10px;}
