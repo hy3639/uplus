@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>U+ 웹팩스</title>
+	<link rel="stylesheet" type="text/css" href="../../css/import.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+<div class="wrapper faxviewer type2">
+	<div class="fax-header">		
+		<div class="function-wrap">
+			<span class="select-box">
+				<select class="styled">
+					<option value="">모두</option>
+					<option value="">선택페이지</option>						
+				</select>				
+			</span>
+			<div class="input-text">
+				<input type="text" value=""> <!-- 필요시 disabled 추가-->
+				<div class="tooltip-layer">
+					<p class="txt">
+						원하는 페이지를 적어주세요.<br>
+						1 또는 1,2또는 1-5 형식으로<br>
+						적어주세요.
+					</p>
+				</div>
+			</div>
+			<div class="paging">
+				<button type="button" class="btn-border btn-mid bd-pink btnPop" title="Popup01">보내기</button>			
+				<button type="button" class="btn-border btn-mid bd-pink">편집하기</button>
+				<button type="button" class="btn-border btn-mid bg-white">취소</button>
+			</div>
+		</div>	
+		<div class="page-wrap">			
+			<div class="paging">
+				<button type="button" class="btn-border btn-mid bg-white">이전</button>
+				<div class="input-text">
+					<input type="text" value="1">
+				</div>
+				<div class="input-text divider">/</div>
+				<div class="input-text">
+					<input type="text" value="2" disabled>
+				</div>
+				<button type="button" class="btn-border btn-mid bg-white">다음</button>
+			</div>
+		</div>	
+	</div>
+	
+	<div class="fax-content-wrap">
+		<div class="sidebar-wrap">
+			<div class="sidebar">
+				<div class="toolbar">				
+					<button type="button" class="item4"><span>확대</span></button>
+					<button type="button" class="item5"><span>축소</span></button>
+					<button type="button" class="item6"><span>왼쪽 회전</span></button>
+					<button type="button" class="item7"><span>오른쪽 회전</span></button>					
+				</div>
+			</div>
+		</div>
+		
+		<div class="fax-content">
+			<div class="img-area">
+				<img src ="../../images/temp/temp_fax.png" style="width:400px" alt="팩스미리보기 이미지">
+			</div>
+			<div class="fax-nav">
+				<button type="button" class="fax-prev">이전</button>
+				<button type="button" class="fax-next">다음</button>
+			</div>
+			<div class="file-size-tip"><span>35%</span></div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 받은팩스 삭제 -->
+<div class="layer-popup" title="Popup01">
+	<div class="popup sm">
+	
+		<div class="popup-cont">
+			<p class="guide-txt center">
+				팩스 전송을 요청하였습니다.
+			</p>			
+		</div>
+		<div class="button-area center margin">
+			<button type="button" class="btn-border btn-mid bg-pink popClose">확인</button>		
+		</div>
+	</div>
+</div>
+
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
+<script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+$(document).ready(function(){
+	
+	//인풋 툴팁
+	$('.function-wrap').each(function(){	
+		$(this).find('input').on('focusin',function(){
+			$(this).closest('.function-wrap').find('.tooltip-layer').show();
+		})
+		.on('focusout',function(){
+			$(this).closest('.function-wrap').find('.tooltip-layer').hide();
+		});
+	});
+
+
+	
+	
+    
+});
+
+
+</script>
+</body>
+</html>

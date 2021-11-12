@@ -352,6 +352,7 @@
 	margin: 0 0 30px;
 	padding:20px 30px;
 }
+.box-gray.search-area .select-box select.styled {min-width: inherit;}
 .guide-area + .search-area {margin-top:10px}
 .search-area .group + .group {margin-top:10px}
 .search-area .item {
@@ -475,9 +476,18 @@
 	top: 0;
 	/* height:52px; */
 	padding:10px 20px;
+	display: flex;
+	flex-wrap: wrap;
 	background-color: #f6f7f8;
 	z-index: 50;
 }
+.fax-header > div {width: 100%; display: flex;}
+.fax-header .page-wrap {justify-content: center;}
+.fax-header .function-wrap  {justify-content: flex-end;}
+.fax-header .function-wrap .tooltip-layer {width: 196px; margin-top: 5px; padding:15px}
+.fax-header .function-wrap .select-box {margin-right: 4px;}
+.fax-header .function-wrap .select-box select.styled {height: 32px;}
+.fax-header .function-wrap .btn-border{margin-left: 4px;}
 .faxviewer .fax-header .date {
 	position: absolute;
 	left:20px;
@@ -568,6 +578,7 @@
 	z-index: 150;
 	background-color:#414550;
 }
+.faxviewer.type2 .sidebar {top:86px}
 .sidebar .toolbar button {
 	position:relative;
 	width:100%;
@@ -975,7 +986,7 @@
 
 /* ----------- 주소록 -----------*/
 .button-area.address + [class^=board-]{margin-top: 10px;}
-.button-area.address .btn-border.bd-pink {margin: 0 10px;}
+.button-area.address .select-area {margin-left: 10px;}
 .pop-address .search-area {display: flex; margin-bottom: 15px;}
 .pop-address .search-area .input-text {flex: 1; margin-right: 4px;}
 .pop-address .box-gray {
