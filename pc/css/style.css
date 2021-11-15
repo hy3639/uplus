@@ -483,7 +483,7 @@
 }
 .fax-header > div {width: 100%; display: flex;}
 .fax-header .page-wrap {justify-content: center;}
-.fax-header .function-wrap  {justify-content: flex-end;}
+.fax-header .function-wrap  {justify-content: flex-end; margin-bottom: 10px;}
 .fax-header .function-wrap .tooltip-layer {width: 196px; margin-top: 5px; padding:15px}
 .fax-header .function-wrap .select-box {margin-right: 4px;}
 .fax-header .function-wrap .select-box select.styled {height: 32px;}
