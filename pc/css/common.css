@@ -637,6 +637,7 @@ footer  p {
 .mgl20 {margin-left:20px !important;}
 .mgl50 {margin-left:50px !important;}
 .mgr8 {margin-right:8px;}
+.mgr10 {margin-right:10px;}
 .mgb15 {margin-bottom:15px;}
 .mgb30 {margin-bottom:30px;}
 .mgb40 {margin-bottom:40px !important;}
@@ -2057,7 +2058,7 @@ div.formSingle {display: none;}
   .tooltip-area .txt .highlight {margin-top:10px;text-indent: -14px;margin-left: 14px;}
   .tooltip-area .txt .highlight .ul-list {margin-left: 6px;}
   .tooltip-area .txt .ul-list.dot .ul-list {margin-left: -8px;} 
-  .tooltip-area .txt .ul-list.dot .ul-list li {}
+  /*.tooltip-area .txt .ul-list.dot .ul-list li {}*/
 /* ==============
 	datepicker
 ============== */
