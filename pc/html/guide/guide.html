@@ -15,6 +15,130 @@
 	.group .sub-cont .tit {font-weight:bold; font-size:14px}
 	/* .sub-cont .select-box,
 	.input-text {margin-bottom: 10px;} */
+
+
+/*그리드페이징*/
+.tui-pagination * {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.tui-ico-ellipsis, .tui-ico-first, .tui-ico-last, .tui-ico-next, .tui-ico-prev {
+    overflow: hidden;
+}
+
+.tui-pagination {
+    height: 28px;
+    margin: 14px 0 12px;
+    line-height: normal;
+    text-align: center;
+    font-size: 0;
+}
+
+.tui-pagination .tui-page-btn {
+    display: inline-block;
+    position: relative;
+	margin: 0 4px;
+    padding: 0 8px;
+    color: #000;
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.tui-pagination .tui-is-selected, .tui-pagination strong {
+	position: relative;
+    color: #e03d7c;
+	display: inline-block;
+	font-weight: 700;
+  
+}
+.tui-pagination strong:before {
+	content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    bottom: 0;
+    background-color: #e03d7c;
+}
+
+.tui-pagination .tui-first, 
+.tui-pagination .tui-prev, 
+.tui-pagination .tui-next, 
+.tui-pagination .tui-last, 
+.tui-pagination .tui-prev-is-ellip, 
+.tui-pagination .tui-next-is-ellip {
+	position: relative;
+    width: 28px;
+    height: 28px;
+    margin: 0 8px;
+    padding: 0;
+    font-size: 0;
+    text-indent: -99999px;
+    line-height: 0;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+	border-radius: 2px;
+}
+
+.tui-pagination .tui-first:before, 
+.tui-pagination .tui-prev:before, 
+.tui-pagination .tui-next:before, 
+.tui-pagination .tui-last:before{
+	content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.tui-pagination .tui-first:before {
+	background-image: url(../../images/icon/icon_28_firstpage.png);
+}
+.tui-pagination .tui-prev {margin-left: 0;}
+.tui-pagination .tui-prev:before {
+	background-image: url(../../images/icon/icon_28_older.png);
+}
+.tui-pagination .tui-next {margin-right: 0;}
+.tui-pagination .tui-next:before {
+    transform: rotate(180deg);
+    background-image: url(../../images/icon/icon_28_older.png);
+}
+
+
+.tui-pagination .tui-last:before {
+	transform: rotate(180deg);
+    background-image: url(../../images/icon/icon_28_firstpage.png);
+}
+
+.tui-page-inputs {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.tui-page-inputs .tui-page-input {
+    display: inline-block;
+    width: 10px;
+    height: 12px;
+    padding: 8px 0 6px;
+    font-size: 12px;
+    text-align: center;
+    color: #333;
+    border: 0;
+    outline: none;
+}
+
+.tui-page-inputs .tui-page-current {
+    color: #e03d7c
+}
 </style>
 </head>
 
@@ -396,6 +520,18 @@
 						<a href="#" class="page">10</a>
 						<a href="#" class="btn-next page">다음</a>
 						<a href="#" class="btn-last page">마지막</a>
+					</div>
+				</div>
+				<div class="cont">
+					<div class="tui-pagination tui-grid-pagination">
+						<a href="#" class="tui-page-btn tui-first"><span class="tui-ico-first">first</span></a>
+						<a href="#" class="tui-page-btn tui-prev"><span class="tui-ico-prev">prev</span></a>
+						<strong class="tui-page-btn tui-is-selected tui-first-child">1</strong>
+						<a href="#" class="tui-page-btn">2</a>
+						<a href="#" class="tui-page-btn">3</a>
+						<a href="#" class="tui-page-btn tui-last-child">4</a>
+						<a href="#" class="tui-page-btn tui-next"><span class="tui-ico-next">next</span></a>
+						<a href="#" class="tui-page-btn tui-last"><span class="tui-ico-last">last</span></a>
 					</div>
 				</div>
 			</div>	
